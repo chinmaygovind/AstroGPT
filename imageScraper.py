@@ -57,7 +57,7 @@ for search_term in DSOS:
         pass
     for image in thumbnails:
         print("Saving " + image + "...")
-        path = directory + "{object}_{num}.png".format(object=search_term,num=num)
+        path = directory + "{}_{0:03}.png".format(search_term, num)
         num += 1
         urllib.request.urlretrieve(image, path)
     print("Finished " + search_term + "...")
