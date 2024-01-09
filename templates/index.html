@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroGPT</title>
+    <style>
+        /* Styles for the buttons */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        /* Style for hover effect on the buttons */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #imageDisplay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        /* Style for the image within the display container */
+        #displayedImg {
+            width: 100%;
+            height: auto;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>AstroGPT</h1>
+    <p>This is a simple Flask server serving a basic webpage.</p>
+    <button id="uploadButton" class="button">Upload Image</button>
+    <button id="clipboardButton" class="button">Paste from Clipboard</button>
+
+    <div id="imageDisplay">
+        <img id="displayedImg" src="" alt="Uploaded Image">
+    </div>
+    
+    <form action = "/create-search" method = "post" enctype="multipart/form-data">   
+        <input type= "file" id="image-input" />
+        <input type = "submit" value="Submit!" />   
+    </form>   
+    
+
+    <script>
+        const fileInput = document.getElementById("image-input");
+        document.getElementById('uploadButton').addEventListener('click', function() {
+        fileInput.click();
+        });
+
+        document.getElementById('image-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            displayImage(file);
+        });
+
+
+        
+        document.onpaste = function (event) {
+            var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+            console.log(JSON.stringify(items)); // might give you mime types
+            for (var index in items) {
+                var item = items[index];
+                if (item.kind === 'file') {
+                    var blob = item.getAsFile();
+                    fileInput.file = blob;
+                    displayImage(blob);
+                }
+            }
+        };
+
+        function displayImage(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageUrl = event.target.result;
+                const imageDisplay = document.getElementById('imageDisplay');
+                const displayedImg = document.getElementById('displayedImg');
+                displayedImg.src = imageUrl;
+                imageDisplay.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>

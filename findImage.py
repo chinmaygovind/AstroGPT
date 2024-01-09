@@ -2,7 +2,7 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 import os
-img1 = cv.imread('myQueryImage.png',cv.IMREAD_GRAYSCALE) # queryImage
+img1 = cv.imread('test2.png',cv.IMREAD_GRAYSCALE) # queryImage
 
 
 
