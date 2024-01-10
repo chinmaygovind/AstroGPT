@@ -51,9 +51,7 @@
     </style>
 </head>
 <body>
-    <video autoplay loop muted width="100%">
-        <source src="static/space.mp4" type="video/mp4" />
-    </video>       
+        
 
     <h1>AstroGPT</h1>
     <p>This is a simple Flask server serving a basic webpage.</p>
@@ -65,7 +63,7 @@
     </div>
     
     <form action = "/create-search" method = "post" enctype="multipart/form-data">   
-        <input type= "file" id="image-input" />
+        <input type= "file" id="image-input" name="image-input"/>
         <input type = "submit" value="Submit!" />   
     </form>   
     
