@@ -3,15 +3,17 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 import os
 
-def queryImage(fileName):
+imageDir = "static/images/"
+
+async def queryImage(fileName):
     img1 = cv.imread(fileName,cv.IMREAD_GRAYSCALE) # queryImage
 
 
 
     allMatches = {}
-    imageDir = "images/"
+
     for directory in os.listdir(imageDir):
-        print(fileName + ": Trying " + directory)
+        #print(fileName + ": Trying " + directory)
         for filename in os.listdir(imageDir + directory):
             #print("Trying " + directory + "/" + filename)
             img2 = cv.imread(imageDir + directory + "/" + filename,cv.IMREAD_GRAYSCALE) # trainImage

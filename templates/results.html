@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroGPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        #imageDisplay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        /* Style for the image within the display container */
+        #displayedImg {
+            width: 100%;
+            height: auto;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="imageDisplay">
+        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}.png" alt="Uploaded Image">
+    </div>
+
+    <script>
+        // Replace this array with your actual data
+        var requestID = "{{myRequestID}}";
+        var endpointURL = '/fetch-results?requestID=' + requestID;
+        // Fetch data from the endpoint
+        fetch(endpointURL)
+            .then(response => response.json())
+            .then(dataArray => {
+                // Get the table body
+                var tableBody = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+
+                // Loop through the data array and populate the table dynamically
+                dataArray.forEach(function (item) {
+                    var row = tableBody.insertRow(tableBody.rows.length);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+
+                    cell1.innerHTML = item.title;
+                    cell2.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';
+                    cell3.innerHTML = item.description;
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+
+</body>
+</html>

@@ -57,16 +57,16 @@
     <p>This is a simple Flask server serving a basic webpage.</p>
     <button id="uploadButton" class="button">Upload Image</button>
     <button id="clipboardButton" class="button">Paste from Clipboard</button>
-
-    <div id="imageDisplay">
-        <img id="displayedImg" src="" alt="Uploaded Image">
-    </div>
+    
+    
     
     <form action = "/create-search" method = "post" enctype="multipart/form-data">   
         <input type= "file" id="image-input" name="image-input"/>
         <input type = "submit" value="Submit!" />   
     </form>   
-    
+    <div id="imageDisplay">
+        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}" alt="Uploaded Image">
+    </div>
 
     <script>
         const fileInput = document.getElementById("image-input");
