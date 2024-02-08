@@ -29,7 +29,6 @@
             max-height: 200px;
             overflow: hidden;
             border: 1px solid #ccc;
-            display: none;
         }
 
         /* Style for the image within the display container */
@@ -77,8 +76,11 @@
                     var cell3 = row.insertCell(2);
 
                     cell1.innerHTML = item.title;
-                    cell2.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';
-                    cell3.innerHTML = item.description;
+                    cell2.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';    
+                    if (item.href) 
+                        cell3.innerHTML = '<a href="' + item.href + '">' + item.description + '</a>';
+                    else 
+                        cell3.innerHTML = item.description;
                 });
             })
             .catch(error => console.error('Error fetching data:', error));

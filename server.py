@@ -2,7 +2,7 @@ from flask import *
 import secrets
 from multiprocessing import Process, Manager
 from findImage import *
-
+from pathlib import Path
 
 app = Flask(__name__)
 
@@ -20,7 +20,9 @@ async def create_search():
         f.save(f"static/queryimages/image_{requestID}.png")   
         queries[requestID] = await queryImage(f"static/queryimages/image_{requestID}.png")
         print("Awaiting process...")
-        return render_template("loading.html", myRequestID=requestID)   
+        print(queries[requestID])
+        return render_template('results.html', myRequestID=requestID)
+ 
 
 @app.route('/check-search', methods = ['GET'])   
 def check_search():   
@@ -50,6 +52,12 @@ def fetch_results():
             entry = {}
             entry["title"] = image[:image.index('_')]
             entry["image"] = imageDir + entry["title"].replace(" ", "_") + "/" + image
+            hrefDir = pagesDir + entry["title"].replace(" ", "_") + "/" + image.replace(".png", ".html")
+            try:
+                if Path(hrefDir).is_file():
+                    entry["href"] = pagesDir + entry["title"].replace(" ", "_") + "/" + image.replace(".png", ".html")
+            except:
+                entry["href"] = None
             entry["description"] = "placeholder description"
             data.append(entry)
         return jsonify(data)

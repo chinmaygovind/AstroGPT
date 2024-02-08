@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-67e8b5519821728e13e",applicationID:"465817224"};;/*! For license information please see nr-loader-rum-1.251.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>S,lF:()=>T,Yu:()=>x,Dg:()=>m,CX:()=>c,GE:()=>_,sU:()=>R});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:50,error_sampling_rate:50,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function _(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const x=(0,n.mF)().o;var E=r(385),D=r(6818);const k={buildEnv:D.Re,customTransaction:void 0,disabled:!1,distMethod:D.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:D.q4,denyList:void 0},j={};function S(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!j[e])throw new Error("Runtime for ".concat(e," was never set"));return j[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");j[e]=(0,i.D)(t,k);const r=(0,n.ek)(e);r&&(r.runtime=j[e])}function T(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.251.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=[...s[e]];function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((t=>{let[r]=t;s[e].delete(r),a(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([g,e,r,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function h(e,t){n[e]=v(e).concat(t)}function v(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),d=(0,n.fP)();function l(){u.aborted=!0,u.backlog={}}d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>d,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),u=r(3960),d=r(385),l=r(50),f=r(3081),g=r(8632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var h=r(2825);const v=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:_,runtime:x={loaderType:b},exposed:E=!0}=t;const D=(0,g.gG)();w||(A=D.init,w=D.info,_=D.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,_||{}),w.jsAttributes??={},d.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const k=(0,i.P_)(e.agentIdentifier),j=[w.beacon,w.errorBeacon];m||(k.proxy.assets&&(v(k.proxy.assets),j.push(k.proxy.assets)),k.proxy.beacon&&j.push(k.proxy.beacon),p(),(0,g.EZ)("activatedFeatures",h.T)),x.denyList=[...k.ajax.deny_list||[],...k.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,x),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(v,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{g[e]=w(v,e,!0,"api")})),g.addPageAction=w(v,"addPageAction",!0,n.D.pageAction),g.setCurrentRouteName=w(v,"routeName",!0,n.D.spa),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},g.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},g.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(m+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(h.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],r),e}finally{h.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function _(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(m,e,void 0,n.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},d.il?(0,u.b2)((()=>_()),!0):_(),g}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),m=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.251.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.251.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-se+MgwtmnbdP/MASClg+GOgpTkSpcEndd09loplWI8jtivCRtbuBQGqwgSDauFr6FUmrBsb2ccq/Hk5NZDAKMQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.251.1.PROD"]=self["webpackChunk:NRBA-1.251.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,957));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName),o(!1)}};l.il?(0,d.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,r),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,v.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,v.D)(e,w)}function w(e,t){return t}var _=i(8632),x=i(4402),E=i(4351);var D=i(5546),k=i(7956),j=i(3239),S=i(7894),R=i(9251);class T extends f{static featureName=R.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,R.t,r),l.il&&((0,k.N)((()=>(0,D.p)("docHidden",[(0,S.z)()],void 0,R.t,this.ee)),!0),(0,j.bP)("pagehide",(()=>(0,D.p)("winPagehide",[(0,S.z)()],void 0,R.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,x.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},(0,_.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,_.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,T,P],loaderType:"lite"})})()})();</script>
+<script async src="/sites/default/files/google_analytics/gtag.js?s8jr81"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-1706522-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","link_attribution":true,"allow_ad_personalization_signals":false,"custom_map":{"dimension1":"Audience","dimension2":"Page Level","dimension3":"Content Type","dimension4":"News Tag -- category","dimension5":"News tag -- person"}});gtag("config", "G-92L6B9PQCG", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","link_attribution":true,"allow_ad_personalization_signals":false});gtag("event", "custom", {"Audience":"n\/a","Page Level":"5","Content Type":"news","News Tag -- category":"\u003Ca href=\u0022\/taxonomy\/term\/971\u0022 hreflang=\u0022en\u0022\u003EResearch\u003C\/a\u003E","News tag -- person":"\u003Ca href=\u0022\/taxonomy\/term\/951\u0022 hreflang=\u0022en\u0022\u003EFaculty\u003C\/a\u003E, \u003Ca href=\u0022\/taxonomy\/term\/966\u0022 hreflang=\u0022en\u0022\u003EStudents\u003C\/a\u003E"});</script>
+<meta name="description" content="A Princeton-led team of astrophysicists has found that the extrasolar planet WASP-12b is spiraling in toward its host star and will be destroyed in less than 3 million years." />
+<link rel="canonical" href="https://www.princeton.edu/news/2020/01/07/planet-wasp-12b-death-spiral-say-scientists" />
+<meta property="og:site_name" content="Princeton University" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.princeton.edu/news/2020/01/07/planet-wasp-12b-death-spiral-say-scientists" />
+<meta property="og:title" content="Planet WASP-12b is on a death spiral, say scientists" />
+<meta property="og:description" content="A Princeton-led team of astrophysicists has found that the extrasolar planet WASP-12b is spiraling in toward its host star and will be destroyed in less than 3 million years." />
+<meta property="og:image" content="https://www.princeton.edu/sites/default/files/styles/scale_1440/public/images/2019/12/PIA13691~orig.jpg?itok=EXYU_u0Y" />
+<meta property="og:image:alt" content="Illustration of star and planet" />
+<meta property="fb:app_id" content="238312316239555" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A Princeton-led team of astrophysicists has found that the extrasolar planet WASP-12b is spiraling in toward its host star and will be destroyed in less than 3 million years." />
+<meta name="twitter:site" content="@Princeton" />
+<meta name="twitter:title" content="Planet WASP-12b is on a death spiral, say scientists" />
+<meta name="twitter:image" content="https://www.princeton.edu/sites/default/files/styles/scale_1440/public/images/2019/12/PIA13691~orig.jpg?itok=EXYU_u0Y" />
+<meta name="twitter:image:alt" content="Illustration of star and planet" />
+<meta name="google-site-verification" content="B6i7aTvWeIZCk1-Ntnn_Lkyf37sREVxxkY6p3gdHucY" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="apple-touch-icon" href="/themes/custom/hobbes/icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/themes/custom/hobbes/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/themes/custom/hobbes/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="manifest" href="/themes/custom/hobbes/icons/manifest.json" />
+<link rel="mask-icon" href="/themes/custom/hobbes/icons/safari-pinned-tab.svg" color="#e77500" />
+<meta name="msapplication-config" content="/themes/custom/hobbes/icons/browserconfig.xml" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="icon" href="/profiles/contrib/lightning/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Planet WASP-12b is on a death spiral, say scientists</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Mt1NYoO5gByfBTUdDcWZzcf34S5Pd7uC9SOV3kGZJwA.css?delta=0&amp;language=en&amp;theme=hobbes&amp;include=eJxdjVEOwiAQBS-E5UhmKc-WumWVhep6-hIjP_68ZCaTvFkK_PZsKOYWkYVxpUxsNc3q_4VT04rdB1K4VUJAb1gC8aDA9LEBN2k5Uk2Sh1lBh23q8K6c8t3H0h7E0w9HlfHSC5X-yHBH6uS_O-0SG-MEmmBFyQ" />
+<link rel="stylesheet" media="all" href="https://use.typekit.net/stk8lop.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_vCDEPGqiTOo8bSJUe8Ar2pyiDGEfbfrOqI_Jt30qens.css?delta=2&amp;language=en&amp;theme=hobbes&amp;include=eJxdjVEOwiAQBS-E5UhmKc-WumWVhep6-hIjP_68ZCaTvFkK_PZsKOYWkYVxpUxsNc3q_4VT04rdB1K4VUJAb1gC8aDA9LEBN2k5Uk2Sh1lBh23q8K6c8t3H0h7E0w9HlfHSC5X-yHBH6uS_O-0SG-MEmmBFyQ" />
+
+    <script src="/sites/default/files/js/js_en1LT0OqbcuFdyfqZv0W-Ljy3rLSx_bW-WeAC0Q3N_0.js?scope=header&amp;delta=0&amp;language=en&amp;theme=hobbes&amp;include=eJxdjVEOwiAQBS-E5UhmKc-WumWVhep6-hIjP_68ZCaTvFkK_PZsKOYWkYVxpUxsNc3q_4VT04rdB1K4VUJAb1gC8aDA9LEBN2k5Uk2Sh1lBh23q8K6c8t3H0h7E0w9HlfHSC5X-yHBH6uS_O-0SG-MEmmBFyQ"></script>
+
+    <meta name="google-site-verification" content="HCFMWeXbGYFnJTWfcWQmuHWebYmZPzueLOKf8RM09I4" />
+      <link rel="alternate" type="application/rss+xml" title="Princeton University News" href="/feed/" />
+      <link rel="alternate" type="application/rss+xml" title="Princeton Research News" href="/feed/research/" />
+      <link rel="alternate" type="application/rss+xml" title="Princeton Public Events" href="/feed/events/" />
+  </head>
+  <body class="node-217486 path-node page-node-type-news nojs" data-scroll='body' data-resize='body'>
+    <a href="#main-content" id="skip-link" class="visually-hidden focusable button skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div data-sticky-container class="header-sticky-container">
+  <header data-sticky data-options="marginTop:0;" data-sticky-on="small" class="clearfix page-header" style="width:100%" data-top-anchor="main:top">
+    <div class="contents">
+      <div class="block-hobbes-branding">
+                      <a href="/" title="Home" rel="home" class="site-logo">
+              <span class="show-for-sr">Princeton University</span>
+            </a>
+                  </div>
+        <nav aria-label="Main">
+          <button id="menutoggle" aria-haspopup="dialog" class="toggle-main-menu menutoggle">
+            <span></span><span></span><span></span><span></span>
+            <span class="show-for-sr">Menu</span>
+          </button>
+        </nav>
+                          <nav  id="block-news" data-block-plugin-id="menu_block:news" class="menu--news block--a-href-newsnews-a crumby-section" aria-label="section">
+        <div class="parent-link"><a href="/news">News</a></div>
+    <button id="crumby-toggle" aria-expanded="false">
+      <span class='chevron-wrapper'><span class='transparent'>News</span><span class='visually-hidden'>Submenu</span></span><span class='toggle-chevron'></span>
+    </button>
+      
+        
+      <ul id="crumby-list">
+              <li>
+                      <a href="/news" data-drupal-link-system-path="news">All Stories</a>
+                            </li>
+            </ul>
+  
+
+
+    </nav>
+
+          
+                        <div id="search-bar">
+          <button aria-expanded="false" id="search-toggle"><span class="search-icon"><span class="show-for-sr">Search</span></span></button>
+          <form action="/search" method="GET" id="pu-header-search" accept-charset="UTF-8" hidden>
+              <div class="js-form-item form-item js-form-type-search form-item-search js-form-item-search form-no-label">
+                  <input data-drupal-selector="edit-search" autocomplete="off" placeholder="Search Princeton" type="text" id="header-search" name="search" value="" size="15" maxlength="128" class="form-search">
+                  <label for="header-search" class="show-for-sr">Search Sites &amp; People</label>
+                  <button class="close-button" aria-label="Close search" type="button">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="header-edit-actions">
+                  <input data-drupal-selector="header-edit-submit" type="submit" id="header-edit-submit" value="Submit search" class="button js-form-submit form-submit">
+              </div>
+          </form>
+        </div>
+
+              </div>
+  </header>
+</div>
+
+
+<main id="main" class="main node-planet-wasp-12b-is-on-a-death-spiral-say-scientists">
+  <a name="main-content" id="main-content"></a>
+    <section class="clearfix">
+        <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-hobbes-content" data-block-plugin-id="system_main_block" class="block__wrapper">
+  
+    
+      
+
+
+  
+<article about="/news/2020/01/07/planet-wasp-12b-death-spiral-say-scientists" class="node node--type-news node--view-mode-full no-early-offsets">
+              <div class="no-overlay">
+            <div class="hero image-cover-container crop-middle">
+              
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-cover-image media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="143921"><img loading="eager" srcset="/sites/default/files/styles/third_1x_crop/public/images/2019/12/PIA13691~orig.jpg?itok=LqktUT5Z 640w, /sites/default/files/styles/half_1x_crop/public/images/2019/12/PIA13691~orig.jpg?itok=b6CetLq1 960w, /sites/default/files/styles/half_16_9_1440/public/images/2019/12/PIA13691~orig.jpg?itok=HISQBn-V 1440w, /sites/default/files/styles/1x_full_2x_half_crop/public/images/2019/12/PIA13691~orig.jpg?itok=0166maJu 1920w, /sites/default/files/styles/crop_2048_ipad/public/images/2019/12/PIA13691~orig.jpg?itok=nyJvMILQ 2048w, /sites/default/files/styles/full_2x_crop/public/images/2019/12/PIA13691~orig.jpg?itok=ATNWrB8_ 2880w" sizes="100vw" width="640" height="360" src="/sites/default/files/styles/1x_full_2x_half_crop/public/images/2019/12/PIA13691~orig.jpg?itok=0166maJu" alt="Illustration of star and planet" typeof="foaf:Image" /></div></article></div>
+      
+            </div>
+          <div class="contents headline">
+            <h1 class='balance-text'>
+              <span>Planet WASP-12b is on a death spiral, say scientists</span>
+
+            </h1>
+          </div>
+        </div>
+      
+  <div class="news-content content-container" id="news-content">
+
+    <div class="share-icons">
+        <a class="sharebox facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.princeton.edu%2Fnews%2F2020%2F01%2F07%2Fplanet-wasp-12b-death-spiral-say-scientists"><span class="show-for-sr">Share on Facebook</span></a>
+        <a class="sharebox twitter" href="https://www.twitter.com/share?url=https%3A%2F%2Fwww.princeton.edu%2Fnews%2F2020%2F01%2F07%2Fplanet-wasp-12b-death-spiral-say-scientists"><span class="show-for-sr">Share on Twitter</span></a>
+        <a class="sharebox linkedin" href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.princeton.edu%2Fnews%2F2020%2F01%2F07%2Fplanet-wasp-12b-death-spiral-say-scientists"><span class="show-for-sr">Share on LinkedIn</span></a>
+        <a class="sharebox email" href="mailto:?subject=Princeton%20News:%20Planet%20WASP-12b%20is%20on%20a%20death%20spiral%2C%20say%20scientists&amp;body=Read%20more%20at%20https%3A%2F%2Fwww.princeton.edu%2Fnews%2F2020%2F01%2F07%2Fplanet-wasp-12b-death-spiral-say-scientists"><span class="show-for-sr">Email</span></a>
+        <a class="sharebox print" href="javascript:window.print()"><span class="show-for-sr">Print</span></a>
+    </div>
+
+
+    <div class="news-top">
+          <div class="byline"><em>By </em> 
+      <div class="field field--name-field-byline field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item">Liz Fuller-Wright, Office of Communications</div> 
+          </div>
+    on 
+            Jan. 7, 2020, 11:35 a.m.
+       </div>
+      
+              <div class="cover-caption">
+          <article class="view-mode-caption-and-credit media media-image"><div class="image-caption"><div class="field field--name-field-media-caption field--type-text-long field--label-hidden field__item"><p>An artist created this illustration of the searing-hot gas planet WASP-12b and its star. A Princeton-led team of astrophysicists has shown that this exoplanet is spiraling in toward its host star, heading toward certain destruction in about 3 million years.</p></div><div class="image-byline"><div class="field field--name-field-byline-freeform field--type-string field--label-hidden field__item">Illustration by NASA/JPL-Caltech</div></div></div></article>
+        </div>
+          </div>
+
+    <div class="node__content">
+      
+      
+            <div class="field field--name-field-news-body field--type-text-long field--label-hidden field__item"><p><span><span><span><span><span><span>Earth is doomed — but not for 5 billion years. Our planet will be roasted as our sun expands and becomes a red giant, but the exoplanet WASP-12b, located 600 light-years away in the constellation Auriga, has less than a thousandth of that time left: a comparatively paltry 3 million years. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>A Princeton-led team of astrophysicists has shown that WASP-12b is spiraling in toward its host star, heading toward certain destruction. Their <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ab5c16">paper</a> appears in the Dec. 27, 2019, issue of the </span></span></span></span></span></span>Astrophysical Journal Letters<span><span><span><span><span><span>. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>WASP-12b is known as a “hot Jupiter,” a giant gaseous planet like our neighbor planet Jupiter, but which is very close to its own star, orbiting its sun in just 26 hours. (By contrast, we take 365 days to orbit, and even Mercury, the innermost planet of our solar system, takes 88 days.)</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>“Ever since the discovery of the first ‘hot Jupiter’ in 1995 — a discovery that was recognized with this year’s Nobel Prize in Physics — we have wondered how long such planets can survive,” said </span></span></span><a href="https://web.astro.princeton.edu/people/joshua-winn"><span><span>Joshua Winn</span></span></a><span><span><span>, a professor of </span></span></span><a href="https://web.astro.princeton.edu/"><span><span>astrophysical sciences</span></span></a><span><span><span> at Princeton and one of the authors of the paper. “We were pretty sure they could not last forever. The strong gravitational interactions between the planet and the star should cause the planet to spiral inward and be destroyed, but nobody could predict how long this takes. It might be millions of years, it might be billions or trillions. Now that we have measured the rate, for at least one system — it’s millions of years — we have a new clue about the behavior of stars as fluid bodies.”</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>The problem is that as WASP-12b orbits its star, the two bodies exert gravitational pulls on each other, raising “tides” like the ocean tides raised by the moon on Earth. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>Within the star, these tidal waves cause the star to become slightly distorted and to oscillate.</span></span></span></span><span><span><span> Because of friction, these waves crash and the oscillations die down, a process that gradually converts the planet’s orbital energy into heat within the star. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>The friction associated with the tides also exerts a gravitational torque on the planet, causing the planet to spiral inward. Measuring how quickly the planet’s orbit is shrinking reveals how quickly the star is dissipating the orbital energy, which provides astrophysicists clues about the interior of stars. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>“If we can find more planets like WASP-12b whose orbits are decaying, we'll be able to learn about the evolution and eventual fate of exoplanetary systems,” said first author </span></span></span></span><a href="https://web.astro.princeton.edu/people/samuel-yee"><span><span><span>Samuel Yee</span></span></span></a><span><span><span><span>, a graduate student in astrophysical sciences.</span></span></span></span> <span><span><span><span>“Although this phenomenon has been predicted for close-in giant planets like WASP-12b in the past, this is the first time we have caught this process in action.”</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>One of the first people to make that prediction that was Frederic Rasio, the Joseph Cummings Professor of Physics and Astronomy at Northwestern University, who was not involved in Yee and Winn's work. “</span></span></span></span><span><span>We’ve all been waiting nearly 25 years for this effect to be detected observationally,” Rasio said. “The implications of the short timescale measured for orbital decay are also very important. In particular it means that there must be many more hot Jupiters that have already gone all the way. When they get to the Roche limit </span></span><span><span><span>— </span></span></span><span><span>the tidal disruption limit for an object on a circular orbit </span></span><span><span><span>— </span></span></span><span><span>their envelopes might get stripped, revealing a rocky core that looks just like a super-Earth (or maybe a mini-Neptune if they can retain a bit of their envelope).”</span></span></span></span></p>
+
+<p><span><span><span><span>Rasio also edits</span></span></span></span> Astrophysical Journal Letters, the journal in which the new paper appears. The researchers had originally submitted their paper to a less-prestigious sister journal also published by the American Astronomical Society, but Rasio redirected it to ApJ Letters because of the "especially great significance" of the research. "Part of my job is to ensure that all major new discoveries presented in manuscripts submitted to the AAS Journals are considered for publication in ApJ Letters," he said. "In this case it was a no-brainer."</p>
+
+<p><span><span><span><span><span><span>WASP-12b was discovered in 2008 through the transit method, in which astronomers observe a small dip in a star’s brightness as the planet passes in front of it, each time it completes an orbit. Since its discovery, the interval between successive dips has shortened by 29 milliseconds per year — an observation that was first noted in 2017 by co-author </span></span></span></span><span><span><span><span>Kishore Patra, then an undergraduate at the Massachusetts Institute of Technology</span></span></span></span><span><span><span><span>.</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>That slight shortening could suggest that the planet’s orbit is shrinking, but there are other possible explanations: If WASP-12b’s orbit is more oval-shaped than circular, for example, the apparent changes in the orbital period could be caused by the changing orientation of the orbit. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>The way to be sure if the orbit is actually shortening is to watch the planet disappear behind its star, known as occultation. </span></span></span></span><span><span><span><span>If the orbit is just changing its direction, the actual orbital period doesn’t change, so if transits occur more quickly than expected, occultations should occur more slowly. But if the orbit is truly decaying, the timing of both transits and occultations should shift in the same direction.</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>Over the last two years, the researchers have collected more data, including new occultation observations made with the Spitzer Space Telescope. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>“These new data strongly support the orbital decay scenario, allowing us to firmly say that the planet is indeed spiraling toward its star,” said Yee. “This confirms the long-standing theoretical predictions and indirect data suggesting that hot Jupiters should eventually be destroyed through this process.”</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>This discovery will help theorists understand the internal workings of stars and interpret other data relating to tidal interactions, said Winn. “It also tells us about the lifetimes of hot Jupiters, a clue that might help shed light on the formation of these strange and unexpected planets.”</span></span></span></span></span></p>
+
+<p><span><span><em><span><span><span>“<a href="https://iopscience.iop.org/article/10.3847/2041-8213/ab5c16">The orbit of WASP-12b is decaying</a>,” by </span></span></span></em><em><span><span><span>Samuel W. Yee</span></span></span></em><em><span><span>, <span>Joshua N. Winn</span>, <span>Heather A. Knutson, Kishore C. Patra, <span>Shreyas Vissapragada</span>, <span>Michael M. Zhang</span>, <span>Matthew J. Holman</span>, <span>Avi Shporer</span> and <span>Jason T. Wrigh</span></span><span>t, appears in the Dec. 27, 2019, issue of the Astrophysical Journal (DOI: </span></span></span></em></span></span><a href="https://dx.doi.org/10.3847/2041-8213/ab5c16">10.3847/2041-8213/ab5c16</a>)<span><span><em><span><span><span>. The research was supported by Princeton University, the Heising-Simons Foundation, </span>NASA Solar Systems grant NNX14AD22G, the Pennsylvania State University, the Eberly College of Science and the Pennsylvania Space Grant Consortium. The authors wish to recognize and acknowledge the very significant cultural role and reverence that the summit of Maunakea has always had within the indigenous Hawaiian community: "We are most fortunate to have the opportunity to conduct observations from this mountain."</span></span></em></span></span></p></div>
+      
+    </div>
+  </div>
+</article>
+
+    <div class="views-element-container"><div class="collapse row related-news js-view-dom-id-ac2a6bf0906d8a965d1b6401f540ed42c71c13db11d70ca0c3a8ddcea170a747">
+  
+  
+  
+
+      <header>
+      <h2>Related Stories</h2>
+    </header>
+  
+  
+  
+
+      <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2022/12/19/keplers-first-exoplanet-spiraling-toward-its-doom" class="card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2022/12/19/keplers-first-exoplanet-spiraling-toward-its-doom"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="169586"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2022/12/1118_Kepler-1658b_1920x1080.jpg?itok=56-6jYwj 640w, /sites/default/files/styles/half_1x_crop/public/images/2022/12/1118_Kepler-1658b_1920x1080.jpg?itok=Va-wt0ob 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2022/12/1118_Kepler-1658b_1920x1080.jpg?itok=Va-wt0ob" alt="A Jupiter-like planet closely orbits a star with seismic waves bouncing around its interior." typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>Kepler&#039;s first exoplanet is spiraling toward its doom</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            As the exoplanet spirals ever closer to its aging star, it provides a chance to learn more about the fate of other worlds as their solar systems evolve.
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2019/07/10/princeton-scientists-spot-two-supermassive-black-holes-collision-course-each-other" class="card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2019/07/10/princeton-scientists-spot-two-supermassive-black-holes-collision-course-each-other"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="138151"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2019/06/SupermassiveBlackHoleBinary.jpg?itok=s-cWO9El 640w, /sites/default/files/styles/half_1x_crop/public/images/2019/06/SupermassiveBlackHoleBinary.jpg?itok=tRV1H72p 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2019/06/SupermassiveBlackHoleBinary.jpg?itok=tRV1H72p" alt="Image showing two supermassive black holes" typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>Princeton scientists spot two supermassive black holes on collision course with each other</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            A newly discovered pair of supermassive black holes can help astronomers predict when the historic first detection of the background "hum" of gravitational waves will be made. 
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2022/09/02/new-era-exoplanet-research-says-princeton-member-webb-space-telescope-team-found" class="card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2022/09/02/new-era-exoplanet-research-says-princeton-member-webb-space-telescope-team-found"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="165891"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2022/09/3000x1688_STScI-01GB2S5HKVNRJ4CRBR9RKM9CEB.jpg?itok=mDOIrI-o 640w, /sites/default/files/styles/half_1x_crop/public/images/2022/09/3000x1688_STScI-01GB2S5HKVNRJ4CRBR9RKM9CEB.jpg?itok=Qc4OhMRs 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2022/09/3000x1688_STScI-01GB2S5HKVNRJ4CRBR9RKM9CEB.jpg?itok=Qc4OhMRs" alt="A planet glows in the light of a nearby sun." typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>&#039;A new era in exoplanet research,&#039; says Princeton member of the Webb Space Telescope team that found carbon dioxide out there</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            NASA’s new space telescope has captured definitive evidence for carbon dioxide in the atmosphere of WASP-39b, a gas giant planet 700 light-years away. While WASP-39b is almost certainly too hot for life, astrophysicist Tansu Daylan says the finding confirms the telescope is equipped to identify the signatures of life on planets beyond our solar system.
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2012/09/03/bakos-perspective-hunt-extrasolar-planets" class="legacy-layout card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2012/09/03/bakos-perspective-hunt-extrasolar-planets"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="77161"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2012/09/bakos_HomePage.jpg?itok=Q7G2pbqN 640w, /sites/default/files/styles/half_1x_crop/public/images/2012/09/bakos_HomePage.jpg?itok=EF33o3Mi 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2012/09/bakos_HomePage.jpg?itok=EF33o3Mi" alt="Bakos home page" typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>Bakos: Perspective on the hunt for extrasolar planets</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            Gáspár Bakos, Princeton University assistant professor of astrophysical  sciences, brings his research on exoplanets and small telescopes  together with a network of six, fully automated telescopes he developed that scan the sky every night for  planets outside Earth's solar system — with 41 planets and counting discovered so far.
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2011/09/26/darkest-world-enlightens-astronomers-about-mysterious-light-gobbling-planet" class="legacy-layout card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2011/09/26/darkest-world-enlightens-astronomers-about-mysterious-light-gobbling-planet"><div aria-hidden="true"></div>
+  <div class="card-section">
+    <h3>
+      <span>&#039;Darkest&#039; world enlightens astronomers about mysterious light-gobbling planet</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            Recent research involving Princeton astrophysics postdoctoral researcher David Spiegel identifies the "darkest" planet yet observed and sets a new standard in determining just how much light "hot Jupiter" planets -- scorching balls of hydrogen and helium already known for being non-reflective -- can keep to themselves.
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2020/11/18/mysterious-blue-ring-nebula-scientists-see-fate-binary-stars" class="card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2020/11/18/mysterious-blue-ring-nebula-scientists-see-fate-binary-stars"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="151361"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2020/11/blue-ring-nebula_H.jpg?itok=5MJX4aJp 640w, /sites/default/files/styles/half_1x_crop/public/images/2020/11/blue-ring-nebula_H.jpg?itok=2e6DLkKd 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2020/11/blue-ring-nebula_H.jpg?itok=2e6DLkKd" alt="Blue haze around a star" typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>In the mysterious Blue Ring Nebula, scientists see the fate of binary stars</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            A team of scientists investigated the mysterious Blue Ring Nebula and concluded that it is the product of a star collision.
+      </p>
+  </div></a>
+</div>
+</div>
+    <div class="small-12 medium-6 large-4 columns views-row"><div about="/news/2019/03/13/astronomers-discover-83-supermassive-black-holes-early-universe" class="card news-teaser news-teaser-card-summary content-tile-flashcard content-tile-set-item" data-equalizer-watch>
+  <a href="/news/2019/03/13/astronomers-discover-83-supermassive-black-holes-early-universe"><div aria-hidden="true">
+            <div class="field field--name-field-news-cover-image field--type-entity-reference field--label-hidden field__item"><article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="132301"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2019/03/figure2_banner.jpg?itok=vUitdnpB 640w, /sites/default/files/styles/half_1x_crop/public/images/2019/03/figure2_banner.jpg?itok=wPsYTFck 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2019/03/figure2_banner.jpg?itok=wPsYTFck" alt="An artist impression of a quasar: A red and orange swirl on a blue background" typeof="foaf:Image" /></div></article></div>
+      </div>
+  <div class="card-section">
+    <h3>
+      <span>Astronomers discover 83 supermassive black holes in the early universe</span>
+<span class="show-for-sr">.</span>
+    </h3>
+    
+    <p>
+            Astronomers from Japan, Taiwan and Princeton University have discovered 83 quasars powered by supermassive black holes that were formed when the universe was only 5 percent of its current age.
+      </p>
+  </div></a>
+</div>
+</div>
+
+    
+
+  
+  
+
+      <footer>
+      <a class="button" href="/news">View All News</a>
+    </footer>
+  
+  
+</div>
+</div>
+
+
+
+  </div>
+
+
+  </section>
+</main>
+
+<dialog id="navmodal" class="invert hobbes-modal">
+  <button id="navmodal-close" class="modal-close menutoggle" aria-label="close menu"><span></span><span></span><span></span><span></span></button>
+  <div class="block-hobbes-branding">
+      <a href="/" title="Home" rel="home" class="site-logo">
+      <span class="show-for-sr">Princeton University</span>
+    </a>
+  </div>
+              <nav aria-labelledby="block-hobbes-main-menu-menu" id="block-hobbes-main-menu" data-block-plugin-id="system_menu_block:main" class="menu--main block--main-navigation">
+            
+  <h2 class="visually-hidden" id="block-hobbes-main-menu-menu" aria-hidden="true">Main navigation</h2>
+  
+
+        
+
+                              <div class='menu-parent menu-parent-1'>
+          <a href="/meet-princeton" data-drupal-link-system-path="node/126">Meet Princeton</a>
+          <button class='toggle-submenu' aria-expanded='false'><span class='toggle-chevron'></span><span class='show-for-sr'>Submenu for Meet Princeton</span></button>
+        </div>
+        <section class='modal-submenu extra-rows items-13' aria-label='Meet Princeton submenu'>
+                                <div class="menu-item"><a href="/meet-princeton/service-humanity" data-drupal-link-system-path="node/20346">In Service of Humanity</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/facts-figures" data-drupal-link-system-path="node/54486">Facts &amp; Figures</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/history" data-drupal-link-system-path="node/20176">History</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/honors-awards" data-drupal-link-system-path="node/93986">Honors &amp; Awards</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/contact-us" data-drupal-link-system-path="node/20181">Contact Us</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/visit-us" data-drupal-link-system-path="node/20531">Visit Us</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/our-faculty" data-drupal-link-system-path="node/20351">Our Faculty</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/our-students" data-drupal-link-system-path="node/20356">Our Students</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/our-alumni" data-drupal-link-system-path="node/20361">Our Alumni</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/our-staff" data-drupal-link-system-path="node/20256">Our Staff</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/our-leadership" data-drupal-link-system-path="node/172146">Our Leadership</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/academic-freedom-and-free-expression" data-drupal-link-system-path="node/252886">Academic Freedom and Free Expression</a></div>
+                        <div class="menu-item"><a href="/meet-princeton/princetons-strategic-planning-framework" data-drupal-link-system-path="node/269851">Strategic Planning Framework</a></div>
+            
+        </section>
+                                <div class='menu-parent menu-parent-2'>
+          <a href="/academics" data-drupal-link-system-path="node/46">Academics</a>
+          <button class='toggle-submenu' aria-expanded='false'><span class='toggle-chevron'></span><span class='show-for-sr'>Submenu for Academics</span></button>
+        </div>
+        <section class='modal-submenu extra-rows items-14' aria-label='Academics submenu'>
+                                <div class="menu-item"><a href="/academics/studying-princeton" data-drupal-link-system-path="node/76">Studying at Princeton</a></div>
+                        <div class="menu-item"><a href="/academics/library" data-drupal-link-system-path="node/20166">Library</a></div>
+                        <div class="menu-item"><a href="/academics/areas-of-study" data-drupal-link-system-path="academics/areas-of-study">Areas of Study</a></div>
+                        <div class="menu-item"><a href="/academics/areas-of-study/humanities" data-drupal-link-system-path="academics/areas-of-study/humanities">Humanities</a></div>
+                        <div class="menu-item"><a href="/academics/areas-of-study/social-sciences" data-drupal-link-system-path="academics/areas-of-study/social-sciences">Social Sciences</a></div>
+                        <div class="menu-item"><a href="/academics/areas-of-study/engineering" data-drupal-link-system-path="academics/areas-of-study/engineering">Engineering</a></div>
+                        <div class="menu-item"><a href="/academics/areas-of-study/natural-sciences" data-drupal-link-system-path="academics/areas-of-study/natural-sciences">Natural Sciences</a></div>
+                        <div class="menu-item"><a href="/academics/advising" data-drupal-link-system-path="node/20381">Advising</a></div>
+                        <div class="menu-item"><a href="https://registrar.princeton.edu/academic-calendar/">Academic Calendar</a></div>
+                        <div class="menu-item"><a href="/academics/course-tools" data-drupal-link-system-path="node/54066">Course Tools</a></div>
+                        <div class="menu-item"><a href="/academics/learning-abroad" data-drupal-link-system-path="node/20161">Learning Abroad</a></div>
+                        <div class="menu-item"><a href="/academics/career-development" data-drupal-link-system-path="node/20391">Career Development</a></div>
+                        <div class="menu-item"><a href="/academics/continuing-education" data-drupal-link-system-path="node/20376">Continuing Education</a></div>
+                        <div class="menu-item"><a href="/academics/innovative-learning" data-drupal-link-system-path="node/20366">Innovative Learning</a></div>
+            
+        </section>
+                                <div class='menu-parent menu-parent-3'>
+          <a href="/research" data-drupal-link-system-path="node/51">Research</a>
+          <button class='toggle-submenu' aria-expanded='false'><span class='toggle-chevron'></span><span class='show-for-sr'>Submenu for Research</span></button>
+        </div>
+        <section class='modal-submenu  items-8' aria-label='Research submenu'>
+                                <div class="menu-item"><a href="/research/engineering-and-applied-science" data-drupal-link-system-path="node/20396">Engineering &amp; Applied Science</a></div>
+                        <div class="menu-item"><a href="/research/humanities" data-drupal-link-system-path="node/20401">Humanities</a></div>
+                        <div class="menu-item"><a href="/research/natural-sciences" data-drupal-link-system-path="node/20406">Natural Sciences</a></div>
+                        <div class="menu-item"><a href="/research/social-sciences" data-drupal-link-system-path="node/20411">Social Sciences</a></div>
+                        <div class="menu-item"><a href="/research/office-dean-research" data-drupal-link-system-path="node/94976">Dean for Research Office</a></div>
+                        <div class="menu-item"><a href="/research/interdisciplinary-approach" data-drupal-link-system-path="node/20421">Interdisciplinary Approach</a></div>
+                        <div class="menu-item"><a href="/research/external-partnerships" data-drupal-link-system-path="node/20416">External Partnerships</a></div>
+                        <div class="menu-item"><a href="/research/facilities-labs" data-drupal-link-system-path="node/21111">Facilities &amp; Labs</a></div>
+            
+        </section>
+                                <div class='menu-parent menu-parent-4'>
+          <a href="/one-community" data-drupal-link-system-path="node/56">One Community</a>
+          <button class='toggle-submenu' aria-expanded='false'><span class='toggle-chevron'></span><span class='show-for-sr'>Submenu for One Community</span></button>
+        </div>
+        <section class='modal-submenu  items-12' aria-label='One Community submenu'>
+                                <div class="menu-item"><a href="/one-community/lifelong-connections" data-drupal-link-system-path="node/20436">Lifelong Connections</a></div>
+                        <div class="menu-item"><a href="/one-community/student-life" data-drupal-link-system-path="node/20441">Student Life</a></div>
+                        <div class="menu-item"><a href="/one-community/arts-culture" data-drupal-link-system-path="node/20446">Arts &amp; Culture</a></div>
+                        <div class="menu-item"><a href="/one-community/athletics" data-drupal-link-system-path="node/20451">Athletics</a></div>
+                        <div class="menu-item"><a href="/one-community/living-princeton-nj" data-drupal-link-system-path="node/20456">Living in Princeton, N.J.</a></div>
+                        <div class="menu-item"><a href="/one-community/housing-dining" data-drupal-link-system-path="node/20461">Housing &amp; Dining</a></div>
+                        <div class="menu-item"><a href="/one-community/activities-organizations" data-drupal-link-system-path="node/20466">Activities &amp; Organizations</a></div>
+                        <div class="menu-item"><a href="/one-community/cultural-affinity-groups" data-drupal-link-system-path="node/20471">Cultural &amp; Affinity Groups</a></div>
+                        <div class="menu-item"><a href="/one-community/health-wellness" data-drupal-link-system-path="node/20476">Health &amp; Wellness</a></div>
+                        <div class="menu-item"><a href="/one-community/religious-life" data-drupal-link-system-path="node/20481">Religious Life</a></div>
+                        <div class="menu-item"><a href="/one-community/serving-public-good" data-drupal-link-system-path="node/20486">Serving the Public Good</a></div>
+                        <div class="menu-item"><a href="/one-community/families" data-drupal-link-system-path="node/20491">Families</a></div>
+            
+        </section>
+                                <div class='menu-parent menu-parent-5'>
+          <a href="/admission-aid" data-drupal-link-system-path="node/61">Admission &amp; Aid</a>
+          <button class='toggle-submenu' aria-expanded='false'><span class='toggle-chevron'></span><span class='show-for-sr'>Submenu for Admission &amp; Aid</span></button>
+        </div>
+        <section class='modal-submenu  items-6' aria-label='Admission &amp; Aid submenu'>
+                                <div class="menu-item"><a href="/admission-aid/affordable-all" data-drupal-link-system-path="node/20496">Affordable for All</a></div>
+                        <div class="menu-item"><a href="https://admission.princeton.edu/cost-aid">About Financial Aid</a></div>
+                        <div class="menu-item"><a href="https://finaid.princeton.edu">Current Undergraduate Financial Aid</a></div>
+                        <div class="menu-item"><a href="https://admission.princeton.edu">Undergraduate Admission</a></div>
+                        <div class="menu-item"><a href="/admission-aid/graduate-admission" data-drupal-link-system-path="node/20501">Graduate Admission</a></div>
+                        <div class="menu-item"><a href="/admission-aid/international-students" data-drupal-link-system-path="node/20506">For International Students</a></div>
+            
+        </section>
+            
+<section class="spotlights">
+  
+    <div class="content-tile content-tile-flashcard flashcard menu-spotlight">
+      <a href="https://alumni.princeton.edu/venture-forward">                      <h3>
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Dare to Venture</div>
+      <span class="show-for-sr">.</span></h3>
+            <div class='image' aria-hidden="true">
+
+
+  <article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="177266"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2023/08/venture_forward_3.png?itok=lD_w5HU2 640w, /sites/default/files/styles/half_1x_crop/public/images/2023/08/venture_forward_3.png?itok=qADUpTd5 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2023/08/venture_forward_3.png?itok=qADUpTd5" alt="" typeof="foaf:Image" /></div></article>
+
+</div>
+            <div class='content'>
+              <span>
+                
+                                  From the Present to the Possible
+                              </span>
+            </div>
+                    </a>    </div>
+
+    <div class="content-tile content-tile-flashcard flashcard menu-spotlight">
+      <a href="https://goprincetontigers.com/">                      <h3>
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Athletics</div>
+      <span class="show-for-sr">.</span></h3>
+            <div class='image' aria-hidden="true">
+
+
+  <article class="view-mode-tile-small media media-image"><div class="field field--name-image field--type-image field--label-hidden field__item" data-mid="177261"><img loading="lazy" srcset="/sites/default/files/styles/third_1x_crop/public/images/2023/08/logo_main_0.png?itok=a1d5Vmrk 640w, /sites/default/files/styles/half_1x_crop/public/images/2023/08/logo_main_0.png?itok=Ue2ocWki 960w" sizes="(min-width:22.5em) 33.333vw, (min-width:120em) 25vw, 100vw" width="640" height="360" src="/sites/default/files/styles/half_1x_crop/public/images/2023/08/logo_main_0.png?itok=Ue2ocWki" alt="" typeof="foaf:Image" /></div></article>
+
+</div>
+            <div class='content'>
+              <span>
+                
+                                  Go Princeton Tigers
+                              </span>
+            </div>
+                    </a>    </div>
+
+</section>
+
+  </nav>
+<nav aria-labelledby="block-hobbes-utilitymenu-menu" id="block-hobbes-utilitymenu" data-block-plugin-id="system_menu_block:menu-toolbar" class="menu--menu-toolbar">
+            
+  <h2 class="visually-hidden" id="block-hobbes-utilitymenu-menu">Utility menu</h2>
+  
+
+        
+  
+  <ul class="utility-menu menu">
+    <li class="menu-item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+    </li>
+    <li class="menu-item">
+        <a href="/events" data-drupal-link-system-path="node/20286">Events</a>
+    </li>
+    <li class="menu-item">
+        <a href="/work/work-princeton" data-drupal-link-system-path="node/21131">Work at Princeton</a>
+    </li>
+    <li class="menu-item">
+        <a href="/links/students" data-drupal-link-system-path="node/20266">Student Links</a>
+    </li>
+    <li class="menu-item">
+        <a href="https://alumni.princeton.edu">Alumni</a>
+    </li>
+    <li class="menu-item">
+        <a href="https://alumni.princeton.edu/give">Giving</a>
+    </li>
+    <li class="menu-item">
+      <a href="https://inside.princeton.edu/university-links">Inside Princeton</a>
+    </li>
+  </ul>
+
+
+  </nav>
+
+
+  </dialog>
+
+  <footer class="page-footer">
+    <div class="row">
+              <div class="small-6 xmedium-3 columns">
+              <nav aria-labelledby="block-hobbes-footergroup1-menu" id="block-hobbes-footergroup1" data-block-plugin-id="system_menu_block:footer" class="menu--footer block--contact-links">
+            
+  <h2 class="visually-hidden" id="block-hobbes-footergroup1-menu" aria-hidden="true">Contact links</h2>
+  
+
+        
+              <ul class="menu vertical">
+                    <li class="menu-item">
+        <a href="/meet-princeton/contact-us" data-drupal-link-system-path="node/20181">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://accessibility.princeton.edu/resources/accessibility-help">Accessibility Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/search/people-advanced" data-drupal-link-system-path="search/people-advanced">Directory</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+        </div>
+                    <div class="small-6 xmedium-3 columns">
+              <nav aria-labelledby="block-hobbes-footergroup2-menu" id="block-hobbes-footergroup2" data-block-plugin-id="system_menu_block:footer-2" class="menu--footer-2 block--visiting-links">
+            
+  <h2 class="visually-hidden" id="block-hobbes-footergroup2-menu" aria-hidden="true">Visiting links</h2>
+  
+
+        
+              <ul class="menu vertical">
+                    <li class="menu-item">
+        <a href="/meet-princeton/visit-us" data-drupal-link-system-path="node/20531">Plan a Visit</a>
+              </li>
+                <li class="menu-item">
+        <a href="/meet-princeton/visit-us#campus-maps" data-drupal-link-system-path="node/20531">Maps &amp; Shuttles</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.goprincetontigers.com">Varsity Athletics</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://giving.princeton.edu">Giving to Princeton</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+        </div>
+                    <div class="small-6 xmedium-3 columns">
+              <nav aria-labelledby="block-hobbes-footergroup3-menu" id="block-hobbes-footergroup3" data-block-plugin-id="system_menu_block:footer-3" class="menu--footer-3 block--academic-links">
+            
+  <h2 class="visually-hidden" id="block-hobbes-footergroup3-menu" aria-hidden="true">Academic links</h2>
+  
+
+        
+            <ul class="menu vertical">
+                            <li class="menu-item">
+            <a href="http://library.princeton.edu">Library</a>
+                    </li>
+                        <li class="menu-item">
+            <a href="https://registrar.princeton.edu/academic-calendar/">Academic Calendar</a>
+                    </li>
+                        <li class="menu-item">
+            <a href="/links/students" data-drupal-link-system-path="node/20266">Student Links</a>
+                    </li>
+                        <li class="menu-item">
+            <a href="https://inside.princeton.edu/university-links">Faculty &amp; Staff Links</a>
+                    </li>
+        </ul>
+
+
+
+  </nav>
+
+
+        </div>
+                    <div class="small-6 xmedium-3 columns">
+              <nav aria-labelledby="block-hobbes-footersocialmedia-menu" id="block-hobbes-footersocialmedia" data-block-plugin-id="system_menu_block:footer-sm" class="menu--footer-sm block--footer-social-media">
+            
+  <h2 class="visually-hidden" id="block-hobbes-footersocialmedia-menu" aria-hidden="true">Footer social media</h2>
+  
+
+        
+              <ul class="menu vertical">
+                    <li class="menu-item sprite-before facebook">
+        <a href="https://www.facebook.com/princetonu">Facebook</a>
+              </li>
+                <li class="menu-item sprite-before twitter">
+        <a href="https://twitter.com/princeton">Twitter</a>
+              </li>
+                <li class="menu-item sprite-before instagram">
+        <a href="https://www.instagram.com/princeton/">Instagram</a>
+              </li>
+                <li class="menu-item sprite-before snapchat">
+        <a href="https://www.snapchat.com/add/princetonu">Snapchat</a>
+              </li>
+                <li class="menu-item sprite-before linkedin">
+        <a href="https://www.linkedin.com/school/157313/">LinkedIn</a>
+              </li>
+                <li class="menu-item sprite-before youtube">
+        <a href="https://www.youtube.com/princeton">YouTube</a>
+              </li>
+                <li class="menu-item sprite-before social-media-directory">
+        <a href="http://socialmedia.princeton.edu/accounts">Social Media Directory</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+        </div>
+          </div>
+    <div class="midfooter row">
+      <div class="columns">
+        <strong>Equal Opportunity and Nondiscrimination at Princeton University:</strong> Princeton University believes that commitment to principles of fairness and respect for all is favorable to the free and open exchange of ideas, and the University seeks to reach out as widely as possible in order to attract the ablest individuals as students, faculty, and staff. In applying this policy, the University is committed to nondiscrimination on the basis of personal beliefs or characteristics such as political views, religion, national origin, ancestry, race, color, sex, sexual orientation, gender identity or expression, pregnancy/childbirth, age, marital or domestic partnership status, veteran status, disability, genetic information and/or other characteristics protected by applicable law in any phase of its education or employment programs or activities. In addition, pursuant to Title IX of the Education Amendments of 1972 and supporting regulations, Princeton does not discriminate on the basis of sex in the education programs or activities that it operates; this extends to admission and employment. Inquiries about the application of Title IX and its supporting regulations may be directed to the Assistant Secretary for Civil Rights, Office for Civil Rights, U.S. Department of Education or to the University’s Sexual Misconduct/Title IX Coordinator. See Princeton’s full <a href="https://rrr.princeton.edu/eop">Equal Opportunity Policy and Nondiscrimination Statement</a>.
+      </div>
+    </div>
+      <div class="subfooter row" typeof="schema: Organization">
+          <div class="subfooter-first small-6 medium-4 large-5 columns">
+            <a href="http://www.princeton.edu"><img alt="" src="/themes/custom/hobbes/images/logo-white.svg"><span property="schema:name" class="show-for-sr">Princeton University</span></a>
+          </div>
+          <div class="subfooter-second small-6 medium-8 large-7 columns">
+            <div class="row">
+              <div class="small-12 medium-5 large-4 columns address">
+                <div property="schema: address" typeof="PostalAddress">
+                  <span property="addressLocality">Princeton, NJ</span>
+                  <span property="schema: postalCode">08544</span>
+                </div>
+                <div>Operator: <span property="telephone">(609) 258-3000</span></div>
+              </div>
+              <div class="small-12 medium-7 large-8 columns text-right">
+                <div class="copyright">
+                  &copy; 2024 The Trustees of Princeton&nbsp;University
+                </div>
+                                      <nav aria-labelledby="block-hobbes-subfooterlinks-menu" id="block-hobbes-subfooterlinks" data-block-plugin-id="system_menu_block:subfooter-links" class="menu--subfooter-links block--subfooter-links">
+            
+  <h2 class="visually-hidden" id="block-hobbes-subfooterlinks-menu" aria-hidden="true">Subfooter links</h2>
+  
+
+        
+        <ul class="menu float-right">
+          <li class="menu-item">
+        <a href="/content/copyright-infringement" data-drupal-link-system-path="node/20201">Copyright Infringement</a>
+      </li>
+          <li class="menu-item">
+        <a href="/privacy-notice" data-drupal-link-system-path="node/174186">Privacy Notice</a>
+      </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                              </div>
+
+              </div>
+          </div>
+                      </div>
+      </div>
+  </footer>
+
+
+  </div>
+
+    
+    <!-- DO NOT REMOVE this comment. The UltraDNS service tests for the following string to confirm that the site is available: ultradns-test-string -->
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/217486","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-1706522-1","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":".share-icons, .flashcard","extCssExplicit":"main, #block-hobbes-main-menu, #crumby-list","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"ajax":[],"user":{"uid":0,"permissionsHash":"58a79a70cecf5a50420d5489cc7910fc77d5a5bbbbabad6a316560fae9fcc8ed"}}</script>
+<script src="/sites/default/files/js/js_L2982srIu5gishLDyDFctL3LER87kqAtyHKf9f6ezKI.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=hobbes&amp;include=eJxdjVEOwiAQBS-E5UhmKc-WumWVhep6-hIjP_68ZCaTvFkK_PZsKOYWkYVxpUxsNc3q_4VT04rdB1K4VUJAb1gC8aDA9LEBN2k5Uk2Sh1lBh23q8K6c8t3H0h7E0w9HlfHSC5X-yHBH6uS_O-0SG-MEmmBFyQ"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-67e8b5519821728e13e","applicationID":"465817224","transactionName":"M1UGYktQVkAAV01YWwofJVVNWFddTkRYVlE7UwVVUVQ=","queueTime":6,"applicationTime":38,"atts":"HxIFFANKRU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

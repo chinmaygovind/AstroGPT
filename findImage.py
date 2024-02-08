@@ -4,18 +4,16 @@ import matplotlib.pyplot as plt
 import os
 
 imageDir = "static/images/"
+pagesDir = "static/imagepages/"
 
 async def queryImage(fileName):
     img1 = cv.imread(fileName,cv.IMREAD_GRAYSCALE) # queryImage
-
-
-
     allMatches = {}
 
     for directory in os.listdir(imageDir):
-        #print(fileName + ": Trying " + directory)
+        print(fileName + ": Trying " + directory)
         for filename in os.listdir(imageDir + directory):
-            #print("Trying " + directory + "/" + filename)
+            print("Trying " + directory + "/" + filename)
             img2 = cv.imread(imageDir + directory + "/" + filename,cv.IMREAD_GRAYSCALE) # trainImage
             # Initiate ORB detector
             orb = cv.ORB_create()
@@ -30,10 +28,11 @@ async def queryImage(fileName):
                 # Sort them in the order of their distance.
                 matches = sorted(matches, key = lambda x:x.distance)
                 # Draw first 10 matches.
-                img3 = cv.drawMatches(img1,kp1,img2,kp2,matches[:10],None,flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+                #img3 = cv.drawMatches(img1,kp1,img2,kp2,matches[:10],None,flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
                 allMatches[filename] = matches[0].distance
-            except:
+            except Exception as e:
+                print(e)
                 pass
 
     sortedMatches = dict(sorted(allMatches.items(), key=lambda item: item[1]))

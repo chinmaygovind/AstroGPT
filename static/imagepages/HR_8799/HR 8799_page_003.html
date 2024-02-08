@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+  <head>
+  <base href="https://www.astro.uni-jena.de/index.php/theory/projects21/41-gsh/gsh-sonstiges/47-architecturehr8799.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Astropysics, Exoplaneten, Neutron Stars, Terra-Astronomy" />
+	<meta name="author" content="Matthias Gothe" />
+	<meta name="description" content="AIU - Astrophysical Institute and University Observatory" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>A possible architecture of the planetary system HR 8799</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/home/astro/WWW/WWW2/plugins/content/responsive-tables/responsive-tables.css" rel="stylesheet" type="text/css" />
+	<link href="/plugins/content/aiugraphmenu1/aiugraphmenu.css" rel="stylesheet" type="text/css" />
+	<link href="/plugins/system/jce/css/content.css?6c49b5832ad4292d25ddf2f6eb235f22" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap.min.css?6c49b5832ad4292d25ddf2f6eb235f22" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap-responsive.min.css?6c49b5832ad4292d25ddf2f6eb235f22" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap-extended.css?6c49b5832ad4292d25ddf2f6eb235f22" rel="stylesheet" type="text/css" />
+	<link href="/media/system/css/modal.css?6c49b5832ad4292d25ddf2f6eb235f22" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"bf72f73d8b1e14429d4fb98cf50ed1b9","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/system/js/core.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script src="/media/system/js/modal.js?6c49b5832ad4292d25ddf2f6eb235f22" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			initSqueezeBox();
+			$(document).on('subform-row-add', initSqueezeBox);
+
+			function initSqueezeBox(event, container)
+			{
+				SqueezeBox.assign($(container || document).find('a.modal').get(), {
+					parse: 'rel'
+				});
+			}
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+	</script>
+
+  <link rel="stylesheet" href="/templates/aiu3/css/layout.css" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/templates/aiu3/img/aiu.ico">
+    <script language="JavaScript" type="text/javascript">
+        function toggleMe(a){ 
+           var e=document.getElementById(a);
+           if(!e) return true;
+           if(e.style.display=="none"){
+              e.style.display="block"
+           } else {
+              e.style.display="none"
+           }
+           return true;
+        }
+    </script>
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <div id="header"><h1>Astrophysikalisches Institut und<br />Universit&auml;ts-Sternwarte</h1>
+                     <h2>Astrophysical Institute and University Observatory</h2>
+         <h2 id="fsu">Friedrich-Schiller-Universität Jena</h2>
+      <div id="header_img">&nbsp;</div>
+    </div>
+    <div id="main">
+      <div id="left_menu">
+        <div id="sel_menu">
+          
+        </div>
+        <div style="clear:both;"></div>
+
+        <ul class="nav menu mod-list">
+<li class="item-21"><a href="/index.php/home.html" >Home/science</a></li><li class="item-42"><a href="/index.php/lehre.html" >Lehre</a></li></ul>
+<ul class="nav menu mod-list">
+<li class="item-34"><a href="/index.php/personen.html" >People</a></li><li class="item-35"><a href="/index.php/presse.html" >Press</a></li><li class="item-441"><a href="/index.php/gallery.html" >Gallery</a></li><li class="item-36"><a href="/index.php/jobs.html" >Jobs / Praktika</a></li><li class="item-38"><a href="/index.php/kontakt.html" >Contact</a></li><li class="item-39"><a href="/index.php/links.html" >Links</a></li><li class="item-146"><a href="/index.php/events/year.listevents/2024/02/08/-.html" >Events</a></li><li class="item-147"><a href="/index.php/publications43.html" >Publications</a></li><li class="item-148"><a href="/index.php/reports.html" >Jahresberichte</a></li><li class="item-376"><a href="/index.php/aiu-history.html" >Historisches</a></li><li class="item-465"><a href="/index.php/more-articles.html" >Highlights</a></li></ul>
+<ul class="nav menu mod-list">
+<li class="item-139"><a href="/index.php/internal-login.html" >Internal Pages</a></li></ul>
+
+      </div>
+      
+      <div id="left_wrapper">
+        <div class="top_menu" id="top_menu_mainlev">
+          <ul class="nav menu mod-list">
+<li class="item-51 default"><a href="/index.php" >Home</a></li><li class="item-428"><a href="/index.php/terra-astronomy.html" >Terra-Astronomy</a></li><li class="item-57 deeper parent"><a href="/index.php/observations.html" >Observations</a><ul class="nav-child unstyled small"><li class="item-573"><a href="/index.php/observations/exoplanet-host-stars.html" >Exoplanet Host Stars</a></li><li class="item-64"><a href="/index.php/observations/substellar-companions.html" >Substellar Companions</a></li><li class="item-68 deeper parent"><a href="/index.php/observations/neutron-stars.html" >Neutron Stars</a><ul class="nav-child unstyled small"><li class="item-85"><a href="/index.php/observations/neutron-stars/nina.html" >Members</a></li><li class="item-86 deeper parent"><a href="/index.php/observations/neutron-stars/nina3.html" >Projects</a><ul class="nav-child unstyled small"><li class="item-93"><a href="/index.php/observations/neutron-stars/nina3/nina10.html" >Neutron star kinematics</a></li><li class="item-97"><a href="/index.php/observations/neutron-stars/nina3/nina14.html" >Search for new neutron stars</a></li><li class="item-105"><a href="/index.php/observations/neutron-stars/nina3/nina16.html" >Optical Investigations</a></li><li class="item-106"><a href="/index.php/observations/neutron-stars/nina3/nina17.html" >Constraining the EoS from X-ray observations</a></li></ul></li><li class="item-87"><a href="/index.php/observations/neutron-stars/nina4.html" >Publications</a></li><li class="item-88 deeper parent"><a href="/index.php/observations/neutron-stars/nina5.html" >Webtools and databases</a><ul class="nav-child unstyled small"><li class="item-89"><a href="/index.php/observations/neutron-stars/nina5/nina6.html" >Net-PSICoNS</a></li></ul></li></ul></li><li class="item-116"><a href="/index.php/observations/yeti.html" >YETI (transits)</a></li><li class="item-173 deeper parent"><a href="/index.php/observations/instrumentation.html" >Instrumentation</a><ul class="nav-child unstyled small"><li class="item-175"><a href="/index.php/observations/instrumentation/2012-04-05-12-40-18.html" target="_blank">Instrumentation in GSH</a></li><li class="item-174"><a href="/index.php/observations/instrumentation/mammut.html" >MAMMUT</a></li><li class="item-181"><a href="/index.php/observations/instrumentation/mirror-coating.html" >Mirror coating</a></li></ul></li></ul></li><li class="item-58 active deeper parent"><a href="/index.php/theory.html" >Disks &amp; Planets</a><ul class="nav-child unstyled small"><li class="item-112"><a href="/index.php/theory/theory-people20.html" >People</a></li><li class="item-113 current active"><a href="/index.php/theory/projects21.html" >Projects</a></li><li class="item-114"><a href="/index.php/theory/publications-theory.html" >Publications</a></li><li class="item-461"><a href="/index.php/theory/catalog-of-resolved-debris-disks.html" >Catalog of resolved debris disks</a></li><li class="item-115"><a href="/index.php/theory/misc.html" >Miscellaneous</a></li></ul></li><li class="item-52 deeper parent"><a href="/index.php/laboratory.html" >Lab &amp; Dust</a><ul class="nav-child unstyled small"><li class="item-73"><a href="/index.php/laboratory/lab-staff.html" >AIU Lab People</a></li><li class="item-76"><a href="/index.php/laboratory/publications.html" >Publications</a></li><li class="item-77"><a href="/index.php/laboratory/databases.html" >Databases</a></li><li class="item-78 deeper parent"><a href="/index.php/laboratory/projects.html" >Projects</a><ul class="nav-child unstyled small"><li class="item-79"><a href="/index.php/laboratory/projects/colors.html" >Colors of Stardust</a></li><li class="item-80"><a href="/index.php/laboratory/projects/high-t-optical-constants.html" >High-T Spectra</a></li><li class="item-81"><a href="/index.php/laboratory/projects/far-infrared-dust-opacity.html" >Current: FIR Dust Opacity</a></li><li class="item-84"><a href="/index.php/laboratory/projects/aerosol-infrared-spectroscopy.html" >Aerosol Spectroscopy</a></li></ul></li><li class="item-110"><a href="/index.php/laboratory/home19.html" >Home</a></li></ul></li><li class="item-123"><a href="/index.php/gsh-home.html" >GSH Observatory</a></li><li class="item-458"><a href="/FOR2285" target="_blank" rel="noopener noreferrer">FOR2285</a></li></ul>
+
+        </div>
+                
+                
+        
+        <div id="pathway">
+          <div aria-label="Breadcrumbs" role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+					<li class="active">
+				<span class="divider icon-location"></span>
+			</li>
+		
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php" class="pathway"><span itemprop="name">Home</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="1">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php/theory.html" class="pathway"><span itemprop="name">Disks &amp; Planets</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="2">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php/theory/projects21.html" class="pathway"><span itemprop="name">Projects</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="3">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php/theory/projects21/39-aiu.html" class="pathway"><span itemprop="name">AIU</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="4">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php/theory/projects21/25-aiu/aiu-science.html" class="pathway"><span itemprop="name">science</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="5">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<span itemprop="name">
+						A possible architecture of the planetary system HR 8799					</span>
+					<meta itemprop="position" content="6">
+				</li>
+				</ul>
+</div>
+
+        </div>
+          
+                <div id="content_without_right_wrap">
+                  <div id="content">
+            <div id="system-message-container">
+	</div>
+
+            <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+						
+		
+	
+	
+		
+								<div itemprop="articleBody">
+		<h1 style="text-align: center;">A possible architecture of the planetary system HR 8799</h1>
+<table style="margin-left: auto; margin-right: auto;" border="0">
+<tbody>
+<tr>
+<td colspan="2" align="center"><a href="/~theory/pics/scatterplot.jpg"><img style="vertical-align: middle;" src="/~theory/pics/scatterplot.jpg" width="600" /></a><br /><em>Click on image for original size</em></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;" align="justify"><span style="color: #000000;">HR 8799 is a planetary system with several planets, planetesimal belts, and dust. We made a coherent analysis of various observational data for all known components of the system. Our results pose new constraints on the age of the system, masses and orbits of the planets, as well as the location and masses of the dust belts. Despite some apparent similarities with the Solar system, a close inspection uncovers significant differences between the two systems. They reveal different architecture, have likely formed in different ways, and probably follow different evolutionary paths.</span></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><a target="_blank" href="http://idw-online.de/pages/de/news330026">FSU press release</a></p>
+<p align="justify"><a target="_blank" href="http://adsabs.harvard.edu/abs/2009A%26A...503..247R">Read the Refereed Article</a></p>
+<p align="justify">&nbsp;</p> 	</div>
+
+	
+							</div>
+          </div>
+        </div>
+        <p id="syndicate">
+          
+        </p>
+        <div style="clear:both;"></div>
+        <div id="bottom_right">
+          optimiert zur Anzeige auf <a href="http://www.mozilla.org/firefox/" target="_blank">Mozilla Firefox</a> | 
+          <a href="/index.php?option=com_content&view=article&id=59" target="_self">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  </body>
+</html>

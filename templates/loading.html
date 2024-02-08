@@ -20,22 +20,7 @@
             background-color: #0056b3;
         }
 
-        #imageDisplay {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            max-width: 200px;
-            max-height: 200px;
-            overflow: hidden;
-            border: 1px solid #ccc;
-            display: none;
-        }
-
-        /* Style for the image within the display container */
-        #displayedImg {
-            width: 100%;
-            height: auto;
-        }
+        
         video#bgVideo {
         position: fixed;
         right: 0;
@@ -47,6 +32,21 @@
         z-index: -100;    
         background-size: cover;
         }
+        #imageDisplay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        /* Style for the image within the display container */
+        #displayedImg {
+            width: 100%;
+            height: auto;
+        }
         
     </style>
 </head>
@@ -56,6 +56,10 @@
     <h1>AstroGPT</h1>
     <p>Searching for your image... </p>
     <p id = "status">Status: </p>
+    
+    <div id="imageDisplay">
+        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}.png" alt="Uploaded Image">
+    </div>
     
     <script>
         function updateStatus() {

@@ -4,28 +4,12 @@
     <meta charset="UTF-8">
     <title>AstroGPT</title>
     <style>
-        /* Styles for the buttons */
-        .button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        /* Style for hover effect on the buttons */
-        .button:hover {
-            background-color: #0056b3;
-        }
-
         #imageDisplay {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            max-width: 200px;
-            max-height: 200px;
+            max-width: 25%;
+            max-height: 25%;
             overflow: hidden;
             border: 1px solid #ccc;
             display: none;
@@ -36,36 +20,84 @@
             width: 100%;
             height: auto;
         }
-        video#bgVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        width: auto;
-        min-width: 100%;
-        height: auto;
-        min-height: 100%;
-        z-index: -100;    
-        background-size: cover;
+        video {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -100;
         }
+
+        h1 {
+            font-size: 50em;
+            color: rgb(255, 243, 230);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2%;
+        }
+
+        /* Styles for the buttons */
+        .button {
+            padding: 2% 4%;
+            margin: 1% 1%;
+            width: 30%;
+            height: 10%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 2%;
+            cursor: pointer;
+            font-size: 10em;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right: 10px;
+        }
+
+        /* Style for hover effect on the buttons */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #submit {
+            padding: 2% 4%;
+            margin: 1% 1%;
+            width: 20%;
+            height: 7%;
+            background-color: #096f9e;
+            color: #fff;
+            border: none;
+            border-radius: 2%;
+            cursor: pointer;
+            font-size: 10em;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right: 10px;
+        }
+        
         
     </style>
 </head>
 <body>
-        
+    <video playsinline autoplay muted loop id="bgvid">
+        <source src="/static/media/space.mp4" type="video/mp4">
+      </video>   
 
     <h1>AstroGPT</h1>
     <p>This is a simple Flask server serving a basic webpage.</p>
     <button id="uploadButton" class="button">Upload Image</button>
     <button id="clipboardButton" class="button">Paste from Clipboard</button>
     
-    
-    
-    <form action = "/create-search" method = "post" enctype="multipart/form-data">   
-        <input type= "file" id="image-input" name="image-input"/>
-        <input type = "submit" value="Submit!" />   
+    <form id = "image-form" action = "/create-search" method = "post" enctype="multipart/form-data">   
+        <input style = "display: none" type= "file" id="image-input" name="image-input"/>
+        <input id = "submit" type = "submit" value="Submit!" />   
     </form>   
+    
+    <p id = "status" style = "display: none">Status: </p>
+    
     <div id="imageDisplay">
-        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}" alt="Uploaded Image">
+        <img id="displayedImg" src="" alt="Uploaded Image">
+    </div>
+    <div id="imageDisplay">
+        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}.png" alt="Uploaded Image">
     </div>
 
     <script>
@@ -79,6 +111,34 @@
             displayImage(file);
         });
 
+        function updateStatus() {
+        // Make a GET request to your endpoint
+        fetch('/check-search?requestID={{myRequestID}}') // Replace '/your-endpoint' with your actual endpoint
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Update the status div with the received data
+                document.getElementById('status').innerText = "Status: " + data.status;
+                if (data.status == "finished") {
+                    window.location.href = "results?requestID={{myRequestID}}";
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                document.getElementById('status').innerText = 'Error fetching status';
+            });
+        }
+
+        document.getElementById('submit').addEventListener("click", function(event) {
+
+            // Call the function initially and then every second
+            updateStatus(); // Update immediately
+            setInterval(updateStatus, 1000);
+        });
 
         
         document.onpaste = function (event) {
