@@ -18,12 +18,12 @@
         /* Style for the image within the display container */
         #displayedImg {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
         video {
             object-fit: cover;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             position: fixed;
             top: 0;
             left: 0;
@@ -31,7 +31,7 @@
         }
 
         h1 {
-            font-size: 50em;
+            font-size: 1500%;
             color: rgb(255, 243, 230);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 2%;
@@ -48,7 +48,7 @@
             border: none;
             border-radius: 2%;
             cursor: pointer;
-            font-size: 10em;
+            font-size: 300%;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin-right: 10px;
         }
@@ -68,7 +68,7 @@
             border: none;
             border-radius: 2%;
             cursor: pointer;
-            font-size: 10em;
+            font-size: 200%;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin-right: 10px;
         }
@@ -95,9 +95,6 @@
     
     <div id="imageDisplay">
         <img id="displayedImg" src="" alt="Uploaded Image">
-    </div>
-    <div id="imageDisplay">
-        <img id="displayedImg" src="/static/queryimages/image_{{myRequestID}}.png" alt="Uploaded Image">
     </div>
 
     <script>

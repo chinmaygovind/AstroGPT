@@ -13,7 +13,7 @@ async def queryImage(fileName):
     for directory in os.listdir(imageDir):
         print(fileName + ": Trying " + directory)
         for filename in os.listdir(imageDir + directory):
-            print("Trying " + directory + "/" + filename)
+            #print("Trying " + directory + "/" + filename)
             img2 = cv.imread(imageDir + directory + "/" + filename,cv.IMREAD_GRAYSCALE) # trainImage
             # Initiate ORB detector
             orb = cv.ORB_create()

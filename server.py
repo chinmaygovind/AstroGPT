@@ -52,13 +52,18 @@ def fetch_results():
             entry = {}
             entry["title"] = image[:image.index('_')]
             entry["image"] = imageDir + entry["title"].replace(" ", "_") + "/" + image
+            entry["hasLink"] = False
             hrefDir = pagesDir + entry["title"].replace(" ", "_") + "/" + image.replace(".png", ".html")
+            hrefDir = hrefDir[:-8] + "page_" + hrefDir[-8:]
+            print(hrefDir)
             try:
-                if Path(hrefDir).is_file():
-                    entry["href"] = pagesDir + entry["title"].replace(" ", "_") + "/" + image.replace(".png", ".html")
-            except:
+                if os.path.isfile(hrefDir):
+                    entry["hasLink"] = True
+                    entry["href"] = hrefDir
+            except Exception as e:
+                print(e)
                 entry["href"] = None
-            entry["description"] = "placeholder description"
+            entry["description"] = "This is a deep space object!"
             data.append(entry)
         return jsonify(data)
     else:

@@ -77,7 +77,8 @@
 
                     cell1.innerHTML = item.title;
                     cell2.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';    
-                    if (item.href) 
+                    console.log(item);
+                    if (item.hasLink) 
                         cell3.innerHTML = '<a href="' + item.href + '">' + item.description + '</a>';
                     else 
                         cell3.innerHTML = item.description;
