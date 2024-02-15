@@ -10,9 +10,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 #'Carina Nebula', 'NGC 1333', 'TW Hya', 'HH 7-11', 'AB Aurigae', 'HD 169142', 'Luhman 16', 'V830 Tau b', 'V 1298 Tau b', 'WASP-18b', 
-DSOS = ['Carina Nebula', 'NGC 1333', 'TW Hya', 'HH 7-11', 'AB Aurigae', 'HD 169142', 'Luhman 16', 'V830 Tau b', 'V 1298 Tau b', 'WASP-18b', 'WASP-39b', 'WASP-43b', 'HR 8799', 'Beta Pictoris', '2M 1207', 'TRAPPIST-1']
-
-for search_term in DSOS:
+#DSOs = ['Carina Nebula', 'NGC 1333', 'TW Hya', 'HH 7-11', 'AB Aurigae', 'HD 169142', 'Luhman 16', 'V830 Tau b', 'V 1298 Tau b', 'WASP-18b', 'WASP-39b', 'WASP-43b', 'HR 8799', 'Beta Pictoris', '2M 1207', 'TRAPPIST-1']
+#DSOs = ['HH 7-11']
+DSOs = ['HR 8799', 'Beta Pictoris', '2M 1207', 'TRAPPIST-1']
+for search_term in DSOs:
     options = webdriver.ChromeOptions()
     options.add_argument('--headless=new')
     service = Service(executable_path='chromedriver.exe')
@@ -22,7 +23,7 @@ for search_term in DSOS:
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     browser = webdriver.Chrome(service=service, options=options)
 
-    url = rf'https://www.google.no/search?q={search_term}&client=opera&hs=cTQ&source=lnms&tbm=isch&sa=X&safe=active&ved=0ahUKEwig3LOx4PzKAhWGFywKHZyZAAgQ_AUIBygB&biw=1920&bih=9000'
+    url = rf'https://www.google.com/search?q={search_term}&client=opera&hs=cTQ&source=lnms&tbm=isch&sa=X&safe=active&ved=0ahUKEwig3LOx4PzKAhWGFywKHZyZAAgQ_AUIBygB&biw=1920&bih=9000'
 
     print("Searching " + search_term + "...")
     print("Loading page...")
@@ -48,25 +49,27 @@ for search_term in DSOS:
     for raw_img in soup.find_all('img'):
         link = raw_img.get('src')
         
-        if link and link.startswith("https://") and "thumbnail" not in link and "favicon" not in link.lower() and "fonts.gstatic.com" not in link.lower():
+        if link and link.startswith("https://") and "thumbnail" not in link and "favicon" not in link.lower() and "fonts.gstatic.com" not in link.lower() and "doodle" not in link.lower():
             thumbnails.append(raw_img)
             pass
 
-    num = 0
     directory = "static/images/{object}/".format(object=search_term).replace(" ", "_")
+    master_directory = "static/images/master/"
     pagedirectory = "static/imagepages/{object}/".format(object=search_term).replace(" ", "_")
     if not os.path.isdir(directory): os.makedirs(directory)
     if not os.path.isdir(pagedirectory): os.makedirs(pagedirectory)
+    num = len(os.listdir(directory))
     for image in thumbnails:
         try:
             children = image.parent.parent.parent.find_all("a", recursive=False)
             #Saving Image
             imgpath = directory + search_term + "_{0:03}.png".format(num)
             urllib.request.urlretrieve(image["src"], imgpath)
+            urllib.request.urlretrieve(image["src"], master_directory + search_term + "_{0:03}.png".format(num))
             print("Downloading image: " + image["src"])
             myHref = None
             for child in children:
-                print(child)
+                #print(child)
                 link = child.get("href")
                 if link and link.startswith("https://") and "thumbnail" not in link and "favicon" not in link.lower() and "fonts.gstatic.com" not in link.lower():
                     myHref = link

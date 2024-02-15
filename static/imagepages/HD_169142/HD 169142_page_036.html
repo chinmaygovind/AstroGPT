@@ -1,588 +1,3084 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-<!-- Always force latest IE rendering engine or request Chrome Frame -->
-<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3f776c1fa0","applicationID":"18256344","transactionName":"elhfQRdXWQkHFBgOUVpaQhoVVFQLBxJETEBRWEY=","queueTime":0,"applicationTime":223,"agent":""}</script>
-<script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UAYDV1NVGwIIVlRUBAUD",licenseKey:"3f776c1fa0",applicationID:"18256344"};;/*! For license information please see nr-loader-full-1.251.1.min.js.LICENSE.txt */
-(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>m,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>D,lF:()=>j,Yu:()=>_,Dg:()=>v,CX:()=>c,GE:()=>x,sU:()=>O});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var u=r(7056),l=r(50);const f="[data-nr-mask]",h=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:u.oD,inactiveMs:u.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:50,error_sampling_rate:50,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},g="All configuration objects require an agent identifier!";function m(e){if(!e)throw new Error(g);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function v(e,t){if(!e)throw new Error(g);p[e]=(0,i.D)(t,h());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(g);var r=m(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function x(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),S=r(6818);const T={buildEnv:S.Re,customTransaction:void 0,disabled:!1,distMethod:S.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:S.q4,denyList:void 0},R={};function D(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function O(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]=(0,i.D)(t,T);const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function j(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,lF:()=>a,q4:()=>n});const n="1.251.1",i="PROD",o="CDN",a="2.0.0-alpha.11"},385:(e,t,r)=>{"use strict";r.d(t,{FN:()=>s,IF:()=>u,Nk:()=>f,Tt:()=>c,_A:()=>o,cv:()=>h,iS:()=>a,il:()=>n,ux:()=>d,v6:()=>i,w1:()=>l});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=""+o?.location,c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=(()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),l=Boolean(n&&window.document.documentMode),f=!!o.navigator?.sendBeacon,h=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>u,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function d(e){e&&(s[e]||(s[e]=new Map))}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(d(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=[...s[e]];function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var d=0;s&&d<s.length;++d)l(s[d],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((t=>{let[r]=t;s[e].delete(r),a(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>d});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),d=function e(t,r){var n={},s={},u={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var h={on:g,addEventListener:g,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(d.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=m(e),u=c.length,l=0;l<u;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([h,e,r,a]);return a},get:v,listeners:m,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",h.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return h;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function g(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function v(t){return u[t]=u[t]||e(h,t)}function b(){return h.backlog}}(void 0,"globalEE"),u=(0,n.fP)();function l(){d.aborted=!0,d.backlog={}}u.ee||(u.ee=d)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Ht:()=>d,M:()=>c,Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function d(){return s(32)}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},7243:(e,t,r)=>{"use strict";r.d(t,{e:()=>i});var n=r(385);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n._A?.location?.protocol&&t.host===n._A?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>u,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},d=new Set;function u(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(d.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),d.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,ce:()=>o,ek:()=>d,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function d(e){let t=a();return t.initializedAgents?.[e]}function u(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},1214:(e,t,r)=>{"use strict";r.d(t,{em:()=>b,u5:()=>R,QU:()=>j,Kf:()=>k});var n=r(8325),i=r(3117);const o="nr@original:".concat(i.a);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],d=e[c];u(d)||(e[c]=r(d,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return u(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){d([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,u,l;try{a=this,o=[...arguments],u="function"==typeof n?n(o,a):n||{}}catch(t){d([t,"",[o,a,s],u],e)}i(r+"start",[o,a,s],u,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],u,c),e}finally{i(r+"end",[o,a,l],u,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){d([t,r,n,i],e)}s=a}}}function d(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function u(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}var l=r(2210),f=r(385);const h={},p=f._A.XMLHttpRequest,g="addEventListener",m="removeEventListener",v="nr@wrapped:".concat(n.A);function b(e){var t=function(e){return(e||n.ee).get("events")}(e);if(h[t.debugId]++)return t;h[t.debugId]=1;var r=c(t,!0);function i(e){r.inPlace(e,[g,m],"-",o)}function o(e,t){return e[1]}return"getPrototypeOf"in Object&&(f.il&&y(document,i),y(f._A,i),y(p.prototype,i)),t.on(g+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,l.X)(n,v,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(m+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function y(e,t){let r=e;for(;"object"==typeof r&&!Object.prototype.hasOwnProperty.call(r,g);)r=Object.getPrototypeOf(r);for(var n=arguments.length,i=new Array(n>2?n-2:0),o=2;o<n;o++)i[o-2]=arguments[o];r&&t(r,...i)}var A="fetch-",w=A+"body-",x=["arrayBuffer","blob","json","text","formData"],_=f._A.Request,E=f._A.Response,S="prototype";const T={};function R(e){const t=function(e){return(e||n.ee).get("fetch")}(e);if(!(_&&E&&f._A.fetch))return t;if(T[t.debugId]++)return t;function r(e,r,i){var o=e[r];"function"==typeof o&&(e[r]=function(){var e,r=[...arguments],a={};t.emit(i+"before-start",[r],a),a[n.A]&&a[n.A].dt&&(e=a[n.A].dt);var s=o.apply(this,r);return t.emit(i+"start",[r,e],s),s.then((function(e){return t.emit(i+"end",[null,e],s),e}),(function(e){throw t.emit(i+"end",[e],s),e}))})}return T[t.debugId]=1,x.forEach((e=>{r(_[S],e,w),r(E[S],e,w)})),r(f._A,"fetch",A),t.on(A+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(A+"done",[null,r],n)}else t.emit(A+"done",[e],n)})),t}const D={},O=["pushState","replaceState"];function j(e){const t=function(e){return(e||n.ee).get("history")}(e);return!f.il||D[t.debugId]++||(D[t.debugId]=1,c(t).inPlace(window.history,O,"-")),t}var I=r(3239);var P=r(50);const C={},N=["open","send"];function k(e){var t=e||n.ee;const r=function(e){return(e||n.ee).get("xhr")}(t);if(C[r.debugId]++)return r;C[r.debugId]=1,b(t);var i=c(r),o=f._A.XMLHttpRequest,a=f._A.MutationObserver,s=f._A.Promise,d=f._A.setInterval,u="readystatechange",l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],h=[],p=f._A.XMLHttpRequest=function(e){const t=new o(e),n=r.context(t);try{r.emit("new-xhr",[t],n),t.addEventListener(u,(a=n,function(){var e=this;e.readyState>3&&!a.resolved&&(a.resolved=!0,r.emit("xhr-resolved",[],e)),i.inPlace(e,l,"fn-",w)}),(0,I.m$)(!1))}catch(e){(0,P.Z)("An error occurred while intercepting XHR",e);try{r.emit("internal-error",[e])}catch(e){}}var a;return t};function g(e,t){i.inPlace(t,["onreadystatechange"],"fn-",w)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,p),p.prototype=o.prototype,i.inPlace(p.prototype,N,"-xhr-",w),r.on("send-xhr-start",(function(e,t){g(e,t),function(e){h.push(e),a&&(m?m.then(A):d?d(A):(v=-v,y.data=v))}(t)})),r.on("open-xhr-start",g),a){var m=s&&s.resolve();if(!d&&!s){var v=1,y=document.createTextNode(v);new a(A).observe(y,{characterData:!0})}}else t.on("fn-end",(function(e){e[0]&&e[0].type===u||A()}));function A(){for(var e=0;e<h.length;e++)g(0,h[e]);h.length&&(h=[])}function w(e,t){return t}return r}},7825:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.ajax},6660:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.jserrors},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},4649:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageAction},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{J0:()=>l,Mi:()=>u,Vb:()=>o,Ye:()=>s,fm:()=>c,i9:()=>a,t9:()=>i,u0:()=>d});var n=r(7056);const i=r(3325).D.sessionReplay,o=.12,a={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},s=1e6,c=64e3,d={[n.IK.ERROR]:15e3,[n.IK.FULL]:3e5,[n.IK.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},l=5e3},3614:(e,t,r)=>{"use strict";r.d(t,{BST_RESOURCE:()=>i,END:()=>s,FEATURE_NAME:()=>n,FN_END:()=>d,FN_START:()=>c,PUSH_STATE:()=>u,RESOURCE:()=>o,START:()=>a});const n=r(3325).D.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,d="fn"+s,u="pushState"},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),d=r(3960),u=r(385),l=r(50),f=r(3081),h=r(8632);function p(){const e=(0,h.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var g=r(2825);const m=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let v=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:x,runtime:_={loaderType:b},exposed:E=!0}=t;const S=(0,h.gG)();w||(A=S.init,w=S.info,x=S.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,x||{}),w.jsAttributes??={},u.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const T=(0,i.P_)(e.agentIdentifier),R=[w.beacon,w.errorBeacon];v||(T.proxy.assets&&(m(T.proxy.assets),R.push(T.proxy.assets)),T.proxy.beacon&&R.push(T.proxy.beacon),p(),(0,h.EZ)("activatedFeatures",g.T)),_.denyList=[...T.ajax.deny_list||[],...T.ajax.block_internal?R:[]],(0,i.sU)(e.agentIdentifier,_),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const h={};var p=a.ee.get(e),g=p.get("tracer"),m="api-",v=m+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(m,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{h[e]=w(m,e,!0,"api")})),h.addPageAction=w(m,"addPageAction",!0,n.D.pageAction),h.setCurrentRouteName=w(m,"routeName",!0,n.D.spa),h.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(m,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},h.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},h.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},h.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},h.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(v+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(g.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw g.emit("fn-err",[arguments,this,e],r),e}finally{g.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function x(){r.e(63).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(v,e,void 0,n.D.spa)})),h.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},u.il?(0,d.b2)((()=>x()),!0):x(),h}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),v=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({63:"nr-full",110:"nr-full-compressor",379:"nr-full-recorder"}[e]+"-1.251.1.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.251.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={63:"sha512-RYA+b++nKlEZKeMEydjhnnADMKlfjKQTmGzejZPgAV9Yo+McKt+LWJ+i8r8f5eIAuJME0KCT6nCqGsEKii2pdw==",379:"sha512-QxvWQvEFWcLPJgBlbdBOZd3wugtQ0B7MEvWHMAbFkxUj0pKI7uRstlw/YW6T6C+hWchMRzKvU0PymDdq4doEAA==",110:"sha512-ckXyayN+7Mded+a54tp4ZTdKkpgAZmeby4SxPF7NLDGmXGRYV19GWxJ+t3MQhrdE2wxPNv8IdswRIRH0J6STXw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={29:0,789:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,d=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);d<a.length;d++)o=a[d],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.251.1.PROD"]=self["webpackChunk:NRBA-1.251.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),d=i(5938),u=i(3960),l=i(385);class f extends d.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(63).then(i.bind(i,1656));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(63).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName),o(!1)}};l.il?(0,u.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var h=i(7633);class p extends f{static featureName=h.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,h.t,r),this.importAggregator()}}var g=i(1117),m=i(1284);class v extends g.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,m.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,m.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,m.D)(e,w)}function w(e,t){return t}var x=i(8632),_=i(4402),E=i(4351);var S=i(5546),T=i(7956),R=i(3239),D=i(7894),O=i(9251);class j extends f{static featureName=O.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t,r),l.il&&((0,T.N)((()=>(0,S.p)("docHidden",[(0,D.z)()],void 0,O.t,this.ee)),!0),(0,R.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,D.z)()],void 0,O.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}var C=i(6660);class N{constructor(e,t,r,n){this.name="UncaughtError",this.message=e,this.sourceURL=t,this.line=r,this.column=n}}class k extends f{static featureName=C.t;#t=new Set;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,C.t,n);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("fn-err",((e,t,n)=>{this.abortHandler&&!this.#t.has(n)&&(this.#t.add(n),(0,S.p)("err",[this.#r(n),(0,D.z)()],void 0,r.D.jserrors,this.ee))})),this.ee.on("internal-error",(e=>{this.abortHandler&&(0,S.p)("ierr",[this.#r(e),(0,D.z)(),!0],void 0,r.D.jserrors,this.ee)})),l._A.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,S.p)("err",[this.#n(e),(0,D.z)(),!1,{unhandledPromiseRejection:1}],void 0,r.D.jserrors,this.ee)}),(0,R.m$)(!1,this.removeOnAbort?.signal)),l._A.addEventListener("error",(e=>{this.abortHandler&&(this.#t.has(e.error)?this.#t.delete(e.error):(0,S.p)("err",[this.#i(e),(0,D.z)()],void 0,r.D.jserrors,this.ee))}),(0,R.m$)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#o,this.importAggregator()}#o(){this.removeOnAbort?.abort(),this.#t.clear(),this.abortHandler=void 0}#r(e){return e instanceof Error?e:void 0!==e?.message?new N(e.message,e.filename||e.sourceURL,e.lineno||e.line,e.colno||e.col):new N("string"==typeof e?e:(0,E.P)(e))}#n(e){let t="Unhandled Promise Rejection: ";if(e?.reason instanceof Error)try{return e.reason.message=t+e.reason.message,e.reason}catch(t){return e.reason}if(void 0===e.reason)return new N(t);const r=this.#r(e.reason);return r.message=t+r.message,r}#i(e){return e.error instanceof Error?e.error:new N(e.message,e.filename,e.lineno,e.colno)}}var H=i(2210);let M=1;const z="nr@id";function L(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===l._A?0:(0,H.X)(e,z,(function(){return M++}))}function F(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,E.P)(e).length}catch(e){return}}}var B=i(1214),U=i(7243);class q{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,n.DL)(this.agentIdentifier);if(!t)return null;var r=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!r||!i)return null;var a=(0,_.M)(),s=(0,_.Ht)(),c=Date.now(),d={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(d.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),d.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,r,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(d.newrelicHeader=this.generateTraceHeader(a,s,c,r,i,o)),d}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof l._A?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,E.P)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,n.Mt)(this.agentIdentifier,"distributed_tracing")&&(r=(0,n.P_)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var i=0;i<r.allowed_origins.length;i++){var o=(0,U.e)(r.allowed_origins[i]);if(e.hostname===o.hostname&&e.protocol===o.protocol&&e.port===o.port){t=!0;break}}return t}isDtEnabled(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var V=i(7825),Z=["load","error","abort","timeout"],G=Z.length,W=n.Yu.REQ,X=n.Yu.XHR;class K extends f{static featureName=V.t;constructor(e,t){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(e,t,V.t,i),(0,n.OP)(e).xhrWrappable){this.dt=new q(e),this.handler=(e,t,r,n)=>(0,S.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};l._A?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const n={status:t.responseStatus},i={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};Y(n,t.name),this.handler("xhr",[n,i,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,r.D.ajax)}}))}catch(e){}(0,B.u5)(this.ee),(0,B.Kf)(this.ee),function(e,t,i,o){function a(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=x,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){_(t,e)}),(0,R.m$)(!1)),l.IF||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,R.m$)(!1))}function s(e){this.params={method:e[0]},Y(this,e[1]),this.metrics={}}function c(t,r){var i=(0,n.DL)(e);i.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",i.xpid);var a=o.generateTracePayload(this.parsedOrigin);if(a){var s=!1;a.newrelicHeader&&(r.setRequestHeader("newrelic",a.newrelicHeader),s=!0),a.traceContextParentHeader&&(r.setRequestHeader("traceparent",a.traceContextParentHeader),a.traceContextStateHeader&&r.setRequestHeader("tracestate",a.traceContextStateHeader),s=!0),s&&(this.dt=a)}}function d(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=F(i);a&&(n.txSize=a)}this.startTime=(0,D.z)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<G;s++)r.addEventListener(Z[s],this.listener,(0,R.m$)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function f(e,t){var r=""+L(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function h(e,t){var r=""+L(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function p(){this.endTime=(0,D.z)()}function g(e,r){r instanceof X&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function m(e,r){r instanceof X&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function v(e,t,r){t instanceof X&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,D.z)()))}function b(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,D.z)()-this.xhrCbStart,this.onload,r],r)}function y(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&l.il&&(t=""+l._A.location.href):e[0]&&e[0].url?t=e[0].url:l._A?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,U.e)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var n=o.generateTracePayload(this.parsedOrigin);if(n&&(n.newrelicHeader||n.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,n)&&(this.dt=n);else{var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),s(i.headers,n)&&(this.dt=n),e.length>1?e[1]=i:e.push(i)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function A(e,t){this.params={},this.metrics={},this.startTime=(0,D.z)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof W?r=i.url:l._A?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),Y(this,r);var o=(""+(i&&i instanceof W&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=F(n.body)||0}function w(e,t){var n;this.endTime=(0,D.z)(),this.params||(this.params={}),this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var o={txSize:this.txSize,rxSize:n,duration:(0,D.z)()-this.startTime};i("xhr",[this.params,o,this.startTime,this.endTime,"fetch"],this,r.D.ajax)}function x(e){var t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;o<G;o++)e.removeEventListener(Z[o],this.listener,!1);t.aborted||(n.duration=(0,D.z)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):_(this,e),n.cbTime=this.cbTime,i("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,r.D.ajax))}}function _(e,t){e.params.status=t.status;var r=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?F(e.response):"text"===r||""===r||void 0===r?F(e.responseText):void 0}(t,e.lastSize);if(r&&(e.metrics.rxSize=r),e.sameOrigin){var n=t.getResponseHeader("X-NewRelic-App-Data");n&&(e.params.cat=n.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",a),t.on("open-xhr-start",s),t.on("open-xhr-end",c),t.on("send-xhr-start",d),t.on("xhr-cb-time",u),t.on("xhr-load-added",f),t.on("xhr-load-removed",h),t.on("xhr-resolved",p),t.on("addEventListener-end",g),t.on("removeEventListener-end",m),t.on("fn-end",b),t.on("fetch-before-start",y),t.on("fetch-start",A),t.on("fn-start",v),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator()}}}function Y(e,t){var r=(0,U.e)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}var Q=i(3614);const{BST_RESOURCE:J,RESOURCE:ee,START:te,END:re,FEATURE_NAME:ne,FN_END:ie,FN_START:oe,PUSH_STATE:ae}=Q;var se=i(7056),ce=i(7144);class de extends f{static featureName=ce.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,ce.t9,r);try{const e=JSON.parse(localStorage.getItem("NRBA_SESSION"));e.sessionReplayMode!==se.IK.OFF?this.#a(e.sessionReplayMode):this.importAggregator({})}catch(e){this.importAggregator({})}}async#a(e){const{Recorder:t}=await Promise.all([i.e(63),i.e(379)]).then(i.bind(i,4136));this.recorder=new t({mode:e,agentIdentifier:this.agentIdentifier}),this.recorder.startRecording(),this.importAggregator({recorder:this.recorder})}}var ue=i(4649);class le extends f{static featureName=ue.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,ue.t,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,_.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new v({agentIdentifier:this.agentIdentifier}),this.features={},(0,x.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,x.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,j,class extends f{static featureName=ne;constructor(e,t){if(super(e,t,ne,!(arguments.length>2&&void 0!==arguments[2])||arguments[2]),!l.il)return;const n=this.ee;let i;(0,B.QU)(n),this.eventsEE=(0,B.em)(n),this.eventsEE.on(oe,(function(e,t){this.bstStart=(0,D.z)()})),this.eventsEE.on(ie,(function(e,t){(0,S.p)("bst",[e[0],t,this.bstStart,(0,D.z)()],void 0,r.D.sessionTrace,n)})),n.on(ae+te,(function(e){this.time=(0,D.z)(),this.startPath=location.pathname+location.hash})),n.on(ae+re,(function(e){(0,S.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,r.D.sessionTrace,n)}));try{i=new PerformanceObserver((e=>{const t=e.getEntries();(0,S.p)(J,[t],void 0,r.D.sessionTrace,n)})),i.observe({type:ee,buffered:!0})}catch(e){}this.importAggregator({resourceObserver:i})}},de,K,P,le,k],loaderType:"pro"})})()})();</script>
-<!-- Responsiveness -->
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<!-- Favicon -->
-<link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
-<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-<link href='/manifest.json' rel='manifest'>
-<link color='#21428e' href='/safari-pinned-tab.svg' rel='mask-icon'>
-<meta content='#ffffff' name='theme-color'>
+<link href='https://www.blogger.com/static/v1/widgets/3566091532-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+<meta content='width=1100' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='https://www.friendsofnasa.org/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Friends of NASA - Atom" href="https://www.friendsofnasa.org/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Friends of NASA - RSS" href="https://www.friendsofnasa.org/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Friends of NASA - Atom" href="https://www.blogger.com/feeds/5682574620231385546/posts/default" />
 
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="L6S/dY+KxGkEISFjdABH1CZxNEyeuI142+eHFdK5LMlG7tUKrr7hONFPG9Z4m95CyHdAdCeGDMNW76oa8+ypYw==" />
-<title>Exoplanet-catalog – Exoplanet Exploration: Planets Beyond our Solar System HD 169142 b
-</title>
-<meta content='Exoplanet Exploration: Planets Beyond our Solar System' property='og:site_name'>
-<meta content='Exoplanet-catalog – Exoplanet Exploration: Planets Beyond our Solar System' property='og:title'>
-<meta content='https://exoplanets.nasa.gov/assets/content/planets/gasgiant.jpg' property='og:image'>
+<link rel="alternate" type="application/atom+xml" title="Friends of NASA - Atom" href="https://www.friendsofnasa.org/feeds/5666205086487522442/comments/default" />
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<link href='https://i.ytimg.com/vi/5P1SQk9sa98/hqdefault.jpg' rel='image_src'/>
+<meta content='https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html' property='og:url'/>
+<meta content='A New Planet is Born: Star HD 169142 | European Southern Observatory' property='og:title'/>
+<meta content='Friends of NASA is an independent NGO dedicated to building international support for peaceful space exploration, commerce, science and STEM education' property='og:description'/>
+<meta content='https://lh3.googleusercontent.com/blogger_img_proxy/AJ0KDdXpIK8-nSTThBwOIi59pyxNHfQm9Ti_yMvNfd2SgW-E4dmU_DyAExOHQnahBhjDqGxetOO2LpyLHCsiUTwOXEIiqT67dxRBEvijw_aAWnx4E7IAAQ=w1200-h630-n-k-no-nu' property='og:image'/>
+<title>Friends of NASA: A New Planet is Born: Star HD 169142 | European Southern Observatory</title>
+<style type='text/css'>@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.ttf)format('truetype');}@font-face{font-family:'Lato';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPHA.ttf)format('truetype');}</style>
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Awesome Inc.
+Designer: Tina Chen
+URL:      tinachen.org
+----------------------------------------------- */
+/* Content
+----------------------------------------------- */
+body {
+font: normal normal 13px Lato;
+color: #ffffff;
+background: #000000 url(//2.bp.blogspot.com/-ed5E5z2qnEI/T1TKv3XkyaI/AAAAAAAABJE/oyXjFuV1gD4/s0/ISS007-E-10807_highres2.jpg) repeat scroll top left;
+}
+html body .content-outer {
+min-width: 0;
+max-width: 100%;
+width: 100%;
+}
+a:link {
+text-decoration: none;
+color: #cccccc;
+}
+a:visited {
+text-decoration: none;
+color: #888888;
+}
+a:hover {
+text-decoration: underline;
+color: #cccccc;
+}
+.body-fauxcolumn-outer .cap-top {
+position: absolute;
+z-index: 1;
+height: 276px;
+width: 100%;
+background: transparent none repeat-x scroll top left;
+_background-image: none;
+}
+/* Columns
+----------------------------------------------- */
+.content-inner {
+padding: 0;
+}
+.header-inner .section {
+margin: 0 16px;
+}
+.tabs-inner .section {
+margin: 0 16px;
+}
+.main-inner {
+padding-top: 30px;
+}
+.main-inner .column-center-inner,
+.main-inner .column-left-inner,
+.main-inner .column-right-inner {
+padding: 0 5px;
+}
+*+html body .main-inner .column-center-inner {
+margin-top: -30px;
+}
+#layout .main-inner .column-center-inner {
+margin-top: 0;
+}
+/* Header
+----------------------------------------------- */
+.header-outer {
+margin: 0 0 0 0;
+background: transparent none repeat scroll 0 0;
+}
+.Header h1 {
+font: normal bold 100px Lato;
+color: #ffffff;
+text-shadow: 0 0 -1px #000000;
+}
+.Header h1 a {
+color: #ffffff;
+}
+.Header .description {
+font: normal normal 30px Lato;
+color: #ffffff;
+}
+.header-inner .Header .titlewrapper,
+.header-inner .Header .descriptionwrapper {
+padding-left: 0;
+padding-right: 0;
+margin-bottom: 0;
+}
+.header-inner .Header .titlewrapper {
+padding-top: 22px;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-outer {
+overflow: hidden;
+position: relative;
+background: #141414 none repeat scroll 0 0;
+}
+#layout .tabs-outer {
+overflow: visible;
+}
+.tabs-cap-top, .tabs-cap-bottom {
+position: absolute;
+width: 100%;
+border-top: 1px solid #222222;
+}
+.tabs-cap-bottom {
+bottom: 0;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+margin: 0;
+padding: .6em 1.5em;
+font: normal bold 16px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ffffff;
+border-top: 1px solid #222222;
+border-bottom: 1px solid #222222;
+border-left: 1px solid #222222;
+height: 16px;
+line-height: 16px;
+}
+.tabs-inner .widget li:last-child a {
+border-right: 1px solid #222222;
+}
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+background: #444444 none repeat-x scroll 0 -100px;
+color: #ffffff;
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+font: normal bold 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ffffff;
+}
+/* Widgets
+----------------------------------------------- */
+.main-inner .section {
+margin: 0 27px;
+padding: 0;
+}
+.main-inner .column-left-outer,
+.main-inner .column-right-outer {
+margin-top: 0;
+}
+#layout .main-inner .column-left-outer,
+#layout .main-inner .column-right-outer {
+margin-top: 0;
+}
+.main-inner .column-left-inner,
+.main-inner .column-right-inner {
+background: transparent none repeat 0 0;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+#layout .main-inner .column-left-inner,
+#layout .main-inner .column-right-inner {
+margin-top: 0;
+}
+.sidebar .widget {
+font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ffffff;
+}
+.sidebar .widget a:link {
+color: #cccccc;
+}
+.sidebar .widget a:visited {
+color: #666666;
+}
+.sidebar .widget a:hover {
+color: #cccccc;
+}
+.sidebar .widget h2 {
+text-shadow: 0 0 -1px #000000;
+}
+.main-inner .widget {
+background-color: #141414;
+border: 1px solid #222222;
+padding: 0 15px 15px;
+margin: 20px -16px;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.main-inner .widget h2 {
+margin: 0 -15px;
+padding: .6em 15px .5em;
+border-bottom: 1px solid #000000;
+}
+.footer-inner .widget h2 {
+padding: 0 0 .4em;
+border-bottom: 1px solid #000000;
+}
+.main-inner .widget h2 + div, .footer-inner .widget h2 + div {
+border-top: 1px solid #222222;
+padding-top: 8px;
+}
+.main-inner .widget .widget-content {
+margin: 0 -15px;
+padding: 7px 15px 0;
+}
+.main-inner .widget ul, .main-inner .widget #ArchiveList ul.flat {
+margin: -8px -15px 0;
+padding: 0;
+list-style: none;
+}
+.main-inner .widget #ArchiveList {
+margin: -8px 0 0;
+}
+.main-inner .widget ul li, .main-inner .widget #ArchiveList ul.flat li {
+padding: .5em 15px;
+text-indent: 0;
+color: #666666;
+border-top: 1px solid #222222;
+border-bottom: 1px solid #000000;
+}
+.main-inner .widget #ArchiveList ul li {
+padding-top: .25em;
+padding-bottom: .25em;
+}
+.main-inner .widget ul li:first-child, .main-inner .widget #ArchiveList ul.flat li:first-child {
+border-top: none;
+}
+.main-inner .widget ul li:last-child, .main-inner .widget #ArchiveList ul.flat li:last-child {
+border-bottom: none;
+}
+.post-body {
+position: relative;
+}
+.main-inner .widget .post-body ul {
+padding: 0 2.5em;
+margin: .5em 0;
+list-style: disc;
+}
+.main-inner .widget .post-body ul li {
+padding: 0.25em 0;
+margin-bottom: .25em;
+color: #ffffff;
+border: none;
+}
+.footer-inner .widget ul {
+padding: 0;
+list-style: none;
+}
+.widget .zippy {
+color: #666666;
+}
+/* Posts
+----------------------------------------------- */
+body .main-inner .Blog {
+padding: 0;
+margin-bottom: 1em;
+background-color: transparent;
+border: none;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.main-inner .section:last-child .Blog:last-child {
+padding: 0;
+margin-bottom: 1em;
+}
+.main-inner .widget h2.date-header {
+margin: 0 -15px 1px;
+padding: 0 0 0 0;
+font: normal normal 16px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #cccccc;
+background: transparent none no-repeat scroll top left;
+border-top: 0 solid #222222;
+border-bottom: 1px solid #000000;
+-moz-border-radius-topleft: 0;
+-moz-border-radius-topright: 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+position: static;
+bottom: 100%;
+right: 15px;
+text-shadow: 0 0 -1px #000000;
+}
+.main-inner .widget h2.date-header span {
+font: normal normal 16px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+display: block;
+padding: .5em 15px;
+border-left: 0 solid #222222;
+border-right: 0 solid #222222;
+}
+.date-outer {
+position: relative;
+margin: 30px 0 20px;
+padding: 0 15px;
+background-color: #141414;
+border: 1px solid #222222;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.date-outer:first-child {
+margin-top: 0;
+}
+.date-outer:last-child {
+margin-bottom: 20px;
+-moz-border-radius-bottomleft: 0;
+-moz-border-radius-bottomright: 0;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-bottom-right-radius: 0;
+-goog-ms-border-bottom-left-radius: 0;
+-goog-ms-border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+}
+.date-posts {
+margin: 0 -15px;
+padding: 0 15px;
+clear: both;
+}
+.post-outer, .inline-ad {
+border-top: 1px solid #222222;
+margin: 0 -15px;
+padding: 15px 15px;
+}
+.post-outer {
+padding-bottom: 10px;
+}
+.post-outer:first-child {
+padding-top: 0;
+border-top: none;
+}
+.post-outer:last-child, .inline-ad:last-child {
+border-bottom: none;
+}
+.post-body {
+position: relative;
+}
+.post-body img {
+padding: 8px;
+background: #222222;
+border: 1px solid transparent;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+border-radius: 0;
+}
+h3.post-title, h4 {
+font: normal bold 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ffffff;
+}
+h3.post-title a {
+font: normal bold 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ffffff;
+}
+h3.post-title a:hover {
+color: #cccccc;
+text-decoration: underline;
+}
+.post-header {
+margin: 0 0 1em;
+}
+.post-body {
+line-height: 1.4;
+}
+.post-outer h2 {
+color: #ffffff;
+}
+.post-footer {
+margin: 1.5em 0 0;
+}
+#blog-pager {
+padding: 15px;
+font-size: 120%;
+background-color: #141414;
+border: 1px solid #222222;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+-moz-border-radius-topleft: 0;
+-moz-border-radius-topright: 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-goog-ms-border-top-left-radius: 0;
+-goog-ms-border-top-right-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius-topright: 0;
+margin-top: 1em;
+}
+.blog-feeds, .post-feeds {
+margin: 1em 0;
+text-align: center;
+color: #ffffff;
+}
+.blog-feeds a, .post-feeds a {
+color: #888888;
+}
+.blog-feeds a:visited, .post-feeds a:visited {
+color: #444444;
+}
+.blog-feeds a:hover, .post-feeds a:hover {
+color: #cccccc;
+}
+.post-outer .comments {
+margin-top: 2em;
+}
+/* Comments
+----------------------------------------------- */
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #222222;
+border-bottom: 1px solid #222222;
+}
+.comments .continue {
+border-top: 2px solid #222222;
+}
+/* Footer
+----------------------------------------------- */
+.footer-outer {
+margin: -0 0 -1px;
+padding: 0 0 0;
+color: #ffffff;
+overflow: hidden;
+}
+.footer-fauxborder-left {
+border-top: 1px solid #222222;
+background: #141414 none repeat scroll 0 0;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+margin: 0 -0;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile {
+background-size: auto;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+*+html body.mobile .main-inner .column-center-inner {
+margin-top: 0;
+}
+.mobile .main-inner .widget {
+padding: 0 0 15px;
+}
+.mobile .main-inner .widget h2 + div,
+.mobile .footer-inner .widget h2 + div {
+border-top: none;
+padding-top: 0;
+}
+.mobile .footer-inner .widget h2 {
+padding: 0.5em 0;
+border-bottom: none;
+}
+.mobile .main-inner .widget .widget-content {
+margin: 0;
+padding: 7px 0 0;
+}
+.mobile .main-inner .widget ul,
+.mobile .main-inner .widget #ArchiveList ul.flat {
+margin: 0 -15px 0;
+}
+.mobile .main-inner .widget h2.date-header {
+right: 0;
+}
+.mobile .date-header span {
+padding: 0.4em 0;
+}
+.mobile .date-outer:first-child {
+margin-bottom: 0;
+border: 1px solid #222222;
+-moz-border-radius-topleft: 0;
+-moz-border-radius-topright: 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-goog-ms-border-top-left-radius: 0;
+-goog-ms-border-top-right-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+.mobile .date-outer {
+border-color: #222222;
+border-width: 0 1px 1px;
+}
+.mobile .date-outer:last-child {
+margin-bottom: 0;
+}
+.mobile .main-inner {
+padding: 0;
+}
+.mobile .header-inner .section {
+margin: 0;
+}
+.mobile .post-outer, .mobile .inline-ad {
+padding: 5px 0;
+}
+.mobile .tabs-inner .section {
+margin: 0 10px;
+}
+.mobile .main-inner .widget h2 {
+margin: 0;
+padding: 0;
+}
+.mobile .main-inner .widget h2.date-header span {
+padding: 0;
+}
+.mobile .main-inner .widget .widget-content {
+margin: 0;
+padding: 7px 0 0;
+}
+.mobile #blog-pager {
+border: 1px solid transparent;
+background: #141414 none repeat scroll 0 0;
+}
+.mobile .main-inner .column-left-inner,
+.mobile .main-inner .column-right-inner {
+background: transparent none repeat 0 0;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+-goog-ms-box-shadow: none;
+box-shadow: none;
+}
+.mobile .date-posts {
+margin: 0;
+padding: 0;
+}
+.mobile .footer-fauxborder-left {
+margin: 0;
+border-top: inherit;
+}
+.mobile .main-inner .section:last-child .Blog:last-child {
+margin-bottom: 0;
+}
+.mobile-index-contents {
+color: #ffffff;
+}
+.mobile .mobile-link-button {
+background: #cccccc none repeat scroll 0 0;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #ffffff;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background: transparent;
+border-top: 1px solid;
+border-color: #222222;
+color: #ffffff;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #222222;
+}
 
-<meta content='467211304136432' property='fb:app_id'>
-<div hidden>
-<!-- New window warning messages -->
-<span id='new-window-0'>Opens in a new window</span>
-<span id='new-window-1'>Opens an external site</span>
-<span id='new-window-2'>Opens an external site in a new window</span>
-<!-- Button controls -->
-<span id='button-toggle-nav'>Toggle navigation</span>
-<span id='button-close-audio-options'>Close audio options</span>
-<span id='button-play-video'>Play video</span>
-<span id='button-close-modal'>Close modal</span>
-<span id='button-previous'>Previous</span>
-<span id='button-next'>Next</span>
-<span id='button-toggle-audio'>Toggle audio voice over</span>
-<span id='button-toggle-music'>Toggle ambient music</span>
-</div>
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body {
+min-width: 1410px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 1410px;
+max-width: 1410px;
+_width: 1410px;
+}
+.main-inner .columns {
+padding-left: 0px;
+padding-right: 500px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0px;
+right: 500px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0px") -
+parseInt("500px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0px;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 500px;
+}
+.main-inner .column-left-outer {
+width: 0px;
+right: 100%;
+margin-left: -0px;
+}
+.main-inner .column-right-outer {
+width: 500px;
+margin-right: -500px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+--></style>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=5682574620231385546&amp;zx=50cd9702-5f90-4427-8479-b9e2c6d51ec3' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=5682574620231385546&amp;zx=50cd9702-5f90-4427-8479-b9e2c6d51ec3' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
+<!-- data-ad-client=ca-pub-3959771632552763 -->
 
-<link rel="stylesheet" media="all" href="/assets/public_manifest-92046dafd3413b0948e7a5fb1ce706603c1937feaed76688fc16ff6cd169cb9c.css" />
-<link rel="stylesheet" media="screen" href="/assets/mbcms/vendor/jquery.fancybox3-d5d81bdfc05a59e4ea72bca1d8b7fcc399bd3b61f7c06af95a8a48795df69d7a.css" />
-<link rel="stylesheet" media="screen" href="/assets/mbcms/vendor/jquery.fancybox-thumbs-63891ea3fd7b7f15621befe5cbdf329cd554b2129f7d69a7ea8d7cedb4c98323.css" />
-<link rel="stylesheet" media="print" href="/assets/gulp/print-360069d6504f4536730a5163a3f9df294d5da81e71af43e13761783b23e77032.css" />
-<script src="/assets/public_manifest-1a56bc0948956f66757f361ef3dd6e93be372d341d3884e640c853694fb406c0.js"></script>
-<script src="/assets/mbcms/vendor/jquery.fancybox3-bd543a29719f5c70e897670b5484b67824cc3c8eba68c8e4719d3cd6e2a5f542.js"></script>
-<script src="/assets/mbcms/vendor/jquery.fancybox-thumbs3-165b9822252e6816da53602b68cdd1a366475c528a9276488772c4849fed264f.js"></script>
-<script src="/assets/mb_manifest-2affd7133e70fb1b830e0b3f9fb9122f16aa56eb508e37092bec592bbcf02e8c.js"></script>
-
-<script>
-  setTimeout(function(){var a=document.createElement("script");
-  var b=document.getElementsByTagName("script")[0];
-  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0025/5267.js?"+Math.floor(new Date().getTime()/3600000);
-  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>
 </head>
-<!-- if exep section -->
-<body>
-<div data-react-class="BrowseHappier" data-react-props="{&quot;gt&quot;:1,&quot;lt&quot;:11}" data-react-cache-id="BrowseHappier-0"></div>
-<div id='main_container'>
-<div id='site_body'>
-<div class='site_header_area'>
-<header class='site_header'>
-<div class='brand_area'>
-<div class='brand1'>
-<a aria-describedby='new-window-2' aria-label='NASA' class='nasa_logo' href='http://www.nasa.gov' rel='noopener' target='_blank' title='visit nasa.gov'>NASA</a>
-</div>
-<div class='brand2'>
-<a class='top_logo' href='/' title='Home'>Exoplanet Exploration</a>
-</div>
-<img alt='' class='print_only print_logo' src='/assets/logo_nasa_duo_black@2x.png'>
-</div>
-
-<a class='visuallyhidden focusable' href='#page'>Skip Navigation</a>
-<div class='right_header_container'>
-<a class='menu_button' href='javascript:void(0);' id='menu_button'>
-<span class='menu_icon'>
-menu
-</span>
-</a>
-<a class='modal_close' id='modal_close'>
-<span class='modal_close_icon'>
-close modal
-</span>
-</a>
-</div>
-<div class='nav_area'>
-<div id='site_nav_container'>
-<nav data-react-class="Meganav" data-react-props="{&quot;nav_items&quot;:[{&quot;name&quot;:&quot;Eyes on Exoplanets&quot;,&quot;style&quot;:&quot;icon&quot;,&quot;li_class&quot;:&quot;galaxy_icon&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;link&quot;:&quot;/eyes-on-exoplanets&quot;,&quot;svg_icon_id&quot;:&quot;eox&quot;,&quot;id&quot;:3084,&quot;features&quot;:[{&quot;title&quot;:&quot;Eyes on Exoplanets&quot;,&quot;body&quot;:&quot;&quot;,&quot;image_src&quot;:&quot;/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaTRjIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--feb827fc1311f7fb987b6f50ea8359dc8c2c4a76/eoe-feature-image.jpeg?disposition=attachment&quot;,&quot;link&quot;:&quot;/eyes-on-exoplanets/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;categories&quot;:[&quot;featured&quot;]}],&quot;title&quot;:&quot;&quot;,&quot;short_description&quot;:&quot;Explore an interactive, 3D data visualization of all known exoplanets.&quot;},{&quot;name&quot;:&quot;What is an Exoplanet?&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/overview&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Overview&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/overview&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3139},{&quot;name&quot;:&quot;In Depth&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/in-depth&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3140},{&quot;title&quot;:&quot;PLANET TYPES&quot;,&quot;sub_items&quot;:[{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/overview&quot;,&quot;link_text&quot;:&quot;Overview&quot;,&quot;name&quot;:&quot;Overview&quot;,&quot;id&quot;:3142},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/gas-giant&quot;,&quot;link_text&quot;:&quot;Gas Giant&quot;,&quot;name&quot;:&quot;Gas Giant&quot;,&quot;id&quot;:3143},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/neptune-like&quot;,&quot;link_text&quot;:&quot;Neptune-like&quot;,&quot;name&quot;:&quot;Neptune-like&quot;,&quot;id&quot;:3144},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/super-earth&quot;,&quot;link_text&quot;:&quot;Super-Earth&quot;,&quot;name&quot;:&quot;Super-Earth&quot;,&quot;id&quot;:3145},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/terrestrial&quot;,&quot;link_text&quot;:&quot;Terrestrial&quot;,&quot;name&quot;:&quot;Terrestrial&quot;,&quot;id&quot;:3146}],&quot;id&quot;:3141,&quot;type&quot;:&quot;columns&quot;},{&quot;name&quot;:&quot;Stars&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/stars&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3147},{&quot;name&quot;:&quot;What is the Universe?&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/what-is-the-universe&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3148}]}],&quot;id&quot;:107,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;Description&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;The Search For Life&quot;,&quot;link&quot;:&quot;/search-for-life/big-questions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;The Big Questions&quot;,&quot;link&quot;:&quot;/search-for-life/big-questions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3150},{&quot;name&quot;:&quot;Are We Alone?&quot;,&quot;link&quot;:&quot;/search-for-life/are-we-alone&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3151},{&quot;name&quot;:&quot;Can We Find Life?&quot;,&quot;link&quot;:&quot;/search-for-life/can-we-find-life&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3152},{&quot;name&quot;:&quot;The Habitable Zone&quot;,&quot;link&quot;:&quot;/search-for-life/habitable-zone&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3153},{&quot;name&quot;:&quot;Why We Search&quot;,&quot;link&quot;:&quot;/search-for-life/why-we-search&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3154}]}],&quot;id&quot;:3149,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;Discovery&quot;,&quot;link&quot;:&quot;/discovery/discoveries-dashboard&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Discoveries Dashboard&quot;,&quot;link&quot;:&quot;/discovery/discoveries-dashboard&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3156},{&quot;name&quot;:&quot;How We Find and Characterize&quot;,&quot;link&quot;:&quot;/discovery/how-we-find-and-characterize&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3157},{&quot;name&quot;:&quot;Missions&quot;,&quot;link&quot;:&quot;/discovery/missions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3158},{&quot;name&quot;:&quot;People&quot;,&quot;link&quot;:&quot;/discovery/people&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3089},{&quot;name&quot;:&quot;Exoplanet Catalog&quot;,&quot;link&quot;:&quot;/discovery/exoplanet-catalog&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:101}]}],&quot;id&quot;:3155,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;Explore&quot;,&quot;link&quot;:&quot;/alien-worlds&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;The Exoplaneteers&quot;,&quot;link&quot;:&quot;/alien-worlds/the-exoplaneteers&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3302},{&quot;name&quot;:&quot;Exoplanet Travel Bureau&quot;,&quot;link&quot;:&quot;/alien-worlds/exoplanet-travel-bureau&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:19},{&quot;name&quot;:&quot;5 Ways to Find a Planet&quot;,&quot;link&quot;:&quot;/alien-worlds/ways-to-find-a-planet&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2925},{&quot;name&quot;:&quot;Eyes on Exoplanets &quot;,&quot;link&quot;:&quot;https://exoplanets.nasa.gov/eyes-on-exoplanets/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2932},{&quot;name&quot;:&quot;Strange New Worlds&quot;,&quot;link&quot;:&quot;/alien-worlds/strange-new-worlds&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:10},{&quot;name&quot;:&quot;Historic Timeline&quot;,&quot;link&quot;:&quot;/alien-worlds/historic-timeline&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:7},{&quot;name&quot;:&quot;Kepler Timeline&quot;,&quot;link&quot;:&quot;/alien-worlds/kepler-timeline&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3031},{&quot;name&quot;:&quot;Universe of Monsters&quot;,&quot;link&quot;:&quot;/alien-worlds/universe-of-monsters&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3010},{&quot;name&quot;:&quot;Galaxy of Horrors&quot;,&quot;link&quot;:&quot;/alien-worlds/galaxy-of-horrors&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2950}]}],&quot;id&quot;:8,&quot;meganav_style&quot;:&quot;dark_theme&quot;,&quot;features&quot;:[{&quot;title&quot;:&quot;Exoplanet Travel Bureau&quot;,&quot;body&quot;:&quot;Take guided tours of some of the most exotic and dazzling destinations in our galaxy.&quot;,&quot;image_src&quot;:&quot;/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbDhEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e2e976d180e6ac87fa3a7ebea97a97026dded13a/bureau_feature.jpg?disposition=attachment&quot;,&quot;link&quot;:&quot;/alien-worlds/exoplanet-travel-bureau/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;categories&quot;:[&quot;featured&quot;]}],&quot;short_description&quot;:&quot;Short Description&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;More&quot;,&quot;link&quot;:&quot;/multimedia-resources&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Multimedia Resources&quot;,&quot;link&quot;:&quot;/multimedia-resources&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3159},{&quot;name&quot;:&quot;News \u0026 Features&quot;,&quot;link&quot;:&quot;/news&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3160},{&quot;name&quot;:&quot;Blog&quot;,&quot;link&quot;:&quot;/blog&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2989},{&quot;name&quot;:&quot;Glossary&quot;,&quot;link&quot;:&quot;/glossary&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2982},{&quot;name&quot;:&quot;Citizen Science&quot;,&quot;link&quot;:&quot;/citizen-science&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3123}]}],&quot;id&quot;:3122,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;For Scientists&quot;,&quot;link&quot;:&quot;/exep&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Exoplanet Exploration Program&quot;,&quot;link&quot;:&quot;https://exoplanets.nasa.gov/exep/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3085},{&quot;name&quot;:&quot;Science Mission Directorate&quot;,&quot;link&quot;:&quot;https://science.nasa.gov&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3086}]}],&quot;id&quot;:2949,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false}],&quot;search&quot;:true,&quot;modal_search&quot;:{&quot;suggestions&quot;:[{&quot;title&quot;:&quot;What is an exoplanet?&quot;,&quot;link&quot;:&quot;/faq/3/what-is-an-exoplanet/&quot;},{&quot;title&quot;:&quot;What’s a transit?&quot;,&quot;link&quot;:&quot;/faq/31/whats-a-transit/&quot;},{&quot;title&quot;:&quot;What is a light-year?&quot;,&quot;link&quot;:&quot;/faq/26/what-is-a-light-year/&quot;},{&quot;title&quot;:&quot;How do exoplanets get their names?&quot;,&quot;link&quot;:&quot;/faq/20/how-do-exoplanets-get-their-names/&quot;},{&quot;title&quot;:&quot;How do planets form?&quot;,&quot;link&quot;:&quot;/faq/43/how-do-planets-form/&quot;}]},&quot;search_placeholder&quot;:{&quot;placeholder&quot;:&quot;search&quot;},&quot;no_redirect&quot;:{&quot;name&quot;:&quot;More&quot;}}" data-react-cache-id="Meganav-0" class="site_nav"></nav>
-</div>
-</div>
-</header>
-</div>
-<div id='sticky_nav_spacer'></div>
-
-<div id='page'>
-<div class='page_cover'></div>
-<div data-react-class="CherTools" data-react-props="{&quot;share&quot;:[[&quot;Facebook&quot;],[&quot;Twitter&quot;],[&quot;Pinterest&quot;],[&quot;Email&quot;]]}" data-react-cache-id="CherTools-0" class="chertools_floater"></div>
-
-<div class='header_mask'></div>
-<section class='content_page atlas_detail module'>
-<div class='grid_layout'>
-<article>
-<header id='page_header'>
-<h2 class='category_title'>
-<a href="/discovery/exoplanet-catalog/">Exoplanet Catalog</a>
-</h2>
-<h1 class='article_title'>
-HD 169142 b
-</h1>
-</header>
-<div class='nwa_ranger'>
-<link rel="stylesheet" media="screen" href="/assets/ranger_layouts/ui_interface_wide-eb734be3786fd4e768fb076ade318d384ceb2478a105857abf39b9100b66179d.css" />
-<div class='mb_ranger_ui'>
-<section class='guild_navigator_module single_ranger_feature'>
-<article class='guild_navigator_canvas' style='background-image: url(/assets/content/planets/gasgiant.jpg)'>
-<iframe allowfullscreen frameborder='0' height='100%' id='exo_pioneer_module' scrolling='no' src='https://eyes.nasa.gov/apps/exo/#/planet/HD_169142_b' width='100%'></iframe>
-</article>
-</section>
-</div>
-</div>
-<div id='primary_column'>
-<div class='wysiwyg_content'>
-<p>
-HD 169142 b is a gas giant exoplanet that orbits an F-type star. Its mass is 3 Jupiters, it takes 166.9 years to complete one orbit of its star, and is 37.2 AU from its star. Its discovery was announced in 2023.
-</p>
-</div>
-<div class='bottom_links'>
-<a href="/discovery/exoplanet-catalog/?">‹ Back to list</a>
-</div>
-</div>
-<div id='secondary_column'>
-<table class='information_grid'>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-PLANET TYPE
-</div>
-<div class='value'>
-Gas Giant
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-DISCOVERY DATE
-</div>
-<div class='value'>
-2023
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-MASS
-</div>
-<div class='value'>
-3 Jupiters
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-PLANET RADIUS
-</div>
-<div class='value'>
-1.17 x Jupiter<br/>(estimate)
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-ORBITAL RADIUS
-</div>
-<div class='value'>
-37.2 AU
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-ORBITAL PERIOD
-</div>
-<div class='value'>
-166.9 years
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-ECCENTRICITY
-</div>
-<div class='value'>
-0.0
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-DETECTION METHOD
-</div>
-<div class='value'>
-<a href='/5-ways-to-find-a-planet/#/3'>Direct Imaging</a>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</article>
-</div>
-</section>
-
-<section class='multimedia_teaser module'>
-<div class='grid_layout page_carousel'>
-<header>
-<h1 class='module_title'>
-Explore Alien Worlds
-</h1>
-</header>
-<div class='multimedia_module_gallery'>
-<script>
-  $(document).ready(function(){
-    $(".explore_items").slick({
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slide: '.explore_items .slide',
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      lazyLoad: 'progressive',
-      centerMode: false,
-      centerPadding: '30px',
-      arrows: true,
-      responsive: [{"breakpoint":953,"settings":{"slidesToShow":2,"slidesToScroll":2,"centerMode":false}},{"breakpoint":480,"settings":{"slidesToShow":1,"slidesToScroll":1,"centerMode":true,"arrows":false}}]
-    });
-  
-    //fix for problems snapping back to position after slide change and responsive change
-    $(".explore_items").on('setPosition', function(event, slick, currentSlide, nextSlide) {
-      var slidesShown = $(".explore_items").slick('slickGetOption', 'slidesToShow');
-      var numberOfSlides = $(".explore_items").find('.slick-slide').length;
-      if (slidesShown === numberOfSlides) {
-        $(".explore_items").find('.slick-track').css('transform', 'translate3d(0px, 0px, 0px)');
+<body class='loading variant-dark'>
+<div class='navbar section' id='navbar'><div class='widget Navbar' data-version='1' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
       }
-    });
-  
-    // SHIM: The slick slider doesn’t seem to respond to orientation changes on Android devices
-    // (possibly because there’s a delay while the browser is rendering the page)
-    window.addEventListener('orientationchange', function() {
-      var clock;
-  
-      // Refresh the slider every half second
-      clock = setInterval(function() {
-        // https://github.com/kenwheeler/slick/issues/429#issuecomment-57450725
-        $('.explore_items')[0].slick.refresh();
-      }, 500);
-  
-      // Stop refreshing after 3 seconds
-      setTimeout(function() {
-        clearInterval(clock);
-      }, 3000);
-    });
-  });
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d5682574620231385546\x26blogName\x3dFriends+of+NASA\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dBLACK\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://www.friendsofnasa.org/search\x26blogLocale\x3den_GB\x26v\x3d2\x26homepageUrl\x3dhttps://www.friendsofnasa.org/\x26targetPostID\x3d5666205086487522442\x26blogPostOrPageUrl\x3dhttps://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html\x26vt\x3d1362086601964494428',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
 </script>
-<div class='explore_items'>
-<div class='slide'>
-<a href='/alien-worlds/exoplanet-travel-bureau'>
-<img alt='' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VaIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45eb649c9a0295222318f1551cc2d9ce769303ab/153_Kepler_16b_preview.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Exoplanet Travel Bureau
+</div></div>
+<div class='body-fauxcolumns'>
+<div class='fauxcolumn-outer body-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content'>
+<div class='content-fauxcolumns'>
+<div class='fauxcolumn-outer content-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content-outer'>
+<div class='content-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left content-fauxborder-left'>
+<div class='fauxborder-right content-fauxborder-right'></div>
+<div class='content-inner'>
+<header>
+<div class='header-outer'>
+<div class='header-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left header-fauxborder-left'>
+<div class='fauxborder-right header-fauxborder-right'></div>
+<div class='region-inner header-inner'>
+<div class='header section' id='header'><div class='widget Header' data-version='1' id='Header1'>
+<div id='header-inner'>
+<div class='titlewrapper'>
+<h1 class='title'>
+<a href='https://www.friendsofnasa.org/'>
+Friends of NASA
+</a>
 </h1>
 </div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-This set of travel posters envision a day when the creativity of scientists and engineers will allow us to do things we can only dream of now.
+<div class='descriptionwrapper'>
+<p class='description'><span>Friends of NASA (FoN) is an independent non-governmental organization (NGO) dedicated to building international support for peaceful space exploration, commerce, scientific discovery, and STEM education.</span></p>
 </div>
 </div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
+</div></div>
 </div>
 </div>
-</a>
+<div class='header-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
 </div>
+</div>
+<script type='text/javascript'>
 
-<div class='slide'>
-<a href='/alien-worlds/strange-new-worlds'>
-<img alt='' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1laIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2aaf0bff1edabe6d331adb1e3545356920e11bd/kepler186f.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Strange New Worlds
-</h1>
-</div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-Explore an interactive gallery of some of the most intriguing and exotic planets discovered so far.
-</div>
-</div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
-</div>
-</div>
-</a>
-</div>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30975378-1']);
+  _gaq.push(['_trackPageview']);
 
-<div class='slide'>
-<a href='/alien-worlds/historic-timeline'>
-<img alt='A planetary tour through time. The ancients debated the existence of planets beyond our own; now we know of thousands. ' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2NaIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1ac61050901764c91f8fe3b72c4ebc9ba60663d0/340_timeline.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Historic Timeline
-</h1>
-</div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-A planetary tour through time. The ancients debated the existence of planets beyond our own; now we know of thousands. 
-</div>
-</div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
-</div>
-</div>
-</a>
-</div>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
+</script>
+</header>
+<div class='tabs-outer'>
+<div class='tabs-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
 </div>
-
-</div>
-</div>
-</section>
-
-</div>
-<footer id='site_footer'>
-<div class='grid_layout'>
-<section class='upper_footer'>
-<div class='share'>
-<h2>Stay Connected</h2>
-<div data-react-class="CherTools" data-react-props="{&quot;follow&quot;:[[&quot;Twitter&quot;,&quot;https://twitter.com/NASAExoplanets&quot;,&quot;/assets/twitter_icon@2x.png&quot;],[&quot;Facebook&quot;,&quot;https://www.facebook.com/NASAExoplanets/&quot;,&quot;/assets/facebook_icon@2x.png&quot;],[&quot;Instagram&quot;,&quot;https://www.instagram.com/nasa/&quot;,&quot;/assets/Instagram_icon@2x.png&quot;],[&quot;RSS&quot;,&quot;https://www.nasa.gov/content/nasa-rss-feeds&quot;,&quot;/assets/rss_icon@2x.png&quot;]]}" data-react-cache-id="CherTools-0"></div>
-
-</div>
-<div class='gradient_line'></div>
-</section>
-<section class='sitemap' role='navigation'>
-<div class='sitemap_directory' id='sitemap_directory'>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/what-is-an-exoplanet/overview">What is an Exoplanet?</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/what-is-an-exoplanet/overview' target='_self'>Overview</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/in-depth' target='_self'>In Depth</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/planet-types/overview' target='_self'>Planet Types</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/stars' target='_self'>Stars</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/what-is-the-universe' target='_self'>What is the Universe?</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/search-for-life/big-questions">The Search For Life</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/search-for-life/big-questions' target='_self'>The Big Questions</a>
-</li>
-<li>
-<a href='/search-for-life/are-we-alone' target='_self'>Are We Alone?</a>
-</li>
-<li>
-<a href='/search-for-life/can-we-find-life' target='_self'>Can We Find Life?</a>
-</li>
-<li>
-<a href='/search-for-life/habitable-zone' target='_self'>The Habitable Zone</a>
-</li>
-<li>
-<a href='/search-for-life/why-we-search' target='_self'>Why We Search</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/discovery/discoveries-dashboard">Discovery</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/discovery/discoveries-dashboard' target='_self'>Discoveries Dashboard</a>
-</li>
-<li>
-<a href='/discovery/how-we-find-and-characterize' target='_self'>How We Find and Characterize</a>
-</li>
-<li>
-<a href='/discovery/missions' target='_self'>Missions</a>
-</li>
-<li>
-<a href='/discovery/people' target='_self'>People</a>
-</li>
-<li>
-<a href='/discovery/exoplanet-catalog' target='_self'>Exoplanet Catalog</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/alien-worlds">Explore</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/alien-worlds/the-exoplaneteers' target='_self'>The Exoplaneteers</a>
-</li>
-<li>
-<a href='/alien-worlds/exoplanet-travel-bureau' target='_self'>Exoplanet Travel Bureau</a>
-</li>
-<li>
-<a href='/alien-worlds/ways-to-find-a-planet' target='_self'>5 Ways to Find a Planet</a>
-</li>
-<li>
-<a href='https://exoplanets.nasa.gov/eyes-on-exoplanets/' target='_self'>Eyes on Exoplanets </a>
-</li>
-<li>
-<a href='/alien-worlds/strange-new-worlds' target='_self'>Strange New Worlds</a>
-</li>
-<li>
-<a href='/alien-worlds/historic-timeline' target='_self'>Historic Timeline</a>
-</li>
-<li>
-<a href='/alien-worlds/kepler-timeline' target='_self'>Kepler Timeline</a>
-</li>
-<li>
-<a href='/alien-worlds/universe-of-monsters' target='_self'>Universe of Monsters</a>
-</li>
-<li>
-<a href='/alien-worlds/galaxy-of-horrors' target='_self'>Galaxy of Horrors</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-More
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/multimedia-resources' target='_self'>Multimedia Resources</a>
-</li>
-<li>
-<a href='/news' target='_self'>News &amp; Features</a>
-</li>
-<li>
-<a href='/blog' target='_self'>Blog</a>
-</li>
-<li>
-<a href='/glossary' target='_self'>Glossary</a>
-</li>
-<li>
-<a href='/citizen-science' target='_self'>Citizen Science</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/exep">For Scientists</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='https://exoplanets.nasa.gov/exep/' target='_self'>Exoplanet Exploration Program</a>
-</li>
-<li>
-<a href='https://science.nasa.gov' target='_self'>Science Mission Directorate</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-
-</div>
-<div class='gradient_line'></div>
-</section>
-<section class='lower_footer'>
-<div class='nav_container'>
-<nav>
+<div class='fauxborder-left tabs-fauxborder-left'>
+<div class='fauxborder-right tabs-fauxborder-right'></div>
+<div class='region-inner tabs-inner'>
+<div class='tabs section' id='crosscol'><div class='widget PageList' data-version='1' id='PageList1'>
+<h2>Pages</h2>
+<div class='widget-content'>
 <ul>
 <li>
-<a href='/feedback' target='_self'>Feedback</a>
+<a href='https://www.friendsofnasa.org/'>Home</a>
 </li>
-|
 <li>
-<a href='/visual-sitemap/content' target='_self'>Sitemap</a>
+<a href='https://www.friendsofnasa.org/p/about-friends-of-nasa.html'>About Friends of NASA</a>
 </li>
-
+<li>
+<a href='https://www.friendsofnasa.org/p/friends-of-nasa-leadership.html'>Friends of NASA Leadership &amp; Management</a>
+</li>
+<li>
+<a href='https://www.friendsofnasa.org/p/friends-of-nasa.html'>Become a Friends of NASA Supporter</a>
+</li>
+<li>
+<a href='https://www.linkedin.com/groups/110506'>Friends of NASA LinkedIn</a>
+</li>
+<li>
+<a href='https://www.friendsofnasa.org/p/2014-2015-update.html'>Friends of NASA Plans &amp; Objectives (2024)</a>
+</li>
+<li>
+<a href='https://www.friendsofnasa.org/p/contact-us.html'>Contact Us</a>
+</li>
 </ul>
-</nav>
+<div class='clear'></div>
 </div>
-<div class='credits'>
-<div class='footer_brands'>
-Managed by the
-<a aria-describedby='new-window-0' href='https://exoplanets.nasa.gov/exep/' target='_blank'>Exoplanet Exploration Program</a>
-and the
-<a aria-describedby='new-window-0' href='https://www.jpl.nasa.gov' target='_blank'>Jet Propulsion Laboratory</a>
-for
-<a aria-describedby='new-window-0' href='https://science.nasa.gov/astrophysics' target='_blank'>NASA’s Astrophysics Division</a>
+</div></div>
+<div class='tabs no-items section' id='crosscol-overflow'></div>
 </div>
-<div class='staff'>
+</div>
+<div class='tabs-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='main-outer'>
+<div class='main-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left main-fauxborder-left'>
+<div class='fauxborder-right main-fauxborder-right'></div>
+<div class='region-inner main-inner'>
+<div class='columns fauxcolumns'>
+<div class='fauxcolumn-outer fauxcolumn-center-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-left-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-right-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class='columns-inner'>
+<div class='column-center-outer'>
+<div class='column-center-inner'>
+<div class='main section' id='main'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+<h2 class='date-header'><span>Monday, April 24, 2023</span></h2>
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<a name='5666205086487522442'></a>
+<h3 class='post-title entry-title' itemprop='name'>
+A New Planet is Born: Star HD 169142 | European Southern Observatory
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-5666205086487522442' itemprop='articleBody'>
+<p style="text-align: center;"><b><span style="font-size: medium;"><u>A New Planet is Born:&nbsp;</u></span></b><b><span style="font-size: medium;"><u>S<span style="text-align: left;">tar HD 169142</span></u></span></b><b><span style="font-size: medium;"><u><span style="text-align: left;">&nbsp;</span><span style="text-align: left;">| European Southern Observatory</span></u></span></b></p><p></p><div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="BLOG_video_class" height="266" src="https://www.youtube.com/embed/5P1SQk9sa98" width="320" youtube-src-id="5P1SQk9sa98"></iframe></div><p><span style="font-size: x-large;">This image shows a newly-formed planet with a mass similar to Jupiter&#8217;s orbiting the star HD 169142. The star has a disc around it, and as the protoplanet moves it carves a circular gap in the disc, as seen in the first image. But how was this planet found?</span></p><p><span style="font-size: x-large;">Astronomers observed the system over several years with the SPHERE instrument at ESO&#8217;s Very Large Telescope in Chile. A new re-analysis of this data, led by Iain Hammond from Monash University in Australia, confirmed the presence of this protoplanet, which moves around the star at a distance somewhat larger than that between Neptune and the Sun. They also identified a spiral wake that the protoplanet leaves behind as it rearranges part of the material in the disc, much like a boat can create a wake as it moves through water.</span></p><p><span style="font-size: x-large;">A protoplanet forms during the early stages of a planetary system. It grows as it accretes dust, gas, rocks and other materials that surround its host star, clearing its orbit and creating gaps like the one seen here. The SPHERE instrument is specifically designed to observe these features, blocking light from the star to increase the contrast in the image, and correcting the blur caused by atmospheric turbulence to improve the resolution. By studying the spiral wake and the gap that the protoplanet has created around the star HD 169142, astronomers can learn more about how giant planets such as Jupiter form.</span></p><p><span style="font-size: x-large;"><br /></span></p><p><span style="font-size: x-large;">Credit:&nbsp;European Southern Observatory (ESO)</span></p><p><span style="font-size: x-large;">Duration: 11 seconds</span></p><p><span style="font-size: x-large;">Release Date: April 6, 2023</span></p><p><span style="font-size: x-large;"><br /></span></p><p>#NASA #ESO #Astronomy #Space #Science #Star #StarHD169142&nbsp;#Planet #Exoplanet #Protoplanet #Sagittarius #Constellation #MilkyWay #Galaxy #Cosmos #Universe #Telescope #VLT #SPHERE #LaSillaObservatory #Chile #Europe #STEM #Education #HD #Video</p>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'><span class='post-author vcard'>
+</span>
+<span class='post-timestamp'>
+at
+<a class='timestamp-link' href='https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html' itemprop='url' rel='bookmark' title='permanent link'><abbr class='published' itemprop='datePublished' title='2023-04-24T09:07:00-04:00'>Monday, April 24, 2023</abbr></a>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-action'>
+<a href='https://www.blogger.com/email-post.g?blogID=5682574620231385546&postID=5666205086487522442' title='Email Post'>
+<img alt="" class="icon-action" height="13" src="//img1.blogblog.com/img/icon18_email.gif" width="18">
+</a>
+</span>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+<a class='goog-inline-block share-button sb-email' href='https://www.blogger.com/share-post.g?blogID=5682574620231385546&postID=5666205086487522442&target=email' target='_blank' title='Email This'><span class='share-button-link-text'>Email This</span></a><a class='goog-inline-block share-button sb-blog' href='https://www.blogger.com/share-post.g?blogID=5682574620231385546&postID=5666205086487522442&target=blog' onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target='_blank' title='BlogThis!'><span class='share-button-link-text'>BlogThis!</span></a><a class='goog-inline-block share-button sb-twitter' href='https://www.blogger.com/share-post.g?blogID=5682574620231385546&postID=5666205086487522442&target=twitter' target='_blank' title='Share to Twitter'><span class='share-button-link-text'>Share to Twitter</span></a><a class='goog-inline-block share-button sb-facebook' href='https://www.blogger.com/share-post.g?blogID=5682574620231385546&postID=5666205086487522442&target=facebook' onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target='_blank' title='Share to Facebook'><span class='share-button-link-text'>Share to Facebook</span></a><a class='goog-inline-block share-button sb-pinterest' href='https://www.blogger.com/share-post.g?blogID=5682574620231385546&postID=5666205086487522442&target=pinterest' target='_blank' title='Share to Pinterest'><span class='share-button-link-text'>Share to Pinterest</span></a>
+</div>
+</div>
+<div class='post-footer-line post-footer-line-2'><span class='post-labels'>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'><span class='post-location'>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>No comments:</h4>
+<div id='Blog1_comments-block-wrapper'>
+<dl class='avatar-comment-indent' id='comments-block'>
+</dl>
+</div>
+<p class='comment-footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<h4 id='comment-post-message'>Post a Comment</h4>
 <p>
-Science Writer: 
-<a href="mailto:pbrennan@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Pat Brennan</a>
-<br>
-Site Editor: 
-<a href="mailto:kristen.l.walbolt@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Kristen Walbolt</a>
-<br>
-Manager: 
-<a href="mailto:travis.schirner@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Travis Schirner</a>
-<br>
+</p>
+<a href='https://www.blogger.com/comment/frame/5682574620231385546?po=5666205086487522442&hl=en-GB' id='comment-editor-src'></a>
+<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script src='https://www.blogger.com/static/v1/jsbin/4235886812-comment_from_post_iframe.js' type='text/javascript'></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
 </p>
 </div>
 </div>
-</section>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='https://www.friendsofnasa.org/2023/04/witnessing-birth-of-distant-cluster-of.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='https://www.friendsofnasa.org/2023/04/galaxy-cluster-aco-s520-in-pictor-hubble.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</a>
+</span>
+<a class='home-link' href='https://www.friendsofnasa.org/'>Home</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+<div class='feed-links'>
+Subscribe to:
+<a class='feed-link' href='https://www.friendsofnasa.org/feeds/5666205086487522442/comments/default' target='_blank' type='application/atom+xml'>Post Comments (Atom)</a>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class='column-left-outer'>
+<div class='column-left-inner'>
+<aside>
+</aside>
+</div>
+</div>
+<div class='column-right-outer'>
+<div class='column-right-inner'>
+<aside>
+<div class='sidebar section' id='sidebar-right-1'><div class='widget HTML' data-version='1' id='HTML7'>
+<div class='widget-content'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3959771632552763"
+     crossorigin="anonymous"></script>
+<!-- AdTest12022 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3959771632552763"
+     data-ad-slot="1711501219"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class='clear'></div>
+</div><div class='widget HTML' data-version='1' id='HTML6'>
+<div class='widget-content'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3959771632552763"
+     crossorigin="anonymous"></script>
+</div>
+<div class='clear'></div>
+</div><div class='widget HTML' data-version='1' id='HTML4'>
+<h2 class='title'>Welcome to Friends of NASA!</h2>
+<div class='widget-content'>
+<a href="http://www.friendsofnasa.org/"><img src="https://1.bp.blogspot.com/-mcmlNU9C-28/U6zFqGlENbI/AAAAAAAAEyw/0a6TBhnyBGo/s1600/Fon+Test3d+-+Earth+Night.jpg" border="0" alt="Friends of NASA" /></a>
+</div>
+<div class='clear'></div>
+</div><div class='widget HTML' data-version='1' id='HTML8'>
+<h2 class='title'>ISS HD Earth Viewing Experiment</h2>
+<div class='widget-content'>
+<iframe width="480" height="270" src="http://www.ustream.tv/embed/17074538?html5ui" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+</div>
+<div class='clear'></div>
+</div><div class='widget HTML' data-version='1' id='HTML2'>
+<h2 class='title'>Become a Friends of NASA Supporter: Subscribe &amp; Donate</h2>
+<div class='widget-content'>
+<span style="font-family: inherit;">We accept monthly donations via PayPal and credit card.</span>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="Z8XAVDFQ9D8VL" />
+<table>
+<tr><td><input type="hidden" name="on0" value="Payment Options (Levels)" />Payment Options (Levels)</td></tr><tr><td><select name="os0">
+	<option value="Spaceflight Participant" />Spaceflight Participant : $2.00 USD - monthly
+	<option value="Flight Engineer" />Flight Engineer : $4.00 USD - monthly
+	<option value="Mission Specialist" />Mission Specialist : $7.00 USD - monthly
+	<option value="Payload Commander" />Payload Commander : $10.00 USD - monthly
+	<option value="Pilot" />Pilot : $25.00 USD - monthly
+	<option value="Command Pilot" />Command Pilot : $50.00 USD - monthly
+	<option value="Flight Director" />Flight Director : $100.00 USD - monthly
+	<option value="Mission Director" />Mission Director : $200.00 USD - monthly
+	<option value="Associate Administrator" />Associate Administrator : $500.00 USD - monthly
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+</div>
+<div class='clear'></div>
+</div><div class='widget LinkList' data-version='1' id='LinkList2'>
+<h2>One-time Donations to Friends of NASA (PayPal)</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='https://www.paypal.me/FriendsofNASA'>Click here to make a One-time Donation via PayPal</a></li>
+</ul>
+<div class='clear'></div>
+</div>
+</div><div class='widget Translate' data-version='1' id='Translate1'>
+<h2 class='title'>Translate</h2>
+<div id='google_translate_element'></div>
+<script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: 'true',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+<script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
+<div class='clear'></div>
+</div><div class='widget LinkList' data-version='1' id='LinkList1'>
+<h2>Follow Friends of NASA on Social Media</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://www.facebook.com/FriendsOfNASA'>Friends of NASA Facebook (160,000+ followers)</a></li>
+<li><a href='https://www.instagram.com/friendsofnasa/'>Friends of NASA Instagram</a></li>
+<li><a href='https://www.linkedin.com/groups/110506'>Friends of NASA LinkedIn (20,000+ members)</a></li>
+<li><a href='http://twitter.com/FriendsofNASA'>Friends of NASA Twitter (X)</a></li>
+</ul>
+<div class='clear'></div>
+</div>
+</div><div class='widget Feed' data-version='1' id='Feed1'>
+<h2>NASA Breaking News</h2>
+<div class='widget-content' id='Feed1_feedItemListDisplay'>
+<span style='filter: alpha(25); opacity: 0.25;'>
+<a href='https://www.nasa.gov/rss/dyn/breaking_news.rss'>Loading...</a>
+</span>
+</div>
+<div class='clear'></div>
+</div><div class='widget BlogSearch' data-version='1' id='BlogSearch1'>
+<h2 class='title'>Search Friends of NASA Website</h2>
+<div class='widget-content'>
+<div id='BlogSearch1_form'>
+<form action='https://www.friendsofnasa.org/search' class='gsc-search-box' target='_top'>
+<table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+<tbody>
+<tr>
+<td class='gsc-input'>
+<input autocomplete='off' class='gsc-input' name='q' size='10' title='search' type='text' value=''/>
+</td>
+<td class='gsc-search-button'>
+<input class='gsc-search-button' title='search' type='submit' value='Search'/>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</div>
+<div class='clear'></div>
+</div><div class='widget PopularPosts' data-version='1' id='PopularPosts1'>
+<h2>Popular Posts</h2>
+<div class='widget-content popular-posts'>
+<ul>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/dream-chaser-spaceplanes-journey-to.html' target='_blank'>
+<img alt='' border='0' src='https://lh3.googleusercontent.com/blogger_img_proxy/AJ0KDdVPZ1XVsKs970vSb6GwLGFMW5dgCOEBtsF2ZYopMt1km8p2YapYdBLM5JQQKmfIgqGNNEVPUY9Kc6ZO2mC7kTWXEs8UVWQnXY5rkNIPpl44xcZ8RA=w72-h72-n-k-no-nu'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/dream-chaser-spaceplanes-journey-to.html'>Dream Chaser Spaceplane's Journey to NASA's Glenn Research Center in Ohio</a></div>
+<div class='item-snippet'>Dream Chaser Spaceplane&#39;s Journey to NASA&#39;s&#160; Glenn Research Center in Ohio &#8220;The last several years have required an enormous amount ...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/intuitive-machines-im-1-moon-lander-on.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivGUtl01nVrPSyVmMLL8ELd-7dJYhVpUjTouSy8ZJG0H8a9cOBEkNBPwRJK2-p41cHV4crXyV0a7xkQ8hlZubRkhK0SBW6ncqKDqQVCoIsRHHkRz9uPg62ZZVZ_0c36jyMCHApf6aowarcF_nQcNkSOTQc-Wx-YAY2w9dj551oK1UWZ7Z-D5actdgLGeY/w72-h72-p-k-no-nu/IMG%201.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/intuitive-machines-im-1-moon-lander-on.html'>Intuitive Machines IM-1 Moon Lander on SpaceX Falcon 9 Rocket Prelaunch</a></div>
+<div class='item-snippet'>Intuitive Machines IM-1 Moon Lander on SpaceX Falcon 9 Rocket: Prelaunch The Intuitive Machines IM-1 robotic Moon lander is targeted for lau...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/sagittarius-c-milky-ways-galaxy-center.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPV06nLBFjsCtfMIwrrFADvkk0Y4gehHmQqQDmxCvPwSOBhDTOVNNs7omUCrYxlU46GNcUcBVPgE18_rSF_vhJ6Bh41qY3frkw-Eb4Uo7Kop1cI6Wf41nszjcxINffxdrHohT9hyhEcKdnbG-qr04JCiAIgxmh92OnNPL9gspDckFYGLNIbBDRPkU6uTY/w72-h72-p-k-no-nu/potw2407a.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/sagittarius-c-milky-ways-galaxy-center.html'>Sagittarius C: The Milky Way's Galaxy Center | European Southern Observatory</a></div>
+<div class='item-snippet'>Sagittarius C: The Milky Way&#39;s Galaxy Center | European Southern Observatory Thousands of bright dots in different sizes and colors&#8212;red,...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/spacex-falcon-9-launch-of-nasa-pace.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_H0IS3Ih41DLkJzZamVWIUQk2wPu3MbZiSbE9gjpgZee5PK9tZDfXjYH0Xreu5pFIdeDqqHywOvjsMV05avzzBFejvnY2WILEMk3aeD4_qy_1EbvsKi2NAu2KzrnV_-xj16oj64SSWf7a86vNkY7hs5VSNSoDdpjFhoLqp05JBls99brb2rBBPmo6EDA/w72-h72-p-k-no-nu/IMG%201.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/spacex-falcon-9-launch-of-nasa-pace.html'>SpaceX Falcon 9 Launch of NASA PACE Earth Science Mission | Cape Canaveral</a></div>
+<div class='item-snippet'>SpaceX Falcon 9 Launch of&#160; NASA PACE Earth Science Mission&#160; | Cape Canaveral A SpaceX Falcon 9 rocket successfully launched NASA&#8217;s PACE (Pla...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/star-forming-region-iras-16562-3959-in.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiplMLzeNMrMWzoDpBvw5xmkAGahunvGhX9vFnnY8EpFdc3QwVD8w5MR1a6klHLrgNz5FYR8RmmYpFEX1BloZbp0VuLi2Du5mHWBmI5l2ctnzehrK3uKRvqooKSbAkOO1Lmf52UvWEtsoDGvjZvv6dJGp45at5kvp4R2BW5lZ8T01XKu7dOVCcChA59d38/w72-h72-p-k-no-nu/potw2407a.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/star-forming-region-iras-16562-3959-in.html'>Star-forming Region IRAS 16562-3959 in Scorpius | Hubble</a></div>
+<div class='item-snippet'>Star-forming Region IRAS 16562-3959 in&#160;Scorpius&#160;| Hubble This image is a relatively close-by star-forming region known as IRAS 16562-3959 th...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2023/05/centaurus-galaxy-with-black-hole-shines.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbPjDuLuKhPpPD2d4cYJbmx3x0LCnk-4rn8JmavRnsxOHQMZi6_mkJ3ha0Uhliy8pSsI-AGnKuh_er_SSZEo7V-ax1TxCBDCj0dms46PnZtavnGfGSd86yOVFcBoAFFPVk4Y6YGf8U189CuuaLIhLOCvl0rFOXMp_Hp704iVo7Wof1iemLEX6aMu1R/w72-h72-p-k-no-nu/Centaurus%20A%20-%20IXPE%20&%20Chandra%20(05-02-23)RD.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2023/05/centaurus-galaxy-with-black-hole-shines.html'>Centaurus A Galaxy with Black Hole Shines | NASA Chandra & IXPE</a></div>
+<div class='item-snippet'>Centaurus A Galaxy with Black Hole Shines | NASA Chandra &amp; IXPE The galaxy Centaurus A (Cen A) shines bright in this image combining dat...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/ax-3-crew-dragon-recovery-operations_9.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilDBcJGy_ot0oKqqH4C1jErqe4EHV4wc1VVaZwfiGYQ_qaqXZHoMhZbIDMAAO1RoqgPSybuDNccCeTCIrcgONAqB-34Es7TBFxcjfpIYwUuVXSocXxbbZ2tdfHx8t9Oet-HyS8wfpYGP7R7anmo_7CWfRksqod9MQIk6ttZH72g_wWQulITPdyJOwRrg4/w72-h72-p-k-no-nu/IMG%201.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/ax-3-crew-dragon-recovery-operations_9.html'>Ax-3 Crew Dragon Recovery Operations and Astronauts Egress | Axiom Space</a></div>
+<div class='item-snippet'>Ax-3 Crew Dragon Recovery Operations and Astronauts Egress&#160; | Axiom Space Ax-3 SpaceX Crew Dragon Spacecraft on recovery boat Shannon Ax-3 P...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='https://www.friendsofnasa.org/2024/02/expedition-70-ax-3-crews-plus-cygnus.html' target='_blank'>
+<img alt='' border='0' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZaeTXMqxaEsEbwTCLY9wziZuA0y2Pxl_SsOv3eFmZVM7QHpPvHidTXR0zmIuqvV5lyGuNoBvXcmujbfMMp_fOnwpv06_aqTCZ4jXdV-lliVKFQtJTIh07ECGHCGiG1f6RbXR28G-oGpymuNNs9Eur2x_UlIDWb0OA4M8j3pTH4OcvCii_0EFyogT-uXw/w72-h72-p-k-no-nu/IMG%201.jpg'/>
+</a>
+</div>
+<div class='item-title'><a href='https://www.friendsofnasa.org/2024/02/expedition-70-ax-3-crews-plus-cygnus.html'>Expedition 70 & Ax-3 Crews Plus Cygnus Capture | International Space Station</a></div>
+<div class='item-snippet'>Expedition 70 &amp; Ax-3 Crews Plus Cygnus Capture | International Space Station Expedition 70 Flight Engineers (from left) Jasmin Moghbeli ...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+</ul>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' data-version='1' id='HTML1'>
+<h2 class='title'>Join Friends of NASA on LinkedIn             (20,000+ Professional Members)</h2>
+<div class='widget-content'>
+<a href="https://www.linkedin.com/groups/110506"><img src="//2.bp.blogspot.com/-7SrY50PrdL4/UcnORRTXAyI/AAAAAAAACxg/cHub4amiZmE/s1600/300px-NASA_logo.svg.png" border="0" alt="Friends of NASA"></a>
+</div>
+<div class='clear'></div>
+</div><div class='widget Profile' data-version='1' id='Profile1'>
+<div class='widget-content'>
+<a href='https://www.blogger.com/profile/03508482617399302045'><img alt='My photo' class='profile-img' height='80' src='//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJLOHCXSSzPCKGx5UyJDJU3-paTnTFtiF9CCAij1-wsCt_s-rlpco8y2va5ESl-Nj-DgZkirCyXakYfpJPt8fRhJkswKkY59SJQOGBUIQOIoAq9Vbdqx73QM7Hiuac8HI/s113/*' width='80'/></a>
+<dl class='profile-datablock'>
+<dt class='profile-data'>
+<a class='profile-name-link g-profile' href='https://www.blogger.com/profile/03508482617399302045' rel='author' style='background-image: url(//www.blogger.com/img/logo-16.png);'>
+Dwayne Lawrence - Friends of NASA | Founder and Executive Director
+</a>
+</dt>
+<dd class='profile-textblock'>Friends of NASA is an independent non-governmental organization (NGO) dedicated to building international support for peaceful space exploration, commerce, scientific discovery, and STEM education.</dd>
+</dl>
+<a class='profile-link' href='https://www.blogger.com/profile/03508482617399302045' rel='author'>View my complete profile</a>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' data-version='1' id='HTML3'>
+<h2 class='title'>Follow Friends of NASA on Twitter</h2>
+<div class='widget-content'>
+<a href="https://twitter.com/FriendsofNASA" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @FriendsofNASA</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<div class='clear'></div>
+</div><div class='widget BlogArchive' data-version='1' id='BlogArchive1'>
+<h2>Blog Archive</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2024/'>
+2024
+</a>
+<span class='post-count' dir='ltr'>(279)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2024/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(89)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2024/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(190)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/'>
+2023
+</a>
+<span class='post-count' dir='ltr'>(2290)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/12/'>
+December
+</a>
+<span class='post-count' dir='ltr'>(161)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(145)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(139)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(187)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(221)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(263)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(225)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(227)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(203)</span>
+<ul class='posts'>
+<li><a href='https://www.friendsofnasa.org/2023/04/saturns-moon-helene-nasa-cassini-mission.html'>Saturn&#39;s Moon Helene | NASA Cassini Mission</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-mars-ancient-rivers-in-mawrth.html'>Planet Mars: Ancient Rivers in Mawrth Vallis | NAS...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-raspberry-nebula-lbn-867-noirlab.html'>The Raspberry Nebula: LBN 867 | Kitt Peak National...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/a-cosmic-overpass-over-chile-magellanic.html'>A Cosmic Overpass over Chile: Magellanic Clouds &amp; ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/aurora-over-nantes-in-northwestern.html'>Aurora over Nantes in Northwestern France | Earth ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/chinas-shenzhou-15-space-station-crew.html'>China&#39;s Shenzhou-15 Space Station Crew: Steady Pro...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/canadarm2-timelapse-views-international.html'>Canadarm2: Timelapse Views | International Space S...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/tonights-sky-may-2023-northern.html'>Tonight&#39;s Sky: May 2023 (Northern Hemisphere)</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/how-do-esas-astronauts-prepare-for-space.html'>How do European Astronauts Prepare for Space? | ESA</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/moving-ahead-with-space-station-power.html'>Moving Ahead With Space Station Power Upgrades | T...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-space-to-ground-checkmate-week-of.html'>NASA&#39;s Space to Ground: Checkmate | Week of April ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-topics-mission-rocket-lab-electron.html'>NASA TROPICS Mission: Rocket Lab Electron Launch P...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/large-geomagnetic-storm-hits-earth-noaa.html'>Large Geomagnetic Storm Hits Earth | NOAA</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/zooming-in-on-dwarf-galaxy-ddo-68-hubble.html'>Zooming in on Dwarf Galaxy DDO 68 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/panning-across-dwarf-galaxy-ddo-68.html'>Panning across Dwarf Galaxy DDO 68 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/dwarf-galaxy-ddo-68-hubble.html'>Dwarf Galaxy DDO 68 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/six-examples-of-galaxy-mergers-hubble_27.html'>Six Examples of Galaxy Mergers | Hubble Space Tele...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/six-examples-of-galaxy-mergers-hubble.html'>Six Examples of Galaxy Mergers | Hubble Space Tele...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/russian-cosmonauts-on-spacewalk_27.html'>Russian Cosmonauts on Spacewalk | International Sp...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-artemis-i-moon-mission-launch-to.html'>NASA&#8217;s Artemis I Moon Mission: Launch to Splashdow...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-astronaut-jessica-watkins.html'>NASA Astronaut &amp; Spaceflight Veteran Jessica Watki...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-mars-images-april-2023-nasas_27.html'>Planet Mars Images: April 2023 | NASA&#39;s Curiosity ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/china-to-build-lunar-research-station.html'>China to Build Lunar Research Station during Chang...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/astronauts-alneyadi-bowen-prepare-for.html'>Astronauts Alneyadi &amp; Bowen Prepare for Spacewalk ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/new-nasa-artemis-v-moon-rocket-engine_26.html'>New NASA Artemis V Moon Rocket Engine Test: Prepar...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-espacio-tierra-haciendo-un.html'>NASA&#39;s Espacio a Tierra | Haciendo un impacto glob...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/zooming-in-on-black-hole-and-jet-of.html'>Zooming in on the Black Hole and Jet of Galaxy Mes...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/first-direct-image-of-black-hole_26.html'>First Direct Image of a Black Hole Expelling a Pow...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/first-direct-image-of-black-hole.html'>First Direct Image of a Black Hole Expelling a Pow...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/earth-science-ten-years-of-global.html'>Earth Science: Ten Years of Global Glacier Ice Los...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/tempo-launch-monitoring-air-pollution.html'>TEMPO Launch: Monitoring Air Pollution over North ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-canadian-rockies-of-north-america.html'>The Canadian Rockies of North America | Internatio...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/recientemente-noticias-sobre-nuestra.html'>Recientemente: Noticias sobre nuestra arquitectura...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/expedition-69-astronaut-woody-hoburg.html'>Expedition 69 Astronaut Woody Hoburg Answers Penns...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-kennedy-space-center-update-for.html'>NASA&#39;s Kennedy Space Center Update for 2023</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-mars-images-april-2023-nasas_25.html'>Planet Mars Images: April 2023 | NASA&#39;s Curiosity ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/chinas-new-global-map-of-mars-tianwen-1.html'>China&#39;s New Global Map of Mars | Tianwen-1 Mars Mi...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/moon-orbit-earthrise-solar-eclipse.html'>Moon Orbit: Earthrise &amp; Solar Eclipse | iSpace Mis...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/cygnus-space-freighter-canadarm-2.html'>Cygnus Space Freighter S.S. Sally Ride &amp; Canadarm ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/chinese-taikonauts-talk-with-students.html'>Chinese Taikonauts Talk with Students from Mongoli...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/arc-mining-moon-using-controlled.html'>Arc Mining The Moon: Using Controlled Lighting Bol...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/aurora-borealis-over-yellowstone.html'>Aurora Borealis over Yellowstone National Park | U...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/mars-moon-deimos-flyby-united-arab.html'>Planet Mars: Deimos Moon Flyby | United Arab Emira...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-wind-tunnel-engineers-langley.html'>NASA Wind Tunnel Engineers: Sam &amp; Frank | Langley ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/celebrating-hubbles-33rd-year.html'>Celebrating Hubble&#8217;s 33rd Year Anniversary! | NASA...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/huge-galaxy-protocluster-in-early.html'>Huge Galaxy Protocluster in Early-Universe Discove...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/witnessing-birth-of-distant-cluster-of.html'>Witnessing the Birth of a Distant Cluster of Galax...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html'>A New Planet is Born: Star HD 169142 | European So...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/galaxy-cluster-aco-s520-in-pictor-hubble.html'>Galaxy Cluster ACO S520 in Pictor | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-tarantula-nebula-nasa-stratospheric.html'>The Tarantula Nebula | NASA Stratospheric Balloon-...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-himalayas-mount-everest-in-nepal.html'>The Himalayas &amp; Mount Everest in Nepal | Internati...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/a-new-panorama-of-our-galactic-center-x.html'>A New Panorama of Our Galactic Center: X-Ray &amp; Rad...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/moon-to-mars-architecture-news-this.html'>Moon to Mars Architecture News | This Week@NASA</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/jellyfish-galaxy-jo204-shaped-by-ram_23.html'>Pan of Jellyfish Galaxy JO204: Shaped by Ram Press...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/pan-over-swirling-barred-spiral-galaxy.html'>Pan over Swirling Barred Spiral Galaxy UGC 678 | H...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/from-orbit-to-aiharnessing-machine.html'>From Orbit to A.I.&#8212;Harnessing Machine Learning wit...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-dia-de-la-tierra-2023-estudiando.html'>NASA Día de la Tierra 2023: estudiando la Tierra d...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-mars-images-april-2023-nasas_22.html'>Planet Mars Images: April 2023 | NASA&#39;s Curiosity ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/happy-earth-day-2023-download-free-nasa.html'>Happy Earth Day 2023! | Download Free NASA Poster</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/mayottes-lagoon-comoro-islands-indian.html'>Mayotte&#8217;s Lagoon, Comoros Islands, Indian Ocean | ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/happy-earth-day-2023-noaa.html'>Happy Earth Day 2023! | NOAA</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/earthrise-conversation-with-apollo-8.html'>Earthrise: A Conversation with Apollo 8 Astronaut ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-earth-in-4k-expeditions-67-68.html'>The Earth in 4K:  Expeditions 67-68 | Internationa...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/the-ballad-of-overview-effect-down-to.html'>The Ballad of The Overview Effect | Down to Earth ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-earth-day-2023-activities-at-union.html'>NASA Earth Day 2023 Activities at Union Station, W...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-earth-day-poster-2023-sciencenasa.html'>NASA&#39;s Earth Day Poster 2023 | Science@NASA</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-space-to-ground-making-global.html'>NASA&#39;s Space to Ground: Making a Global Impact | W...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/expedition-69-new-crew-station-photos.html'>Expedition 69: New Crew &amp; Station Photos | Interna...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/new-stellar-danger-to-planets_20.html'>New Stellar Danger to Planets Identified | NASA&#39;s ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/new-stellar-danger-to-planets.html'>New Stellar Danger to Planets Identified | NASA&#39;s ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/spacex-starship-flight-test-april-20.html'>SpaceX Starship Flight Test: April 20, 2023</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/hubble-33th-anniversary-image-dark.html'>Hubble 33th Anniversary Image: Dark Nebula NGC 133...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/zoom-into-ngc-1333-cauldron-of-star.html'>Zoom into Dark Nebula NGC 1333: A Cauldron of Star...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/pan-of-dark-nebula-ngc-1333-cauldron-of.html'>Pan of Dark Nebula NGC 1333: A Cauldron of Star Bi...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/dark-nebula-ngc-1333-cauldron-of-star_20.html'>Dark Nebula NGC 1333: A Cauldron of Star Birth | H...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/dark-nebula-ngc-1333-cauldron-of-star.html'>Dark Nebula NGC 1333: A Cauldron of Star Birth | H...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-mars-waxing-waning-winds-nasas.html'>Planet Mars: Waxing &amp; Waning Winds | NASA&#39;s Mars R...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/ingenuity-mars-helicopter-achieves.html'>Ingenuity Mars Helicopter Achieves Milestones | NA...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasas-espacio-tierra-empacando-14-de.html'>NASA&#39;s Espacio A Tierra | Empacando: 14 de abril 2023</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/building-blocks-for-life-to-survive-on.html'>Building Blocks for Life to Survive on Saturn&#39;s Mo...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/russian-cosmonauts-on-spacewalk.html'>Russian Cosmonauts on Spacewalk | International Sp...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/russian-soyuz-crew-ship-space-modules.html'>Russian Soyuz Crew Ship &amp; Space Modules over Earth...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/planet-jupiter-ganymedelargest-moon-in.html'>Planet Jupiter &amp; Ganymede&#8212;Largest Moon in Our Sola...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/wide-field-view-of-galaxies-ngc-4298.html'>Wide-field View of Galaxies NGC 4298 &amp; NGC 4302 (g...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/zoom-in-on-galaxies-ngc-4298-ngc-4302.html'>Zoom-in on Galaxies NGC 4298 &amp; NGC 4302 | Hubble &amp;...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/pan-on-galaxies-ngc-4298-ngc-4302-hubble.html'>Pan on Galaxies NGC 4298 &amp; NGC 4302 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/a-close-galactic-pair-galaxies-ngc-4302.html'>A Close Galactic Pair: Galaxies NGC 4302 &amp; NGC 429...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/moscow-celebrates-first-film-shot-in.html'>Moscow Celebrates First Film Shot in Space Ahead o...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/expedition-69-astronauts-discuss-life.html'>Expedition 69 Astronauts Discuss Life in Space | I...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/wide-field-view-of-lenticular-galaxy.html'>Wide-field View of Lenticular Galaxy NGC 4993 (gro...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/neutron-star-merger-animation-ending.html'>Neutron Star Merger Animation Ending with Kilonova...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/zoom-into-lenticular-galaxy-ngc-4993.html'>Zoom into Lenticular Galaxy NGC 4993 and Kilonova ...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/lenticular-galaxy-ngc-4993-kilonova.html'>Lenticular Galaxy NGC 4993: Kilonova Detected | Hu...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/nasa-launches-super-pressure-balloon.html'>NASA Launches Stratospheric Super Pressure Balloon...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/inteviewing-wally-funk-aviation-pioneer.html'>Interviewing Wally Funk: Aviation Pioneer | Nation...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/recientemente-un-hito-para-nuestro.html'>Recientemente: Un hito para nuestro avión supersón...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/wide-field-view-of-interacting-galaxies.html'>Wide-field View of Interacting Galaxies Arp 256 (g...</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/pan-on-galactic-merger-in-progress-arp.html'>Pan on Galactic Merger in Progress: Arp 256 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/galactic-merger-in-progress-arp-256.html'>Galactic Merger in Progress: Arp 256 | Hubble</a></li>
+<li><a href='https://www.friendsofnasa.org/2023/04/american-bald-eagle-family-at-nasas.html'>American Bald Eagle Family at NASA&#39;s Kennedy Space...</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(212)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(145)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2023/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(162)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/'>
+2022
+</a>
+<span class='post-count' dir='ltr'>(2447)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/12/'>
+December
+</a>
+<span class='post-count' dir='ltr'>(173)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(169)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(290)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(397)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(489)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(284)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(139)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(145)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(153)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(108)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(85)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2022/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(15)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2021/'>
+2021
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2021/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2020/'>
+2020
+</a>
+<span class='post-count' dir='ltr'>(10)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2020/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(10)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/'>
+2019
+</a>
+<span class='post-count' dir='ltr'>(151)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(8)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(54)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(63)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2019/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(20)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/'>
+2018
+</a>
+<span class='post-count' dir='ltr'>(471)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(17)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(38)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(53)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(95)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(57)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(54)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(125)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(23)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2018/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(9)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/'>
+2017
+</a>
+<span class='post-count' dir='ltr'>(292)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(18)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(59)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(56)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(39)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(39)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(76)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2017/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/'>
+2016
+</a>
+<span class='post-count' dir='ltr'>(187)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(55)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(18)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(15)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(74)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(9)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2016/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/'>
+2015
+</a>
+<span class='post-count' dir='ltr'>(2379)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/12/'>
+December
+</a>
+<span class='post-count' dir='ltr'>(81)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(59)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(236)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(66)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(446)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(568)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(262)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(213)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(134)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(111)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/02/'>
+February
+</a>
+<span class='post-count' dir='ltr'>(74)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2015/01/'>
+January
+</a>
+<span class='post-count' dir='ltr'>(129)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/'>
+2014
+</a>
+<span class='post-count' dir='ltr'>(2453)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/12/'>
+December
+</a>
+<span class='post-count' dir='ltr'>(279)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(482)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(619)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(315)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/08/'>
+August
+</a>
+<span class='post-count' dir='ltr'>(162)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(459)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/06/'>
+June
+</a>
+<span class='post-count' dir='ltr'>(104)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2014/03/'>
+March
+</a>
+<span class='post-count' dir='ltr'>(31)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/'>
+2013
+</a>
+<span class='post-count' dir='ltr'>(135)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/12/'>
+December
+</a>
+<span class='post-count' dir='ltr'>(11)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/11/'>
+November
+</a>
+<span class='post-count' dir='ltr'>(30)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/10/'>
+October
+</a>
+<span class='post-count' dir='ltr'>(89)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/09/'>
+September
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/07/'>
+July
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2013/05/'>
+May
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2012/'>
+2012
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://www.friendsofnasa.org/2012/04/'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+</div><div class='widget Subscribe' data-version='1' id='Subscribe1'>
+<div style='white-space:nowrap'>
+<h2 class='title'>Subscribe to Friends of NASA</h2>
+<div class='widget-content'>
+<div class='subscribe-wrapper subscribe-type-POST'>
+<div class='subscribe expanded subscribe-type-POST' id='SW_READER_LIST_Subscribe1POST' style='display:none;'>
+<div class='top'>
+<span class='inner' onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img class='subscribe-dropdown-arrow' src='https://resources.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+Posts
+</span>
+<div class='feed-reader-links'>
+<a class='feed-reader-link' href='https://www.netvibes.com/subscribe.php?url=https%3A%2F%2Fwww.friendsofnasa.org%2Ffeeds%2Fposts%2Fdefault' target='_blank'>
+<img src='https://resources.blogblog.com/img/widgets/subscribe-netvibes.png'/>
+</a>
+<a class='feed-reader-link' href='https://add.my.yahoo.com/content?url=https%3A%2F%2Fwww.friendsofnasa.org%2Ffeeds%2Fposts%2Fdefault' target='_blank'>
+<img src='https://resources.blogblog.com/img/widgets/subscribe-yahoo.png'/>
+</a>
+<a class='feed-reader-link' href='https://www.friendsofnasa.org/feeds/posts/default' target='_blank'>
+<img align='absmiddle' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+                  Atom
+                </a>
+</div>
+</div>
+<div class='bottom'></div>
+</div>
+<div class='subscribe' id='SW_READER_LIST_CLOSED_Subscribe1POST' onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<div class='top'>
+<span class='inner'>
+<img class='subscribe-dropdown-arrow' src='https://resources.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+Posts
+</span>
+</span>
+</div>
+<div class='bottom'></div>
+</div>
+</div>
+<div class='subscribe-wrapper subscribe-type-PER_POST'>
+<div class='subscribe expanded subscribe-type-PER_POST' id='SW_READER_LIST_Subscribe1PER_POST' style='display:none;'>
+<div class='top'>
+<span class='inner' onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img class='subscribe-dropdown-arrow' src='https://resources.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+Comments
+</span>
+<div class='feed-reader-links'>
+<a class='feed-reader-link' href='https://www.netvibes.com/subscribe.php?url=https%3A%2F%2Fwww.friendsofnasa.org%2Ffeeds%2F5666205086487522442%2Fcomments%2Fdefault' target='_blank'>
+<img src='https://resources.blogblog.com/img/widgets/subscribe-netvibes.png'/>
+</a>
+<a class='feed-reader-link' href='https://add.my.yahoo.com/content?url=https%3A%2F%2Fwww.friendsofnasa.org%2Ffeeds%2F5666205086487522442%2Fcomments%2Fdefault' target='_blank'>
+<img src='https://resources.blogblog.com/img/widgets/subscribe-yahoo.png'/>
+</a>
+<a class='feed-reader-link' href='https://www.friendsofnasa.org/feeds/5666205086487522442/comments/default' target='_blank'>
+<img align='absmiddle' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+                  Atom
+                </a>
+</div>
+</div>
+<div class='bottom'></div>
+</div>
+<div class='subscribe' id='SW_READER_LIST_CLOSED_Subscribe1PER_POST' onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<div class='top'>
+<span class='inner'>
+<img class='subscribe-dropdown-arrow' src='https://resources.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='https://resources.blogblog.com/img/icon_feed12.png'/>
+Comments
+</span>
+</span>
+</div>
+<div class='bottom'></div>
+</div>
+</div>
+<div style='clear:both'></div>
+</div>
+</div>
+<div class='clear'></div>
+</div></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class='sidebar no-items section' id='sidebar-right-3'></div>
+</aside>
+</div>
+</div>
+</div>
+<div style='clear: both'></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class='main-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<footer>
+<div class='footer-outer'>
+<div class='footer-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left footer-fauxborder-left'>
+<div class='fauxborder-right footer-fauxborder-right'></div>
+<div class='region-inner footer-inner'>
+<div class='foot section' id='footer-1'><div class='widget HTML' data-version='1' id='HTML5'>
+<div class='widget-content'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3959771632552763"
+     crossorigin="anonymous"></script>
+</div>
+<div class='clear'></div>
+</div></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='foot no-items section' id='footer-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='foot no-items section' id='footer-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class='foot no-items section' id='footer-3'></div>
+</div>
+</div>
+<div class='footer-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
 </div>
 </footer>
-
+<!-- content -->
 </div>
 </div>
-<script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=EXOPLANETS&amp;pua=UA-75768140-1,UA-118212757-3&amp;sp=q&amp;Sdor=false&amp;yt=true&exts=tif,tiff,wav" type='text/javascript'></script>
+<div class='content-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
 
-
-<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5JGP522');</script><!-- End Google Tag Manager -->
-
-
-<script id="parsely-cfg" src="//cdn.parsely.com/keys/exoplanets.nasa.gov/p.js" async="" defer=""></script>
-
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2830589142-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY765ZHTu77qHqxEyqHMvkSG8WfUZQ:1708022215391';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d5682574620231385546','//www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html','5682574620231385546');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '5682574620231385546', 'title': 'Friends of NASA', 'url': 'https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html', 'canonicalUrl': 'https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html', 'homepageUrl': 'https://www.friendsofnasa.org/', 'searchUrl': 'https://www.friendsofnasa.org/search', 'canonicalHomepageUrl': 'https://www.friendsofnasa.org/', 'blogspotFaviconUrl': 'https://www.friendsofnasa.org/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Friends of NASA - Atom\x22 href\x3d\x22https://www.friendsofnasa.org/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Friends of NASA - RSS\x22 href\x3d\x22https://www.friendsofnasa.org/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Friends of NASA - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/5682574620231385546/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Friends of NASA - Atom\x22 href\x3d\x22https://www.friendsofnasa.org/feeds/5666205086487522442/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseClientId': 'ca-pub-3959771632552763', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/360931b5b66b264f', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '5666205086487522442', 'postImageThumbnailUrl': 'https://i.ytimg.com/vi/5P1SQk9sa98/default.jpg', 'postImageUrl': 'https://i.ytimg.com/vi/5P1SQk9sa98/hqdefault.jpg', 'pageName': 'A New Planet is Born: Star HD 169142 | European Southern Observatory', 'pageTitle': 'Friends of NASA: A New Planet is Born: Star HD 169142 | European Southern Observatory', 'metaDescription': ''}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'Ok', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true, 'variant': 'dark', 'variantId': 'dark'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'A New Planet is Born: Star HD 169142 | European Southern Observatory', 'description': 'Friends of NASA is an independent NGO dedicated to building international support for peaceful space exploration, commerce, science and STEM education', 'featuredImage': 'https://lh3.googleusercontent.com/blogger_img_proxy/AJ0KDdXpIK8-nSTThBwOIi59pyxNHfQm9Ti_yMvNfd2SgW-E4dmU_DyAExOHQnahBhjDqGxetOO2LpyLHCsiUTwOXEIiqT67dxRBEvijw_aAWnx4E7IAAQ', 'url': 'https://www.friendsofnasa.org/2023/04/star-hd-169142-new-planet-is-born.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 5666205086487522442}}]);
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'crosscol', document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/', 'title': 'Home'}, {'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/p/about-friends-of-nasa.html', 'id': '2948707727019397127', 'title': 'About Friends of NASA'}, {'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/p/friends-of-nasa-leadership.html', 'id': '549307093098112167', 'title': 'Friends of NASA Leadership \x26amp; Management'}, {'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/p/friends-of-nasa.html', 'id': '3818931609525441419', 'title': 'Become a Friends of NASA Supporter'}, {'isCurrentPage': false, 'href': 'https://www.linkedin.com/groups/110506', 'title': 'Friends of NASA LinkedIn'}, {'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/p/2014-2015-update.html', 'id': '8638026769077018329', 'title': 'Friends of NASA Plans \x26amp; Objectives (2024)'}, {'isCurrentPage': false, 'href': 'https://www.friendsofnasa.org/p/contact-us.html', 'id': '8608289302426754356', 'title': 'Contact Us'}], 'mobile': false, 'showPlaceholder': false, 'hasCurrentPage': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1706771196-lbx__en_gb.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/3268905543-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML7', 'sidebar-right-1', document.getElementById('HTML7'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sidebar-right-1', document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar-right-1', document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'sidebar-right-1', document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar-right-1', document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList2', 'sidebar-right-1', document.getElementById('LinkList2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_TranslateView', new _WidgetInfo('Translate1', 'sidebar-right-1', document.getElementById('Translate1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebar-right-1', document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed1', 'sidebar-right-1', document.getElementById('Feed1'), {'title': 'NASA Breaking News', 'showItemDate': true, 'showItemAuthor': false, 'feedUrl': 'https://www.nasa.gov/rss/dyn/breaking_news.rss', 'numItemsShow': 5, 'loadingMsg': 'Loading...', 'openLinksInNewWindow': true, 'useFeedWidgetServ': 'true'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'sidebar-right-1', document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar-right-1', document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar-right-1', document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar-right-1', document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebar-right-1', document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-right-1', document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Loading\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_SubscribeView', new _WidgetInfo('Subscribe1', 'sidebar-right-1', document.getElementById('Subscribe1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'footer-1', document.getElementById('HTML5'), {}, 'displayModeFull'));
+</script>
 </body>
 </html>

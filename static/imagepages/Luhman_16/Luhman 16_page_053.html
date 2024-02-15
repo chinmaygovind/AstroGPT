@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110248607-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-110248607-1');
+  </script>
+
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Juno: New Origins  | Luhman 16 Ac</title>
+
+  <meta name="keywords" content="SimpleRockets,game,physics,rocket,building,design" />
+  <meta name="description" content="PC and mobile game about building rockets">
+  <meta name="author" content="okler.net">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/Content/img/favicon.ico?v=2" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/Content/img/apple-touch-icon.png">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Web Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/Content/vendor/font-awesome/css/font-awesome.css">
+
+  <link href="/bundles/bundle-css?v=3a_vORvtWVf8pUWqbWupiRslOQixOGIx_oHBxAbYbNg1" rel="stylesheet"/>
+
+
+  <!-- Head Libs -->
+  <script src="/bundles/header-js?v=wDXEzX_EpPJb5iZZmPjqpBeW6yqo_X0S_9LrEXGEEZU1"></script>
+
+
+  <!-- Cookie notice -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#252e39"
+          },
+          "button": {
+            "background": "#14a7d0"
+          }
+        },
+        "content": {
+          "message": "By continuing, you agree that we may use cookies to help customize your experience."
+        }
+      })
+    });
+  </script>
+</head>
+<body>
+  <div class="body">
+    <header id="header" class="header-narrow header-full-width header-no-min-height" data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickySetTop': '0'}">
+      <div class="header-body" style="top: 0px;">
+        <div class="header-container container">
+          <div class="header-row">
+            <div class="header-column">
+              <div class="header-row">
+                <div class="header-logo">
+                    <a href="/">
+                      <img alt="Porto" style="max-height:66px; max-width:100%" src="/Content/img/logo.png" title="What is happening to the logo...">
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div class="header-column justify-content-end">
+              <div class="header-row">
+                <div class="header-nav">
+                  <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                    <nav class="collapse">
+                      <ul class="nav nav-pills" id="mainMenu">
+                          <li><a class="nav-link" href="/Buy">Buy</a></li>
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href="#">
+                            Community
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Forums">Forums</a></li>
+                            <li><a class="dropdown-item" href="/Videos">Videos</a></li>
+                            <li><a class="dropdown-item" href="/Users">Users</a></li>
+                            <li><a class="dropdown-item" href="/Education">Education</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href="#">
+                            Content
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Crafts">Crafts</a></li>
+                            <li><a class="dropdown-item" href="/Sandboxes">Sandboxes</a></li>
+                            <li><a class="dropdown-item" href="/PlanetarySystems">Systems</a></li>
+                            <li><a class="dropdown-item" href="/CelestialBodies">Celestial Bodies</a></li>
+                            <li><a class="dropdown-item" href="/Mods">Mods</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href="#">
+                            Development
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.simplerockets.com/Forums/View/3059">FAQ</a></li>
+                            <li><a class="dropdown-item" href="/Blog">Blog</a></li>
+                            <li><a class="dropdown-item" href="/Feedback/Roadmap">Roadmap</a></li>
+                            <li><a class="dropdown-item" href="/Feedback/Suggestions">Suggestions</a></li>
+                            <li><a class="dropdown-item" href="/About/Presskit">Presskit</a></li>
+                          </ul>
+                        </li>
+                          <li>
+                            <a href="/Account/LogIn?returnUrl=%2FCelestialBodies%2FView%2FO2UTQw%2FLuhman-16-Ac">Register / Log-In</a>
+                          </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                    <i class="fa fa-bars"></i>
+                  </button>
+                  <ul class="header-social-icons social-icons d-none d-sm-block">
+                    <li class="social-icons-instagram"><a href="https://www.instagram.com/jundroo_games/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    <li class="social-icons-twitter"><a href="https://twitter.com/jundroogames" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li class="social-icons-youtube"><a href="https://www.youtube.com/user/Jundroo" target="_blank" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div role="main" class="main">
+      
+  <section class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+
+<img src="https://www.gravatar.com/avatar/b5c99292f62406911706e09b3db74978" style="float:left; margin-right: 10px; max-width: 80px; max-height: 80px; width: 100%" alt="Profile image" />
+
+<h1 style="display:flex;">Luhman 16 Ac</h1>
+<br />
+<div style="padding-top: 10px;">
+    <span>
+        <div style="display:inline-block; margin-right: 10px;">
+          <span class='user-points rank-14' title=''>4,563</span>
+          <a href="/u/sacr3dbac0n0">sacr3dbac0n0</a>
+        </div>
+    </span>
+  <span title="8/12/2021" > &nbsp;2.5 years ago </span>
+</div>
+
+
+        </div>
+        <div class="col-md-4 text-right">
+
+          <div class="d-inline-block">
+
+          </div>
+
+
+          <div class="d-inline-block">
+            <span style="display:none" class="desktop-only">
+              <a id="download-desktop" href="#" class="btn btn-primary btn-icon download-button"><i class="fa fa-download"></i> Download</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <div class="container" style="min-height: 200px">
+        
+
+
+
+<!-- Spotlight Modal -->
+<div id="spotlight-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Spotlight Post</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Spotlighting lets you share this post with all of your followers. This is a great way to help new players get the recognition they deserve for their work.
+        </p>
+        <p>
+          Click the Spotlight button below and all of your followers will receive a notification.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
+        <a id="spotlight-confirm-button" class="btn btn-primary" href="/Post/Spotlight/140257">Spotlight</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Download Modal -->
+<div id="download-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Download Celestial Body</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Copy this URL to the clipboard and press CTRL+V while in the designer in Juno: New Origins to download this celestial body.
+          <input onClick="this.select();" type="text" class="form-control" value="https://www.simplerockets.com/CelestialBodies/View/O2UTQw/Luhman-16-Ac" />
+        </p>
+        <p>
+          If you are on mobile, then try requesting the mobile version of the site. You can learn more about how to do that <a href="https://www.igeeksblog.com/how-to-go-back-to-mobile-site-after-requesting-desktop-version-on-iphone-ipad/">here</a>. Otherwise, just click
+          the Download for Mobile button below.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-primary btn-icon download-button download-mobile">Download for Mobile</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="portfolio-list lightbox" data-sort-id="portfolio" data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}}'>
+      <div class="owl-carousel" data-plugin-options='{"items": 1}'>
+          <div>
+            <div class="portfolio-item img-thumbnail">
+              <a href="https://jundroo.blob.core.windows.net/simplerockets/files/2021/8/12/O2UTQw/UserView-0.jpg">
+                <img alt="" class="img-responsive user-image" src="https://jundroo.blob.core.windows.net/simplerockets/files/2021/8/12/O2UTQw/UserView-0.jpg">
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div>
+      <div>
+        <div class="pull-right">
+          <div>
+            <div class="btn btn-dark btn-xs dropdown-toggle ml-1" data-toggle="dropdown">
+            </div>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="/Post/ReportPost/140257" title="Report this post as inappropriate.">Report</a>
+            </div>
+          </div>
+        </div>
+
+        <span class="downloads pull-right"><i class="fa fa-cloud-download"></i> 1,404 downloads</span>
+
+          <span class="badge badge-dark">Unlisted</span>
+      </div>
+
+      <div class="post-description">
+          <div style="margin-top: 10px; border-top: 1px solid #282d36; padding-top: 15px;">
+            <span class="badge badge-dark">Auto Credit</span> Based on lordvader0219's <a href="/CelestialBodies/View/1253WY/Luhman-16-Ac">Luhman 16 Ac</a>
+          </div>
+        <p class="more" style="margin-top: 10px; border-top: 1px solid #282d36; padding-top: 15px;">
+          <p>A ringed gas giant with a very chaotic top layer of clouds and enormous storms. Added rings.</p>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 post-specs">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-box-icon">
+            <i class="fa fa-info"></i>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="heading-primary mb-0">GENERAL INFO</h4>
+            <ul>
+                <li>
+                  <span class="spec-label">Predecessor:</span>
+                  <span class="spec-value"><a href="/CelestialBodies/View/1253WY">Luhman 16 Ac</a></span>
+                </li>
+                                          <li>
+                <span class="spec-label">Created On:</span>
+                <span class="spec-value">Windows</span>
+              </li>
+              <li>
+                <span class="spec-label">Game Version:</span>
+                <span class="spec-value">0.9.704.0</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-box-icon">
+            <i class="fa fa-globe"></i>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="heading-primary mb-0">CHARACTERISTICS</h4>
+            <ul>
+              <li>
+                <span class="spec-label">Radius:</span>
+                <span class="spec-value">15,500 km</span>
+              </li>
+              <li>
+                <span class="spec-label">Sea Level:</span>
+                <span class="spec-value">None</span>
+              </li>
+              <li>
+                <span class="spec-label">Surface Gravity:</span>
+                <span class="spec-value">23.0 m/s</span>
+              </li>
+              <li>
+                <span class="spec-label">Rotational Period:</span>
+                <span class="spec-value">5d 20h </span>
+              </li>
+              <li>
+                <span class="spec-label">Escape Velocity:</span>
+                <span class="spec-value">26.70 km/s</span>
+              </li>
+              <li>
+                <span class="spec-label">Mass:</span>
+                <span class="spec-value">8.28E+25kg</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-box-icon">
+            <i class="fa fa-cloud"></i>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="heading-primary mb-0">Atmosphere</h4>
+            <ul>
+                <li>
+                  <span class="spec-label">Height:</span>
+                  <span class="spec-value">75 km</span>
+                </li>
+                <li>
+                  <span class="spec-label">Scale Height:</span>
+                  <span class="spec-value">11 km</span>
+                </li>
+                <li>
+                  <span class="spec-label">Surface Air Density:</span>
+                  <span class="spec-value">26.681 kg/m3</span>
+                </li>
+                <li>
+                  <span class="spec-label">Surface Temperature:</span>
+                  <span class="spec-value">90 K</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="feature-box">
+          <div class="feature-box-icon">
+            <i class="fa fa-map"></i>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="heading-primary mb-0">EQUIRECTANGULAR MAP</h4>
+          </div>
+        </div>
+        <div class="col-md-12 mt-4">
+          <div style="overflow-x:auto; margin: auto auto; text-align: center">
+            <div id="map-container" style="width: 1024px; height: 512px; display:block; background-image: url('https://jundroo.blob.core.windows.net/simplerockets/files/2021/8/12/O2UTQw/PlanetMap-0.jpg')">
+              <img id="map-grid" src="/Content/img/EquirectangularGrid.png" />
+            </div>
+          </div>
+        </div>
+        <hr class="tall" />
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="new">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+  <div class="col-md-12">
+    <h2 class="heading-primary" style="display:inline-block; margin: 0">No Comments</h2>
+      <div class="pull-right" style="margin-top: 5px;">
+        <div id="comments-sort-menu" class="btn btn-dark btn-sm dropdown-toggle" data-toggle="dropdown">
+          Sort By Newest
+        </div>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a id="sort-comments-new" href="#" class="dropdown-item btn">Sort By Newest</a>
+          <a id="sort-comments-top" href="#" class="dropdown-item btn">Sort By Top</a>
+        </div>
+      </div>
+  </div>
+  <ul class="comments col-md-12">
+      <li style="margin-bottom: 10px;">
+        <a href="/Account/Login" class="btn btn-primary">Log in to leave a comment</a>
+      </li>
+          </ul>
+</div>
+        </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="heading-primary pull-left">Upvotes Disabled</h2>
+              </div>
+              <div class="col-md-12">
+                This post is unlisted and upvoting is disabled.
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<hr class="tall" />
+
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <p>
+                © Copyright 2019. All Rights Reserved.<br />
+                6:43:28 PM
+              </p>
+            </div>
+            <div class="col-md-4">
+              <nav id="sub-menu">
+                <ul>
+                  
+                  <li><a href="/About/Rules">Rules</a></li>
+                  <li><a href="/About/PrivacyPolicy">Privacy Policy</a></li>
+                  <li><a href="http://jundroo.com/contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+  <!-- Libs -->
+  <script src="/Content/vendor/jquery/jquery.min.js"></script>
+  <script src="/bundles/bundle-js?v=JpSw-P9FhSKoY_1Km6BWKYolbantwXGSLmqDyo3bj3g1"></script>
+
+
+  
+  <script type="text/javascript">
+
+   $(document).ready(function () {
+     var hasMods = false;
+     var mobileFriendly = true && !hasMods;
+     var highlightedCommentId = 0;
+     var urlId = "O2UTQw";
+     var loggedIn = false;
+     var downloadWarning = false;
+
+     initContentPost(highlightedCommentId, urlId, 'celestialbody', hasMods, mobileFriendly, loggedIn, downloadWarning);
+
+     $("#map-container").click(function () {
+       $("#map-grid").toggle("show");
+     })
+   });
+  </script>
+
+</body>
+</html>

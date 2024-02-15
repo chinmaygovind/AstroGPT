@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+<title>
+The Discovery of TRAPPIST-1 Planets
+</title>
+<link rel="stylesheet" media="all" href="/assets/application-4473c4ff1dd763c5317ab5ae758b33396ae502f414f3cf5b0c56d5cd7a02c87e.css" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="63VQU+eLbZo3QZnuVfAGH3m/Sf3G+gRwgEzaDgmGvBGC1m6rr/fpQ7boh/F0ucp/owNsmojxjoFR0uZsP0HePA==" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-5fb98f4aa3029e4446678915798a6eeee62ff008353a77e19d1ff661941fc235.png" />
+</head>
+<body>
+<div class='flash'>
+</div>
+<div class='nasa_banner'>
+<div class='container-fluid'>
+<div class='brand_area'>
+<div class='brand1'>
+<a class='nasa_logo' href='http://www.nasa.gov' title='NASA'>NASA</a>
+</div>
+<div class='brand2'>
+<div class='jpl_logo'>
+<a href='//www.jpl.nasa.gov/' id='jpl_logo' title='Jet Propulsion Laboratory'>Jet Propulsion Laboratory</a>
+</div>
+<div class='caltech_logo'>
+<a href='http://www.caltech.edu/' id='caltech_logo' target='_blank' title='California Institute of Technology'>California Institute of Technology</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='navbar_wrapper'>
+<div class='container-fluid'>
+<nav class='navbar navbar-toggleable-md navbar-light bg-light header'>
+<a class="navbar-brand" href="/"><img src="/assets/spitzer_logo_Sm-4f375e91766c096ace246835203000f5da0d6d36d7eba5dadf675ef9628443dc.png" alt="Spitzer logo sm" />
+</a><button aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler navbar-toggler-right' data-target='#navbarNavDropdown' data-toggle='collapse' type='button'>
+<span aria-hidden='true'></span>
+<span aria-hidden='true'></span>
+<span aria-hidden='true'></span>
+</button>
+<div class='collapse navbar-collapse no-transition' id='navbarNavDropdown'>
+<ul class='navbar-nav'>
+<li class='dropdown nav-item'>
+<a class="clickable_dropdown nav-link" id="mission_dropdown" role="button" href="/mission">Mission</a>
+<div aria-labelledby='mission_dropdown' class='dropdown-menu'>
+<a class="dropdown-item" href="/mission/lyman-spitzer-jr">Lyman Spitzer Jr.</a>
+<a class="dropdown-item" href="/mission/mission-overview">Mission Overview</a>
+<a class="dropdown-item" href="/mission/technology">Technology</a>
+<a class="dropdown-item" href="/mission/history">History</a>
+<a class="dropdown-item" href="/mission/science">Science</a>
+</div>
+</li>
+<li class='dropdown nav-item'>
+<a class="clickable_dropdown nav-link" id="science_dropdown" role="button" href="/science-themes">Science</a>
+<div aria-labelledby='science_dropdown' class='dropdown-menu'>
+<a class="dropdown-item" href="/science-themes/solar-system">Solar System</a>
+<a class="dropdown-item" href="/science-themes/planet-formation">Planet Formation</a>
+<a class="dropdown-item" href="/science-themes/exoplanets-science">Exoplanets</a>
+<a class="dropdown-item" href="/science-themes/stars-and-nebulae">Stars and Nebulae</a>
+<a class="dropdown-item" href="/science-themes/galaxies">Galaxies</a>
+<a class="dropdown-item" href="/science-themes/universe">Universe</a>
+<a class="dropdown-item" target="_blank" href="https://irsa.ipac.caltech.edu/Missions/spitzer.html">Spitzer Data Archive</a>
+</div>
+</li>
+<li class='active dropdown nav-item'>
+<a class="nav-link" id="images_dropdown" href="/images">Images</a>
+</li>
+<li class='dropdown nav-item'>
+<a class="nav-link clickable_dropdown" id="video_dropdown" href="/videos">Video &amp; Audio</a>
+<div aria-labelledby='video_dropdown' class='dropdown-menu'>
+<a class="dropdown-item" href="/videos?category=hidden-universe">Hidden Universe</a>
+<a class="dropdown-item" href="/videos?category=irrelevant-astronomy">IRrelevant Astronomy</a>
+<a class="dropdown-item" href="/videos?category=ask-an-astronomer">Ask an Astronomer</a>
+<a class="dropdown-item" href="/videos?category=science-animations">Science Animations</a>
+<a class="dropdown-item" href="/videos?category=observatory-animations">Observatory Animations</a>
+<a class="dropdown-item" href="/videos?category=nasa-jpl-videos">NASA JPL Videos</a>
+<a class="dropdown-item" href="/videos?category=el-universo-escondido">El Universo Escondido</a>
+<a class="dropdown-item" href="/audios">Audio Podcasts</a>
+</div>
+</li>
+<li class='dropdown nav-item'>
+<a class="nav-link clickable_dropdown" id="news_dropdown" href="/news">News</a>
+<div aria-labelledby='news_dropdown' class='dropdown-menu'>
+<a class="dropdown-item" href="/page/media-information">Media Information</a>
+<a class="dropdown-item" href="/news?type=from_partners">From Partners</a>
+<a class="dropdown-item" href="/news?type=news_releases">News Releases</a>
+<a class="dropdown-item" href="/news">All</a>
+</div>
+</li>
+<li class='dropdown nav-item'>
+<a class="nav-link clickable_dropdown" id="news_dropdown" href="/explore">Explore</a>
+<div aria-labelledby='news_dropdown' class='dropdown-menu'>
+<a class="dropdown-item" href="/blogs">Spitzer Team Blog</a>
+<a class="dropdown-item" href="/explore/glimpse360">GLIMPSE 360</a>
+<a class="dropdown-item" href="/explore/trappist-1">TRAPPIST-1</a>
+<a class="dropdown-item" href="/explore/spitzer-final-voyage">Spitzer Final Voyage</a>
+<a class="dropdown-item" href="/explore/posters">Posters</a>
+<a class="dropdown-item" href="/explore/models">Models</a>
+<a class="dropdown-item" href="/explore/video-conference-backgrounds">Video Conference Backgrounds</a>
+<a class="dropdown-item" href="/explore/spitzer-apps">Spitzer Apps</a>
+<a class="dropdown-item" href="/explore/spitzer-vr">Spitzer VR</a>
+<a class="dropdown-item" href="/showcase">All Showcases</a>
+</div>
+</li>
+<li class='nav-item'>
+<form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<input type="hidden" name="type" id="type" />
+<input type="text" name="query" id="query" class="form-control" placeholder="Search" />
+</form>
+
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<div class='content_wrapper'>
+<div class='image_page'>
+<div class='container'>
+<div class='section'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='primary_header'>
+The Discovery of TRAPPIST-1 Planets
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-8'>
+<div class='raw'>
+<div class='image_container center'>
+<img src="/system/avm_images/binaries/6298/larger/ssc2017-01i.jpg?1603783005" alt="Ssc2017 01i" />
+<p class='caption'>
+Credit:
+NASA/JPL/Caltech/R. Hurt (IPAC)
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-6'>
+<p class='strong'>
+Artwork
+&bull;
+ February 22nd, 2017
+&bull;
+ssc2017-01i
+</p>
+</div>
+<div class='col-lg-6 text-align-right'>
+<p class='strong'>
+ssc2017-01i
+</p>
+</div>
+</div>
+<p>The first observations of the TRAPPIST-1 system reported in 2016 revealed three planets orbiting a small, red-dwarf star, though the exact location of the outermost one, was not well-determined (yellow band, top image). Follow-up observations with NASA's Spitzer Space Telescope, as well as ground-based telescopes, dramatically changed our understanding of this system, revealing a total ofseven planets in Earths size range.The original TRAPPIST-1d was found to have actually been the mixed-up signals of three other planets e, f, and g (yellow orbits, bottom image), and an entirely new d and h were also added to the system.</p><p></p><p>NASA's Jet Propulsion Laboratory, Pasadena, California, manages the Spitzer Space Telescope mission for NASA's Science Mission Directorate, Washington. Science operations are conducted at the Spitzer Science Center at Caltech in Pasadena. Spacecraft operations are based at Lockheed Martin Space Systems Company, Littleton, Colorado. Data are archived at the Infrared Science Archive housed at Caltech/IPAC. Caltech manages JPL for NASA. </p>
+</div>
+<div class='col-lg-4'>
+<div class='downloads'>
+<div class='tertiary_header'>
+Downloads
+</div>
+<div class='strong small'>JPG</div>
+<ul>
+<li>
+<a href="/system/avm_images/binaries/6298/medium/ssc2017-01i.jpg?1603783005">320x180 (23.8 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/large/ssc2017-01i.jpg?1603783005">500x281 (33.8 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/larger/ssc2017-01i.jpg?1603783005">1024x576 (75 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/largest/ssc2017-01i.jpg?1603783005">1280x720 (99.7 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/huge/ssc2017-01i.jpg?1603783005">1600x900 (132 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/huger/ssc2017-01i.jpg?1603783005">3000x1688 (297 KB)
+</a></li>
+<li>
+<a href="/system/avm_images/binaries/6298/jpg_original/ssc2017-01i.jpg?1603783005">5104x2871 (597 KB)
+</a></li>
+</ul>
+<div class='strong small'>TIF</div>
+<ul>
+<li>
+<a href="/system/avm_images/binaries/6298/original/ssc2017-01i.tif?1603783005">5104 x 2871 (877 KB)
+</a></li>
+</ul>
+</div>
+<div class='related_media raw'>
+<div class='tertiary_header'>
+Related Media
+</div>
+<a class="" href="/news/ssc2017-01-nasa-telescope-reveals-largest-batch-of-earth-size-habitable-zone-planets-around-single-star"><div class='image_container'>
+<img src="/system/articles/images/1924/medium/ssc2017-01_Rec.jpg?1596837247" alt="Ssc2017 01 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+News Release
+|
+ssc2017-01
+</div>
+NASA Telescope Reveals Largest Batch of Earth-Size, Habitable-Zone Planets Around Single Star
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01a-trappist-1-planet-lineup"><div class='image_container'>
+<img src="/system/avm_images/binaries/6266/medium/ssc2017-01a.jpg?1603799421" alt="Ssc2017 01a" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01a
+</div>
+TRAPPIST-1 Planet Lineup
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01b-abstract-concept-of-trappist-1-system"><div class='image_container'>
+<img src="/system/avm_images/binaries/6270/medium/ssc2017-01b.jpg?1603787386" alt="Ssc2017 01b" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01b
+</div>
+Abstract Concept of TRAPPIST-1 System
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01c-surface-of-trappist-1f"><div class='image_container'>
+<img src="/system/avm_images/binaries/6274/medium/ssc2017-01c.jpg?1603783913" alt="Ssc2017 01c" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01c
+</div>
+Surface of TRAPPIST-1f
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01d-transit-illustration-of-trappist-1"><div class='image_container'>
+<img src="/system/avm_images/binaries/6278/medium/ssc2017-01d.jpg?1603797854" alt="Ssc2017 01d" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01d
+</div>
+Transit Illustration of TRAPPIST-1
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01e-500-hours-of-spitzer-observations-of-trappist-1"><div class='image_container'>
+<img src="/system/avm_images/binaries/6282/medium/ssc2017-01e.jpg?1603795436" alt="Ssc2017 01e" />
+</div>
+<div class='details'>
+<div class='small'>
+Chart
+|
+ssc2017-01e
+</div>
+500 Hours of Spitzer Observations of TRAPPIST-1
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01f-trappist-1-statistics-table"><div class='image_container'>
+<img src="/system/avm_images/binaries/6286/medium/ssc2017-01f.jpg?1603793212" alt="Ssc2017 01f" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01f
+</div>
+TRAPPIST-1 Statistics Table
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01g-trappist-1-comparison-to-solar-system-and-jovian-moons"><div class='image_container'>
+<img src="/system/avm_images/binaries/6290/medium/ssc2017-01g.jpg?1603802518" alt="Ssc2017 01g" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01g
+</div>
+TRAPPIST-1 Comparison to Solar System and Jovian Moons
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/image/ssc2017-01h-the-trappist-1-habitable-zone"><div class='image_container'>
+<img src="/system/avm_images/binaries/6294/medium/ssc2017-01h.jpg?1603782646" alt="Ssc2017 01h" />
+</div>
+<div class='details'>
+<div class='small'>
+Chart
+|
+ssc2017-01h
+</div>
+The TRAPPIST-1 Habitable Zone
+</div>
+<div class='clearfix'></div>
+</a><a class="active" href="/image/ssc2017-01i-the-discovery-of-trappist-1-planets"><div class='image_container'>
+<img src="/system/avm_images/binaries/6298/medium/ssc2017-01i.jpg?1603783005" alt="Ssc2017 01i" />
+</div>
+<div class='details'>
+<div class='small'>
+Artwork
+|
+ssc2017-01i
+</div>
+The Discovery of TRAPPIST-1 Planets
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/video/ssc2017-01v1-the-seven-wonders-of-trappist-1"><div class='image_container'>
+<img src="/system/videos/images/1635/medium/ssc2017-01v1_Rec.jpg?1603841420" alt="Ssc2017 01v1 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+Science Animations
+|
+ssc2017-01v1
+</div>
+The Seven Wonders of TRAPPIST-1
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/video/ssc2017-01v2-500-hours-exploring-the-7-exoplanets-of-trappist-1"><div class='image_container'>
+<img src="/system/videos/images/1639/medium/ssc2017-01v2_Rec.jpg?1603841675" alt="Ssc2017 01v2 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+Science Animations
+|
+ssc2017-01v2
+</div>
+500 Hours: Exploring the 7 Exoplanets of TRAPPIST-1
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/video/ssc2017-01v3-trappist-1-planets-flyaround-animation"><div class='image_container'>
+<img src="/system/videos/images/1642/medium/ssc2017-01v3_Rec.jpg?1603842137" alt="Ssc2017 01v3 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+Science Animations
+|
+ssc2017-01v3
+</div>
+TRAPPIST-1 Planets - Flyaround Animation
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/video/ssc2017-01v4-trappist-1-planetary-orbits-and-transits"><div class='image_container'>
+<img src="/system/videos/images/1645/medium/ssc2017-01v4_Rec.jpg?1603841401" alt="Ssc2017 01v4 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+Science Animations
+|
+ssc2017-01v4
+</div>
+TRAPPIST-1 Planetary Orbits and Transits
+</div>
+<div class='clearfix'></div>
+</a><a class="" href="/video/ssc2017-01v5-spitzer-in-space"><div class='image_container'>
+<img src="/system/videos/images/1648/medium/ssc2017-01v5_Rec.jpg?1603841702" alt="Ssc2017 01v5 rec" />
+</div>
+<div class='details'>
+<div class='small'>
+Observatory Animations
+|
+ssc2017-01v5
+</div>
+Spitzer in Space
+</div>
+<div class='clearfix'></div>
+</a></div>
+<div class='related_media raw'>
+<div class='tertiary_header'>
+Explore
+</div>
+<a class="" href="/explore/trappist-1"><div class='image_container'>
+<img src="/system/packages/images/1143/small/trappist-1-tn.jpg?1612264731" alt="Trappist 1 tn" />
+</div>
+<div class='details'>
+<div class='small'>
+Showcase
+</div>
+TRAPPIST-1
+</div>
+<div class='clearfix'></div>
+</a></div>
+
+</div>
+</div>
+</div>
+</div>
+<div class='tertiary_color_light_transparent font_dark'>
+<div class='container'>
+<div class='section'>
+<div class='row'>
+<div class='col-lg-4'>
+<p class='strong'>
+About the Object
+</p>
+<dl>
+<dt>
+  Name
+</dt>
+<dd property=''>
+  <span property='dc:subject'>TRAPPIST-1</span>
+</dd>
+
+<dt>
+  Type
+</dt>
+<dd property='avm:Subject.Category'>
+  Planet > Type > Gas Giant
+</dd>
+
+<dt>
+  Distance
+</dt>
+<dd property='avm:Distance'>
+  40 Light Years
+</dd>
+
+
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class='clearfix'></div>
+</div>
+<div class='footer'>
+<div class='footer_container'>
+<div class='footer_section'>
+<div class='tertiary_header'>Contact</div>
+<dl>
+<dd>
+<a href="mailto:outreach@ipac.caltech.edu">outreach@ipac.caltech.edu</a>
+</dd>
+<dd>
+<div class='social_icons'>
+<a class="icon facebook_icon" target="_blank" title="Follow on Facebook" href="https://www.facebook.com/exploreastrocaltechipac "><svg alt='Facebook' aria-labelledby='at-svg-facebook-9' class='at-icon at-icon-facebook' role='img' style='width: 32px; height: 32px;' title='Facebook' version='1.1' viewbox='0 0 32 32' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<title id='at-svg-facebook-9'>Facebook</title>
+<g>
+<path d='M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z' fill-rule='evenodd'></path>
+</g>
+</svg>
+</a><a class="icon twitter_icon" target="_blank" title="Follow on Twitter" href="https://twitter.com/ExploreAstro"><svg alt='Twitter' aria-labelledby='at-svg-twitter-10' class='at-icon at-icon-twitter' role='img' style='width: 32px; height: 32px;' title='Twitter' version='1.1' viewbox='0 0 32 32' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<title id='at-svg-twitter-10'>Twitter</title>
+<g>
+<path d='M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336' fill-rule='evenodd'></path>
+</g>
+</svg>
+</a><a class="icon youtube_icon" target="_blank" title="Follow on YouTube" href="https://www.youtube.com/c/ExploreAstro"><svg alt='YouTube' aria-labelledby='at-svg-youtube-11' class='at-icon at-icon-youtube' role='img' style='width: 32px; height: 32px;' title='YouTube' version='1.1' viewbox='0 0 32 32' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<title id='at-svg-youtube-11'>YouTube</title>
+<g>
+<path d='M13.73 18.974V12.57l5.945 3.212-5.944 3.192zm12.18-9.778c-.837-.908-1.775-.912-2.205-.965C20.625 8 16.007 8 16.007 8c-.01 0-4.628 0-7.708.23-.43.054-1.368.058-2.205.966-.66.692-.875 2.263-.875 2.263S5 13.303 5 15.15v1.728c0 1.845.22 3.69.22 3.69s.215 1.57.875 2.262c.837.908 1.936.88 2.426.975 1.76.175 7.482.23 7.482.15 0 .08 4.624.072 7.703-.16.43-.052 1.368-.057 2.205-.965.66-.69.875-2.262.875-2.262s.22-1.845.22-3.69v-1.73c0-1.844-.22-3.69-.22-3.69s-.215-1.57-.875-2.262z' fill-rule='evenodd'></path>
+</g>
+</svg>
+</a><a class="icon instagram_icon" target="_blank" title="Follow on Instagram" href="https://www.instagram.com/explore.astro/"><svg alt='Instagram' aria-labelledby='at-svg-instagram-12' class='at-icon at-icon-instagram' role='img' style='width: 32px; height: 32px;' title='Instagram' version='1.1' viewbox='0 0 32 32' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<title id='at-svg-instagram-12'>Instagram</title>
+<g>
+<path d='M16 5c-2.987 0-3.362.013-4.535.066-1.17.054-1.97.24-2.67.512a5.392 5.392 0 0 0-1.95 1.268 5.392 5.392 0 0 0-1.267 1.95c-.272.698-.458 1.498-.512 2.67C5.013 12.637 5 13.012 5 16s.013 3.362.066 4.535c.054 1.17.24 1.97.512 2.67.28.724.657 1.337 1.268 1.95a5.392 5.392 0 0 0 1.95 1.268c.698.27 1.498.457 2.67.51 1.172.054 1.547.067 4.534.067s3.362-.013 4.535-.066c1.17-.054 1.97-.24 2.67-.51a5.392 5.392 0 0 0 1.95-1.27 5.392 5.392 0 0 0 1.268-1.95c.27-.698.457-1.498.51-2.67.054-1.172.067-1.547.067-4.534s-.013-3.362-.066-4.535c-.054-1.17-.24-1.97-.51-2.67a5.392 5.392 0 0 0-1.27-1.95 5.392 5.392 0 0 0-1.95-1.267c-.698-.272-1.498-.458-2.67-.512C19.363 5.013 18.988 5 16 5zm0 1.982c2.937 0 3.285.01 4.445.064 1.072.05 1.655.228 2.042.38.514.198.88.437 1.265.822.385.385.624.75.823 1.265.15.387.33.97.38 2.042.052 1.16.063 1.508.063 4.445 0 2.937-.01 3.285-.064 4.445-.05 1.072-.228 1.655-.38 2.042-.198.514-.437.88-.822 1.265-.385.385-.75.624-1.265.823-.387.15-.97.33-2.042.38-1.16.052-1.508.063-4.445.063-2.937 0-3.285-.01-4.445-.064-1.072-.05-1.655-.228-2.042-.38-.514-.198-.88-.437-1.265-.822a3.408 3.408 0 0 1-.823-1.265c-.15-.387-.33-.97-.38-2.042-.052-1.16-.063-1.508-.063-4.445 0-2.937.01-3.285.064-4.445.05-1.072.228-1.655.38-2.042.198-.514.437-.88.822-1.265.385-.385.75-.624 1.265-.823.387-.15.97-.33 2.042-.38 1.16-.052 1.508-.063 4.445-.063zm0 12.685a3.667 3.667 0 1 1 0-7.334 3.667 3.667 0 0 1 0 7.334zm0-9.316a5.65 5.65 0 1 0 0 11.3 5.65 5.65 0 0 0 0-11.3zm7.192-.222a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0' fill-rule='evenodd'></path>
+</g>
+</svg>
+</a></div>
+
+</dd>
+</dl>
+</div>
+<div class='footer_section'>
+<div class='tertiary_header'>Policies</div>
+<dl>
+<dd>
+<a href="/page/image-use-policy">Image and Video Use Policy</a>
+</dd>
+<dd>
+<a href="/page/privacy-policy">Privacy Policy</a>
+</dd>
+</dl>
+</div>
+<div class='footer_section'>
+<div class='tertiary_header'>Related Sites</div>
+<dl>
+<dd>
+<a target="_ipac" href="https://coolcosmos.ipac.caltech.edu">Cool Cosmos</a>
+</dd>
+<dd>
+<a target="_ipac" href="https://astropix.ipac.caltech.edu">AstroPix</a>
+</dd>
+</dl>
+</div>
+<div class='footer_section'>
+<div class='tertiary_header'>For Researchers</div>
+<dl>
+<dd>
+<a target="_ipac" href="https://www.ipac.caltech.edu">IPAC</a>
+</dd>
+<dd>
+<a target="_ipac" href="https://ssc.spitzer.caltech.edu/">Spitzer Science Center</a>
+</dd>
+</dl>
+</div>
+</div>
+<div class='logos'>
+<a alt="NASA" title="NASA" target="_Spitzer" href="https://www.nasa.gov/"><img src="/assets/logos/nasa_logo-a7dc2333c903d36dc947d2a4eeed9072088ff6dc46185550c629e415362eb973.png" alt="Nasa logo" /></a>
+<a alt="JPL" title="JPL" target="_Spitzer" href="https://www.jpl.nasa.gov/"><img src="/assets/logos/jpl-25cf991c5f66be7769096ab2165fa5af8a618c180804151c0ba47d5a47ed7c73.png" alt="Jpl" /></a>
+<a alt="California Institute of Technology" title="California Institute of Technology" target="_Spitzer" href="https://www.caltech.edu"><img src="/assets/logos/caltech-25fbf343c445159c401717a0d2d7763ab9dbceb3f069fa887827119bbc538544.png" alt="Caltech" /></a>
+<a alt="Infrared Processing and Analysis Center" title="Infrared Processing and Analysis Center" target="_Spitzer" href="https://www.ipac.caltech.edu"><img src="/assets/logos/ipac-5a1e4da40ee0f9fd5e4605f0367d429f2ca24905bb47a7382756f9b175c8bbab.png" alt="Ipac" /></a>
+</div>
+</div>
+
+</body>
+</html>
+<script src="/assets/application-a172acc21973c42177c9ef607da5273a455dbdbf472d19c1ff6433bad94b6353.js"></script>
+
+<script async='' src='https://www.googletagmanager.com/gtag/js?id=UA-10917724-3'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-10917724-3');
+</script>
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WASP-43b</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Patrick Irwin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="papers.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nemesis.html">Nemesis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="misc.html">Miscellaneous</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h1 class="mt-5">Phase curve spectra of WASP-43b</h1>
+
+        <p>We recently published a paper to the Monthly Notices of the Royal Astronomical
+        Society (Irwin et al., 2020. MNRAS, 493, 106 - 125. doi: 
+        <a href="https://doi.org/10.1093/mnras/staa238">https://doi.org/10.1093/mnras/staa238</a>) 
+        presenting a reanalysis of phase curve observations of WASP-43b using a novel 
+        2.5-D retrieval model. The ArXiv version of this paper is <A HREF="http://arxiv.org/abs/1909.03233"> here </A>.</p>
+
+        <p>In this paper we attempt to fit the temperature profile and abundance at all longititudes, altitides and latitudes
+        simultaneously, making the assumption that properties vary with latitude as (cos(latitude))^n, where n is an
+        assumed coefficient. We call this approach a 2.5-D retrieval.</p>
+
+        <p>
+        <img src=animations/gcm_model.gif width=200 align=right>      
+        Using a model based on a GCM we simulate what a planet such as WASP-43b will look like, here in the Spitzer/IRAC 
+        channel centred at 4.5 microns. It can be seen that the temperatures vary greatly across the planet. We then perform a full 
+        disc ingration across our synthetic planet at all 15 HST/WFC3 and 2 Spitzer/IRAC channels at
+        the fifteen different phases reported by 
+        <A HREF="https://doi.org/10.3847/1538-3881/153/2/68"> Stevenson et al. (2017) </A> to produce phase
+        curves that approximately match observations. We then add on noise and and fit the synthetic phase
+        curves with our 
+        <A HREF="https://doi.org/10.1016/j.jqsrt.2007.11.006"> NEMESIS </A> radiative transfer and 
+        retrieval model. Having fitted the synthetic observations, we then recomputed how the planet would actually look at
+        4.5 microns.
+
+        <p>
+        <br>
+        <img src=animations/gcm-1D-fit.gif  width=200 align=right>
+        Here are the results using a simple 1-D model. Here we assume that at each phase the temperatures and abundances are the same at all points on the disc. 
+        While this is easy to model, it does not recognise that in fact temperatures vary across the disc. Hence
+        in this sort of retrieval the dayside temperatures are cooler than they should really be and the nightside temperatures
+        are warmer. 
+        <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src=animations/gcm-2pt5D-fit_0pt25.gif width=200 align=right>
+        However, when we use our 2.5-D model, with n=0.25, we simulate this appearance.
+        It can be seen here that the hot parts of the planet are more tightly constrained to the dayside. In addition the
+        the magnitude of the temperature variations is closer to the simulation. The north-south variation in our model is
+        contained in the n-coefficient. 
+        <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src=animations/gcm-2pt5D-fit_1pt0.gif width=200 align=right>
+        If instead we set n=1.0 we get the following simultion. 
+        This simulation looks less realistic and actually doesn't fit the synthetic observations as well.
+
+        <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        It can be seen that the 2.5-D model approach more realistically simulates the appearance of our model planet and recovers more
+        consistent temperatures. We then applied our model to the observed phase curves of <A HREF="https://doi.org/10.3847/1538-3881/153/2/68"> 
+        Stevenson et al. (2017). </A></p>
+
+        <p>Here are the results of the simulated appearance of WASP-43b using our 1-D, 2.5-D (n=0.25) and 2.5-D (n=1.0)  models:</p>
+        <img src=animations/stev-1D-fit.gif width=250>
+        <br>
+
+        <img src=animations/stev-2pt5D-fit_0pt25.gif width=250>
+        <br>
+
+        <img src=animations/stev-2pt5D-fit_1pt0.gif width=250>
+        <br>
+
+        To see these with the correct relative phase to eachother, here is a comparison, between the GCM, 
+        the 1-D model and the 2.5-D (n=0.25) model:
+
+        <br> 
+
+        <img src=animations/animated.gif width=750>
+        <br>
+
+        <p>It is clear that the nightside of the real WASP-43b is much colder than the GCM-based simulation. Such a stark 
+        temperature difference is difficult to explain with dynamical models, but one explanation is that the nightside
+        may be covered with a cloud that lowers the radiation to space. To model this we repeated our retrievals, but 
+        set the nightside temperatures to be very cold (500K).</>
+
+        <p>Here are the results using a 2.5-D model, with n=0.25, nightside set to 500K:</p>
+        <img src=animations/stev-2pt5D-fit_0pt25_dark.gif width=250>
+        <br>
+
+        <p>Here are the results using a 2.5-D model, with n=1.0, nightside set to 500K:</p>
+        <img src=animations/stev-2pt5D-fit_1pt0_dark.gif width=250>
+        <br>
+        <p>Our 2.5-D model, with n=0.25 and a dark nightside provides the best fit to the observations. 
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

@@ -1,588 +1,986 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-<!-- Always force latest IE rendering engine or request Chrome Frame -->
-<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3f776c1fa0","applicationID":"18256344","transactionName":"elhfQRdXWQkHFBgOUVpaQhoVVFQLBxJETEBRWEY=","queueTime":0,"applicationTime":223,"agent":""}</script>
-<script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UAYDV1NVGwIIVlRUBAUD",licenseKey:"3f776c1fa0",applicationID:"18256344"};;/*! For license information please see nr-loader-full-1.251.1.min.js.LICENSE.txt */
-(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>m,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>D,lF:()=>j,Yu:()=>_,Dg:()=>v,CX:()=>c,GE:()=>x,sU:()=>O});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var u=r(7056),l=r(50);const f="[data-nr-mask]",h=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:u.oD,inactiveMs:u.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:50,error_sampling_rate:50,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},g="All configuration objects require an agent identifier!";function m(e){if(!e)throw new Error(g);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function v(e,t){if(!e)throw new Error(g);p[e]=(0,i.D)(t,h());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(g);var r=m(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function x(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),S=r(6818);const T={buildEnv:S.Re,customTransaction:void 0,disabled:!1,distMethod:S.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:S.q4,denyList:void 0},R={};function D(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function O(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]=(0,i.D)(t,T);const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function j(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,lF:()=>a,q4:()=>n});const n="1.251.1",i="PROD",o="CDN",a="2.0.0-alpha.11"},385:(e,t,r)=>{"use strict";r.d(t,{FN:()=>s,IF:()=>u,Nk:()=>f,Tt:()=>c,_A:()=>o,cv:()=>h,iS:()=>a,il:()=>n,ux:()=>d,v6:()=>i,w1:()=>l});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=""+o?.location,c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=(()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),l=Boolean(n&&window.document.documentMode),f=!!o.navigator?.sendBeacon,h=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>u,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function d(e){e&&(s[e]||(s[e]=new Map))}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(d(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=[...s[e]];function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var d=0;s&&d<s.length;++d)l(s[d],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((t=>{let[r]=t;s[e].delete(r),a(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>d});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),d=function e(t,r){var n={},s={},u={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var h={on:g,addEventListener:g,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(d.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=m(e),u=c.length,l=0;l<u;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([h,e,r,a]);return a},get:v,listeners:m,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",h.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return h;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function g(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function v(t){return u[t]=u[t]||e(h,t)}function b(){return h.backlog}}(void 0,"globalEE"),u=(0,n.fP)();function l(){d.aborted=!0,d.backlog={}}u.ee||(u.ee=d)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Ht:()=>d,M:()=>c,Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function d(){return s(32)}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},7243:(e,t,r)=>{"use strict";r.d(t,{e:()=>i});var n=r(385);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n._A?.location?.protocol&&t.host===n._A?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>u,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},d=new Set;function u(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(d.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),d.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,ce:()=>o,ek:()=>d,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function d(e){let t=a();return t.initializedAgents?.[e]}function u(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},1214:(e,t,r)=>{"use strict";r.d(t,{em:()=>b,u5:()=>R,QU:()=>j,Kf:()=>k});var n=r(8325),i=r(3117);const o="nr@original:".concat(i.a);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],d=e[c];u(d)||(e[c]=r(d,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return u(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){d([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,u,l;try{a=this,o=[...arguments],u="function"==typeof n?n(o,a):n||{}}catch(t){d([t,"",[o,a,s],u],e)}i(r+"start",[o,a,s],u,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],u,c),e}finally{i(r+"end",[o,a,l],u,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){d([t,r,n,i],e)}s=a}}}function d(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function u(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}var l=r(2210),f=r(385);const h={},p=f._A.XMLHttpRequest,g="addEventListener",m="removeEventListener",v="nr@wrapped:".concat(n.A);function b(e){var t=function(e){return(e||n.ee).get("events")}(e);if(h[t.debugId]++)return t;h[t.debugId]=1;var r=c(t,!0);function i(e){r.inPlace(e,[g,m],"-",o)}function o(e,t){return e[1]}return"getPrototypeOf"in Object&&(f.il&&y(document,i),y(f._A,i),y(p.prototype,i)),t.on(g+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,l.X)(n,v,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(m+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function y(e,t){let r=e;for(;"object"==typeof r&&!Object.prototype.hasOwnProperty.call(r,g);)r=Object.getPrototypeOf(r);for(var n=arguments.length,i=new Array(n>2?n-2:0),o=2;o<n;o++)i[o-2]=arguments[o];r&&t(r,...i)}var A="fetch-",w=A+"body-",x=["arrayBuffer","blob","json","text","formData"],_=f._A.Request,E=f._A.Response,S="prototype";const T={};function R(e){const t=function(e){return(e||n.ee).get("fetch")}(e);if(!(_&&E&&f._A.fetch))return t;if(T[t.debugId]++)return t;function r(e,r,i){var o=e[r];"function"==typeof o&&(e[r]=function(){var e,r=[...arguments],a={};t.emit(i+"before-start",[r],a),a[n.A]&&a[n.A].dt&&(e=a[n.A].dt);var s=o.apply(this,r);return t.emit(i+"start",[r,e],s),s.then((function(e){return t.emit(i+"end",[null,e],s),e}),(function(e){throw t.emit(i+"end",[e],s),e}))})}return T[t.debugId]=1,x.forEach((e=>{r(_[S],e,w),r(E[S],e,w)})),r(f._A,"fetch",A),t.on(A+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(A+"done",[null,r],n)}else t.emit(A+"done",[e],n)})),t}const D={},O=["pushState","replaceState"];function j(e){const t=function(e){return(e||n.ee).get("history")}(e);return!f.il||D[t.debugId]++||(D[t.debugId]=1,c(t).inPlace(window.history,O,"-")),t}var I=r(3239);var P=r(50);const C={},N=["open","send"];function k(e){var t=e||n.ee;const r=function(e){return(e||n.ee).get("xhr")}(t);if(C[r.debugId]++)return r;C[r.debugId]=1,b(t);var i=c(r),o=f._A.XMLHttpRequest,a=f._A.MutationObserver,s=f._A.Promise,d=f._A.setInterval,u="readystatechange",l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],h=[],p=f._A.XMLHttpRequest=function(e){const t=new o(e),n=r.context(t);try{r.emit("new-xhr",[t],n),t.addEventListener(u,(a=n,function(){var e=this;e.readyState>3&&!a.resolved&&(a.resolved=!0,r.emit("xhr-resolved",[],e)),i.inPlace(e,l,"fn-",w)}),(0,I.m$)(!1))}catch(e){(0,P.Z)("An error occurred while intercepting XHR",e);try{r.emit("internal-error",[e])}catch(e){}}var a;return t};function g(e,t){i.inPlace(t,["onreadystatechange"],"fn-",w)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,p),p.prototype=o.prototype,i.inPlace(p.prototype,N,"-xhr-",w),r.on("send-xhr-start",(function(e,t){g(e,t),function(e){h.push(e),a&&(m?m.then(A):d?d(A):(v=-v,y.data=v))}(t)})),r.on("open-xhr-start",g),a){var m=s&&s.resolve();if(!d&&!s){var v=1,y=document.createTextNode(v);new a(A).observe(y,{characterData:!0})}}else t.on("fn-end",(function(e){e[0]&&e[0].type===u||A()}));function A(){for(var e=0;e<h.length;e++)g(0,h[e]);h.length&&(h=[])}function w(e,t){return t}return r}},7825:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.ajax},6660:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.jserrors},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},4649:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageAction},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{J0:()=>l,Mi:()=>u,Vb:()=>o,Ye:()=>s,fm:()=>c,i9:()=>a,t9:()=>i,u0:()=>d});var n=r(7056);const i=r(3325).D.sessionReplay,o=.12,a={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},s=1e6,c=64e3,d={[n.IK.ERROR]:15e3,[n.IK.FULL]:3e5,[n.IK.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},l=5e3},3614:(e,t,r)=>{"use strict";r.d(t,{BST_RESOURCE:()=>i,END:()=>s,FEATURE_NAME:()=>n,FN_END:()=>d,FN_START:()=>c,PUSH_STATE:()=>u,RESOURCE:()=>o,START:()=>a});const n=r(3325).D.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,d="fn"+s,u="pushState"},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),d=r(3960),u=r(385),l=r(50),f=r(3081),h=r(8632);function p(){const e=(0,h.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var g=r(2825);const m=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let v=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:x,runtime:_={loaderType:b},exposed:E=!0}=t;const S=(0,h.gG)();w||(A=S.init,w=S.info,x=S.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,x||{}),w.jsAttributes??={},u.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const T=(0,i.P_)(e.agentIdentifier),R=[w.beacon,w.errorBeacon];v||(T.proxy.assets&&(m(T.proxy.assets),R.push(T.proxy.assets)),T.proxy.beacon&&R.push(T.proxy.beacon),p(),(0,h.EZ)("activatedFeatures",g.T)),_.denyList=[...T.ajax.deny_list||[],...T.ajax.block_internal?R:[]],(0,i.sU)(e.agentIdentifier,_),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const h={};var p=a.ee.get(e),g=p.get("tracer"),m="api-",v=m+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(m,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{h[e]=w(m,e,!0,"api")})),h.addPageAction=w(m,"addPageAction",!0,n.D.pageAction),h.setCurrentRouteName=w(m,"routeName",!0,n.D.spa),h.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(m,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},h.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},h.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},h.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},h.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(v+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(g.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw g.emit("fn-err",[arguments,this,e],r),e}finally{g.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function x(){r.e(63).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(v,e,void 0,n.D.spa)})),h.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},u.il?(0,d.b2)((()=>x()),!0):x(),h}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),v=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({63:"nr-full",110:"nr-full-compressor",379:"nr-full-recorder"}[e]+"-1.251.1.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.251.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={63:"sha512-RYA+b++nKlEZKeMEydjhnnADMKlfjKQTmGzejZPgAV9Yo+McKt+LWJ+i8r8f5eIAuJME0KCT6nCqGsEKii2pdw==",379:"sha512-QxvWQvEFWcLPJgBlbdBOZd3wugtQ0B7MEvWHMAbFkxUj0pKI7uRstlw/YW6T6C+hWchMRzKvU0PymDdq4doEAA==",110:"sha512-ckXyayN+7Mded+a54tp4ZTdKkpgAZmeby4SxPF7NLDGmXGRYV19GWxJ+t3MQhrdE2wxPNv8IdswRIRH0J6STXw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={29:0,789:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,d=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);d<a.length;d++)o=a[d],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.251.1.PROD"]=self["webpackChunk:NRBA-1.251.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),d=i(5938),u=i(3960),l=i(385);class f extends d.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(63).then(i.bind(i,1656));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(63).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName),o(!1)}};l.il?(0,u.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var h=i(7633);class p extends f{static featureName=h.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,h.t,r),this.importAggregator()}}var g=i(1117),m=i(1284);class v extends g.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,m.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,m.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,m.D)(e,w)}function w(e,t){return t}var x=i(8632),_=i(4402),E=i(4351);var S=i(5546),T=i(7956),R=i(3239),D=i(7894),O=i(9251);class j extends f{static featureName=O.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t,r),l.il&&((0,T.N)((()=>(0,S.p)("docHidden",[(0,D.z)()],void 0,O.t,this.ee)),!0),(0,R.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,D.z)()],void 0,O.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}var C=i(6660);class N{constructor(e,t,r,n){this.name="UncaughtError",this.message=e,this.sourceURL=t,this.line=r,this.column=n}}class k extends f{static featureName=C.t;#t=new Set;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,C.t,n);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("fn-err",((e,t,n)=>{this.abortHandler&&!this.#t.has(n)&&(this.#t.add(n),(0,S.p)("err",[this.#r(n),(0,D.z)()],void 0,r.D.jserrors,this.ee))})),this.ee.on("internal-error",(e=>{this.abortHandler&&(0,S.p)("ierr",[this.#r(e),(0,D.z)(),!0],void 0,r.D.jserrors,this.ee)})),l._A.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,S.p)("err",[this.#n(e),(0,D.z)(),!1,{unhandledPromiseRejection:1}],void 0,r.D.jserrors,this.ee)}),(0,R.m$)(!1,this.removeOnAbort?.signal)),l._A.addEventListener("error",(e=>{this.abortHandler&&(this.#t.has(e.error)?this.#t.delete(e.error):(0,S.p)("err",[this.#i(e),(0,D.z)()],void 0,r.D.jserrors,this.ee))}),(0,R.m$)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#o,this.importAggregator()}#o(){this.removeOnAbort?.abort(),this.#t.clear(),this.abortHandler=void 0}#r(e){return e instanceof Error?e:void 0!==e?.message?new N(e.message,e.filename||e.sourceURL,e.lineno||e.line,e.colno||e.col):new N("string"==typeof e?e:(0,E.P)(e))}#n(e){let t="Unhandled Promise Rejection: ";if(e?.reason instanceof Error)try{return e.reason.message=t+e.reason.message,e.reason}catch(t){return e.reason}if(void 0===e.reason)return new N(t);const r=this.#r(e.reason);return r.message=t+r.message,r}#i(e){return e.error instanceof Error?e.error:new N(e.message,e.filename,e.lineno,e.colno)}}var H=i(2210);let M=1;const z="nr@id";function L(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===l._A?0:(0,H.X)(e,z,(function(){return M++}))}function F(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,E.P)(e).length}catch(e){return}}}var B=i(1214),U=i(7243);class q{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,n.DL)(this.agentIdentifier);if(!t)return null;var r=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!r||!i)return null;var a=(0,_.M)(),s=(0,_.Ht)(),c=Date.now(),d={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(d.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),d.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,r,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(d.newrelicHeader=this.generateTraceHeader(a,s,c,r,i,o)),d}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof l._A?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,E.P)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,n.Mt)(this.agentIdentifier,"distributed_tracing")&&(r=(0,n.P_)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var i=0;i<r.allowed_origins.length;i++){var o=(0,U.e)(r.allowed_origins[i]);if(e.hostname===o.hostname&&e.protocol===o.protocol&&e.port===o.port){t=!0;break}}return t}isDtEnabled(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,n.Mt)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var V=i(7825),Z=["load","error","abort","timeout"],G=Z.length,W=n.Yu.REQ,X=n.Yu.XHR;class K extends f{static featureName=V.t;constructor(e,t){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(e,t,V.t,i),(0,n.OP)(e).xhrWrappable){this.dt=new q(e),this.handler=(e,t,r,n)=>(0,S.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};l._A?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const n={status:t.responseStatus},i={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};Y(n,t.name),this.handler("xhr",[n,i,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,r.D.ajax)}}))}catch(e){}(0,B.u5)(this.ee),(0,B.Kf)(this.ee),function(e,t,i,o){function a(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=x,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){_(t,e)}),(0,R.m$)(!1)),l.IF||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,R.m$)(!1))}function s(e){this.params={method:e[0]},Y(this,e[1]),this.metrics={}}function c(t,r){var i=(0,n.DL)(e);i.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",i.xpid);var a=o.generateTracePayload(this.parsedOrigin);if(a){var s=!1;a.newrelicHeader&&(r.setRequestHeader("newrelic",a.newrelicHeader),s=!0),a.traceContextParentHeader&&(r.setRequestHeader("traceparent",a.traceContextParentHeader),a.traceContextStateHeader&&r.setRequestHeader("tracestate",a.traceContextStateHeader),s=!0),s&&(this.dt=a)}}function d(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=F(i);a&&(n.txSize=a)}this.startTime=(0,D.z)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<G;s++)r.addEventListener(Z[s],this.listener,(0,R.m$)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function f(e,t){var r=""+L(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function h(e,t){var r=""+L(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function p(){this.endTime=(0,D.z)()}function g(e,r){r instanceof X&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function m(e,r){r instanceof X&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function v(e,t,r){t instanceof X&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,D.z)()))}function b(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,D.z)()-this.xhrCbStart,this.onload,r],r)}function y(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&l.il&&(t=""+l._A.location.href):e[0]&&e[0].url?t=e[0].url:l._A?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,U.e)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var n=o.generateTracePayload(this.parsedOrigin);if(n&&(n.newrelicHeader||n.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,n)&&(this.dt=n);else{var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),s(i.headers,n)&&(this.dt=n),e.length>1?e[1]=i:e.push(i)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function A(e,t){this.params={},this.metrics={},this.startTime=(0,D.z)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof W?r=i.url:l._A?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),Y(this,r);var o=(""+(i&&i instanceof W&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=F(n.body)||0}function w(e,t){var n;this.endTime=(0,D.z)(),this.params||(this.params={}),this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var o={txSize:this.txSize,rxSize:n,duration:(0,D.z)()-this.startTime};i("xhr",[this.params,o,this.startTime,this.endTime,"fetch"],this,r.D.ajax)}function x(e){var t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;o<G;o++)e.removeEventListener(Z[o],this.listener,!1);t.aborted||(n.duration=(0,D.z)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):_(this,e),n.cbTime=this.cbTime,i("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,r.D.ajax))}}function _(e,t){e.params.status=t.status;var r=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?F(e.response):"text"===r||""===r||void 0===r?F(e.responseText):void 0}(t,e.lastSize);if(r&&(e.metrics.rxSize=r),e.sameOrigin){var n=t.getResponseHeader("X-NewRelic-App-Data");n&&(e.params.cat=n.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",a),t.on("open-xhr-start",s),t.on("open-xhr-end",c),t.on("send-xhr-start",d),t.on("xhr-cb-time",u),t.on("xhr-load-added",f),t.on("xhr-load-removed",h),t.on("xhr-resolved",p),t.on("addEventListener-end",g),t.on("removeEventListener-end",m),t.on("fn-end",b),t.on("fetch-before-start",y),t.on("fetch-start",A),t.on("fn-start",v),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator()}}}function Y(e,t){var r=(0,U.e)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}var Q=i(3614);const{BST_RESOURCE:J,RESOURCE:ee,START:te,END:re,FEATURE_NAME:ne,FN_END:ie,FN_START:oe,PUSH_STATE:ae}=Q;var se=i(7056),ce=i(7144);class de extends f{static featureName=ce.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,ce.t9,r);try{const e=JSON.parse(localStorage.getItem("NRBA_SESSION"));e.sessionReplayMode!==se.IK.OFF?this.#a(e.sessionReplayMode):this.importAggregator({})}catch(e){this.importAggregator({})}}async#a(e){const{Recorder:t}=await Promise.all([i.e(63),i.e(379)]).then(i.bind(i,4136));this.recorder=new t({mode:e,agentIdentifier:this.agentIdentifier}),this.recorder.startRecording(),this.importAggregator({recorder:this.recorder})}}var ue=i(4649);class le extends f{static featureName=ue.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,ue.t,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,_.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new v({agentIdentifier:this.agentIdentifier}),this.features={},(0,x.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,x.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,j,class extends f{static featureName=ne;constructor(e,t){if(super(e,t,ne,!(arguments.length>2&&void 0!==arguments[2])||arguments[2]),!l.il)return;const n=this.ee;let i;(0,B.QU)(n),this.eventsEE=(0,B.em)(n),this.eventsEE.on(oe,(function(e,t){this.bstStart=(0,D.z)()})),this.eventsEE.on(ie,(function(e,t){(0,S.p)("bst",[e[0],t,this.bstStart,(0,D.z)()],void 0,r.D.sessionTrace,n)})),n.on(ae+te,(function(e){this.time=(0,D.z)(),this.startPath=location.pathname+location.hash})),n.on(ae+re,(function(e){(0,S.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,r.D.sessionTrace,n)}));try{i=new PerformanceObserver((e=>{const t=e.getEntries();(0,S.p)(J,[t],void 0,r.D.sessionTrace,n)})),i.observe({type:ee,buffered:!0})}catch(e){}this.importAggregator({resourceObserver:i})}},de,K,P,le,k],loaderType:"pro"})})()})();</script>
-<!-- Responsiveness -->
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<!-- Favicon -->
-<link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
-<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-<link href='/manifest.json' rel='manifest'>
-<link color='#21428e' href='/safari-pinned-tab.svg' rel='mask-icon'>
-<meta content='#ffffff' name='theme-color'>
+<html lang="en-US" xmlns="https://www.w3.org/1999/xhtml" xmlns:og="https://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="L6S/dY+KxGkEISFjdABH1CZxNEyeuI142+eHFdK5LMlG7tUKrr7hONFPG9Z4m95CyHdAdCeGDMNW76oa8+ypYw==" />
-<title>Exoplanet-catalog – Exoplanet Exploration: Planets Beyond our Solar System HD 169142 b
-</title>
-<meta content='Exoplanet Exploration: Planets Beyond our Solar System' property='og:site_name'>
-<meta content='Exoplanet-catalog – Exoplanet Exploration: Planets Beyond our Solar System' property='og:title'>
-<meta content='https://exoplanets.nasa.gov/assets/content/planets/gasgiant.jpg' property='og:image'>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 
-<meta content='467211304136432' property='fb:app_id'>
-<div hidden>
-<!-- New window warning messages -->
-<span id='new-window-0'>Opens in a new window</span>
-<span id='new-window-1'>Opens an external site</span>
-<span id='new-window-2'>Opens an external site in a new window</span>
-<!-- Button controls -->
-<span id='button-toggle-nav'>Toggle navigation</span>
-<span id='button-close-audio-options'>Close audio options</span>
-<span id='button-play-video'>Play video</span>
-<span id='button-close-modal'>Close modal</span>
-<span id='button-previous'>Previous</span>
-<span id='button-next'>Next</span>
-<span id='button-toggle-audio'>Toggle audio voice over</span>
-<span id='button-toggle-music'>Toggle ambient music</span>
-</div>
+	<meta name="facebook-domain-verification" content="6ye9ncvrtovmj1b4efjzf2mltchdqa" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://public.nrao.edu/xmlrpc.php">
 
 
-<link rel="stylesheet" media="all" href="/assets/public_manifest-92046dafd3413b0948e7a5fb1ce706603c1937feaed76688fc16ff6cd169cb9c.css" />
-<link rel="stylesheet" media="screen" href="/assets/mbcms/vendor/jquery.fancybox3-d5d81bdfc05a59e4ea72bca1d8b7fcc399bd3b61f7c06af95a8a48795df69d7a.css" />
-<link rel="stylesheet" media="screen" href="/assets/mbcms/vendor/jquery.fancybox-thumbs-63891ea3fd7b7f15621befe5cbdf329cd554b2129f7d69a7ea8d7cedb4c98323.css" />
-<link rel="stylesheet" media="print" href="/assets/gulp/print-360069d6504f4536730a5163a3f9df294d5da81e71af43e13761783b23e77032.css" />
-<script src="/assets/public_manifest-1a56bc0948956f66757f361ef3dd6e93be372d341d3884e640c853694fb406c0.js"></script>
-<script src="/assets/mbcms/vendor/jquery.fancybox3-bd543a29719f5c70e897670b5484b67824cc3c8eba68c8e4719d3cd6e2a5f542.js"></script>
-<script src="/assets/mbcms/vendor/jquery.fancybox-thumbs3-165b9822252e6816da53602b68cdd1a366475c528a9276488772c4849fed264f.js"></script>
-<script src="/assets/mb_manifest-2affd7133e70fb1b830e0b3f9fb9122f16aa56eb508e37092bec592bbcf02e8c.js"></script>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://public.nrao.edu/news/media-tip-sheet-september-2014/" />
+<meta name="twitter:title" content="NRAO Media Tip Sheet September 2014" />
+<meta name="twitter:description"contente="ALMA finds new organic molecule; VLA reveals details of still-forming planetary system; NRAO patent for new radio synthesizer." />
+<meta name="twitter:image" content="https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1-300x150.jpg" />
+<meta name="twitter:site" content="@TheNRAO" />
 
-<script>
-  setTimeout(function(){var a=document.createElement("script");
-  var b=document.getElementsByTagName("script")[0];
-  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0025/5267.js?"+Math.floor(new Date().getTime()/3600000);
-  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	<script>
+		//Google Tag Manager (Google Analytics Included)
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-K7BWG7H');
+		//End Google Tag Manager
+	</script>
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>NRAO Media Tip Sheet September 2014 - National Radio Astronomy Observatory</title>
+	<link rel="canonical" href="https://public.nrao.edu/news/media-tip-sheet-september-2014/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="NRAO Media Tip Sheet September 2014 - National Radio Astronomy Observatory" />
+	<meta property="og:description" content="ALMA finds new organic molecule; VLA reveals details of still-forming planetary system; NRAO patent for new radio synthesizer." />
+	<meta property="og:url" content="https://public.nrao.edu/news/media-tip-sheet-september-2014/" />
+	<meta property="og:site_name" content="National Radio Astronomy Observatory" />
+	<meta property="article:modified_time" content="2017-03-31T21:29:23+00:00" />
+	<meta property="og:image" content="https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/","url":"https://public.nrao.edu/news/media-tip-sheet-september-2014/","name":"NRAO Media Tip Sheet September 2014 - National Radio Astronomy Observatory","isPartOf":{"@id":"https://public.nrao.edu/#website"},"primaryImageOfPage":{"@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/#primaryimage"},"image":{"@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/#primaryimage"},"thumbnailUrl":"https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg","datePublished":"2014-09-25T16:00:29+00:00","dateModified":"2017-03-31T21:29:23+00:00","breadcrumb":{"@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://public.nrao.edu/news/media-tip-sheet-september-2014/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/#primaryimage","url":"https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg","contentUrl":"https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg","width":1200,"height":600},{"@type":"BreadcrumbList","@id":"https://public.nrao.edu/news/media-tip-sheet-september-2014/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://public.nrao.edu/"},{"@type":"ListItem","position":2,"name":"News","item":"https://public.nrao.edu/news/"},{"@type":"ListItem","position":3,"name":"NRAO Media Tip Sheet September 2014"}]},{"@type":"WebSite","@id":"https://public.nrao.edu/#website","url":"https://public.nrao.edu/","name":"National Radio Astronomy Observatory","description":"Revealing the Hidden Universe","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://public.nrao.edu/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//platform-api.sharethis.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel="alternate" type="application/rss+xml" title="National Radio Astronomy Observatory &raquo; Feed" href="https://public.nrao.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="National Radio Astronomy Observatory &raquo; Comments Feed" href="https://public.nrao.edu/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="National Radio Astronomy Observatory &raquo; iCal Feed" href="https://public.nrao.edu/events/?ical=1" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/public.nrao.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
 </script>
+<link rel='stylesheet' id='tribe-events-pro-mini-calendar-block-styles-css' href='https://public.nrao.edu/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-mini-calendar-block.min.css?ver=6.3.1' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://public.nrao.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://public.nrao.edu/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://public.nrao.edu/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=8.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://public.nrao.edu/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=8.5.2' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://public.nrao.edu/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.5.2' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='ppress-frontend-css' href='https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=4.14.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.14.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='nrao-proxima-css' href='https://public.nrao.edu/wp-content/themes/nrao/css/fonts/nrao-fonts.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='nrao-style-css' href='https://public.nrao.edu/wp-content/themes/nrao/css/style.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://public.nrao.edu/wp-includes/css/dashicons.min.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='cf7cf-style-css' href='https://public.nrao.edu/wp-content/plugins/cf7-conditional-fields/style.css?ver=2.4.6' type='text/css' media='all' />
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/themes/nrao/js/nav.js?ver=6.4.3" id="nav-script-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js?ver=8.4.11#property=63bd7703caf2ee001a714d1d&amp;product=gdpr-compliance-tool-v2&amp;source=simple-share-buttons-adder-wordpress" id="simple-share-buttons-adder-mu-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.8.5.2" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/public.nrao.edu\/shop\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=8.5.2" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.8.5.2" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.5.2" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.14.4" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.14.4" id="ppress-select2-js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js?ver=1.11.4" async="async" type="text/javascript"></script>
+<script src="https://public.nrao.edu/wp-content/themes/nrao/js/tablesorter.min.js?ver=6.4.3" defer="defer" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/db8302fcc4.js?ver=6.4.3" crossorigin="anonymous" type="text/javascript"></script>
+<link rel="https://api.w.org/" href="https://public.nrao.edu/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://public.nrao.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.3" />
+<meta name="generator" content="WooCommerce 8.5.2" />
+<link rel='shortlink' href='https://public.nrao.edu/?p=4601' />
+<link rel="alternate" type="application/json+oembed" href="https://public.nrao.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpublic.nrao.edu%2Fnews%2Fmedia-tip-sheet-september-2014%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://public.nrao.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpublic.nrao.edu%2Fnews%2Fmedia-tip-sheet-september-2014%2F&#038;format=xml" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://public.nrao.edu"><link rel="alternate" href="https://public.nrao.edu/wp-json/tribe/events/v1/" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://public.nrao.edu/wp-content/uploads/2017/11/logo-icon.png" sizes="32x32" />
+<link rel="icon" href="https://public.nrao.edu/wp-content/uploads/2017/11/logo-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://public.nrao.edu/wp-content/uploads/2017/11/logo-icon.png" />
+<meta name="msapplication-TileImage" content="https://public.nrao.edu/wp-content/uploads/2017/11/logo-icon.png" />
 </head>
-<!-- if exep section -->
-<body>
-<div data-react-class="BrowseHappier" data-react-props="{&quot;gt&quot;:1,&quot;lt&quot;:11}" data-react-cache-id="BrowseHappier-0"></div>
-<div id='main_container'>
-<div id='site_body'>
-<div class='site_header_area'>
-<header class='site_header'>
-<div class='brand_area'>
-<div class='brand1'>
-<a aria-describedby='new-window-2' aria-label='NASA' class='nasa_logo' href='http://www.nasa.gov' rel='noopener' target='_blank' title='visit nasa.gov'>NASA</a>
-</div>
-<div class='brand2'>
-<a class='top_logo' href='/' title='Home'>Exoplanet Exploration</a>
-</div>
-<img alt='' class='print_only print_logo' src='/assets/logo_nasa_duo_black@2x.png'>
-</div>
 
-<a class='visuallyhidden focusable' href='#page'>Skip Navigation</a>
-<div class='right_header_container'>
-<a class='menu_button' href='javascript:void(0);' id='menu_button'>
-<span class='menu_icon'>
-menu
+<body class="release-template-default single single-release postid-4601 theme-nrao woocommerce-no-js tribe-no-js page-template-nrao group-blog">
+	<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BWG7H" height="0" width="0" style="display:none;visibility:hidden">
+	</iframe>
+</noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<div id="header-top-bar">
+
+			<div class="row">
+
+					<ul id="top-links">
+
+						<li>
+							<a href="https://www.facebook.com/TheNRAO" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/TheNRAO" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/national.radio.astronomy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://vimeo.com/nrao" target="_blank"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
+						</li>
+						<!--<li>
+							<a href="/activities/">For Educators</a>
+						</li>-->
+						<li class="for-scientists">
+							<a href="https://science.nrao.edu/" target="_blank">For Scientists <i class="fa fa-external-link" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+
+			</div>
+
+		</div>
+
+		<div class="inner">
+			<div class="row">
+				<div class="site-branding columns small-12 medium-5">
+					<a id="home-link" href="https://public.nrao.edu/">
+
+						<div id="nsf-logo" class="logo-icon-wrapper">
+							<img class="logo-icon" src="https://public.nrao.edu/wp-content/themes/nrao/img/NSF_Logo.png" alt="NSF Logo Icon" />
+						</div>
+
+						<div id="nrao-logo" class="logo-icon-wrapper">
+							<img class="logo-icon" src="https://public.nrao.edu/wp-content/themes/nrao/img/NRAO_logo_text.png" alt="NRAO Logo" />
+						</div>
+					</a>
+
+				</div><!-- .site-branding -->
+
+				<div class="site-navigation columns small-12 medium-7">
+					<div class="row">
+						<div class="menu-button-container">
+							<button type="button" class="navbar-toggle hamburger-menu columns small-12" id="site-navigation-toggle">
+								<span></span>
+							</button>
+						</div>
+						<nav id="primary-site-navigation" class="main-navigation columns small-12" role="navigation">
+							<div class="navigation-inner container">
+								<div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-11088" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11088 current-menu-item"><a href="/news/">News</a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-360"><a href="/gallery/">Gallery</a></li>
+<li id="menu-item-568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-568"><a href="/telescopes/">Telescopes + Tech</a>
+<ul class="sub-menu">
+	<li id="menu-item-11463" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11463"><a href="/telescopes/vla/">VLA</a></li>
+	<li id="menu-item-11464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11464"><a href="/telescopes/alma/">ALMA</a></li>
+	<li id="menu-item-12110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12110"><a href="/telescopes/vlba/">VLBA</a></li>
+	<li id="menu-item-11462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11462"><a href="https://public.nrao.edu/ngvla/">ngVLA</a></li>
+	<li id="menu-item-23845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23845"><a href="https://public.nrao.edu/cdl/">CDL</a></li>
+	<li id="menu-item-21995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21995"><a href="https://public.nrao.edu/next-generation-radar/">ngRADAR</a></li>
+	<li id="menu-item-9091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9091"><a href="https://public.nrao.edu/vlass/">VLASS</a></li>
+</ul>
+</li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-157"><a href="https://public.nrao.edu/visit/">Visit Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-11465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11465"><a href="/visit/very-large-array/">Visit VLA</a></li>
+	<li id="menu-item-11466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11466"><a href="https://www.almaobservatory.org/es/outreach/alma-observatory-public-visits/">Visit ALMA</a></li>
+</ul>
+</li>
+<li id="menu-item-570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-570"><a href="/radio-astronomy/">Learn</a>
+<ul class="sub-menu">
+	<li id="menu-item-9906" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-9906"><a href="https://public.nrao.edu/blogs/">Blogs</a></li>
+	<li id="menu-item-11467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11467"><a href="https://public.nrao.edu/outreach/">Outreach Programs &#038; Events</a></li>
+	<li id="menu-item-21404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21404"><a href="https://public.nrao.edu/odi/">Diversity &#038; Inclusion</a></li>
+	<li id="menu-item-14210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14210"><a href="/radio-astronomy/the-science-of-radio-astronomy/">What is Radio Astronomy?</a></li>
+	<li id="menu-item-11474" class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11474"><a href="https://public.nrao.edu/radio-astronomy/black-holes/">Black Holes</a></li>
+	<li id="menu-item-11475" class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11475"><a href="https://public.nrao.edu/radio-astronomy/exoplanets/">Exoplanets</a></li>
+	<li id="menu-item-11473" class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11473"><a href="https://public.nrao.edu/radio-astronomy/pulsars/">Pulsars Astronomy</a></li>
+</ul>
+</li>
+<li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-316"><a href="https://public.nrao.edu/explore/">Explore</a>
+<ul class="sub-menu">
+	<li id="menu-item-11468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11468"><a href="https://public.nrao.edu/explore/vla-explorer/">The VLA Explorer</a></li>
+	<li id="menu-item-11472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11472"><a href="https://public.nrao.edu/color/">Cosmic Coloring Compositor</a></li>
+	<li id="menu-item-11469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11469"><a href="https://public.nrao.edu/explore/milky-way-explorer/">Milky Way Explorer</a></li>
+	<li id="menu-item-14271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14271"><a href="https://public.nrao.edu/interferometry-explained/">Interferometry Explained</a></li>
+	<li id="menu-item-11470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11470"><a href="https://public.nrao.edu/explore/alma-explorer/">ALMA Explorer</a></li>
+	<li id="menu-item-11471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11471"><a href="https://public.nrao.edu/explore/mission-control/">NRAO Mission Control</a></li>
+</ul>
+</li>
+<li id="menu-item-25512" class="give-button menu-item menu-item-type-custom menu-item-object-custom menu-item-25512"><a href="/join/">Join &#038; Give</a></li>
+</ul></div>								<!--<span class="show-for-small-only">
+									<div class="menu-audience-specific-container"><ul id="audience-specific" class="menu"><li id="menu-item-1008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1008"><a href="https://public.nrao.edu/press-office/">Press Office</a></li>
+<li id="menu-item-1009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1009"><a href="https://public.nrao.edu/media-use/">Image Use</a></li>
+<li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010"><a href="https://public.nrao.edu/about/">About NRAO</a></li>
+<li id="menu-item-1012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1012"><a href="/activities/">For Educators</a></li>
+</ul></div>								</span>-->
+							</div>
+
+							
+<form id="headerSearch" role="search" method="get" class="nrao-search-form" action="https://public.nrao.edu/">
+		<button type="submit" class="nrao-search-submit-icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+		<input spellcheck="true" type="search" class="search-field" style="color: #555;" placeholder="Search &hellip;" value="" name="s" />
+</form>
+						</nav><!-- #site-navigation -->
+					</div>
+				</div>
+			</row>
+
+
+
+
+		</div>
+
+
+
+	</header><!-- #masthead -->
+
+<!-- This used to be where the secondary nav templates were pulled in -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			<div class="row top-pad">
+				<div class="small-11 columns">
+					
+<div class="row breadcrumbs">
+	<div class="small-12 columns">
+		<ul id="breadcrumbs" class="breadcrumbs"><li class="item-home"><a class="bread-link bread-home" href="https://public.nrao.edu" title="Home">Home</a></li><li class="separator separator-home"> <i class="fas fa-angle-right"></i> </li><li class="item-cat item-custom-post-type-release"><a class="bread-cat bread-custom-post-type-release" href="https://public.nrao.edu/news/" title="News">News</a></li><li class="separator"> <i class="fas fa-angle-right"></i> </li><li class="item-current item-4601"><strong class="bread-current bread-4601" title="NRAO Media Tip Sheet September 2014">Tip Sheet: September 25, 2014 at 12:00 pm EDT</strong></li></ul>	</div>
+</div>				</div>
+			</div>
+
+		
+<article id="post-4601" class="post-4601 release type-release status-publish has-post-thumbnail hentry release_topic-chemistry-and-cosmology release_topic-protoplanets-and-exoplanets release_topic-radio-telescopes release_type-tip-sheet">
+	<header class="entry-header">
+
+		<div class="row">
+
+			<div class="small-12 medium-3 medium-push-9 columns">
+				<div class="printfriendly pf-button  pf-alignright"><a href="#" rel="nofollow" onClick="window.print(); return false;" title="Printer Friendly, PDF & Email"><img class="pf-button-img" src="https://cdn.printfriendly.com/buttons/printfriendly-pdf-button-nobg.png" alt="Print Friendly, PDF & Email" style="width: 112px;height: 24px;"  /></a></div>			</div>
+
+			<div class="small-12 medium-9 medium-pull-3 columns">
+				<div class="header-date">Tip Sheet: </div>
+			</div>
+
+			<div class="small-12 columns tip-banner">
+				<img width="1200" height="600" src="https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg" class="attachment-fixed-ratio-large size-fixed-ratio-large wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1.jpg 1200w, https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1-600x300.jpg 600w, https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1-300x150.jpg 300w, https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1-768x384.jpg 768w, https://public.nrao.edu/wp-content/uploads/2017/03/TS_14-09-1-1024x512.jpg 1024w" sizes="(max-width: 1200px) 100vw, 1200px" />			</div>
+
+			<div class="small-12 columns">
+				<h1 class="entry-title">NRAO Media Tip Sheet September 2014</h1>
+				<p class="pr-subtitle">Science, Engineering, and Technology Milestones</p>
+
+			</div>
+		</div>
+	</header><!-- .entry-header -->
+
+	<div class="row">
+		<div class="columns small-12">
+					</div>
+	</div>
+
+	<div class="entry-content">
+						<div class="tip-head">
+					<div class="row">
+
+						<div class="small-12 columns">
+							<h3>Topics in This Issue:</h3>
+						</div>
+
+						<div class="small-12 columns bottom-pad">
+							
+								<div class="small-12 columns tip-list">
+									<a href="#item1">1. ALMA Finds that Organic Molecules are Branching Out</a>
+									<br><span><p>A new organic molecule with a “branched” structure was found by ALMA, offering greater hope that amino acids may one day be detected in interstellar space.</p>
 </span>
-</a>
-<a class='modal_close' id='modal_close'>
-<span class='modal_close_icon'>
-close modal
+								</div>
+								
+								<div class="small-12 columns tip-list">
+									<a href="#item2">2. VLA Reveals Details of Still-Forming Planetary System</a>
+									<br><span><p>VLA mapped the structure of a disk of dust surrounding a young star, revealing a pair of gaps in the disk where new planets are likely forming.</p>
 </span>
-</a>
-</div>
-<div class='nav_area'>
-<div id='site_nav_container'>
-<nav data-react-class="Meganav" data-react-props="{&quot;nav_items&quot;:[{&quot;name&quot;:&quot;Eyes on Exoplanets&quot;,&quot;style&quot;:&quot;icon&quot;,&quot;li_class&quot;:&quot;galaxy_icon&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;link&quot;:&quot;/eyes-on-exoplanets&quot;,&quot;svg_icon_id&quot;:&quot;eox&quot;,&quot;id&quot;:3084,&quot;features&quot;:[{&quot;title&quot;:&quot;Eyes on Exoplanets&quot;,&quot;body&quot;:&quot;&quot;,&quot;image_src&quot;:&quot;/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaTRjIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--feb827fc1311f7fb987b6f50ea8359dc8c2c4a76/eoe-feature-image.jpeg?disposition=attachment&quot;,&quot;link&quot;:&quot;/eyes-on-exoplanets/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;categories&quot;:[&quot;featured&quot;]}],&quot;title&quot;:&quot;&quot;,&quot;short_description&quot;:&quot;Explore an interactive, 3D data visualization of all known exoplanets.&quot;},{&quot;name&quot;:&quot;What is an Exoplanet?&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/overview&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Overview&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/overview&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3139},{&quot;name&quot;:&quot;In Depth&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/in-depth&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3140},{&quot;title&quot;:&quot;PLANET TYPES&quot;,&quot;sub_items&quot;:[{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/overview&quot;,&quot;link_text&quot;:&quot;Overview&quot;,&quot;name&quot;:&quot;Overview&quot;,&quot;id&quot;:3142},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/gas-giant&quot;,&quot;link_text&quot;:&quot;Gas Giant&quot;,&quot;name&quot;:&quot;Gas Giant&quot;,&quot;id&quot;:3143},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/neptune-like&quot;,&quot;link_text&quot;:&quot;Neptune-like&quot;,&quot;name&quot;:&quot;Neptune-like&quot;,&quot;id&quot;:3144},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/super-earth&quot;,&quot;link_text&quot;:&quot;Super-Earth&quot;,&quot;name&quot;:&quot;Super-Earth&quot;,&quot;id&quot;:3145},{&quot;url&quot;:&quot;/what-is-an-exoplanet/planet-types/terrestrial&quot;,&quot;link_text&quot;:&quot;Terrestrial&quot;,&quot;name&quot;:&quot;Terrestrial&quot;,&quot;id&quot;:3146}],&quot;id&quot;:3141,&quot;type&quot;:&quot;columns&quot;},{&quot;name&quot;:&quot;Stars&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/stars&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3147},{&quot;name&quot;:&quot;What is the Universe?&quot;,&quot;link&quot;:&quot;/what-is-an-exoplanet/what-is-the-universe&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3148}]}],&quot;id&quot;:107,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;Description&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;The Search For Life&quot;,&quot;link&quot;:&quot;/search-for-life/big-questions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;The Big Questions&quot;,&quot;link&quot;:&quot;/search-for-life/big-questions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3150},{&quot;name&quot;:&quot;Are We Alone?&quot;,&quot;link&quot;:&quot;/search-for-life/are-we-alone&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3151},{&quot;name&quot;:&quot;Can We Find Life?&quot;,&quot;link&quot;:&quot;/search-for-life/can-we-find-life&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3152},{&quot;name&quot;:&quot;The Habitable Zone&quot;,&quot;link&quot;:&quot;/search-for-life/habitable-zone&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3153},{&quot;name&quot;:&quot;Why We Search&quot;,&quot;link&quot;:&quot;/search-for-life/why-we-search&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3154}]}],&quot;id&quot;:3149,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;Discovery&quot;,&quot;link&quot;:&quot;/discovery/discoveries-dashboard&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Discoveries Dashboard&quot;,&quot;link&quot;:&quot;/discovery/discoveries-dashboard&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3156},{&quot;name&quot;:&quot;How We Find and Characterize&quot;,&quot;link&quot;:&quot;/discovery/how-we-find-and-characterize&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3157},{&quot;name&quot;:&quot;Missions&quot;,&quot;link&quot;:&quot;/discovery/missions&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3158},{&quot;name&quot;:&quot;People&quot;,&quot;link&quot;:&quot;/discovery/people&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3089},{&quot;name&quot;:&quot;Exoplanet Catalog&quot;,&quot;link&quot;:&quot;/discovery/exoplanet-catalog&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:101}]}],&quot;id&quot;:3155,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;Explore&quot;,&quot;link&quot;:&quot;/alien-worlds&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;The Exoplaneteers&quot;,&quot;link&quot;:&quot;/alien-worlds/the-exoplaneteers&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3302},{&quot;name&quot;:&quot;Exoplanet Travel Bureau&quot;,&quot;link&quot;:&quot;/alien-worlds/exoplanet-travel-bureau&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:19},{&quot;name&quot;:&quot;5 Ways to Find a Planet&quot;,&quot;link&quot;:&quot;/alien-worlds/ways-to-find-a-planet&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2925},{&quot;name&quot;:&quot;Eyes on Exoplanets &quot;,&quot;link&quot;:&quot;https://exoplanets.nasa.gov/eyes-on-exoplanets/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2932},{&quot;name&quot;:&quot;Strange New Worlds&quot;,&quot;link&quot;:&quot;/alien-worlds/strange-new-worlds&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:10},{&quot;name&quot;:&quot;Historic Timeline&quot;,&quot;link&quot;:&quot;/alien-worlds/historic-timeline&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:7},{&quot;name&quot;:&quot;Kepler Timeline&quot;,&quot;link&quot;:&quot;/alien-worlds/kepler-timeline&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3031},{&quot;name&quot;:&quot;Universe of Monsters&quot;,&quot;link&quot;:&quot;/alien-worlds/universe-of-monsters&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3010},{&quot;name&quot;:&quot;Galaxy of Horrors&quot;,&quot;link&quot;:&quot;/alien-worlds/galaxy-of-horrors&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2950}]}],&quot;id&quot;:8,&quot;meganav_style&quot;:&quot;dark_theme&quot;,&quot;features&quot;:[{&quot;title&quot;:&quot;Exoplanet Travel Bureau&quot;,&quot;body&quot;:&quot;Take guided tours of some of the most exotic and dazzling destinations in our galaxy.&quot;,&quot;image_src&quot;:&quot;/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbDhEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e2e976d180e6ac87fa3a7ebea97a97026dded13a/bureau_feature.jpg?disposition=attachment&quot;,&quot;link&quot;:&quot;/alien-worlds/exoplanet-travel-bureau/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;categories&quot;:[&quot;featured&quot;]}],&quot;short_description&quot;:&quot;Short Description&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;More&quot;,&quot;link&quot;:&quot;/multimedia-resources&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Multimedia Resources&quot;,&quot;link&quot;:&quot;/multimedia-resources&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3159},{&quot;name&quot;:&quot;News \u0026 Features&quot;,&quot;link&quot;:&quot;/news&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3160},{&quot;name&quot;:&quot;Blog&quot;,&quot;link&quot;:&quot;/blog&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2989},{&quot;name&quot;:&quot;Glossary&quot;,&quot;link&quot;:&quot;/glossary&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:2982},{&quot;name&quot;:&quot;Citizen Science&quot;,&quot;link&quot;:&quot;/citizen-science&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3123}]}],&quot;id&quot;:3122,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false},{&quot;name&quot;:&quot;For Scientists&quot;,&quot;link&quot;:&quot;/exep&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;sections&quot;:[{&quot;items&quot;:[{&quot;name&quot;:&quot;Exoplanet Exploration Program&quot;,&quot;link&quot;:&quot;https://exoplanets.nasa.gov/exep/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3085},{&quot;name&quot;:&quot;Science Mission Directorate&quot;,&quot;link&quot;:&quot;https://science.nasa.gov&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:3086}]}],&quot;id&quot;:2949,&quot;meganav_style&quot;:&quot;&quot;,&quot;features&quot;:[],&quot;short_description&quot;:&quot;&quot;,&quot;expanded_meganav&quot;:false}],&quot;search&quot;:true,&quot;modal_search&quot;:{&quot;suggestions&quot;:[{&quot;title&quot;:&quot;What is an exoplanet?&quot;,&quot;link&quot;:&quot;/faq/3/what-is-an-exoplanet/&quot;},{&quot;title&quot;:&quot;What’s a transit?&quot;,&quot;link&quot;:&quot;/faq/31/whats-a-transit/&quot;},{&quot;title&quot;:&quot;What is a light-year?&quot;,&quot;link&quot;:&quot;/faq/26/what-is-a-light-year/&quot;},{&quot;title&quot;:&quot;How do exoplanets get their names?&quot;,&quot;link&quot;:&quot;/faq/20/how-do-exoplanets-get-their-names/&quot;},{&quot;title&quot;:&quot;How do planets form?&quot;,&quot;link&quot;:&quot;/faq/43/how-do-planets-form/&quot;}]},&quot;search_placeholder&quot;:{&quot;placeholder&quot;:&quot;search&quot;},&quot;no_redirect&quot;:{&quot;name&quot;:&quot;More&quot;}}" data-react-cache-id="Meganav-0" class="site_nav"></nav>
-</div>
-</div>
-</header>
-</div>
-<div id='sticky_nav_spacer'></div>
+								</div>
+								
+								<div class="small-12 columns tip-list">
+									<a href="#item3">3. New NRAO Patent for Radio Synthesizer</a>
+									<br><span><p>New frequency synthesizer helps astronomers "tune in" to the cosmos. </p>
+</span>
+								</div>
+															</div>
+													</div>
+				</div><!--end intro row -->
 
-<div id='page'>
-<div class='page_cover'></div>
-<div data-react-class="CherTools" data-react-props="{&quot;share&quot;:[[&quot;Facebook&quot;],[&quot;Twitter&quot;],[&quot;Pinterest&quot;],[&quot;Email&quot;]]}" data-react-cache-id="CherTools-0" class="chertools_floater"></div>
 
-<div class='header_mask'></div>
-<section class='content_page atlas_detail module'>
-<div class='grid_layout'>
-<article>
-<header id='page_header'>
-<h2 class='category_title'>
-<a href="/discovery/exoplanet-catalog/">Exoplanet Catalog</a>
-</h2>
-<h1 class='article_title'>
-HD 169142 b
-</h1>
-</header>
-<div class='nwa_ranger'>
-<link rel="stylesheet" media="screen" href="/assets/ranger_layouts/ui_interface_wide-eb734be3786fd4e768fb076ade318d384ceb2478a105857abf39b9100b66179d.css" />
-<div class='mb_ranger_ui'>
-<section class='guild_navigator_module single_ranger_feature'>
-<article class='guild_navigator_canvas' style='background-image: url(/assets/content/planets/gasgiant.jpg)'>
-<iframe allowfullscreen frameborder='0' height='100%' id='exo_pioneer_module' scrolling='no' src='https://eyes.nasa.gov/apps/exo/#/planet/HD_169142_b' width='100%'></iframe>
-</article>
-</section>
+			    
+					<div class="anchor tip-sheet-tip row" id="item1">
+						<div class="small-12 columns"><h3>1. ALMA Finds that Organic Molecules are Branching Out</h3></div>
+						<div class="small-12 medium-8 large-9 columns"><p>Researchers using the <a href="https://public.nrao.edu/telescopes/alma">Atacama Large Millimeter/submillimeter Array</a> (ALMA) have teased out the faint signal of a new organic molecule lurking in interstellar space. The molecule, known as iso-propyl cyanide (i-C3H7CN), is a variant (isomer) of a molecule already known to be quite prevalent in space. The key difference between the two is that the carbon backbone upon which the newly detected molecule is &#8220;branched.&#8221; This distinction is very significant, according to the researchers, because it suggests that branched carbon-chain molecules may be fairly abundant in the interstellar medium. In this case, the &#8220;iso&#8221; version of the molecule is almost half as abundant as the normal form. &#8220;The enormous abundance of iso-propyl cyanide suggests that branched molecules may in fact be the rule, rather than the exception, in the interstellar medium,&#8221; says Robin Garrod, an astrochemist at Cornell University. Models of how these molecules form suggest they are produced either within or on thin veneers of ice that coat interstellar dust grains. Creating iso-propyl cyanide in such a way appears to require the addition of certain &#8220;functional&#8221; groups of carbon to the growing molecule. &#8220;This type of molecular manufacturing bodes well for the presence of amino acids &#8212; a precursor of proteins &#8212; in similar environments,&#8221; said Arnaud Belloche with the Max-Planck Institute for Radio Astronomy in Bonn, Germany. “A branched structure is a key characteristic of amino acids and among the amino acids found in meteorites, the most abundant isomers are the branched ones,” Belloche added. The results are published in the journal <em>Science</em>.<strong><br />
+</strong></p>
 </div>
-</div>
-<div id='primary_column'>
-<div class='wysiwyg_content'>
-<p>
-HD 169142 b is a gas giant exoplanet that orbits an F-type star. Its mass is 3 Jupiters, it takes 166.9 years to complete one orbit of its star, and is 37.2 AU from its star. Its discovery was announced in 2023.
-</p>
-</div>
-<div class='bottom_links'>
-<a href="/discovery/exoplanet-catalog/?">‹ Back to list</a>
-</div>
-</div>
-<div id='secondary_column'>
-<table class='information_grid'>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-PLANET TYPE
-</div>
-<div class='value'>
-Gas Giant
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-DISCOVERY DATE
-</div>
-<div class='value'>
-2023
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-MASS
-</div>
-<div class='value'>
-3 Jupiters
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-PLANET RADIUS
-</div>
-<div class='value'>
-1.17 x Jupiter<br/>(estimate)
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-ORBITAL RADIUS
-</div>
-<div class='value'>
-37.2 AU
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-ORBITAL PERIOD
-</div>
-<div class='value'>
-166.9 years
-</div>
-</td>
-</tr>
-<tr class='fact_row'>
-<td class='planet_fact first'>
-<div class='title'>
-ECCENTRICITY
-</div>
-<div class='value'>
-0.0
-</div>
-</td>
-<td class='planet_fact'>
-<div class='title'>
-DETECTION METHOD
-</div>
-<div class='value'>
-<a href='/5-ways-to-find-a-planet/#/3'>Direct Imaging</a>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</article>
-</div>
-</section>
 
-<section class='multimedia_teaser module'>
-<div class='grid_layout page_carousel'>
-<header>
-<h1 class='module_title'>
-Explore Alien Worlds
-</h1>
-</header>
-<div class='multimedia_module_gallery'>
-<script>
-  $(document).ready(function(){
-    $(".explore_items").slick({
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slide: '.explore_items .slide',
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      lazyLoad: 'progressive',
-      centerMode: false,
-      centerPadding: '30px',
-      arrows: true,
-      responsive: [{"breakpoint":953,"settings":{"slidesToShow":2,"slidesToScroll":2,"centerMode":false}},{"breakpoint":480,"settings":{"slidesToShow":1,"slidesToScroll":1,"centerMode":true,"arrows":false}}]
-    });
-  
-    //fix for problems snapping back to position after slide change and responsive change
-    $(".explore_items").on('setPosition', function(event, slick, currentSlide, nextSlide) {
-      var slidesShown = $(".explore_items").slick('slickGetOption', 'slidesToShow');
-      var numberOfSlides = $(".explore_items").find('.slick-slide').length;
-      if (slidesShown === numberOfSlides) {
-        $(".explore_items").find('.slick-track').css('transform', 'translate3d(0px, 0px, 0px)');
-      }
-    });
-  
-    // SHIM: The slick slider doesn’t seem to respond to orientation changes on Android devices
-    // (possibly because there’s a delay while the browser is rendering the page)
-    window.addEventListener('orientationchange', function() {
-      var clock;
-  
-      // Refresh the slider every half second
-      clock = setInterval(function() {
-        // https://github.com/kenwheeler/slick/issues/429#issuecomment-57450725
-        $('.explore_items')[0].slick.refresh();
-      }, 500);
-  
-      // Stop refreshing after 3 seconds
-      setTimeout(function() {
-        clearInterval(clock);
-      }, 3000);
-    });
-  });
+
+						<div class="small-12 medium-4 large-3 columns">
+															<div class="pr-media-wrapper">
+									<a href="#PRimage1" class="open-popup-link">
+										<img src="https://public.nrao.edu/wp-content/uploads/2017/03/CMZLabocaPlanckMol_nrao.jpg" />
+									<div class="caption-wrapper">
+																				<div class="nrao-caption secondary">Dust and molecules in the central region of our Galaxy: The background image shows the...<span class="caption-read-more">Read More</span></div>
+									
+																					<div class="nrao-credit">Credit: MPIfR/A. Weiß (background image), University of Cologne/M. Koerber (molecular models), MPIfR/A. Belloche (montage).</div>
+										
+									</div>
+									</a>
+								</div>
+													</div>
+					</div>
+
+			    
+					<div class="anchor tip-sheet-tip row" id="item2">
+						<div class="small-12 columns"><h3>2. VLA Reveals Details of Still-Forming Planetary System</h3></div>
+						<div class="small-12 medium-8 large-9 columns"><p>Astronomers using the<a href="https://public.nrao.edu/telescopes/vla" target="_blank"> Karl G. Jansky Very Large Array</a> (VLA) have mapped the structure of a disk of dust surrounding a young star, revealing a pair of gaps in the disk where new planets are likely forming. &#8220;We&#8217;re looking at the very early stages of planetary formation in this system,&#8221; said Mayra Osorio, of the Astrophysical Institute of Andalucía (IAA-CSIC) in Spain. The international team of scientists studied a young star designated HD 169142, nearly 500 light-years from Earth. They used the VLA to observe the star at radio frequencies of 42-48 GHz, or wavelengths of about 7 mm, a technique well-suited to detecting grains of dust surrounding the star. What they found was that the star is surrounded by a dusty disk with a radius about 240 times the Earth-Sun distance. The disk has two gaps &#8212; an inner gap ranging from just less than the Sun-Venus distance out to just under the Sun-Neptune distance, and another ranging from roughly the Sun-Pluto distance out to 67 times the Earth-Sun distance. &#8220;The dust in this system appears to have formed millimeter-to-centimeter-sized grains, which is a prerequisite for planet formation,&#8221; Osorio said. The gaps in the disk, the scientists said, are most likely caused by young planets sweeping up and accumulating the dust along their orbital paths. In fact, another team of astronomers, including Osorio and five others who did the radio observations, observed infrared light and announced finding a companion to the star within the inner gap. Osorio&#8217;s radio team has found an object within the outer gap that they suggest may be a dusty disk surrounding a second, still-forming planet. &#8220;This system is relatively nearby and its disk is seen nearly face-on from Earth, so it provides an excellent opportunity for further, detailed study of how planets form around young stars,&#8221; Osorio said. The scientists reported their findings in the <em>Astrophysical Journal Letters</em>.<strong><br />
+</strong></p>
+</div>
+
+
+						<div class="small-12 medium-4 large-3 columns">
+															<div class="pr-media-wrapper">
+									<a href="#PRimage2" class="open-popup-link">
+										<img src="https://public.nrao.edu/wp-content/uploads/2017/03/HD169142_nrao.jpg" />
+									<div class="caption-wrapper">
+																				<div class="nrao-caption secondary">Image at 7 mm wavelength of the dusty disk around the star HD 169142 obtained...<span class="caption-read-more">Read More</span></div>
+									
+																					<div class="nrao-credit">Credit: Osorio et al., NRAO/AUI/NSF</div>
+										
+									</div>
+									</a>
+								</div>
+													</div>
+					</div>
+
+			    
+					<div class="anchor tip-sheet-tip row" id="item3">
+						<div class="small-12 columns"><h3>3. New NRAO Patent for Radio Synthesizer</h3></div>
+						<div class="small-12 medium-8 large-9 columns"><p>A team of NRAO engineers and scientists has been granted a patent (#8,779,814)  for a new class of frequency synthesizer – a device that is integrated into radio telescopes to help astronomers tune-in to very specific, but very weak signals from space. Before astronomers can study and analyze faint celestial signals, they first must choose the signals of interest; a frequency synthesizer does just that while mitigating the unwanted signals &#8212; much like listening to a faint radio station that is right next to a strong station. The new device, which was designed specifically for the NRAO’s <a href="https://public.nrao.edu/telescopes/vlba" target="_blank">Very Long Baseline Array</a> (VLBA), offers extremely flexible tuning with fewer limitations than previous designs. It has almost limitless output frequency tuning resolution (often referred to as synthesizer step size) and can achieve any particular frequency in multiple ways by simply changing the settings. This avoids combinations that might otherwise generate unwanted responses that degrade the signal. The new synthesizer&#8217;s much improved tuning resolution and flexibility will allow new science to be performed with the VLBA. It also will increase the ability of the VLBA to cooperate with radio astronomy institutions around the world for extremely high-resolution studies of the cosmos. The patent was issued to Associated Universities, Inc., and credits co-inventors Richard Scott, Walter Brisken, and Robert Long. <strong><br />
+</strong><br />
+The <a href="https://public.nrao.edu" target="_blank">National Radio Astronomy Observatory</a> is a facility of the <a href="http://www.nsf.gov" target="_blank">National Science Foundation</a>, operated under cooperative agreement by <a href="http://www.aui.edu" target="_blank">Associated Universities, Inc</a>.</p>
+<p><em>Contacts:</em></p>
+<p><em>Dave Finley, Public Information Officer</em><br />
+<em>(575) 835-7302</em><br />
+<em><a href="mailto:dfinley@nrao.edu">dfinley@nrao.edu</a></em></p>
+<p><em>Charles Blue, Public Information Officer</em><br />
+<em>(434) 296-0314</em><br />
+<em><a href="mailto:cblue@nrao.edu">cblue@nrao.edu</a></em></p>
+</div>
+
+
+						<div class="small-12 medium-4 large-3 columns">
+													</div>
+					</div>
+
+			    
+
+
+
+				<!--- LightBox Content -->
+
+				<div id="lightbox-container" style="display: none;">
+
+				    
+							
+								<div id="PRimage1" class="white-popup mfp-hide">
+
+									<img class="size-source" src="https://public.nrao.edu/wp-content/uploads/2017/03/CMZLabocaPlanckMol_nrao.jpg" />
+
+									<table class="image-meta-table">
+										<tr>
+											<td id="image-meta">
+												<div><p>Dust and molecules in the central region of our Galaxy: The background image shows the dust emission in a combination of data obtained with the APEX telescope and the Planck space observatory at a wavelength around 860 micrometers. The organic molecule iso-propyl cyanide with a branched carbon backbone (i-C3H7CN, left) as well as its straight-chain isomer normal-propyl cyanide (n-C3H7CN, right) were both detected with the Atacama Large Millimeter/submillimeter Array in the star-forming region Sgr B2, about 300 light years away from the Galactic center Sgr A*.</p>
+</div>
+																									<div class="nrao-credit">Credit: MPIfR/A. Weiß (background image), University of Cologne/M. Koerber (molecular models), MPIfR/A. Belloche (montage).</div>
+																							</td>
+											<td class="image_dls">
+													<div><strong>Image Downloads</strong></div>
+																										<a href="https://public.nrao.edu/wp-content/uploads/2017/03/CMZLabocaPlanckMol_nrao.jpg" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Hi-Res File <!--() -->
+													</a><br>
+													<a href="https://public.nrao.edu/wp-content/uploads/2017/03/CMZLabocaPlanckMol_nrao-1024x632.jpg" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Screensize File <!--() -->
+													</a><br>
+											</td>
+										</tr>
+									</table>
+
+
+
+
+								</div>
+
+							
+					
+							
+								<div id="PRimage2" class="white-popup mfp-hide">
+
+									<img class="size-source" src="https://public.nrao.edu/wp-content/uploads/2017/03/HD169142_nrao.jpg" />
+
+									<table class="image-meta-table">
+										<tr>
+											<td id="image-meta">
+												<div><p>Image at 7 mm wavelength of the dusty disk around the star HD 169142 obtained with the Very Large Array (VLA) at 7 mm wavelength. The positions of the protoplanet candidates are marked with plus signs (+) (Osorio et al. 2014, ApJ, 791, L36). The insert in the upper right corner shows, at the same scale, the bright infrared source in the inner disk cavity, as observed with the Very Large Telescope (VLT) at 3.8 micron wavelength (Reggiani et al. 2014, ApJ, 792, L23).</p>
+</div>
+																									<div class="nrao-credit">Credit: Osorio et al., NRAO/AUI/NSF</div>
+																							</td>
+											<td class="image_dls">
+													<div><strong>Image Downloads</strong></div>
+																										<a href="https://public.nrao.edu/wp-content/uploads/2017/03/HD169142_nrao.jpg" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Hi-Res File <!--() -->
+													</a><br>
+													<a href="https://public.nrao.edu/wp-content/uploads/2017/03/HD169142_nrao-1024x979.jpg" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Screensize File <!--() -->
+													</a><br>
+											</td>
+										</tr>
+									</table>
+
+
+
+
+								</div>
+
+							
+					
+							
+								<div id="PRimage3" class="white-popup mfp-hide">
+
+									<img class="size-source" src="" />
+
+									<table class="image-meta-table">
+										<tr>
+											<td id="image-meta">
+												<div></div>
+																									<div class="nrao-credit">Credit: NRAO/AUI/NSF</div>
+																							</td>
+											<td class="image_dls">
+													<div><strong>Image Downloads</strong></div>
+																										<a href="" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Hi-Res File <!--() -->
+													</a><br>
+													<a href="" download>
+														<i class="fa fa-download" aria-hidden="true"></i> Screensize File <!--() -->
+													</a><br>
+											</td>
+										</tr>
+									</table>
+
+
+
+
+								</div>
+
+							
+					
+
+				</div>
+
+				<!--- end LightBox Content -->
+
+
+
+
+
+			  <!--endif -->
+
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			<hr class="">
+	<div class="row">
+		<div class="small-12 columns">
+			<h3>More News From Atacama Large Millimeter/submillimeter Array</h3>
+		</div>
+	</div>
+	<div class="row small-up-2 large-up-4">
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/alma-gets-a-new-heartbeat/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2019/12/ALMA_potw_eso_130415-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2019/12/ALMA_potw_eso_130415-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2019/12/ALMA_potw_eso_130415-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">ALMA Gets a New Heartbeat</div>
+					<div class="news-list-meta"><em>February 6, 2024</em></div>
+					<div class="news-list-excerpt"><p>The Atacama Large Millimeter/submillimeter Array (ALMA) has just received a “heart transplant,” high in the Atacama Desert in Northern Chile. ALMA, the most complex astronomical observatory ever built on Earth, installed a new hydrogen maser. Funded by the National Radio Astronomy Observatory (NRAO), this upgrade marks an essential investment, setting a new standard in reliability for observations.</p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/new-details-of-supermassive-black-holes-shadow-revealed/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2024/01/EHT-2018-shadow-image-e1705687229704-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2024/01/EHT-2018-shadow-image-e1705687229704-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2024/01/EHT-2018-shadow-image-e1705687229704-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">New Details of Supermassive Black Hole’s Shadow Revealed</div>
+					<div class="news-list-meta"><em>January 18, 2024</em></div>
+					<div class="news-list-excerpt"><p>The Event Horizon Telescope (EHT) Collaboration has released new images of supermassive black hole M87*. A recent paper published in the journal Astronomy &#038; Astrophysics presents new images from data collected by the Atacama Large Millimeter/submillimeter Array (ALMA) and several other instruments within the EHT. These new images show a bright ring surrounding a deep central depression, “the shadow of the black hole,” as predicted by general relativity.  Excitingly, the brightness peak of the ring has shifted by about 30º compared to the first images, which is consistent with scientists’ theoretical understanding of variability from turbulent material around black holes.</p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/early-evolution-of-planetary-disk-structures-seen-for-the-first-time/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2023/03/gallery-images-largeALMAat19CPadilla_large-e1679519234113-585x300.jpeg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2023/03/gallery-images-largeALMAat19CPadilla_large-e1679519234113-585x300.jpeg 585w, https://public.nrao.edu/wp-content/uploads/2023/03/gallery-images-largeALMAat19CPadilla_large-e1679519234113-1170x600.jpeg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">Early Evolution of Planetary Disk Structures Seen for the First Time</div>
+					<div class="news-list-meta"><em>January 8, 2024</em></div>
+					<div class="news-list-excerpt"><p>An international team of astronomers have found ring and spiral structures in very young planetary disks, demonstrating that planet formation may begin much earlier than once thought. The results were presented today at the 243rd Meeting of the American Astronomical Society.</p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/mystery-of-star-formation-revealed-by-hearts-of-molecular-clouds/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2023/11/Screenshot-2023-11-20-at-3.22.53-PM-585x300.png" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2023/11/Screenshot-2023-11-20-at-3.22.53-PM-585x300.png 585w, https://public.nrao.edu/wp-content/uploads/2023/11/Screenshot-2023-11-20-at-3.22.53-PM-300x153.png 300w, https://public.nrao.edu/wp-content/uploads/2023/11/Screenshot-2023-11-20-at-3.22.53-PM-1170x600.png 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">Mystery of Star Formation Revealed by Hearts of Molecular Clouds</div>
+					<div class="news-list-meta"><em>January 8, 2024</em></div>
+					<div class="news-list-excerpt"><p>An international team of astronomers has revealed mysterious star formation at the far edge of the galaxy M83. This research was presented today in a press conference at the 243rd meeting of the American Astronomical Society (AAS) in New Orleans, Louisiana. The research used several instruments operated by the National Science Foundation’s National Radio Astronomy Observatory (NRAO), including the Atacama Large Millimeter/submillimeter Array (ALMA), the Karl G. Jansky Very Large Array (VLA), and the Green Bank Telescope (GBT), along with the National Astronomical Observatory of Japan’s (NAOJ) Subaru Telescope and the NASA Galaxy Evolution Explorer (GALEX).</p>
+</div>
+				</a>
+			</div>
+
+			</div>
+	<hr>
+	<div class="row">
+		<div class="small-12 columns">
+			<h4>More News Related to Chemistry and Cosmology</h4>
+		</div>
+	</div>
+	<div class="row small-up-2 large-up-4">
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/alma-scientists-detect-signs-of-water-in-a-galaxy-far-far-away/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2021/11/nrao21ao18_Sreevani_FarawayH20_Illustration-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2021/11/nrao21ao18_Sreevani_FarawayH20_Illustration-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2021/11/nrao21ao18_Sreevani_FarawayH20_Illustration-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">ALMA Scientists Detect Signs of Water in a Galaxy Far, Far Away</div>
+					<div class="news-list-meta"><em>November 3, 2021</em></div>
+					<div class="news-list-excerpt"><p>Water has been detected in the most massive galaxy in the early Universe, according to new observations from the Atacama Large Millimeter/submillimeter Array (ALMA). Scientists studying SPT0311-58 found H20, along with carbon monoxide in the galaxy, which is located nearly 12.88 billion light years from Earth. Detection of these two molecules in abundance suggests that the molecular Universe was going strong shortly after the elements were forged in early stars. The new research comprises the most detailed study of molecular gas content of a galaxy in the early Universe to date and the most distant detection of H20 in a regular star-forming galaxy. </p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/alma-reveals-carbon-rich-organic-birth-environments-of-planets/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2021/09/Fig6_HD163296_HCN_260GH_hf1_BLUElogSeeThruStars3K75percent-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="a bright blue young star with a cloud of cold gas surrounding it" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2021/09/Fig6_HD163296_HCN_260GH_hf1_BLUElogSeeThruStars3K75percent-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2021/09/Fig6_HD163296_HCN_260GH_hf1_BLUElogSeeThruStars3K75percent-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">ALMA Reveals Carbon-Rich, Organic Birth Environments of Planets</div>
+					<div class="news-list-meta"><em>September 15, 2021</em></div>
+					<div class="news-list-excerpt"><p>An international collaboration of scientists using the Atacama Large Millimeter/submillimeter Array (ALMA) has completed the most extensive chemical composition mapping of the protoplanetary disks around five nearby young stars at high resolution, producing images that capture the molecular composition associated with planetary births, and a roadmap for future studies of the makeup of planet- and comet-forming regions. The new study unlocks clues about the role of molecules in planetary system formation, and whether these young planetary systems in the making have what it takes to host life.</p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/featured-video-why-hydrogen-tells-us-the-story-of-the-universe/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2021/07/BL8_Hydrogen_Big_Question-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2021/07/BL8_Hydrogen_Big_Question-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2021/07/BL8_Hydrogen_Big_Question-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">Featured Video: Why Hydrogen Tells Us the Story of the Universe</div>
+					<div class="news-list-meta"><em>July 1, 2021</em></div>
+					<div class="news-list-excerpt"><p>Hydrogen is the most abundant element in the universe. Radio astronomers can see hydrogen by the light it emits, reflects, and even absorbs. Because hydrogen is everywhere, it can tell stories about the cosmos from the Big Bang to today.</p>
+<p>Join our host Summer Ash of the National Radio Astronomy Observatory as she talks about how hydrogen can tell us so much about the structure and evolution of the universe.</p>
+</div>
+				</a>
+			</div>
+
+		
+			<div class="column column-block">
+				<a class="link-wrapper" href="https://public.nrao.edu/news/alma-reveals-unusual-composition-of-interstellar-comet-2i-borisov/">
+					<div class="news-list-image"><img width="585" height="300" src="https://public.nrao.edu/wp-content/uploads/2020/04/nrao20in05_Borisov_ArtistImpression_SD-585x300.jpg" class="attachment-fixed_ratio_thumb size-fixed_ratio_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://public.nrao.edu/wp-content/uploads/2020/04/nrao20in05_Borisov_ArtistImpression_SD-585x300.jpg 585w, https://public.nrao.edu/wp-content/uploads/2020/04/nrao20in05_Borisov_ArtistImpression_SD-1170x600.jpg 1170w" sizes="(max-width: 585px) 100vw, 585px" /></div>
+					<div class="news-list-title">ALMA Reveals Unusual Composition of Interstellar Comet 2I/Borisov</div>
+					<div class="news-list-meta"><em>April 20, 2020</em></div>
+					<div class="news-list-excerpt"><p>ALMA is the first telescope to measure the gases originating directly from the nucleus of an object that travelled to us from another planetary system.</p>
+</div>
+				</a>
+			</div>
+
+			</div>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="inner">
+			<div class="footer-top row">
+				<div class="small-12 medium-4 columns">
+					<h4>Connect with NRAO</h4>
+					<div class="row small-up-5" id="media-links-foot">
+							<div class="column column-block">
+								<a href="https://www.facebook.com/TheNRAO" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+							</div>
+							<div class="column column-block">
+								<a href="https://twitter.com/TheNRAO" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+							</div>
+							<div class="column column-block">
+								<a href="https://www.instagram.com/national.radio.astronomy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							</div>
+							<div class="column column-block">
+								<a href="https://vimeo.com/nrao" target="_blank"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
+							</div>
+							<div class="column column-block">
+								<a href="/e-newsletter-sign-up/"><i class="fa fa-envelope-open" aria-hidden="true"></i></a>
+							</div>
+
+					</div>
+					<div class="twitter-feed">
+						<a class="twitter-timeline" style="width: 100%;" data-height="350" href="https://twitter.com/TheNRAO">Tweets by TheNRAO</a>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+
+				<div class="footer-text small-12 medium-8 columns">
+					<table>
+						<tr>
+							<td colspan="2" style="font-size: 125%; font-weight: bold;">
+								The National Radio Astronomy Observatory is a facility of the National Science Foundation
+operated under cooperative agreement by Associated Universities, Inc.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="https://public.nrao.edu/wp-content/themes/nrao/img/logoNRAO.png" />
+							</td>
+							<td>
+								Founded in 1956, the NRAO provides state-of-the-art radio telescope facilities for use by the international scientific community. NRAO telescopes are open to all astronomers regardless of institutional or national affiliation. Observing time on NRAO telescopes is available on a competitive basis to qualified scientists after evaluation of research proposals on the basis of scientific merit, the capability of the instruments to do the work, and the availability of the telescope during the requested time. NRAO also provides both formal and informal programs in education and public outreach for teachers, students, the general public, and the media.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://www.nsf.gov/">
+									<img src="https://public.nrao.edu/wp-content/themes/nrao/img/logoNSF.gif" style="max-width: 70px;" />
+								</a>
+							</td>
+							<td>
+								The <a href="https://www.nsf.gov/">National Science Foundation</a> (NSF) is an independent federal agency created by Congress in 1950 "to promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense..."
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="http://www.aui.edu/">
+									<img src="https://public.nrao.edu/wp-content/themes/nrao/img/logoAUI.png" />
+								</a>
+							</td>
+							<td>
+								<a href="http://www.aui.edu/">AUI</a> collaborates with the scientific community and research sponsors to plan, build, and operate cutting-edge facilities. We cultivate excellence, deliver value, enhance education, and engage the public.
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<img src="https://public.nrao.edu/wp-content/themes/nrao/img/swoosh-pale.png" />
+			<div class="row small-up-1 medium-up-2 large-up-4">
+				<div class="column column-block">
+					<div class="menu-menu-1-container"><ul id="menu-menu-1" class="footer-menu-main"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11088 current-menu-item"><a href="/news/">News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-360"><a href="/gallery/">Gallery</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-568"><a href="/telescopes/">Telescopes + Tech</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11463"><a href="/telescopes/vla/">VLA</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11464"><a href="/telescopes/alma/">ALMA</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12110"><a href="/telescopes/vlba/">VLBA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11462"><a href="https://public.nrao.edu/ngvla/">ngVLA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23845"><a href="https://public.nrao.edu/cdl/">CDL</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21995"><a href="https://public.nrao.edu/next-generation-radar/">ngRADAR</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9091"><a href="https://public.nrao.edu/vlass/">VLASS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-157"><a href="https://public.nrao.edu/visit/">Visit Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11465"><a href="/visit/very-large-array/">Visit VLA</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11466"><a href="https://www.almaobservatory.org/es/outreach/alma-observatory-public-visits/">Visit ALMA</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-570"><a href="/radio-astronomy/">Learn</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-9906"><a href="https://public.nrao.edu/blogs/">Blogs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11467"><a href="https://public.nrao.edu/outreach/">Outreach Programs &#038; Events</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21404"><a href="https://public.nrao.edu/odi/">Diversity &#038; Inclusion</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14210"><a href="/radio-astronomy/the-science-of-radio-astronomy/">What is Radio Astronomy?</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11474"><a href="https://public.nrao.edu/radio-astronomy/black-holes/">Black Holes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11475"><a href="https://public.nrao.edu/radio-astronomy/exoplanets/">Exoplanets</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-ratopic menu-item-11473"><a href="https://public.nrao.edu/radio-astronomy/pulsars/">Pulsars Astronomy</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-316"><a href="https://public.nrao.edu/explore/">Explore</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11468"><a href="https://public.nrao.edu/explore/vla-explorer/">The VLA Explorer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11472"><a href="https://public.nrao.edu/color/">Cosmic Coloring Compositor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11469"><a href="https://public.nrao.edu/explore/milky-way-explorer/">Milky Way Explorer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14271"><a href="https://public.nrao.edu/interferometry-explained/">Interferometry Explained</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11470"><a href="https://public.nrao.edu/explore/alma-explorer/">ALMA Explorer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11471"><a href="https://public.nrao.edu/explore/mission-control/">NRAO Mission Control</a></li>
+</ul>
+</li>
+<li class="give-button menu-item menu-item-type-custom menu-item-object-custom menu-item-25512"><a href="/join/">Join &#038; Give</a></li>
+</ul></div>				</div>
+
+				<div class="column column-block">
+					<div class="menu-footer-middle-container"><ul id="menu-footer-middle" class="footer-menu-middle"><li id="menu-item-11098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11098"><a href="https://science.nrao.edu/">For Scientists</a></li>
+<li id="menu-item-9373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9373"><a href="https://public.nrao.edu/about/">About NRAO</a></li>
+<li id="menu-item-11100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11100"><a href="/ask/">Ask an Astronomer</a></li>
+<li id="menu-item-11101" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11101"><a href="http://www.nrao.edu/archives/">Historical Archives</a></li>
+<li id="menu-item-9376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9376"><a href="http://epe.aui.edu/programs/astronomy-in-chile-educator-ambassadors-program/">ACEAP</a></li>
+<li id="menu-item-9377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9377"><a href="/media-use/">Media Use</a></li>
+<li id="menu-item-9378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9378"><a href="/social-media-policy/">Social Media Policy</a></li>
+</ul></div>
+				</div>
+
+				<div class="column column-block">
+					<div class="menu-footer-right-container"><ul id="menu-footer-right" class="footer-menu-right"><li id="menu-item-11105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11105"><a href="http://library.nrao.edu/index.shtml">NRAO Library</a></li>
+<li id="menu-item-9380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9380"><a href="/cdl/">Central Development Lab</a></li>
+<li id="menu-item-12088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12088"><a href="https://public.nrao.edu/tech-transfer/">Technology Transfer</a></li>
+<li id="menu-item-9381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9381"><a href="http://jobs.jobvite.com/nrao/jobs">Careers at NRAO</a></li>
+<li id="menu-item-9382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9382"><a href="/odi/">NRAO Diversity</a></li>
+<li id="menu-item-9383" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9383"><a href="https://inside.nrao.edu/">Employee Services</a></li>
+<li id="menu-item-11111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11111"><a href="https://go.nrao.edu/conduct">Visitor Code of Conduct</a></li>
+</ul></div>
+				</div>
+
+				<div itemscope itemtype="http://schema.org/Organization" class="column column-block">
+					<meta itemprop="name" content="The National Radio Astronomy Observatory"/>
+  				<meta itemprop="alternateName" content="NRAO"/>
+					<h3>Contact Us</h3>
+					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					NRAO Headquarters<br>
+						<span itemprop="streetAddress">520 Edgemont Road<br></span>
+					 	<span itemprop="addressLocality">Charlottesville</span>,
+					 	<span itemprop="addressRegion">VA</span>
+						<span itemprop="postalCode">22903</span><br>
+						<span itemprop="telephone">434-296-0211</span><br>
+					</div>
+					<a href="/contact-us/">More Information Here</a><br>
+				</div>
+			</div>
+
+			<div>
+				<br>&copy; 2024 The National Radio Astronomy Observatory
+			</div><!-- .site-info -->
+
+		</div>
+
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/098ebf70fa55051d52d890f91/be8b85a68ceb6466131881217.js");</script><script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script>	<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	     <script type="text/javascript" id="pf_script">
+                      var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfImagesSize = 'full-size';
+          var pfImageDisplayStyle = 'left';
+          var pfEncodeImages = '0';
+          var pfShowHiddenContent  = '0';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+
+            var pfCustomCSS = "https://public.nrao.edu/wp-content/themes/nrao/css/print-friendly.css";
+          var pfPlatform = 'WordPress';
+
+        (function($){
+            $(document).ready(function(){
+                if($('.pf-button-content').length === 0){
+                    $('style#pf-excerpt-styles').remove();
+                }
+            });
+        })(jQuery);
+        </script>
+      <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            
+            <link rel='stylesheet' id='wc-blocks-style-css' href='https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=11.8.0-dev' type='text/css' media='all' />
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.7" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/public.nrao.edu\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
 </script>
-<div class='explore_items'>
-<div class='slide'>
-<a href='/alien-worlds/exoplanet-travel-bureau'>
-<img alt='' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VaIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45eb649c9a0295222318f1551cc2d9ce769303ab/153_Kepler_16b_preview.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Exoplanet Travel Bureau
-</h1>
-</div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-This set of travel posters envision a day when the creativity of scientists and engineers will allow us to do things we can only dream of now.
-</div>
-</div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
-</div>
-</div>
-</a>
-</div>
-
-<div class='slide'>
-<a href='/alien-worlds/strange-new-worlds'>
-<img alt='' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1laIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2aaf0bff1edabe6d331adb1e3545356920e11bd/kepler186f.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Strange New Worlds
-</h1>
-</div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-Explore an interactive gallery of some of the most intriguing and exotic planets discovered so far.
-</div>
-</div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
-</div>
-</div>
-</a>
-</div>
-
-<div class='slide'>
-<a href='/alien-worlds/historic-timeline'>
-<img alt='A planetary tour through time. The ancients debated the existence of planets beyond our own; now we know of thousands. ' src='/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2NaIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1ac61050901764c91f8fe3b72c4ebc9ba60663d0/340_timeline.jpg?disposition=attachment'>
-<div class='text_overlay'>
-<h1 class='media_feature_title'>
-Historic Timeline
-</h1>
-</div>
-<div class='gradient_container_bottom'></div>
-<div class='rollover_description'>
-<div class='rollover_description_inner'>
-<div class='rollover_body'>
-A planetary tour through time. The ancients debated the existence of planets beyond our own; now we know of thousands. 
-</div>
-</div>
-<div class='overlay_arrow'>
-<img alt='More' src='/assets/overlay-arrow.png'>
-</div>
-</div>
-</a>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-</div>
-<footer id='site_footer'>
-<div class='grid_layout'>
-<section class='upper_footer'>
-<div class='share'>
-<h2>Stay Connected</h2>
-<div data-react-class="CherTools" data-react-props="{&quot;follow&quot;:[[&quot;Twitter&quot;,&quot;https://twitter.com/NASAExoplanets&quot;,&quot;/assets/twitter_icon@2x.png&quot;],[&quot;Facebook&quot;,&quot;https://www.facebook.com/NASAExoplanets/&quot;,&quot;/assets/facebook_icon@2x.png&quot;],[&quot;Instagram&quot;,&quot;https://www.instagram.com/nasa/&quot;,&quot;/assets/Instagram_icon@2x.png&quot;],[&quot;RSS&quot;,&quot;https://www.nasa.gov/content/nasa-rss-feeds&quot;,&quot;/assets/rss_icon@2x.png&quot;]]}" data-react-cache-id="CherTools-0"></div>
-
-</div>
-<div class='gradient_line'></div>
-</section>
-<section class='sitemap' role='navigation'>
-<div class='sitemap_directory' id='sitemap_directory'>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/what-is-an-exoplanet/overview">What is an Exoplanet?</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/what-is-an-exoplanet/overview' target='_self'>Overview</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/in-depth' target='_self'>In Depth</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/planet-types/overview' target='_self'>Planet Types</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/stars' target='_self'>Stars</a>
-</li>
-<li>
-<a href='/what-is-an-exoplanet/what-is-the-universe' target='_self'>What is the Universe?</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/search-for-life/big-questions">The Search For Life</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/search-for-life/big-questions' target='_self'>The Big Questions</a>
-</li>
-<li>
-<a href='/search-for-life/are-we-alone' target='_self'>Are We Alone?</a>
-</li>
-<li>
-<a href='/search-for-life/can-we-find-life' target='_self'>Can We Find Life?</a>
-</li>
-<li>
-<a href='/search-for-life/habitable-zone' target='_self'>The Habitable Zone</a>
-</li>
-<li>
-<a href='/search-for-life/why-we-search' target='_self'>Why We Search</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/discovery/discoveries-dashboard">Discovery</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/discovery/discoveries-dashboard' target='_self'>Discoveries Dashboard</a>
-</li>
-<li>
-<a href='/discovery/how-we-find-and-characterize' target='_self'>How We Find and Characterize</a>
-</li>
-<li>
-<a href='/discovery/missions' target='_self'>Missions</a>
-</li>
-<li>
-<a href='/discovery/people' target='_self'>People</a>
-</li>
-<li>
-<a href='/discovery/exoplanet-catalog' target='_self'>Exoplanet Catalog</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/alien-worlds">Explore</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/alien-worlds/the-exoplaneteers' target='_self'>The Exoplaneteers</a>
-</li>
-<li>
-<a href='/alien-worlds/exoplanet-travel-bureau' target='_self'>Exoplanet Travel Bureau</a>
-</li>
-<li>
-<a href='/alien-worlds/ways-to-find-a-planet' target='_self'>5 Ways to Find a Planet</a>
-</li>
-<li>
-<a href='https://exoplanets.nasa.gov/eyes-on-exoplanets/' target='_self'>Eyes on Exoplanets </a>
-</li>
-<li>
-<a href='/alien-worlds/strange-new-worlds' target='_self'>Strange New Worlds</a>
-</li>
-<li>
-<a href='/alien-worlds/historic-timeline' target='_self'>Historic Timeline</a>
-</li>
-<li>
-<a href='/alien-worlds/kepler-timeline' target='_self'>Kepler Timeline</a>
-</li>
-<li>
-<a href='/alien-worlds/universe-of-monsters' target='_self'>Universe of Monsters</a>
-</li>
-<li>
-<a href='/alien-worlds/galaxy-of-horrors' target='_self'>Galaxy of Horrors</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-More
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='/multimedia-resources' target='_self'>Multimedia Resources</a>
-</li>
-<li>
-<a href='/news' target='_self'>News &amp; Features</a>
-</li>
-<li>
-<a href='/blog' target='_self'>Blog</a>
-</li>
-<li>
-<a href='/glossary' target='_self'>Glossary</a>
-</li>
-<li>
-<a href='/citizen-science' target='_self'>Citizen Science</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-<div class='sitemap_block'>
-<div class='footer_sitemap_item'>
-<h3 class='sitemap_title'>
-<a href="/exep">For Scientists</a>
-</h3>
-<ul><li>
-<div class='global_subnav_container'>
-<ul class='subnav'>
-<li>
-<a href='https://exoplanets.nasa.gov/exep/' target='_self'>Exoplanet Exploration Program</a>
-</li>
-<li>
-<a href='https://science.nasa.gov' target='_self'>Science Mission Directorate</a>
-</li>
-
-</ul>
-</div>
-</li></ul>
-</div>
-</div>
-
-</div>
-<div class='gradient_line'></div>
-</section>
-<section class='lower_footer'>
-<div class='nav_container'>
-<nav>
-<ul>
-<li>
-<a href='/feedback' target='_self'>Feedback</a>
-</li>
-|
-<li>
-<a href='/visual-sitemap/content' target='_self'>Sitemap</a>
-</li>
-
-</ul>
-</nav>
-</div>
-<div class='credits'>
-<div class='footer_brands'>
-Managed by the
-<a aria-describedby='new-window-0' href='https://exoplanets.nasa.gov/exep/' target='_blank'>Exoplanet Exploration Program</a>
-and the
-<a aria-describedby='new-window-0' href='https://www.jpl.nasa.gov' target='_blank'>Jet Propulsion Laboratory</a>
-for
-<a aria-describedby='new-window-0' href='https://science.nasa.gov/astrophysics' target='_blank'>NASA’s Astrophysics Division</a>
-</div>
-<div class='staff'>
-<p>
-Science Writer: 
-<a href="mailto:pbrennan@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Pat Brennan</a>
-<br>
-Site Editor: 
-<a href="mailto:kristen.l.walbolt@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Kristen Walbolt</a>
-<br>
-Manager: 
-<a href="mailto:travis.schirner@jpl.nasa.gov?subject=%5BExoplanet%20Exploration%3A%20Planets%20Beyond%20our%20Solar%20System%5D">Travis Schirner</a>
-<br>
-</p>
-</div>
-</div>
-</section>
-</div>
-</footer>
-
-</div>
-</div>
-<script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=EXOPLANETS&amp;pua=UA-75768140-1,UA-118212757-3&amp;sp=q&amp;Sdor=false&amp;yt=true&exts=tif,tiff,wav" type='text/javascript'></script>
-
-
-<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5JGP522');</script><!-- End Google Tag Manager -->
-
-
-<script id="parsely-cfg" src="//cdn.parsely.com/keys/exoplanets.nasa.gov/p.js" async="" defer=""></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.7" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/simple-share-buttons-adder/js/ssba.js?ver=1702652667" id="simple-share-buttons-adder-ssba-js"></script>
+<script type="text/javascript" id="simple-share-buttons-adder-ssba-js-after">
+/* <![CDATA[ */
+Main.boot( [] );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=8.5.2" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"ajaxurl":"https:\/\/public.nrao.edu\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":"yes"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=8.5.2" id="wc-order-attribution-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/react.min.js?ver=18.2.0" id="react-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/deprecated.min.js?ver=73ad3591e7bc95f4777a" id="wp-deprecated-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/dom.min.js?ver=49ff2869626fbeaacc23" id="wp-dom-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.2.0" id="react-dom-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/escape-html.min.js?ver=03e27a7b6ae14f7afaa6" id="wp-escape-html-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/element.min.js?ver=ed1c7604880e8b574b40" id="wp-element-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/is-shallow-equal.min.js?ver=20c2b06ecf04afb14fee" id="wp-is-shallow-equal-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/keycodes.min.js?ver=3460bd0fac9859d6886c" id="wp-keycodes-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/priority-queue.min.js?ver=422e19e9d48b269c5219" id="wp-priority-queue-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/compose.min.js?ver=3189b344ff39fef940b7" id="wp-compose-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/private-apis.min.js?ver=11cb2ebaa70a9f1f0ab5" id="wp-private-apis-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/redux-routine.min.js?ver=0be1b2a6a79703e28531" id="wp-redux-routine-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/data.min.js?ver=dc5f255634f3da29c8d5" id="wp-data-js"></script>
+<script type="text/javascript" id="wp-data-js-after">
+/* <![CDATA[ */
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19" id="lodash-js"></script>
+<script type="text/javascript" id="lodash-js-after">
+/* <![CDATA[ */
+window.lodash = _.noConflict();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-registry.js?ver=1c879273bd5c193cad0a" id="wc-blocks-registry-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/url.min.js?ver=b4979979018b684be209" id="wp-url-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/api-fetch.min.js?ver=0fa4dabf8bf2c7adf21a" id="wp-api-fetch-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-after">
+/* <![CDATA[ */
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://public.nrao.edu/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "11b9a97b5a" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://public.nrao.edu/wp-admin/admin-ajax.php?action=rest-nonce";
+/* ]]> */
+</script>
+<script type="text/javascript" id="wc-settings-js-before">
+/* <![CDATA[ */
+var wcSettings = wcSettings || JSON.parse( decodeURIComponent( '%7B%22shippingCostRequiresAddress%22%3Afalse%2C%22adminUrl%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fwp-admin%5C%2F%22%2C%22countries%22%3A%7B%22AF%22%3A%22Afghanistan%22%2C%22AX%22%3A%22%5Cu00c5land%20Islands%22%2C%22AL%22%3A%22Albania%22%2C%22DZ%22%3A%22Algeria%22%2C%22AS%22%3A%22American%20Samoa%22%2C%22AD%22%3A%22Andorra%22%2C%22AO%22%3A%22Angola%22%2C%22AI%22%3A%22Anguilla%22%2C%22AQ%22%3A%22Antarctica%22%2C%22AG%22%3A%22Antigua%20and%20Barbuda%22%2C%22AR%22%3A%22Argentina%22%2C%22AM%22%3A%22Armenia%22%2C%22AW%22%3A%22Aruba%22%2C%22AU%22%3A%22Australia%22%2C%22AT%22%3A%22Austria%22%2C%22AZ%22%3A%22Azerbaijan%22%2C%22BS%22%3A%22Bahamas%22%2C%22BH%22%3A%22Bahrain%22%2C%22BD%22%3A%22Bangladesh%22%2C%22BB%22%3A%22Barbados%22%2C%22BY%22%3A%22Belarus%22%2C%22PW%22%3A%22Belau%22%2C%22BE%22%3A%22Belgium%22%2C%22BZ%22%3A%22Belize%22%2C%22BJ%22%3A%22Benin%22%2C%22BM%22%3A%22Bermuda%22%2C%22BT%22%3A%22Bhutan%22%2C%22BO%22%3A%22Bolivia%22%2C%22BQ%22%3A%22Bonaire%2C%20Saint%20Eustatius%20and%20Saba%22%2C%22BA%22%3A%22Bosnia%20and%20Herzegovina%22%2C%22BW%22%3A%22Botswana%22%2C%22BV%22%3A%22Bouvet%20Island%22%2C%22BR%22%3A%22Brazil%22%2C%22IO%22%3A%22British%20Indian%20Ocean%20Territory%22%2C%22BN%22%3A%22Brunei%22%2C%22BG%22%3A%22Bulgaria%22%2C%22BF%22%3A%22Burkina%20Faso%22%2C%22BI%22%3A%22Burundi%22%2C%22KH%22%3A%22Cambodia%22%2C%22CM%22%3A%22Cameroon%22%2C%22CA%22%3A%22Canada%22%2C%22CV%22%3A%22Cape%20Verde%22%2C%22KY%22%3A%22Cayman%20Islands%22%2C%22CF%22%3A%22Central%20African%20Republic%22%2C%22TD%22%3A%22Chad%22%2C%22CL%22%3A%22Chile%22%2C%22CN%22%3A%22China%22%2C%22CX%22%3A%22Christmas%20Island%22%2C%22CC%22%3A%22Cocos%20%28Keeling%29%20Islands%22%2C%22CO%22%3A%22Colombia%22%2C%22KM%22%3A%22Comoros%22%2C%22CG%22%3A%22Congo%20%28Brazzaville%29%22%2C%22CD%22%3A%22Congo%20%28Kinshasa%29%22%2C%22CK%22%3A%22Cook%20Islands%22%2C%22CR%22%3A%22Costa%20Rica%22%2C%22HR%22%3A%22Croatia%22%2C%22CU%22%3A%22Cuba%22%2C%22CW%22%3A%22Cura%26ccedil%3Bao%22%2C%22CY%22%3A%22Cyprus%22%2C%22CZ%22%3A%22Czech%20Republic%22%2C%22DK%22%3A%22Denmark%22%2C%22DJ%22%3A%22Djibouti%22%2C%22DM%22%3A%22Dominica%22%2C%22DO%22%3A%22Dominican%20Republic%22%2C%22EC%22%3A%22Ecuador%22%2C%22EG%22%3A%22Egypt%22%2C%22SV%22%3A%22El%20Salvador%22%2C%22GQ%22%3A%22Equatorial%20Guinea%22%2C%22ER%22%3A%22Eritrea%22%2C%22EE%22%3A%22Estonia%22%2C%22SZ%22%3A%22Eswatini%22%2C%22ET%22%3A%22Ethiopia%22%2C%22FK%22%3A%22Falkland%20Islands%22%2C%22FO%22%3A%22Faroe%20Islands%22%2C%22FJ%22%3A%22Fiji%22%2C%22FI%22%3A%22Finland%22%2C%22FR%22%3A%22France%22%2C%22GF%22%3A%22French%20Guiana%22%2C%22PF%22%3A%22French%20Polynesia%22%2C%22TF%22%3A%22French%20Southern%20Territories%22%2C%22GA%22%3A%22Gabon%22%2C%22GM%22%3A%22Gambia%22%2C%22GE%22%3A%22Georgia%22%2C%22DE%22%3A%22Germany%22%2C%22GH%22%3A%22Ghana%22%2C%22GI%22%3A%22Gibraltar%22%2C%22GR%22%3A%22Greece%22%2C%22GL%22%3A%22Greenland%22%2C%22GD%22%3A%22Grenada%22%2C%22GP%22%3A%22Guadeloupe%22%2C%22GU%22%3A%22Guam%22%2C%22GT%22%3A%22Guatemala%22%2C%22GG%22%3A%22Guernsey%22%2C%22GN%22%3A%22Guinea%22%2C%22GW%22%3A%22Guinea-Bissau%22%2C%22GY%22%3A%22Guyana%22%2C%22HT%22%3A%22Haiti%22%2C%22HM%22%3A%22Heard%20Island%20and%20McDonald%20Islands%22%2C%22HN%22%3A%22Honduras%22%2C%22HK%22%3A%22Hong%20Kong%22%2C%22HU%22%3A%22Hungary%22%2C%22IS%22%3A%22Iceland%22%2C%22IN%22%3A%22India%22%2C%22ID%22%3A%22Indonesia%22%2C%22IR%22%3A%22Iran%22%2C%22IQ%22%3A%22Iraq%22%2C%22IE%22%3A%22Ireland%22%2C%22IM%22%3A%22Isle%20of%20Man%22%2C%22IL%22%3A%22Israel%22%2C%22IT%22%3A%22Italy%22%2C%22CI%22%3A%22Ivory%20Coast%22%2C%22JM%22%3A%22Jamaica%22%2C%22JP%22%3A%22Japan%22%2C%22JE%22%3A%22Jersey%22%2C%22JO%22%3A%22Jordan%22%2C%22KZ%22%3A%22Kazakhstan%22%2C%22KE%22%3A%22Kenya%22%2C%22KI%22%3A%22Kiribati%22%2C%22KW%22%3A%22Kuwait%22%2C%22KG%22%3A%22Kyrgyzstan%22%2C%22LA%22%3A%22Laos%22%2C%22LV%22%3A%22Latvia%22%2C%22LB%22%3A%22Lebanon%22%2C%22LS%22%3A%22Lesotho%22%2C%22LR%22%3A%22Liberia%22%2C%22LY%22%3A%22Libya%22%2C%22LI%22%3A%22Liechtenstein%22%2C%22LT%22%3A%22Lithuania%22%2C%22LU%22%3A%22Luxembourg%22%2C%22MO%22%3A%22Macao%22%2C%22MG%22%3A%22Madagascar%22%2C%22MW%22%3A%22Malawi%22%2C%22MY%22%3A%22Malaysia%22%2C%22MV%22%3A%22Maldives%22%2C%22ML%22%3A%22Mali%22%2C%22MT%22%3A%22Malta%22%2C%22MH%22%3A%22Marshall%20Islands%22%2C%22MQ%22%3A%22Martinique%22%2C%22MR%22%3A%22Mauritania%22%2C%22MU%22%3A%22Mauritius%22%2C%22YT%22%3A%22Mayotte%22%2C%22MX%22%3A%22Mexico%22%2C%22FM%22%3A%22Micronesia%22%2C%22MD%22%3A%22Moldova%22%2C%22MC%22%3A%22Monaco%22%2C%22MN%22%3A%22Mongolia%22%2C%22ME%22%3A%22Montenegro%22%2C%22MS%22%3A%22Montserrat%22%2C%22MA%22%3A%22Morocco%22%2C%22MZ%22%3A%22Mozambique%22%2C%22MM%22%3A%22Myanmar%22%2C%22NA%22%3A%22Namibia%22%2C%22NR%22%3A%22Nauru%22%2C%22NP%22%3A%22Nepal%22%2C%22NL%22%3A%22Netherlands%22%2C%22NC%22%3A%22New%20Caledonia%22%2C%22NZ%22%3A%22New%20Zealand%22%2C%22NI%22%3A%22Nicaragua%22%2C%22NE%22%3A%22Niger%22%2C%22NG%22%3A%22Nigeria%22%2C%22NU%22%3A%22Niue%22%2C%22NF%22%3A%22Norfolk%20Island%22%2C%22KP%22%3A%22North%20Korea%22%2C%22MK%22%3A%22North%20Macedonia%22%2C%22MP%22%3A%22Northern%20Mariana%20Islands%22%2C%22NO%22%3A%22Norway%22%2C%22OM%22%3A%22Oman%22%2C%22PK%22%3A%22Pakistan%22%2C%22PS%22%3A%22Palestinian%20Territory%22%2C%22PA%22%3A%22Panama%22%2C%22PG%22%3A%22Papua%20New%20Guinea%22%2C%22PY%22%3A%22Paraguay%22%2C%22PE%22%3A%22Peru%22%2C%22PH%22%3A%22Philippines%22%2C%22PN%22%3A%22Pitcairn%22%2C%22PL%22%3A%22Poland%22%2C%22PT%22%3A%22Portugal%22%2C%22PR%22%3A%22Puerto%20Rico%22%2C%22QA%22%3A%22Qatar%22%2C%22RE%22%3A%22Reunion%22%2C%22RO%22%3A%22Romania%22%2C%22RU%22%3A%22Russia%22%2C%22RW%22%3A%22Rwanda%22%2C%22ST%22%3A%22S%26atilde%3Bo%20Tom%26eacute%3B%20and%20Pr%26iacute%3Bncipe%22%2C%22BL%22%3A%22Saint%20Barth%26eacute%3Blemy%22%2C%22SH%22%3A%22Saint%20Helena%22%2C%22KN%22%3A%22Saint%20Kitts%20and%20Nevis%22%2C%22LC%22%3A%22Saint%20Lucia%22%2C%22SX%22%3A%22Saint%20Martin%20%28Dutch%20part%29%22%2C%22MF%22%3A%22Saint%20Martin%20%28French%20part%29%22%2C%22PM%22%3A%22Saint%20Pierre%20and%20Miquelon%22%2C%22VC%22%3A%22Saint%20Vincent%20and%20the%20Grenadines%22%2C%22WS%22%3A%22Samoa%22%2C%22SM%22%3A%22San%20Marino%22%2C%22SA%22%3A%22Saudi%20Arabia%22%2C%22SN%22%3A%22Senegal%22%2C%22RS%22%3A%22Serbia%22%2C%22SC%22%3A%22Seychelles%22%2C%22SL%22%3A%22Sierra%20Leone%22%2C%22SG%22%3A%22Singapore%22%2C%22SK%22%3A%22Slovakia%22%2C%22SI%22%3A%22Slovenia%22%2C%22SB%22%3A%22Solomon%20Islands%22%2C%22SO%22%3A%22Somalia%22%2C%22ZA%22%3A%22South%20Africa%22%2C%22GS%22%3A%22South%20Georgia%5C%2FSandwich%20Islands%22%2C%22KR%22%3A%22South%20Korea%22%2C%22SS%22%3A%22South%20Sudan%22%2C%22ES%22%3A%22Spain%22%2C%22LK%22%3A%22Sri%20Lanka%22%2C%22SD%22%3A%22Sudan%22%2C%22SR%22%3A%22Suriname%22%2C%22SJ%22%3A%22Svalbard%20and%20Jan%20Mayen%22%2C%22SE%22%3A%22Sweden%22%2C%22CH%22%3A%22Switzerland%22%2C%22SY%22%3A%22Syria%22%2C%22TW%22%3A%22Taiwan%22%2C%22TJ%22%3A%22Tajikistan%22%2C%22TZ%22%3A%22Tanzania%22%2C%22TH%22%3A%22Thailand%22%2C%22TL%22%3A%22Timor-Leste%22%2C%22TG%22%3A%22Togo%22%2C%22TK%22%3A%22Tokelau%22%2C%22TO%22%3A%22Tonga%22%2C%22TT%22%3A%22Trinidad%20and%20Tobago%22%2C%22TN%22%3A%22Tunisia%22%2C%22TR%22%3A%22Turkey%22%2C%22TM%22%3A%22Turkmenistan%22%2C%22TC%22%3A%22Turks%20and%20Caicos%20Islands%22%2C%22TV%22%3A%22Tuvalu%22%2C%22UG%22%3A%22Uganda%22%2C%22UA%22%3A%22Ukraine%22%2C%22AE%22%3A%22United%20Arab%20Emirates%22%2C%22GB%22%3A%22United%20Kingdom%20%28UK%29%22%2C%22US%22%3A%22United%20States%20%28US%29%22%2C%22UM%22%3A%22United%20States%20%28US%29%20Minor%20Outlying%20Islands%22%2C%22UY%22%3A%22Uruguay%22%2C%22UZ%22%3A%22Uzbekistan%22%2C%22VU%22%3A%22Vanuatu%22%2C%22VA%22%3A%22Vatican%22%2C%22VE%22%3A%22Venezuela%22%2C%22VN%22%3A%22Vietnam%22%2C%22VG%22%3A%22Virgin%20Islands%20%28British%29%22%2C%22VI%22%3A%22Virgin%20Islands%20%28US%29%22%2C%22WF%22%3A%22Wallis%20and%20Futuna%22%2C%22EH%22%3A%22Western%20Sahara%22%2C%22YE%22%3A%22Yemen%22%2C%22ZM%22%3A%22Zambia%22%2C%22ZW%22%3A%22Zimbabwe%22%7D%2C%22currency%22%3A%7B%22code%22%3A%22USD%22%2C%22precision%22%3A2%2C%22symbol%22%3A%22%24%22%2C%22symbolPosition%22%3A%22left%22%2C%22decimalSeparator%22%3A%22.%22%2C%22thousandSeparator%22%3A%22%2C%22%2C%22priceFormat%22%3A%22%251%24s%252%24s%22%7D%2C%22currentUserId%22%3A0%2C%22currentUserIsAdmin%22%3Afalse%2C%22dateFormat%22%3A%22F%20j%2C%20Y%22%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2F%22%2C%22locale%22%3A%7B%22siteLocale%22%3A%22en_US%22%2C%22userLocale%22%3A%22en_US%22%2C%22weekdaysShort%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%7D%2C%22dashboardUrl%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fmy-account%5C%2F%22%2C%22orderStatuses%22%3A%7B%22pending%22%3A%22Pending%20payment%22%2C%22processing%22%3A%22Processing%22%2C%22on-hold%22%3A%22On%20hold%22%2C%22completed%22%3A%22Completed%22%2C%22cancelled%22%3A%22Cancelled%22%2C%22refunded%22%3A%22Refunded%22%2C%22failed%22%3A%22Failed%22%2C%22checkout-draft%22%3A%22Draft%22%7D%2C%22placeholderImgSrc%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fwp-content%5C%2Fuploads%5C%2Fwoocommerce-placeholder-300x300.png%22%2C%22productsSettings%22%3A%7B%22cartRedirectAfterAdd%22%3Afalse%7D%2C%22siteTitle%22%3A%22National%20Radio%20Astronomy%20Observatory%22%2C%22storePages%22%3A%7B%22myaccount%22%3A%7B%22id%22%3A17165%2C%22title%22%3A%22My%20account%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fmy-account%5C%2F%22%7D%2C%22shop%22%3A%7B%22id%22%3A17162%2C%22title%22%3A%22Shop%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fshop%5C%2F%22%7D%2C%22cart%22%3A%7B%22id%22%3A17163%2C%22title%22%3A%22Cart%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fshop%5C%2Fcart%5C%2F%22%7D%2C%22checkout%22%3A%7B%22id%22%3A17164%2C%22title%22%3A%22Checkout%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fshop%5C%2Fcheckout%5C%2F%22%7D%2C%22privacy%22%3A%7B%22id%22%3A0%2C%22title%22%3A%22%22%2C%22permalink%22%3Afalse%7D%2C%22terms%22%3A%7B%22id%22%3A0%2C%22title%22%3A%22%22%2C%22permalink%22%3Afalse%7D%7D%2C%22wcAssetUrl%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fwp-content%5C%2Fplugins%5C%2Fwoocommerce%5C%2Fassets%5C%2F%22%2C%22wcVersion%22%3A%228.5.2%22%2C%22wpLoginUrl%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fwp-login.php%22%2C%22wpVersion%22%3A%226.4.3%22%2C%22collectableMethodIds%22%3A%5B%5D%2C%22admin%22%3A%7B%22wccomHelper%22%3A%7B%22isConnected%22%3Afalse%2C%22connectURL%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%5C%2Fwp-admin%5C%2Fadmin.php%3Fpage%3Dwc-addons%26section%3Dhelper%26wc-helper-connect%3D1%26wc-helper-nonce%3Dd2bda8390a%22%2C%22userEmail%22%3A%22%22%2C%22userAvatar%22%3A%22https%3A%5C%2F%5C%2Fsecure.gravatar.com%5C%2Favatar%5C%2F%3Fs%3D48%26d%3Dmm%26r%3Dg%22%2C%22storeCountry%22%3A%22US%22%2C%22inAppPurchaseURLParams%22%3A%7B%22wccom-site%22%3A%22https%3A%5C%2F%5C%2Fpublic.nrao.edu%22%2C%22wccom-back%22%3A%22%252Fnews%252Fmedia-tip-sheet-september-2014%252F%22%2C%22wccom-woo-version%22%3A%228.5.2%22%2C%22wccom-connect-nonce%22%3A%22d2bda8390a%22%7D%7D%2C%22_feature_nonce%22%3A%22e1471af91d%22%2C%22alertCount%22%3A%220%22%2C%22visibleTaskListIds%22%3A%5B%22extended%22%5D%7D%7D' ) );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/wc-settings.js?ver=07c2f0675ddd247d2325" id="wc-settings-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/data-controls.min.js?ver=fe4ccc8a1782ea8e2cb1" id="wp-data-controls-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/html-entities.min.js?ver=36a4a255da7dd2e1bf8e" id="wp-html-entities-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/notices.min.js?ver=38e88f4b627cf873edd0" id="wp-notices-js"></script>
+<script type="text/javascript" id="wc-blocks-middleware-js-before">
+/* <![CDATA[ */
+			var wcBlocksMiddlewareConfig = {
+				storeApiNonce: '04cdf1d4bb',
+				wcStoreApiNonceTimestamp: '1708022217'
+			};
+			
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-middleware.js?ver=ca04183222edaf8a26be" id="wc-blocks-middleware-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-data.js?ver=c96aba0171b12e03b8a6" id="wc-blocks-data-store-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/a11y.min.js?ver=7032343a947cfccf5608" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/primitives.min.js?ver=6984e6eb5d6157c4fe44" id="wp-primitives-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-includes/js/dist/warning.min.js?ver=122829a085511691f14d" id="wp-warning-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/blocks-components.js?ver=b165bb2bd213326d7f31" id="wc-blocks-components-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/client/blocks/blocks-checkout.js?ver=9f469ef17beaf7c51576" id="wc-blocks-checkout-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution-blocks.min.js?ver=8.5.2" id="wc-order-attribution-blocks-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/public.nrao.edu\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"0c83d6cd24","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.14.4" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" id="mailchimp-woocommerce-js-extra">
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https:\/\/public.nrao.edu","ajax_url":"https:\/\/public.nrao.edu\/wp-admin\/admin-ajax.php","disable_carts":"","subscribers_only":"","language":"en","allowed_to_set_cookies":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js?ver=3.6.07" id="mailchimp-woocommerce-js"></script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/themes/nrao/js/magnific-popup.min.js?ver=20160511" id="magnific-js"></script>
+<script src="https://public.nrao.edu/wp-content/themes/nrao/js/main.min.js?ver=20160511" defer="defer" type="text/javascript"></script>
+<script src="https://public.nrao.edu/wp-content/themes/nrao/js/navigation.min.js?ver=20151215" defer="defer" type="text/javascript"></script>
+<script src="https://public.nrao.edu/wp-content/themes/nrao/js/skip-link-focus-fix.min.js?ver=20151215" defer="defer" type="text/javascript"></script>
+<script type="text/javascript" id="wpcf7cf-scripts-js-extra">
+/* <![CDATA[ */
+var wpcf7cf_global_settings = {"ajaxurl":"https:\/\/public.nrao.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/cf7-conditional-fields/js/scripts.js?ver=2.4.6" id="wpcf7cf-scripts-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LcMRYEUAAAAAPG0FgCubJb6rQEkKmnB2YbqpaDX&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LcMRYEUAAAAAPG0FgCubJb6rQEkKmnB2YbqpaDX","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://public.nrao.edu/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.8.7" id="wpcf7-recaptcha-js"></script>
 
 </body>
 </html>
+
+<!-- Dynamic page generated in 1.068 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2024-02-15 13:36:57 -->
+
+<!-- super cache -->

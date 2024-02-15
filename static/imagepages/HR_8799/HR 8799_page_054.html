@@ -1,0 +1,654 @@
+
+
+
+
+
+<head profile="http://www.w3.org/2005/10/profile">
+	<link rel="icon" type="image/ico" href="/static/img/favicon.ico" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/><meta name="description" content="description"/>
+	<meta name="apple-itunes-app" content="app-id=327702034"/>
+	<title>Open Exoplanet Catalogue - HR 8799 d</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/static/css/tables.css" media="screen" />
+	<!-- Google Analytics start -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-6857673-3");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	<!-- Google Analytics end -->
+	<script type="text/javascript" src="/static/js/d3.v3.min.js"></script>
+	<script type="text/javascript" src="/static/js/rgbcolor.js"></script> 
+	<script type="text/javascript" src="/static/js/canvg.js"></script> 
+	<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+	
+<script>
+$(document).ready(function(){
+	$(".editbutton").click(function(event) {
+		event.preventDefault();
+		$(".editmessage").remove();
+		$(".edit").remove();
+		var xmlpath = encodeURI($(this).attr('href'));
+		$(this).parent().load(xmlpath,function(){
+		  	grecaptcha.render('captchacontainer', {
+				'sitekey'  : 	'6LddfwETAAAAAIncPt-eEewlB2C1dLVWqygP90RX',
+				'callback' :	function(response) { }
+			});
+		});
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="outer-container">
+<div class="inner-container">
+<div class="header">
+<div class="title">
+<span id="forkongithub"><a href="http://github.com/openexoplanetcatalogue/open_exoplanet_catalogue/">Fork me on GitHub</a></span>
+<div class="name"><a href="/">Open Exoplanet Catalogue</a></div>
+<div class="tag">an open source database of all discovered extrasolar planets</div>
+</div> <!-- title -->
+</div> <!-- header -->
+<div class="navigation">
+<h2>Catalogue</h2>
+<ul>
+<li><a href="/systems/">All extrasolar planets</a></li>
+<li><a href="/systems/?filters=habitable">Habitable zone planets</a></li>
+<li><a href="/systems/?filters=multistar">Planets in binary systems</a></li>
+</ul>
+
+<!--
+<h2>Kepler Catalogue</h2>
+<ul>
+<li><a href="/kepler/">Public Data Q0</a></li>
+</ul>
+
+-->
+<h2>Plots</h2>
+<ul>
+<li><a href="/correlations/">Correlations plots</a></li>
+<li><a href="/histogram/">Histograms</a></li>
+<li><a href="https://github.com/hannorein/oec_plots">Python scripts<br />for offline use</a></li>
+</ul>
+
+<h2>Other</h2>
+<ul>
+<li><a href="http://exoplanetapp.com">iPhone Application</a></li>
+<li><a href="/">About</a></li>
+</ul>
+
+</div> <!-- navigation -->
+<div class="content">
+	
+
+<!-- ########################### -->
+<!-- ########################### -->
+<h1>HR 8799</h1>
+<p>
+	The planetary system HR 8799 hosts at least 4 planets. 
+</p>
+<p>
+	<span class="systemdescription"></span>
+</p>
+
+
+<table cellspacing="0" summary="Details of the planetary system">
+	<tr>
+		<th scope="col" class="nobg" style="width: 15em;">&nbsp;</th>
+		<th scope="col" style="width: 10em;">System parameters</th>
+	</tr>
+	
+	<tr>
+		<th scope="row">Primary system name</th>
+		<td>HR 8799</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Alternative system names</th>
+		<td><span class="NA"><span class="numericvalue"></span>N/A</span></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Right ascension</th>
+		<td>23 07 28.71507</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Declination</th>
+		<td>+21 08 03.3053</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Distance [parsec]</th>
+		<td><span class="numericvalue">39.4</span>&#177;1.1</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Distance [lightyears]</th>
+		<td><span class="numericvalue">129</span>&#177;4</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Number of stars in system</th>
+		<td>1</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Number of planets in system</th>
+		<td>4</td>
+	</tr>
+	
+</table>
+
+
+<!-- ########################### -->
+
+<h2><img src="/static/img/photo.png" alt="Image" />Image</h2>
+<a class="systemimagelink" href='/oec_iphone/data_images/HR 8799.weblarger.png'><div class="systemimage" style="width:50em; height:15em; background-position:center; background-image:url('/oec_iphone/data_images/HR 8799.weblarger.png');">&nbsp;</div></a>
+<p>
+This image shows three planets orbiting the star HR 8799. It was obtained with the Keck II telescope on Hawaii. Credit: C. Marois et al., NRC Canada.
+</p>
+
+
+
+<!-- ########################### -->
+<h2><img src="/static/img/binary.png" alt="Architecture" />Architecture of the system</h2>
+<p>
+This list shows all planetary and stellar components in the system. It gives a quick overview of the hierarchical architecture.
+</p>
+<ul style="padding-left: 1em; margin-left: 1em;"><li><img src="/static/img/star.png" width="16" height="16" />&nbsp;HR 8799, stellar object<ul style="padding-left: 1em; margin-left: 1em;"><li><img src="/static/img/planet.png" width="16" height="16" />&nbsp;HR 8799 b, planet, semi-major axis: <span class="numericvalue">68.0</span>&#177;1.9 AU<ul style="padding-left: 1em; margin-left: 1em;"></ul><li><img src="/static/img/planet.png" width="16" height="16" />&nbsp;HR 8799 c, planet, semi-major axis: <span class="numericvalue">42.8</span>&#177;1.2 AU<ul style="padding-left: 1em; margin-left: 1em;"></ul><li><img src="/static/img/planet.png" width="16" height="16" />&nbsp;HR 8799 d, planet, semi-major axis: <span class="numericvalue">27.0</span>&#177;0.7 AU<ul style="padding-left: 1em; margin-left: 1em;"></ul><li><img src="/static/img/planet.png" width="16" height="16" />&nbsp;HR 8799 e, planet, semi-major axis: <span class="numericvalue">17.0</span>&#177;0.5 AU<ul style="padding-left: 1em; margin-left: 1em;"></ul></ul></ul>
+
+
+<!-- ########################### -->
+<h2><img src="/static/img/planet.png" alt="Planets" />Planets in the system</h2>
+<p>This table lists all planets in the system HR 8799.</p>
+<div class="planetsection"></div>
+
+<table cellspacing="0" summary="Details of the planetary system">
+	<tr>
+		<th scope="col" class="nobg" style="width: 15em;">&nbsp;</th>
+		
+		<th scope="col" style="width: 10em;">HR 8799 b</th>
+		
+		<th scope="col" style="width: 10em;">HR 8799 c</th>
+		
+		<th scope="col" style="width: 10em;">HR 8799 d</th>
+		
+		<th scope="col" style="width: 10em;">HR 8799 e</th>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Alternative planet names</th>
+		
+			
+				<td  valign="top" style="width: 10em;">HD 218396 b, Gaia DR2 2832463659640297472 b, TYC 1718-2350-1 b, HIP 114189 b</td>
+			
+				<td  valign="top" style="width: 10em;">HD 218396 c, Gaia DR2 2832463659640297472 c, TYC 1718-2350-1 c, HIP 114189 c</td>
+			
+				<td  valign="top" style="width: 10em;">HD 218396 d, Gaia DR2 2832463659640297472 d, TYC 1718-2350-1 d, HIP 114189 d</td>
+			
+				<td  valign="top" style="width: 10em;">HD 218396 e, Gaia DR2 2832463659640297472 e, TYC 1718-2350-1 e, HIP 114189 e</td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Description</th>
+		
+			
+				<td  valign="top" style="width: 10em;">HR 8799 is a young Lambda Boötis star in the constellation of Pegasus. It hosts a debris disk and at least 4 planets. The outer two planets have peculiar spectral energy distributions that match a blend of L and T-type spectra.</td>
+			
+				<td  valign="top" style="width: 10em;">HR 8799 is a young Lambda Boötis star in the constellation of Pegasus. It hosts a debris disk and at least 4 planets. The outer two planets have peculiar spectral energy distributions that match a blend of L and T-type spectra.</td>
+			
+				<td  valign="top" style="width: 10em;">HR 8799 is a young Lambda Boötis star in the constellation of Pegasus. It hosts a debris disk and at least 4 planets. The inner two planets have spectral energy distributions that best match dusty L7 dwarfs.</td>
+			
+				<td  valign="top" style="width: 10em;">HR 8799 is a young Lambda Boötis star in the constellation of Pegasus. It hosts a debris disk and at least 4 planets. The inner two planets have spectral energy distributions that best match dusty L7 dwarfs.</td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Lists</th>
+		
+			<td colspan="4" style="width: 40em;">Confirmed planets</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Mass [M<sub>jup</sub>]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">5.00</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">7.00</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">7.00</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">7.00</span></td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Mass [M<sub>earth</sub>]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1589</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">2225</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">2225</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">2225</span></td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Radius [R<sub>jup</sub>]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">0.700</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1.000</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1.100</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1.000</span></td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Radius [R<sub>earth</sub>]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">7.85</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">11.21</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">12.33</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">11.21</span></td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Orbital period [days]</th>
+		
+			
+				<td  valign="top" style="width: 10em;">( <span class="numericvalue">1.67</span>&#177;0.09 )&#183;10<sup>5</sup></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">83255</span>&#177;4511</td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">41628</span>&#177;2257</td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">20816</span>&#177;1129</td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Semi-major axis [AU]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">68.0</span>&#177;1.9</td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">42.8</span>&#177;1.2</td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">27.0</span>&#177;0.7</td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">17.0</span>&#177;0.5</td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Eccentricity</th>
+		
+			<td colspan="4" style="width: 40em;"><span class="numericvalue">0.00</span></td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Equilibrium temperature [K]</th>
+		
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1100</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1200</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1200</span></td>
+			
+				<td  valign="top" style="width: 10em;"><span class="numericvalue">1200</span></td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Discovery method</th>
+		
+			<td colspan="4" style="width: 40em;">imaging</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Discovery year</th>
+		
+			
+				<td  valign="top" style="width: 10em;">2008</td>
+			
+				<td  valign="top" style="width: 10em;">2008</td>
+			
+				<td  valign="top" style="width: 10em;">2008</td>
+			
+				<td  valign="top" style="width: 10em;">2010</td>
+			
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Last updated [yy/mm/dd]</th>
+		
+			<td colspan="4" style="width: 40em;">15/11/26</td>
+		
+	</tr>
+	
+</table>
+
+<!-- ########################### -->
+<h2><img src="/static/img/help-about.png" alt="star" />Stars in the system</h2>
+<p>This table lists all stars in the system HR 8799.</p>
+
+<div class="starsection"></div>
+
+<table cellspacing="0" summary="Details of the star system">
+	<tr>
+		<th scope="col" class="nobg" style="width: 15em;">&nbsp;</th>
+		
+		<th scope="col" style="width: 10em;">HR 8799</th>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Alternative star names</th>
+		
+			<td colspan="1">V342 Peg, V342 Pegasi, HD 218396, HIP 114189, TYC 1718-2350-1, SAO 91022, BD+20 5278, 2MASS J23072869+2108033, Gaia DR2 2832463659640297472</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Mass [M<sub>Sun</sub>]</th>
+		
+			<td colspan="1"><span class="numericvalue">1.52</span><span class="errorbars"><span class="errorplus">&#43;0.04</span><span class="errorminus">&#8722;0.02</span></span></td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Radius [R<sub>Sun</sub>]</th>
+		
+			<td colspan="1"><span class="numericvalue">1.44</span>&#177;0.06</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Age [Gyr]</th>
+		
+			<td colspan="1"><span class="numericvalue">0.033</span><span class="errorbars"><span class="errorplus">&#43;0.007</span><span class="errorminus">&#8722;0.013</span></span></td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Metallicity [Fe/H]</th>
+		
+			<td colspan="1"><span class="numericvalue">-0.470</span></td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Temperature [K]</th>
+		
+			<td colspan="1"><span class="numericvalue">7193</span>&#177;87</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Spectral type</th>
+		
+			<td colspan="1">kA5hF0mA5 V</td>
+		
+	</tr>
+	
+	<tr>
+		<th scope="row">Visual magnitude</th>
+		
+			<td colspan="1"><span class="numericvalue">5.953</span>&#177;0.010</td>
+		
+	</tr>
+	
+</table>
+
+
+<!-- ########################### -->
+<!--
+<h2><img src="/static/img/kig.png" alt="Visualizations" />Visualizations</h2>
+<h3>Orbits</h3>
+<div id="viz"></div>
+<div id="sliderbox">
+	<div id="speed-slider" class="dragdealer">
+		<div class="red-bar handle">speed</div>
+	</div>
+	<div id="zoom-slider" class="dragdealer">
+		<div class="red-bar handle">zoom</div>
+	</div>
+</div>
+<style>
+#viz, .infobox {
+    font-family: sans-serif;
+}
+
+#viz text {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+</style>
+-->
+
+<h3>Planet sizes</h3>
+<p>
+The following plot shows the approximate sizes of the planets in this system
+The Solar System planets are shown as a comparison.
+Note that unless the radius has been determined through a transit observation, this is only an approximation (see Lissauer et al. 2011b).
+</p>
+<svg width="480" height="400">
+
+        <defs>
+        <radialGradient id = "g1" cx = "50%" cy = "50%" r = "50%">
+            <stop style="stop-color:rgb(20,20,20);" offset = "0%"/>
+            <stop style="stop-color:rgb(100,100,100);" offset = "95%"/>
+            <stop style="stop-color:rgb(250,250,250);" offset = "100%"/>
+            </radialGradient>
+        <radialGradient id = "g2" cx = "50%" cy = "50%" r = "50%">
+            <stop style="stop-color:rgb(120,120,120);" offset = "0%"/>
+            <stop style="stop-color:rgb(180,180,180);" offset = "95%"/>
+            <stop style="stop-color:rgb(252,252,252);" offset = "100%"/>
+            </radialGradient>
+        <radialGradient id = "g3" cx = "50%" cy = "50%" r = "50%">
+            <stop style="stop-color:rgb(120,80,80);" offset = "0%"/>
+            <stop style="stop-color:rgb(180,100,100);" offset = "95%"/>
+            <stop style="stop-color:rgb(252,202,202);" offset = "100%"/>
+            </radialGradient>
+        </defs>
+        <g style="stroke:black;">
+    <circle cx="2.102509" cy="300.000000" r="1.102509" style="fill:url(#g2); stroke:none" /><line x1="2.000000" y1="209.000000" x2="2.000000" y2="300.000000" fill="none" stroke="lightgrey" /><text x="2.000000" y="215.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Pluto</text><circle cx="17.523137" cy="300.000000" r="2.318120" style="fill:url(#g2); stroke:none" /><line x1="16.205018" y1="224.000000" x2="16.205018" y2="300.000000" fill="none" stroke="lightgrey" /><text x="16.205018" y="230.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Mercury</text><circle cx="35.069897" cy="300.000000" r="3.228640" style="fill:url(#g2); stroke:none" /><line x1="32.841257" y1="239.000000" x2="32.841257" y2="300.000000" fill="none" stroke="lightgrey" /><text x="32.841257" y="245.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Mars</text><circle cx="56.050591" cy="300.000000" r="5.752054" style="fill:url(#g2); stroke:none" /><line x1="51.298537" y1="254.000000" x2="51.298537" y2="300.000000" fill="none" stroke="lightgrey" /><text x="51.298537" y="260.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Venus</text><circle cx="79.864543" cy="300.000000" r="6.061897" style="fill:url(#g2); stroke:none" /><line x1="74.802646" y1="269.000000" x2="74.802646" y2="300.000000" fill="none" stroke="lightgrey" /><text x="74.802646" y="275.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Earth</text><circle cx="121.943074" cy="300.000000" r="24.016633" style="fill:url(#g2); stroke:none" /><line x1="98.926441" y1="284.000000" x2="98.926441" y2="300.000000" fill="none" stroke="lightgrey" /><text x="98.926441" y="290.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Neptune</text><circle cx="182.251968" cy="300.000000" r="24.292260" style="fill:url(#g2); stroke:none" /><line x1="158.959707" y1="299.000000" x2="158.959707" y2="300.000000" fill="none" stroke="lightgrey" /><text x="158.959707" y="305.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Uranus</text><circle cx="275.825262" cy="300.000000" r="57.281034" style="fill:url(#g2); stroke:none" /><line x1="219.544228" y1="314.000000" x2="219.544228" y2="300.000000" fill="none" stroke="lightgrey" /><text x="219.544228" y="320.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Saturn</text><circle cx="413.053153" cy="300.000000" r="67.946856" style="fill:url(#g2); stroke:none" /><line x1="346.106296" y1="329.000000" x2="346.106296" y2="300.000000" fill="none" stroke="lightgrey" /><text x="346.106296" y="335.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >Jupiter</text><circle cx="48.562799" cy="100.000000" r="47.562799" style="fill:url(#g3); stroke:none" /><line x1="2.000000" y1="9.000000" x2="2.000000" y2="100.000000" fill="none" stroke="lightgrey" /><text x="2.000000" y="15.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 b</text><circle cx="176.072455" cy="100.000000" r="67.946856" style="fill:url(#g3); stroke:none" /><line x1="109.125599" y1="24.000000" x2="109.125599" y2="100.000000" fill="none" stroke="lightgrey" /><text x="109.125599" y="30.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 c</text><circle cx="330.760853" cy="100.000000" r="74.741542" style="fill:url(#g3); stroke:none" /><line x1="257.019311" y1="39.000000" x2="257.019311" y2="100.000000" fill="none" stroke="lightgrey" /><text x="257.019311" y="45.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 d</text><circle cx="485.449251" cy="100.000000" r="67.946856" style="fill:url(#g3); stroke:none" /><line x1="418.502395" y1="54.000000" x2="418.502395" y2="100.000000" fill="none" stroke="lightgrey" /><text x="418.502395" y="60.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 e</text> </g>
+</svg>
+
+
+
+<h3>Habitable zone</h3>
+<p>
+The following plot shows the approximate location of the planets in this system with respect to the habitable zone (green) and the size of the star (red).
+This is only an estimate, using the star's spectral type and mass.
+Note that if no green band is shown in the plot, then the planet's orbit is far outside the habitable zone.
+The equations of <a href="http://adsabs.harvard.edu/abs/2007A%26A...476.1373S">Selsis, Kasting et al</a> are used to draw the inner and outer boundaries.
+</p>
+
+
+<svg width="600" height="100">
+
+            <defs>
+                <radialGradient id="habitablegradient" >
+                    <stop id="stops0" offset=".0" stop-color="lightgreen" stop-opacity="0"/>
+                    <stop id="stops1" offset="0.362020" stop-color="lightgreen" stop-opacity="0"/>
+                    <stop id="stops2" offset="0.517104" stop-color="lightgreen" stop-opacity="1"/>
+                    <stop id="stops3" offset="0.839172" stop-color="lightgreen" stop-opacity="1"/>
+                    <stop id="stops4" offset="1" stop-color="lightgreen" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <ellipse cx="0.000000" cy="50.000000" rx="28.013455" ry="28.013455" fill="url(#habitablegradient)" /><text     x="10.141429"" y="99.000000" font-family="sans-serif" font-weight="normal"  font-size="12" stroke="none" style="fill:green">Habitable zone</text><ellipse cx="0.000000" cy="50.000000" rx="0.048305" ry="0.048305" style="fill:red" /><g style="stroke:black;"><g><ellipse cx="0.000000" cy="50.000000" rx="490.000000" ry="490.000000" style="fill:none" /><text x="492.000000" y="24.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 b</text></g><g><ellipse cx="0.000000" cy="50.000000" rx="308.665391" ry="308.665391" style="fill:none" /><text x="310.665391" y="36.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 c</text></g><g><ellipse cx="0.000000" cy="50.000000" rx="194.457034" ry="194.457034" style="fill:none" /><text x="196.457034" y="48.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 d</text></g><g><ellipse cx="0.000000" cy="50.000000" rx="122.500000" ry="122.500000" style="fill:none" /><text x="124.500000" y="60.000000" font-family="sans-serif" font-weight="normal"  font-size="12.000000" stroke="none" >HR 8799 e</text></g>
+</svg>
+
+
+
+
+
+
+<!-- ########################### -->
+<h2><img src="/static/img/info.png" alt="references" />Scientific references and contributors</h2>
+
+<h3>Links to scientific papers and other data sources</h3>
+<table cellspacing="0" summary="Links">
+	
+		<tr>
+			<td>
+				<img src="/static/img/link.png" width=11 height=11 alt ="history" /> 
+				<a href="http://simbad.u-strasbg.fr/simbad">http://simbad.u-strasbg.fr/simbad</a> 
+			</td>
+		</tr>
+	
+		<tr>
+			<td>
+				<img src="/static/img/link.png" width=11 height=11 alt ="history" /> 
+				<a href="http://arxiv.org/abs/1511.04082">http://arxiv.org/abs/1511.04082</a> 
+			</td>
+		</tr>
+	
+		<tr>
+			<td>
+				<img src="/static/img/link.png" width=11 height=11 alt ="history" /> 
+				<a href="http://phl.upr.edu/projects/habitable-exoplanets-catalog/data/database">http://phl.upr.edu/projects/habitable-exoplanets-catalog/data/database</a> 
+			</td>
+		</tr>
+	
+		<tr>
+			<td>
+				<img src="/static/img/link.png" width=11 height=11 alt ="history" /> 
+				<a href="http://arxiv.org/abs/1511.04083">http://arxiv.org/abs/1511.04083</a> 
+			</td>
+		</tr>
+	
+		<tr>
+			<td>
+				<img src="/static/img/link.png" width=11 height=11 alt ="history" /> 
+				<a href="http://cdsads.u-strasbg.fr/abs/2012ApJ...761...57B">http://cdsads.u-strasbg.fr/abs/2012ApJ...761...57B</a> 
+			</td>
+		</tr>
+	
+</table>
+<p>
+This table lists all links which are relevant to this particular system.
+Note that this is just a summary. 
+More references to the scientific publications and comments can be found in the commit messages.
+To see these, head over the github or <a href="https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/blame/master/systems/HR%208799.xml">click here</a> to directly go to the git blame output of this system.
+In the left column of the output you can see the commit message corresponding to each parameter. 
+It also lists the date of the last commit and the person making the changes.
+Within the commit message, you will find a link to the scientific publication where the data is taken from.
+Note that this is a new feature and not all system parameters might have a reference associated with it yet.
+Please help making this catalogue better and contribute data or references!
+</p>
+
+
+
+<h3>Open Exoplanet Catalogue contributors</h3>
+<table cellspacing="0" summary="Contributors">
+	<tr>
+		<th scope="col">Contributor</th>
+		<th scope="col">E-mail</th>
+		<th scope="col">Number of commits</th>
+	</tr>
+	
+	<tr>
+		<td>Andrew Tribick</td>
+		<td>ajtribick(at)googlemail.com</td>
+		<td>2</td>
+	</tr>
+	
+	<tr>
+		<td>Hanno Rein</td>
+		<td>hanno(at)hanno-rein.de</td>
+		<td>6</td>
+	</tr>
+	
+	<tr>
+		<td>Kenneth J Cott</td>
+		<td>kennethjcott(at)gmail.com</td>
+		<td>1</td>
+	</tr>
+	
+	<tr>
+		<td>Marc-Antoine Martinod</td>
+		<td>marc-antoine.martinod(at)ens-cachan.fr</td>
+		<td>1</td>
+	</tr>
+	
+</table>
+<p>
+This table lists all people who have contributed to the Open Exoplanet Catalogue. 
+Please consider contributing! <a href="http://openexoplanetcatalogue.com/contribute/">Click here</a> to find out how.
+You can also view all <a href="https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/commits/master/systems/HR%208799.xml">commits</a> contributing to this file on github.
+</p>
+
+
+
+<!-- ########################### -->
+<h2><img src="/static/img/xml.png" alt="xml" />Data download</h2>
+<p>
+You can download the <a href="/open_exoplanet_catalogue/systems/HR%208799.xml" alt="XML File">xml file</a> corresponding to this planetary system, which is part of the <a href="https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/">Open Exoplanet Catalogue</a>. 
+All information on this page has been directly generated from this XML file. 
+You can also download the entire catalogue over at <a href="https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/">github</a>. 
+If you prefer to download the dataset as an ASCII tables, you might find the <a href="https://github.com/OpenExoplanetCatalogue/oec_tables/">oec_tables</a> repository useful.
+</p>
+
+
+<!-- ########################### -->
+<h2><img src="/static/img/lightbulb.png" alt="corrections" />Corrections</h2>
+<p>
+If you spot an error or if you can contribute additional data to this entry, please send an e-mail to <a href="mailto:exoplanet@hanno-rein.de">exoplanet@hanno-rein.de</a>.
+Please include the corrected <a href="/open_exoplanet_catalogue/systems/HR%208799.xml" alt="XML File">xml file</a> and a reference to where the new data is coming from, ideally a scientific paper.
+If you are fluent with git and github, you can also create a pull request or open an issue on the <a href="https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/">Open Exoplanet Catalogue</a> repository.
+Please include the reference to the relevant scientific paper in your commit message.
+
+
+
+
+
+
+
+
+</div> <!-- content -->
+<div class="clearer">&nbsp;</div>
+<div class="footer">
+The data on this page is taken from the <a href="http://github.com/hannorein/open_exoplanet_catalogue">Open Exoplanet Catalogue</a>. The Open Exoplanet Catalogue as well as this website itself are licensed under an <a href="https://github.com/hannorein/open_exoplanet_catalogue/blob/master/README.md">MIT license</a>.
+</div> <!-- footer -->
+</div> <!-- inner container -->
+</div> <!-- outer container -->
+</body>
+</html>

@@ -73,7 +73,40 @@
             margin-right: 10px;
         }
         
+        #rocket-container {
+            position: absolute;
+            bottom: 0;
+            left: 100px; /* Start off-screen */
+            width: 100px;
+            height: 150px;
+        }
         
+        #rocket {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 120px;
+            transition: transform 3s linear;
+            
+        }
+        
+        .move-rocket {
+            animation: bobbing 1s ease-in-out infinite alternate;
+            transform: translateX(calc(10vw + 10px)); /* Move rocket across the screen */
+        }
+        @keyframes bobbing {
+            0% {
+            transform: translateY(0);
+            }
+            50% {
+            transform: translateY(10px);
+            }
+            100% {
+            transform: translateY(0);
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -82,13 +115,12 @@
       </video>   
 
     <h1>AstroGPT</h1>
-    <p>This is a simple Flask server serving a basic webpage.</p>
     <button id="uploadButton" class="button">Upload Image</button>
     <button id="clipboardButton" class="button">Paste from Clipboard</button>
     
     <form id = "image-form" action = "/create-search" method = "post" enctype="multipart/form-data">   
         <input style = "display: none" type= "file" id="image-input" name="image-input"/>
-        <input id = "submit" type = "submit" value="Submit!" />   
+        <input id = "submit" type = "submit" value="Submit!" onclick="rocket.classList.add('move-rocket');"/>   
     </form>   
     
     <p id = "status" style = "display: none">Status: </p>
@@ -96,7 +128,12 @@
     <div id="imageDisplay">
         <img id="displayedImg" src="" alt="Uploaded Image">
     </div>
+    
+    <div id="rocket-container">
+    <img id="rocket" src="https://i.imgur.com/xsEYC2G.png" alt="Rocket">
+    <div class="flame"></div>
 
+    <!-- submission script -->
     <script>
         const fileInput = document.getElementById("image-input");
         document.getElementById('uploadButton').addEventListener('click', function() {

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7 sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7 sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8 sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9 sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 9]><html class="lte-ie9 sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html class="sticky-footer external-links ua-brand-icons overlay-menu-scroll-hide" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-7cc308777bca6b524e8",applicationID:"560634064"};;/*! For license information please see nr-loader-rum-1.252.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>S,lF:()=>T,Yu:()=>x,Dg:()=>m,CX:()=>c,GE:()=>_,sU:()=>R});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function _(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const x=(0,n.mF)().o;var E=r(385),D=r(6818);const k={buildEnv:D.Re,customTransaction:void 0,disabled:!1,distMethod:D.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:D.q4,denyList:void 0},j={};function S(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!j[e])throw new Error("Runtime for ".concat(e," was never set"));return j[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");j[e]=(0,i.D)(t,k);const r=(0,n.ek)(e);r&&(r.runtime=j[e])}function T(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.252.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(u(e),!e||!s[e].get(t)||r)return c(t);s[e].get(t).staged=!0;const a=[...s[e]];function c(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}a.every((e=>{let[t,r]=e;return r.staged}))&&(a.sort(((e,t)=>e[1].priority-t[1].priority)),a.forEach((t=>{let[r]=t;s[e].delete(r),c(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([g,e,r,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function h(e,t){n[e]=v(e).concat(t)}function v(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),d=(0,n.fP)();function l(){u.aborted=!0,Object.keys(u.backlog).forEach((e=>{delete u.backlog[e]}))}d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>d,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),u=r(3960),d=r(385),l=r(50),f=r(3081),g=r(8632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var h=r(2825);const v=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:_,runtime:x={loaderType:b},exposed:E=!0}=t;const D=(0,g.gG)();w||(A=D.init,w=D.info,_=D.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,_||{}),w.jsAttributes??={},d.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const k=(0,i.P_)(e.agentIdentifier),j=[w.beacon,w.errorBeacon];m||(k.proxy.assets&&(v(k.proxy.assets),j.push(k.proxy.assets)),k.proxy.beacon&&j.push(k.proxy.beacon),p(),(0,g.EZ)("activatedFeatures",h.T)),x.denyList=[...k.ajax.deny_list||[],...k.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,x),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(v,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{g[e]=w(v,e,!0,"api")})),g.addPageAction=w(v,"addPageAction",!0,n.D.pageAction),g.setCurrentRouteName=w(v,"routeName",!0,n.D.spa),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},g.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},g.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(m+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(h.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],r),e}finally{h.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function _(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>{(0,l.Z)("Downloading runtime APIs failed..."),(0,c.L)(e,"api",!0)}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(m,e,void 0,n.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},d.il?(0,u.b2)((()=>_()),!0):_(),g}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),m=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.252.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.252.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-85KXSsv643MTRPulZfmcwj8IKIbJeT9JfNpsSBckCZNUr+o/ILbmpOISx04Ol69WzHRZplUy/y2FaJ3KUChaTw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.252.0.PROD"]=self["webpackChunk:NRBA-1.252.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,957));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName,!0),o(!1)}};l.il?(0,d.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,r),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,v.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,v.D)(e,w)}function w(e,t){return t}var _=i(8632),x=i(4402),E=i(4351);var D=i(5546),k=i(7956),j=i(3239),S=i(7894),R=i(9251);class T extends f{static featureName=R.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,R.t,r),l.il&&((0,k.N)((()=>(0,D.p)("docHidden",[(0,S.z)()],void 0,R.t,this.ee)),!0),(0,j.bP)("pagehide",(()=>(0,D.p)("winPagehide",[(0,S.z)()],void 0,R.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,x.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},(0,_.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,_.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,T,P],loaderType:"lite"})})()})();</script>
+<link rel="shortcut icon" href="https://news.arizona.edu/sites/all/themes/custom/ua_zen_subtheme/favicon.ico" type="image/vnd.microsoft.icon" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "EducationalOrganization",
+            "additionalType": "CollegeOrUniversity",
+            "@id": "https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf",
+            "name": "The University of Arizona",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tucson",
+                "addressRegion": "AZ",
+                "postalCode": "85721",
+                "addressCountry": "USA"
+            },
+            "url": "https://news.arizona.edu/",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://cdn.uanews.arizona.edu/s3fs-public/brown%20dwarf.jpg"
+            }
+        }
+    ]
+}</script>
+<meta name="description" content="Planetary scientists wondered if bands of winds or swirling storms dominated the atmospheres of brown dwarfs. UArizona-led research solved the mystery." />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="UA Quickstart 7 (https://quickstart.arizona.edu)" />
+<link rel="image_src" href="https://cdn.uanews.arizona.edu/s3fs-public/brown%20dwarf.jpg" />
+<meta name="rights" content="© 2024 The Arizona Board of Regents on behalf of The University of Arizona." />
+<link rel="canonical" href="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" />
+<link rel="shortlink" href="https://news.arizona.edu/node/123836" />
+<meta property="og:site_name" content="University of Arizona News" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Striped or Spotted? Winds and Jet Streams Found on the Closest Brown Dwarf" />
+<meta property="og:url" content="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" />
+<meta property="og:description" content="Planetary scientists wondered if bands of winds or swirling storms dominated the atmospheres of brown dwarfs. UArizona-led research solved the mystery." />
+<meta property="og:updated_time" content="2021-01-20T13:28:13-07:00" />
+<meta property="og:image" content="https://cdn.uanews.arizona.edu/s3fs-public/styles/uanow_feature_625x324/public/brown%20dwarf.jpg?itok=zBhQw7V5" />
+<meta property="og:image:url" content="https://cdn.uanews.arizona.edu/s3fs-public/brown%20dwarf.jpg" />
+<meta property="og:image:secure_url" content="https://cdn.uanews.arizona.edu/s3fs-public/brown%20dwarf.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@uarizona" />
+<meta name="twitter:creator:id" content="14862639" />
+<meta name="twitter:url" content="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" />
+<meta name="twitter:title" content="Striped or Spotted? Winds and Jet Streams Found on the Closest Brown" />
+<meta name="twitter:description" content="Planetary scientists wondered if bands of winds or swirling storms dominated the atmospheres of brown dwarfs. UArizona-led research solved the mystery." />
+<meta name="twitter:image" content="https://cdn.uanews.arizona.edu/s3fs-public/styles/uanow_feature_625x324/public/brown%20dwarf.jpg?itok=zBhQw7V5" />
+<meta property="article:published_time" content="2021-01-04T11:28:56-07:00" />
+<meta property="article:modified_time" content="2021-01-20T13:28:13-07:00" />
+<meta name="msvalidate.01" content="EA8D37DD2D1860039677EEAD5F63DEAE" />
+<meta name="google-site-verification" content="3hNIcsUDYmipfAA1KwB-O1vD-MXQ5kTWcNW-1Uh48Ig" />
+  <title>Striped or Spotted? Winds and Jet Streams Found on the Closest Brown Dwarf | University of Arizona News</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  
+  <link type="text/css" rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/ua-brand-icons/v2.0.1/ua-brand-icons.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/v1.0.0-beta.30/ua-bootstrap.min.css" media="all" />
+<style>
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/editor/css/components/align.module.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/editor/css/components/resize.module.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/editor/css/filter/filter.caption.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/editor/modules/editor_ckeditor/css/plugins/drupalimagecaption/editor_ckeditor.drupalimagecaption.css?s8wee5");
+@import url("https://news.arizona.edu/modules/system/system.base.css?s8wee5");
+</style>
+<style>
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/date/date_repeat_field/date_repeat_field.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/fences/field.css?s8wee5");
+@import url("https://news.arizona.edu/sites/all/modules/contrib/google_cse/google_cse.css?s8wee5");
+@import url("https://news.arizona.edu/modules/node/node.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/picture/picture_wysiwyg.css?s8wee5");
+@import url("https://news.arizona.edu/modules/search/search.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_event/css/uaqs_event.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_fields/uaqs_fields_media/css/uaqs_fields_media.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_navigation/uaqs_navigation_global_footer/css/uaqs_navigation_global_footer.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_navigation/uaqs_navigation_resources/css/uaqs_navigation_resources.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_person/css/uaqs_person.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_social_media/css/uaqs_social_media.css?s8wee5");
+@import url("https://news.arizona.edu/modules/user/user.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/extlink/css/extlink.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/views/css/views.css?s8wee5");
+</style>
+<style>
+@import url("https://news.arizona.edu/sites/all/modules/contrib/colorbox/styles/default/colorbox_style.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/ctools/css/ctools.css?s8wee5");
+@import url("https://news.arizona.edu/profiles/ua_quickstart/themes/custom/ua_zen/css/ua_zen_back_to_top.css?s8wee5");
+</style>
+<style>
+@import url("https://news.arizona.edu/profiles/ua_quickstart/themes/custom/ua_zen/css/styles.css?s8wee5");
+@import url("https://news.arizona.edu/sites/all/themes/custom/ua_zen_subtheme/css/overrides.css?s8wee5");
+</style>
+<style>
+@import url("https://news.arizona.edu/profiles/ua_quickstart/themes/custom/ua_zen/css/uaqs_navigation_overlay_menu_scroll.css?s8wee5");
+</style>
+  <script defer="defer" src="https://cdn.uanews.arizona.edu/s3fs-public/google_tag/google_tag.script.js?s8wee5"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/profiles/ua_quickstart/modules/contrib/jquery_update/replace/jquery/3.1/jquery.min.js'>\x3C/script>")</script>
+<script>jQuery.migrateMute=true;jQuery.migrateTrace=false;</script>
+<script src="//code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+<script>window.jQuery && window.jQuery.migrateWarnings || document.write("<script src='/profiles/ua_quickstart/modules/contrib/jquery_update/replace/jquery-migrate/3.0.0/jquery-migrate.min.js'>\x3C/script>")</script>
+<script src="https://news.arizona.edu/misc/jquery-extend-3.4.0.js?v=3.1.1"></script>
+<script src="https://news.arizona.edu/misc/jquery-html-prefilter-3.5.0-backport.js?v=3.1.1"></script>
+<script src="https://news.arizona.edu/misc/jquery.once.js?v=1.2"></script>
+<script src="https://news.arizona.edu/misc/drupal.js?s8wee5"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/jquery_update/js/jquery_browser.js?v=0.0.1"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://news.arizona.edu/sites/all/modules/contrib/google_cse/google_cse.js?s8wee5"></script>
+<script src="https://news.arizona.edu/sites/all/libraries/colorbox/jquery.colorbox-min.js?s8wee5"></script>
+<script src="https://news.arizona.edu/sites/all/modules/contrib/colorbox/js/colorbox.js?s8wee5"></script>
+<script src="https://news.arizona.edu/sites/all/modules/contrib/colorbox/styles/default/colorbox_style.js?s8wee5"></script>
+<script>var switchTo5x = true;var __st_loadLate = true;var useFastShare = 1;</script>
+<script src="https://ws.sharethis.com/button/buttons.js"></script>
+<script>if (typeof stLight !== 'undefined') { stLight.options({"publisher":"5f0cd39182708800123b4228","version":"5x","lang":"en"}); }</script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/google_analytics/googleanalytics.js?s8wee5"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2329641-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "displayfeatures");ga("require", "linker");ga("linker:autoLink", ["news.arizona.edu","uanews.arizona.edu","arizona.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_navigation/uaqs_navigation_resources/js/uaqs_navigation_resources.js?s8wee5"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/field_group/field_group.js?s8wee5"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/extlink/js/extlink.js?s8wee5"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"ua_zen_subtheme","theme_token":"WV4e4p6OWqB7xk0p04J7Wj1cPCQ8vN9UdYrVDAf1MAI","js":{"profiles\/ua_quickstart\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"profiles\/ua_quickstart\/modules\/contrib\/picture\/picture.min.js":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_fields\/uaqs_fields_media\/js\/uaqs_fields_media.js":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/js\/uaqs_navigation_overlay_menu_scroll.js":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/js\/ua_zen_back_to_top.js":1,"https:\/\/cdn.uadigital.arizona.edu\/lib\/ua-bootstrap\/v1.0.0-beta.30\/ua-bootstrap.min.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/3.1.1\/jquery.min.js":1,"0":1,"1":1,"\/\/code.jquery.com\/jquery-migrate-3.0.0.min.js":1,"2":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/ua_quickstart\/modules\/contrib\/jquery_update\/js\/jquery_browser.js":1,"3":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"4":1,"https:\/\/ws.sharethis.com\/button\/buttons.js":1,"5":1,"profiles\/ua_quickstart\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"6":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_navigation\/uaqs_navigation_resources\/js\/uaqs_navigation_resources.js":1,"profiles\/ua_quickstart\/modules\/contrib\/field_group\/field_group.js":1,"profiles\/ua_quickstart\/modules\/contrib\/extlink\/js\/extlink.js":1},"css":{"https:\/\/cdn.digital.arizona.edu\/lib\/ua-brand-icons\/v2.0.1\/ua-brand-icons.min.css":1,"https:\/\/cdn.uadigital.arizona.edu\/lib\/ua-bootstrap\/v1.0.0-beta.30\/ua-bootstrap.min.css":1,"profiles\/ua_quickstart\/modules\/contrib\/editor\/css\/components\/align.module.css":1,"profiles\/ua_quickstart\/modules\/contrib\/editor\/css\/components\/resize.module.css":1,"profiles\/ua_quickstart\/modules\/contrib\/editor\/css\/filter\/filter.caption.css":1,"profiles\/ua_quickstart\/modules\/contrib\/editor\/modules\/editor_ckeditor\/css\/plugins\/drupalimagecaption\/editor_ckeditor.drupalimagecaption.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.theme.css":1,"profiles\/ua_quickstart\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"profiles\/ua_quickstart\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_event\/css\/uaqs_event.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_fields\/uaqs_fields_media\/css\/uaqs_fields_media.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_navigation\/uaqs_navigation_global_footer\/css\/uaqs_navigation_global_footer.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_navigation\/uaqs_navigation_resources\/css\/uaqs_navigation_resources.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_person\/css\/uaqs_person.css":1,"profiles\/ua_quickstart\/modules\/custom\/uaqs_social_media\/css\/uaqs_social_media.css":1,"modules\/user\/user.css":1,"profiles\/ua_quickstart\/modules\/contrib\/extlink\/css\/extlink.css":1,"profiles\/ua_quickstart\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"profiles\/ua_quickstart\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/css\/ua_zen_back_to_top.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/system.menus.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/system.messages.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/system.theme.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/css\/styles.css":1,"sites\/all\/themes\/custom\/ua_zen_subtheme\/css\/overrides.css":1,"profiles\/ua_quickstart\/themes\/custom\/ua_zen\/css\/uaqs_navigation_overlay_menu_scroll.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"googleCSE":{"cx":"010243666505436901942:jojktujdgng","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":0},"uaqsFieldsMedia":{"bgVideos":{"-Td_efOMIBY":{"videoId":"-Td_efOMIBY","start":0}}},"field_group":{"html-element":"uaqs_sidebar_teaser_list","link":"uaqs_sidebar_teaser_list","uaqs_full_width":"full","div":"full"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackDomainMode":2,"trackCrossDomains":["news.arizona.edu","uanews.arizona.edu","arizona.edu"]},"currentPath":"node\/123836","currentPathIsAdmin":false,"urlIsAjaxTrusted":{"\/story\/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf":true},"better_exposed_filters":{"views":{"uanews_external_stories":{"displays":{"recent":{"filters":[]}}}}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":0,"extExclude":".arizona\\.edu|.uagc\\.edu","extInclude":"","extCssExclude":".colorbox","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":"mailto","mailtoLabel":"(link sends e-mail)","extUseFontAwesome":0}});</script>
+      <!--[if lt IE 9]>
+    <script src="/profiles/ua_quickstart/themes/custom/ua_zen/js/html5-respond.js"></script>
+    <![endif]-->
+  </head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-123836 node-type-uanews-story section-story" >
+      <p id="skip-link">
+      <a href="#main_nav" class="sr-only sr-only-focusable">Jump to navigation</a>
+    </p>
+  
+    <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML2BZB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </div>
+  
+<header id="header_ua" class="page-row l-arizona-header bg-red bg-cochineal-red">
+  <section class="container l-container">
+    <div class="row">
+                    <div class="col-xs-10 col-sm-6">
+            <a href="https://www.arizona.edu" title="The University of Arizona homepage" class="arizona-logo remove-external-link-icon">
+    <img alt="The University of Arizona Wordmark Line Logo White" src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg" class="arizona-line-logo">
+  </a>
+        </div>
+                    <div class="col-xs-2 col-sm-6">
+          <div class="row">
+              <div class="region region-header-ua-utilities">
+    <div class="col-sm-5 col-md-4 col-lg-3 hidden-xs pull-right no-gutter">
+  <div id="block-bean-uaqs-resources-bean" class="resource-menu block block-bean first odd" role="complementary" aria-label="resources links">
+    <a class="btn btn-block btn-hollow-reverse dropdown-toggle btn-hollow-reverse-bloom btn-sm btn-hollow-no-hover-effect btn-resource" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                    Resources            <span class="caret"></span>
+    </a>
+        <ul class="dropdown-menu dropdown-menu-right"><li class="menu__item is-leaf first leaf"><a href="http://map.arizona.edu/" class="menu__link">Campus Map</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://uaccess.arizona.edu" class="menu__link">UAccess</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://directory.arizona.edu/index" class="menu__link">A-Z</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://directory.arizona.edu/phonebook" class="menu__link">Directory / Phonebook</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://slate.admissions.arizona.edu/account/login" class="menu__link">UA Future</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.arizona.edu/weather" class="menu__link">Weather</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://news.arizona.edu" class="menu__link">News</a></li>
+<li class="menu__item is-leaf last leaf"><a href="https://news.arizona.edu/calendar" title="" class="menu__link">Calendar</a></li>
+</ul>  </div>
+</div>
+<div class="col-sm-7 col-md-5 col-lg-5 col-lg-offset-4 no-gutter col-md-offset-3"><div class="search-form text-size-h6 visible-sm visible-md visible-lg hidden-xs"><div id="block-bean-site-search" class="block block-bean last even" role="complementary">
+
+    
+  <form class="google-cse" action="/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-item-search-block-form form-type-textfield form-group"><input title="Enter the terms you wish to search for." placeholder="Search Site..." class="input-search form-control form-control form-text" onfocus="this.placeholder = &#039;&#039;" onblur="this.placeholder = &#039;Search Site...&#039;" tabindex="0" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" /> <label class="control-label element-invisible" for="edit-search-block-form--2">Search</label>
+</div><div class="form-actions form-wrapper" id="edit-actions"><input class="btn btn-search radius form-submit" type="submit" id="edit-submit" name="op" value="Search" /></div><input type="hidden" name="form_build_id" value="form-quz2mlQ7VKTgSbpB-U0oXZ1SM_K30Q_m-7-PlrJI7XQ" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div>
+</div><a class="search-input-link visible-xs pull-right" href="/search/node"></a></div>  </div>
+          </div>
+        </div>
+          </div>
+  </section>
+</header>
+
+<header class="header page-row" id="header_site" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+                  <a href="/" title="University of Arizona News | Home" class="header__logo" rel="home" id="logo"><img src="https://cdn.uanews.arizona.edu/s3fs-public/news lockup 2020.png" alt="University of Arizona News | Home" class='header__logo-image'/></a>              </div>
+      <div class="col-xs-12 col-sm-6 col-lg-8">
+        <div class="row">
+          <div class="col-xs-12">
+                                  </div>
+        </div>
+                  <div class="row">
+              <div class="region region-header-2">
+    <div class="col-sm-7 col-lg-offset-4 col-lg-5 bottom-buffer-5 top-buffer-sm-50 left-buffer-sm-0 right-buffer-sm-0"><div id="block-bean-submit-a-story-idea" class="block block-bean first odd" role="complementary" aria-label="call to action link">
+
+    
+  <div class="entity entity-bean bean-uaqs-call-to-action clearfix" about="/block/submit-a-story-idea">
+      <div class="content">
+    
+  <a href="https://news.arizona.edu/blog-form/shout-box" class="gta-cta-header-buttons btn btn-hollow-default btn-block">Submit a Story Idea</a>  </div>
+</div>
+
+</div>
+</div><div class="col-sm-5 col-lg-3 left-buffer-sm-10 top-buffer-sm-4 right-buffer-sm-0 bottom-buffer-30 top-buffer-sm-50"><div id="block-bean-subscribe-button" class="block block-bean last even" role="complementary" aria-label="call to action link">
+
+    
+  <div class="entity entity-bean bean-uaqs-call-to-action clearfix" about="/block/subscribe-button">
+      <div class="content">
+    
+  <a href="https://news.arizona.edu/signupfornews/subscribe" class="gta-cta-header-buttons btn btn-default btn-block">Subscribe</a>  </div>
+</div>
+
+</div>
+</div>  </div>
+          </div>
+              </div>
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
+      <div id="nav-container" class="container">
+      <nav id="main_nav" class="navbar navbar-default navbar-static-top" role="navigation" aria-label="main">
+                  <div class="navbar-header overlay-menu-scroll-toggle">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-parent="#main_nav" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="text">MAIN MENU</span>
+                 <span class="hamburger">Open Navigation</span>
+               </button>
+            </div><div id="navbar" class="overlay-menu-scroll" role="navigation" aria-expanded="false"><div class="navbar-scroller"><ul class="menu nav navbar-nav"><li class="menu__item is-expanded first expanded dropdown"><a title="This is a dropdown menu for topics." class="menu__link text-uppercase dropdown-toggle nolink" data-target="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Stories <span class="caret"></span></a><ul class="dropdown-menu"><li class="menu__item is-leaf first leaf"><a href="/taxonomy/term/all" title="" class="menu__link">All Stories</a></li>
+<li class="menu__item is-leaf leaf"><a href="/arts" title="" class="menu__link">Arts</a></li>
+<li class="menu__item is-leaf leaf"><a href="/business-law" title="" class="menu__link">Business &amp; Law</a></li>
+<li class="menu__item is-leaf leaf"><a href="/campus-news" title="" class="menu__link">Campus</a></li>
+<li class="menu__item is-leaf leaf"><a href="/health" title="" class="menu__link">Health</a></li>
+<li class="menu__item is-leaf leaf"><a href="/science-and-technology" title="" class="menu__link">Sci | Tech</a></li>
+<li class="menu__item is-leaf leaf"><a href="/social-sciences" title="" class="menu__link">Social Sciences</a></li>
+<li class="menu__item is-leaf leaf"><a href="/sports" title="" class="menu__link">Sports</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/students" title="" class="menu__link">Students</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf"><a href="/videos" class="menu__link text-uppercase">Videos</a></li>
+<li class="menu__item is-leaf leaf"><a href="/photos" class="menu__link text-uppercase">Galleries</a></li>
+<li class="menu__item is-leaf leaf"><a href="/news/ua-in-the-news" title="External Stories" class="menu__link text-uppercase">In the News</a></li>
+<li class="menu__item is-leaf leaf"><a href="/calendar" title="" class="menu__link text-uppercase">Calendar</a></li>
+<li class="menu__item is-leaf leaf"><a href="/atwork" class="menu__link text-uppercase">UA@Work</a></li>
+<li class="menu__item is-expanded expanded dropdown"><a title="Press Releases and Information for the Media" class="menu__link text-uppercase dropdown-toggle nolink" data-target="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">For Journalists <span class="caret"></span></a><ul class="dropdown-menu"><li class="menu__item is-leaf first leaf"><a href="/media-information" class="menu__link">Media Information</a></li>
+<li class="menu__item is-leaf leaf"><a href="/news-releases" title="" class="menu__link">News Releases</a></li>
+<li class="menu__item is-leaf leaf"><a href="/expert-packages" title="" class="menu__link">Experts</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/press-kits" title="" class="menu__link">Electronic Press Kits</a></li>
+</ul></li>
+<li class="menu__item is-leaf last leaf"><a href="/contact-us" class="menu__link text-uppercase">Contact Us</a></li>
+</ul><div class="clearfix"></div></div></div>                      </nav> <!-- /#main_nav-->
+    </div> <!-- /.container -->
+  </header>
+
+<div id="main" class="page-row page-row-expanded page-row-padding-bottom page mb-4" role="main">
+            <div class="container">
+        <div class="row">
+            <div class="col-xs-12" aria-label="breadcrumb">
+                                    </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div id="content" class="col-sm-12">
+        <a id="main-content"></a>
+                                                
+
+
+<div class="node-123836 node node-uanews-story view-mode-full clearfix" about="/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Striped or Spotted? Winds and Jet Streams Found on the Closest Brown Dwarf" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <div class="row"><div class="col-md-offset-2 col-md-8"><h1 class="sans mb-0 text-midnight">
+  Striped or Spotted? Winds and Jet Streams Found on the Closest Brown Dwarf<div class="lead text-midnight">
+  Planetary scientists wondered if bands of winds or swirling storms dominated the atmospheres of brown dwarfs. UArizona-led research has solved the mystery.</div></h1><div class="text-size-h4">
+  By Mikayla Mace Kelley, 
+  University Communications</div><div class="text-muted text-size-h4" id="publication-date">
+  Jan. 7, 2021</div><div class="sharethis-buttons"><div class="sharethis-wrapper"><span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_facebook_custom" displayText="facebook"></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_twitter_custom" displayText="twitter" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_linkedin_custom" displayText="linkedin" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_email_custom" displayText="email" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_print_custom" displayText="print" st_via="" st_username=""></span>
+</div></div>
+<div class="mb-3">
+  <div id="file-423331" class="file file-image file-image-jpeg view-mode-uaqs_large">
+        <h2 class="element-hidden sr-only"><a href="/file/423331">brown dwarf.jpg</a></h2>
+    
+  
+  <div class="content">
+    <figure><img typeof="foaf:Image" src="https://cdn.uanews.arizona.edu/s3fs-public/styles/uaqs_large/public/brown dwarf.jpg?itok=7Uw9dcnU" alt="Artist representation of a brown dwarf" title="Artist representation of a brown dwarf" /><figcaption class="text-muted">
+  Using high-precision brightness measurements from NASA&#039;s TESS space telescope, astronomers found that the nearby brown dwarf Luhman 16B&#039;s atmosphere is dominated by high-speed, global winds akin to Earth&#039;s jet stream system. This global circulation determines how clouds are distributed in the brown dwarf&#039;s atmosphere, giving it a striped appearance. <cite class="small clearfix">
+  Daniel Apai</cite></figcaption></figure>  </div>
+
+  
+</div></div>
+  <p>A University of Arizona-led research team has found bands and stripes on the brown dwarf closest to Earth, hinting at the processes churning the brown dwarf's atmosphere from within.</p>
+
+<p>Brown dwarfs are mysterious celestial objects that are not quite stars and not quite planets. They are about the size of Jupiter but typically dozens of times more massive. Still, they are less massive than the smallest stars, so their cores do not have enough pressure to fuse atoms the way stars do. They are hot when they form and gradually cool, glowing faintly and dimming slowly throughout their lives, making them hard to find. No telescope can clearly see the atmospheres of these objects.</p>
+
+<p>"We wondered, do brown dwarfs look like Jupiter, with its regular belts and bands shaped by large, parallel, longitudinal jets, or will they be dominated by an ever-changing pattern of gigantic storms known as vortices like those found on Jupiter's poles?" said UArizona researcher <strong>Daniel Apai</strong>, an associate professor in the <a href="https://www.as.arizona.edu/">Department of Astronomy and Steward Observatory</a> and the <a href="https://www.lpl.arizona.edu/">Lunar and Planetary Laboratory</a>.</p>
+
+<p>Apai is lead author of a <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abcb97">new study</a> published today in The Astrophysical Journal that seeks to answer that question using a novel technique.</p>
+<div id="file-423344" class="file file-video file-video-oembed view-mode-uaqs_large center-block">
+        <h2 class="element-hidden sr-only"><a href="/file/423344">Chasing Storms in Brown Dwarfs with NASA’s TESS Exoplanet Hunter Telescope</a></h2>
+    
+  
+  <div class="content">
+    <div class="embed-responsive embed-responsive-16by9">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/-Td_efOMIBY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" title="Chasing Storms in Brown Dwarfs with NASA’s TESS Exoplanet Hunter Telescope"></iframe></div>  </div>
+
+  
+</div>
+
+<p>He and his team found that brown dwarfs look strikingly similar to Jupiter. The patterns in the atmospheres reveal high-speed winds running parallel to to the brown drawfs' equators. These winds are mixing the atmospheres, redistributing heat that emerges from the brown dwarfs' hot interiors. Also, like Jupiter, vortices dominate the polar regions.</p>
+
+<p>Some atmospheric models predicted this atmospheric pattern, Apai said, including models by the late Adam Showman, a UArizona Lunar and Planetary Laboratory professor and a leader in brown dwarf atmosphere models.</p>
+
+<p>"Wind patterns and large-scale atmospheric circulation often have profound effects on planetary atmospheres, from Earth's climate to Jupiter's appearance, and now we know that such large-scale atmospheric jets also shape brown dwarf atmospheres," said Apai, whose co-authors on the paper include the Astronomical Observatory of Padua's Luigi Bedin and Domenico Nardiello, who is also affiliated with Laboratoire d'Astrophysique de Marseille in France.</p>
+
+<p>"Knowing how the winds blow and redistribute heat in one of the best-studied and closest brown dwarfs helps us to understand the climates, temperature extremes and evolution of brown dwarfs in general," Apai said.</p>
+
+<p>Apai's group at UArizona is a world leader in mapping the atmospheres of brown dwarfs and planets outside of our solar system using space telescopes and a new method.</p>
+
+<p>The team used NASA's Transiting Exoplanet Survey Satellite, or TESS, space telescope to study the two brown dwarfs closest to Earth. At only 6 1/2 light-years away, the brown dwarfs are called Luhman 16 A and B. While both are about the same size as Jupiter, they are both more dense and therefore contain more mass. Luhman 16 A is about 34 times more massive than Jupiter, and Luhman 16 B – which was the main subject of Apai's study – is about 28 times more massive than Jupiter and about 1,500 degrees Fahrenheit hotter.</p>
+
+<p>"The TESS space telescope, although designed to hunt for extrasolar planets, also provided this incredibly rich and exciting dataset on the closest brown dwarf to us," Apai said. "With advanced algorithms developed by members of our team, we were able to obtain very precise measurements of the brightness changes as the two brown dwarfs rotated. The brown dwarfs get brighter whenever brighter atmospheric regions turn into the visible hemisphere and darker when these rotate out of view."</p>
+
+<p>Since the space telescope provides extremely precise measurements and it is not interrupted by daylight, the team collected more rotations than ever before, providing the most detailed view of a brown dwarf's atmospheric circulation.</p>
+
+<p>"No telescope is large enough to provide detailed images of planets or brown dwarfs," Apai said. "But by measuring how the brightness of these rotating objects changes over time, it is possible to create crude maps of their atmospheres – a technique that, in the future, could also be used to map Earthlike planets in other solar systems that might otherwise be hard to see."</p>
+
+<p>The researchers' results show that there is a lot of similarity between the atmospheric circulation of solar system planets and brown dwarfs. As a result, brown dwarfs can serve as more massive analogs of giant planets existing outside of our solar system in future studies.</p>
+
+<p>"Our study provides a template for future studies of similar objects on how to explore – and even map – the atmospheres of brown dwarfs and giant extrasolar planets without the need for  telescopes powerful enough to resolve them visually," Apai said.</p>
+
+<p>Apai's team hopes to further explore the clouds, storm systems and circulation zones present in brown dwarfs and extrasolar planets to deepen our understanding of atmospheres beyond the solar system.</p><div class="row"><div class="col-sm-12"><h3 class="text-uppercase mb-0 text-midnight" style="font-weight: bold;"><span>Share</span></h3><div class="sharethis-wrapper"><span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_facebook_custom" displayText="facebook"></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_twitter_custom" displayText="twitter" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_linkedin_custom" displayText="linkedin" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_email_custom" displayText="email" st_via="" st_username=""></span>
+<span st_url="https://news.arizona.edu/story/striped-or-spotted-winds-and-jet-streams-found-closest-brown-dwarf" st_title="Striped%20or%20Spotted%3F%20Winds%20and%20Jet%20Streams%20Found%20on%20the%20Closest%20Brown%20Dwarf" class="st_print_custom" displayText="print" st_via="" st_username=""></span>
+</div></div></div><div class="row my-4"><div class="col-sm-6" id="topics"><h3 class="mt-1 mb-0 text-midnight" style="font-weight: bold;"><span>Topics</span></h3>
+  <a href="/science-and-technology" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Science and Technology</a></div><div class="col-sm-6" id="tags"><h3 class="mt-1 mb-0 text-midnight" style="font-weight: bold;"><span>Tags</span></h3>
+  <a href="/exploration" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Exploration</a>  <a href="/research" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Research</a>  <a href="/space" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Space</a></div></div></div></div></div></div></div></div><div class="bg-cool-gray-50"><section class="container"><div class="row"><div class="col-xs-12"><div class="row"><div class="col-md-offset-2 col-md-8"><div class="row"><div class="col-md-12 py-3 mb-4"><h3 class="text-uppercase my-0 text-midnight" style="font-weight: bold;"><span>Resources for the media</span></h3><div class="col-lg-6 pl-lg-0 col-md-6 pl-md-0 col-sm-6 pl-sm-0 col-xs-12 pull-left story-media-contacts">  <h3 class="field-label">
+    Media contact(s)  </h3>
+
+  <div class="card node node-uaqs-person view-mode-uaqs_card">
+      <span property="dc:title" content="Mikayla Kelley" class="rdf-meta element-hidden"></span>      <div class="card-block"><h4 class="card-title">
+  <a href="https://news.arizona.edu/person/mikayla-kelley">Mikayla Kelley</a></h4>
+  <p class="field-uaqs-titles">
+    University Communications  </p>
+
+  <div class="field-uaqs-email">
+    <a href="mailto:mikaylamace@arizona.edu">mikaylamace@arizona.edu</a>  </div>
+
+  <div class="field-uaqs-phones">
+    <a href="tel:520-621-1878">520-621-1878</a>  </div>
+</div>    </div>
+
+
+
+</div><div class="col-lg-6 col-md-6 col-sm-6 pl-sm-0 col-xs-12 pl-xs-0 story-media-contacts">  <h3 class="field-label">
+    Researcher contact(s)  </h3>
+
+  <div class="card node node-uaqs-person view-mode-uaqs_card">
+      <span property="dc:title" content="Daniel Apai" class="rdf-meta element-hidden"></span>      <div class="card-block"><h4 class="card-title">
+  <a href="https://news.arizona.edu/node/121591">Daniel Apai</a></h4>
+  <p class="field-uaqs-titles">
+    Steward Observatory  </p>
+
+  <div class="field-uaqs-email">
+    <a href="mailto:apai@as.arizona.edu">apai@as.arizona.edu</a>  </div>
+
+  <div class="field-uaqs-phones">
+    <a href="tel:520-621-6534">520-621-6534</a>  </div>
+</div>    </div>
+
+ 
+
+</div><div class="required-fields col-xl-12 col-lg-12 col-md-12 col-xs-12 px-0"><div class="col-sm-12 col-lg-6"><div class="py-1 mb-4 align-items-center btn-block"><a href="/news-releases" class="btn btn-default btn-sm btn-block btn-block">Visit the newsroom</a></div></div></div></div></div></div></div></div></div></section></div><div class="container"><div class="row"><div class="col-xs-12"><div>
+  
+  
+</div>
+<div class="col-md-6">
+  <div id="block-bean-recent-external-stories" class="block block-bean last even" role="complementary">
+
+        
+    <div class="entity entity-bean bean-uaqs-flexible-block clearfix" about="/block/recent----external-stories">
+      <div class="content">
+    
+  <div class="entity entity-paragraphs-item paragraphs-item-uaqs-content-chunks-html mb-4 ">
+  <div class="content">
+    
+  <div class="mt-3">
+<p class="text-size-h3"><span class="text-uppercase"><span class="text-blue"><strong>University of Arizona in the News</strong></span></span></p>
+</div>
+  </div>
+</div>
+  <div class="entity entity-paragraphs-item paragraphs-item-uaqs-content-chunks-view mb-4 ">
+  <div class="content">
+    
+  <div class="view view-uanews-external-stories view-id-uanews_external_stories view-display-id-recent view-dom-id-32b09d6df21827ce277e93e05ab30439">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div class="node-136287 node node-uanews-external-story view-mode-uaqs_sidebar_teaser_list clearfix" about="/ext-story/university-arizona-libraries-digital-archival-project-empowers-voices-among-us-mexico" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="University of Arizona Libraries&#039; digital archival project empowers voices among U.S.-Mexico border communities" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <a href="https://www.insightintodiversity.com/ua-libraries-digital-archival-project-empowers-voices-among-u-s-mexico-border-communities/" class="remove-external-link-icon list-link-block pt-0" target="_blank" title="University of Arizona Libraries&amp;#039; digital archival project empowers voices among U.S.-Mexico border communities"><strong class="text-size-h5 text-chili pseudo-link">
+  Insight Into Diversity</strong><span class="text-muted pl-2">
+  Wednesday</span>
+  <div class="text-midnight text-size-h4 bold">University of Arizona Libraries&#039; digital archival project empowers voices among U.S.-Mexico border communities</div>
+</a>
+  
+  
+</div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div class="node-136266 node node-uanews-external-story view-mode-uaqs_sidebar_teaser_list clearfix" about="/ext-story/donated-keepsakes-illustrate-life-uss-arizona-pearl-harbor" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Donated keepsakes illustrate life on USS Arizona before Pearl Harbor" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <a href="https://tucson.com/news/local/history/uss-arizona-keepsakes-join-collection-university-arizona-tucson/article_67dbf800-c7b1-11ee-83aa-8334e1afb7f3.html" class="remove-external-link-icon list-link-block pt-0" target="_blank" title="Donated keepsakes illustrate life on USS Arizona before Pearl Harbor"><strong class="text-size-h5 text-chili pseudo-link">
+  Arizona Daily Star</strong><span class="text-muted pl-2">
+  Tuesday</span>
+  <div class="text-midnight text-size-h4 bold">Donated keepsakes illustrate life on USS Arizona before Pearl Harbor</div>
+</a>
+  
+  
+</div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div class="node-136265 node node-uanews-external-story view-mode-uaqs_sidebar_teaser_list clearfix" about="/ext-story/research-tai-chi-may-be-better-reducing-blood-pressure-aerobic-exercise" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Research: Tai chi may be better at reducing blood pressure than aerobic exercise" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <a href="https://www.npr.org/2024/02/14/1231313626/research-tai-chi-may-be-better-at-reducing-blood-pressure-than-aerobic-exercise" class="remove-external-link-icon list-link-block pt-0" target="_blank" title="Research: Tai chi may be better at reducing blood pressure than aerobic exercise"><strong class="text-size-h5 text-chili pseudo-link">
+  NPR</strong><span class="text-muted pl-2">
+  Tuesday</span>
+  <div class="text-midnight text-size-h4 bold">Research: Tai chi may be better at reducing blood pressure than aerobic exercise</div>
+</a>
+  
+  
+</div>
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div class="node-136227 node node-uanews-external-story view-mode-uaqs_sidebar_teaser_list clearfix" about="/ext-story/bennu-asteroid-could-be-ocean-world-researchers-say" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Bennu asteroid could be from an &#039;ocean world&#039; researchers say" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <a href="https://www.bbc.co.uk/newsround/68225932" class="remove-external-link-icon list-link-block pt-0" target="_blank" title="Bennu asteroid could be from an &amp;#039;ocean world&amp;#039; researchers say"><strong class="text-size-h5 text-chili pseudo-link">
+  BBC</strong><span class="text-muted pl-2">
+  Feb. 11, 2024</span>
+  <div class="text-midnight text-size-h4 bold">Bennu asteroid could be from an &#039;ocean world&#039; researchers say</div>
+</a>
+  
+  
+</div>
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div class="node-136225 node node-uanews-external-story view-mode-uaqs_sidebar_teaser_list clearfix" about="/ext-story/my-pets-have-stolen-my-heart-again-and-again-i-know-im-not-alone" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="My pets have stolen my heart again and again. I know I&#039;m not alone." class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <a href="https://www.washingtonpost.com/wellness/2024/02/11/dogs-cats-pets-attachment-love/" class="remove-external-link-icon list-link-block pt-0" target="_blank" title="My pets have stolen my heart again and again. I know I&amp;#039;m not alone."><strong class="text-size-h5 text-chili pseudo-link">
+  The Washington Post</strong><span class="text-muted pl-2">
+  Feb. 11, 2024</span>
+  <div class="text-midnight text-size-h4 bold">My pets have stolen my heart again and again. I know I&#039;m not alone.</div>
+</a>
+  
+  
+</div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+</div>
+
+  </div>
+</div>
+                </div>
+                                </div>
+    </div>
+        <div class="region region-full-width-content-bottom px-0 bg-blue bg-triangles-top-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+    	<div id="block-bean-subscribe-footer" class="block block-bean first last odd" role="complementary">
+
+    
+  <div class="entity entity-bean bean-uaqs-flexible-block clearfix" about="/block/subscribe-footer">
+      <div class="content">
+    
+  <div class="entity entity-paragraphs-item paragraphs-item-uaqs-content-chunks-html mb-4 ">
+  <div class="content">
+    
+  <div class="container">
+<div class="btgrid">
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8">
+<div class="row">
+<div class="col-md-7">
+<div class="content py-lg-5 pt-sm-5 pt-md-5 top-buffer-xs-30 align-items-center ">
+<p class="h3 mt-0"><span class="text-white"><strong>Subscribe to UANow</strong></span></p>
+<p class="h4"><span class="text-white">Get the latest University of Arizona news delivered in your inbox. Or, stay in the loop using our Amazon Alexa skill.</span></p>
+</div>
+</div>
+<div class="col col-md-4 col-md-offset-1">
+<div class="content py-lg-5 bottom-buffer-xs-30 pb-sm-5 pb-md-5">
+<p><a class="btn btn-sm btn-hollow-reverse btn-block" href="/signupfornews/subscribe">Subscribe to UANow</a></p>
+<p><a class="btn btn-sm btn-hollow-reverse btn-block" href="https://www.amazon.com/The-University-of-Arizona-News/dp/B07GJJL7K9">Get Alexa alerts</a></p>
+<p><a class="btn btn-sm btn-hollow-reverse btn-block" href="/rss">RSS</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+
+</div>
+      </div>
+    </div>
+  </div>
+</div> <!--Close wrapper-->
+
+                </div> <!-- /.main -->
+<!-- back to top button --->
+  <button id="js-ua-zen-back-to-top" role="button" aria-label="Return to the top of this page." class="ua-zen-back-to-top btn btn-primary"><span class="sr-only">Return to the top of this page.</span>
+<i class="ua-brand-up-arrow"></i>
+</button>
+
+<footer id="footer_site" class="page page-row" role="contentinfo">
+    <div class="region region-footer">
+    <div class="container">
+      <div class="row">
+        <div class="page-row-padding-top page-row-padding-bottom"></div>
+        <div class="page-row-padding-top page-row-padding-bottom"></div>
+                  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 text-center-xs text-left-not-xs">
+            <div class="row bottom-buffer-30">
+              <div class="col-xs-12">
+               <a href="https://marcomm.arizona.edu" title="University of Arizona News | Home" class="remove-external-link-icon"><img src="https://cdn.uanews.arizona.edu/s3fs-public/UniversityMarketing&Communications_Webheader-01_0_1.png" alt="University of Arizona News | Home" /></a>              </div>
+            </div>
+          </div>
+                          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs-block"></div>
+          <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+            <div id="block-bean-uaqs-footer-links-bean-main" class="block block-bean first last odd small text-right-lg text-right-md  text-right-sm text-center-xs" role="complementary">
+        <ul class="menu"><li class="menu__item is-leaf first leaf"><a href="https://talent.arizona.edu" class="menu__link">Employment</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://cirt.arizona.edu" class="menu__link">Emergency Information</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://www.titleix.arizona.edu/" class="menu__link">Title IX</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://cirt.arizona.edu/ualert" class="menu__link">UAlert</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.arizona.edu/information-security-privacy" class="menu__link">Information Security &amp; Privacy</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.arizona.edu/copyright" class="menu__link">Copyright</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.arizona.edu/campus-accessibility" class="menu__link">Campus Accessibility</a></li>
+<li class="menu__item is-leaf leaf"><a href="/contact-us" title="" class="menu__link">Contact Us</a></li>
+<li class="menu__item is-leaf last leaf"><a href="https://www.arizona.edu/website-feedback" class="menu__link">Feedback</a></li>
+</ul></div>
+          </div>
+                <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer_sub" class="region region-footer-sub">
+  	<div class="container">
+        <div class="row">
+    	    <div id="block-bean-land-acknowledgment-subfooter" class="block block-bean first last odd" role="complementary">
+
+    
+  <div class="entity entity-bean bean-uaqs-flexible-block clearfix" about="/block/land-acknowledgment-subfooter">
+      <div class="content">
+    
+  <div class="entity entity-paragraphs-item paragraphs-item-uaqs-headed-text mb-0 ">
+  
+  <p class="text-align-center text-muted mt-0 mb-0"><em>We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. Committed to diversity and inclusion, the University strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.</em></p>
+</div>
+  </div>
+</div>
+
+</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                            <hr>
+                        <p class="small"><a href="https://www.arizona.edu/information-security-privacy" target="_blank">University Information Security and Privacy</a></p>            <p class="copyright small">&copy; 2024 The Arizona Board of Regents on behalf of <a href="https://www.arizona.edu" target="_blank">The University of Arizona</a>.</p>            </div>
+        </div>
+  	</div>
+</div>
+</footer>
+
+  <script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/picture/picturefill2/picturefill.min.js?v=2.3.1"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/contrib/picture/picture.min.js?v=7.96"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/modules/custom/uaqs_fields/uaqs_fields_media/js/uaqs_fields_media.js?s8wee5"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/themes/custom/ua_zen/js/uaqs_navigation_overlay_menu_scroll.js?s8wee5"></script>
+<script src="https://news.arizona.edu/profiles/ua_quickstart/themes/custom/ua_zen/js/ua_zen_back_to_top.js?s8wee5"></script>
+<script src="https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/v1.0.0-beta.30/ua-bootstrap.min.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-7cc308777bca6b524e8","applicationID":"560634064","transactionName":"YVMBYhZUCBFSWhFZWVgZIlUQXAkMHFcKVFNpRgJRAWoQC1ZO","queueTime":0,"applicationTime":1228,"atts":"TRQCFF5OGx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

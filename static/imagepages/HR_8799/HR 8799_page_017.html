@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- BEGIN Common HEAD config, used in all layouts >>>>>>>>>>>>>>>>>>>>> -->
+<meta charset='UTF-8'>
+<meta content='IE=Edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link crossorigin='use-credentials' href='/manifest.json' rel='manifest'>
+<link href='/assets/pwa/vs-icon-48x48-df56b86e3709f108c9c5d239874b20d5a60486af08092f7e7daabede8ac9030e.png' rel='apple-touch-icon' sizes='48x48'>
+<link href='/assets/pwa/vs-icon-60x60-6b9707c2f7732e16cd0b7aa2fc10fbd8a6194743cce4072749467998169fa061.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/assets/pwa/vs-icon-72x72-723d972ddf376137029f5cb274a546a390d346e0fa01068c4b8850ed4cdd108f.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/assets/pwa/vs-icon-76x76-b3d7269a00399b747e2949af6f5ba5de4434373bc4664a6c0a72355b7d6c71eb.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/assets/pwa/vs-icon-120x120-58dbac7b5faf950bf3379417bda7ffcbf439d9fb1959831f6a66f3721292ab9e.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/assets/pwa/vs-icon-152x152-415ab4177b42eb448c3a8850fd63740d47eb6a81bfb3d3b65ec1bffce0665027.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/assets/pwa/vs-icon-180x180-68b8a7fac9ac82d6c0b874d1fb5dc08584772f84c44af1ad771ef43581b1a92c.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/assets/pwa/vs-icon-512x512-74af692cc5c168bce0004e1f2bbe967730c5b636a4d8f648921215032d137f7d.png' rel='apple-touch-icon' sizes='512x512'>
+<link href='/assets/pwa/vs-icon-1024x1024-577cca9f8bbd3314d0d72fdb66289b6203d2b57070b0b44888aca66085659313.png' rel='apple-touch-icon' sizes='1024x1024'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='#222' name='theme-color'>
+<title>ViewSpace | Detecting Other Worlds: Direct Imaging</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="3mBpAxEPPtZPVDPn513_Q1wPgp8whlObUlUfhRJJZ-aHbS60kBczl-FvQYJEzKz--oc806iL7UIsZAqD2xn6UQ" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MHMTWRN');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+  // inPwaMode() is now defined here so it can be used early on by the app
+  // Checks if app is running as a PWA (Progressive Web App)
+  function inPwaMode() {
+    onAndroid = navigator.userAgent.toLowerCase().includes("android");
+    if (window.matchMedia('(display-mode: standalone)').matches ||              // For desktops/laptops (Macs & PCs), Chrome/Edge
+        window.matchMedia('(display-mode: fullscreen)').matches && onAndroid || // For Android mobile devices, (Chrome)
+        window.navigator.standalone) {                                          // For iPhone/iPad, (Safari)
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  // Returns true if app is on an Interactives page while running as a PWA.
+  // This is useful for a few cases where non-interactive pages load while
+  // running as a PWA. For example, the VS home page loads in PWA mode before
+  // redirecting to the Interactives about page. The home page load shouldn't
+  // register as an inPWA page load in Google Analytics. We are also seeing a
+  // few users with unique setups running playlists (and some other pages) in
+  // fullscreen mode that register as being inPwa mode in GA. We want to ensure
+  // that they don't experience their top nav menus disappearing (as occurs in
+  // Pwa mode). This method supports ensuring that only Interactives pages in
+  // Pwa mode have their top menu (and other sections) hidden.
+  function onPwaInteractivesPages() {
+    onInteractivesPages = document.location.pathname.startsWith('/interactives/');
+    if (inPwaMode() && onInteractivesPages){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  // push info to Google Tag Manager. "dataLayer" is provided by gtm_rails
+  // gtm_rails is not loaded if gtm_container_id is blank,
+  //   `config/google_tag_manager.yml` references credentials
+  dataLayer.push({'isLoggedIn': false,
+                  'isPWA': onPwaInteractivesPages()}); // Returns true if in Pwa mode and on an Interactives page
+</script>
+<!-- END Common HEAD config, used in all layouts <<<<<<<<<<<<<<<<<<<<<< -->
+
+<link rel="stylesheet" href="/assets/application-9ce928bf21aafb59d14bedf5a2567c29c611e5231e881d26f20b1e2b5c769ef1.css" media="all" data-turbolinks-track="reload" />
+
+<script src="/assets/application-d365829fad3fcbb99f8b8839f9f90c17d640d2975853b53e8b45b66d987be49c.js" data-turbolinks-track="reload"></script>
+<script src="//afarkas.github.io/lazysizes/lazysizes.min.js" async="async"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<meta content='ViewSpace | Detecting Other Worlds: Direct Imaging' property='og:title'>
+<meta content='Blocking bright starlight allows us to photograph the faint light of distant exoplanets.' property='og:description'>
+<meta content='https://viewspace.org/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop1-LABEL@1x-2e14a671987ac37ff640850a92a72b48dc7b5a8d23ea20ba039d9009162256f5.jpg' property='og:image'>
+<link href='/assets/favicon-ae013ec48f810a42eba6f1419e92d0370660ae7f99c459740552fec1f9cde3b1.ico' rel='shortcut icon'>
+</head>
+<body data-edit-mode='false' data-turbolinks='false' style='overflow-x: hidden;'>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHMTWRN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Vimeo/GTM integration, see https://help.vimeo.com/hc/en-us/articles/115002859607-Integrating-with-Google-Tag-Manager -->
+<script defer='defer' src='https://extend.vimeocdn.com/ga/94554777.js' type='text/javascript'></script>
+<header role='banner'>
+<div id='skip_to_content'>
+<a class='' href='#main_content'>Skip to main content</a>
+</div>
+<nav aria-labelledby='primary-navigation-header' class='navbar navbar-default' role='navigation'>
+<h2 class='sr-only' id='primary-navigation-header'>Primary Navigation</h2>
+<a class="navbar-brand" id="navbar-brand-id" href="/"><img alt="ViewSpace" aria-hidden="true" src="/assets/viewspace_wordmark_white-ac0fe856b6b9d6a883a6d97aae0e75bc1f3c80a6815234a9a0e109640088cefb.svg" />
+<span class='sr-only'>ViewSpace Homepage</span>
+</a><!-- Brand and toggle get grouped for better mobile display -->
+<div class='navbar-header hide-for-pwa'>
+<button aria-expanded='false' class='navbar-toggle collapsed' data-target='#navbarCollapsed' data-toggle='collapse' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+</div>
+<div class='collapse navbar-collapse' id='navbarCollapsed'>
+<ul aria-labelledby="primary-navigation-header" role="list" class="nav navbar-nav navbar-right hide-for-pwa"><li><a href="/">Home</a></li>
+<li class='dropdown'>
+<button name="button" type="button" aria-expanded="false" class="btn btn-menu-dropdown dropdown-toggle" data-toggle="dropdown">Interactives</button>
+<ul class='dropdown-menu'>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_2.sub_menu_1.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/interactives/unveiling_invisible_universe">About the Interactives</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_2.sub_menu_2.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/interactives/unveiling_invisible_universe/forms_of_light">Interactives Library</a></li>
+</ul>
+</li>
+<li class='dropdown'>
+<button name="button" type="button" aria-expanded="false" class="btn btn-menu-dropdown dropdown-toggle" data-toggle="dropdown">Videos</button>
+<ul class='dropdown-menu'>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_3.sub_menu_1.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/resources/videos">About the Videos</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_3.sub_menu_2.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/video_library">Video Library</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_3.sub_menu_3.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/playlists/featured">Video Collections</a></li>
+</ul>
+</li>
+<li class='dropdown'>
+<button name="button" type="button" aria-expanded="false" class="btn btn-menu-dropdown dropdown-toggle" data-toggle="dropdown">Resources</button>
+<ul class='dropdown-menu'>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_4.sub_menu_1.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/resources/museum_resources">Museum Resources</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_4.sub_menu_2.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/resources/exhibit_labels">Exhibit Labels</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_4.sub_menu_3.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/support/guide">Setup Guide</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.nav.menu_4.sub_menu_4.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/support/message/new">Contact Us</a></li>
+</ul>
+</li>
+<li class='login-button'><a href="/devise_users/sign_in">Venue Login</a></li>
+</ul></div>
+</nav>
+<script>
+  pwa_hide_html_elements();
+  
+  $(document).on('turbolinks:load', function () {
+    setUIForEditMode()         // Maintains edit_mode appearance between individual content update submits/reloads of page
+  })
+  
+  function inEditMode() {
+     if (document.getElementById('edit_mode_check_box')){
+      return !!document.getElementById('edit_mode_check_box').checked;
+    } else {
+      return false;
+    }
+  }
+  
+  function reloadWithLocale(locale='en'){      // Fired after user clicks edit_mode checkbox. Reloads the page with appropriate draft or non-draft locale.
+    non_draft_locale = locale.replace('_draft', '')
+    pathArr = window.location.pathname.split('/')
+    pathArr = pathArr.filter(e => e !== locale)
+    path_without_locale = window.location.origin + pathArr.join('/')
+  
+    if (inEditMode()){
+      draft_locale = non_draft_locale + '_draft'
+      window.location.href = path_without_locale + '?locale=' + draft_locale + "&edit_mode=true"    // Reload current page with draft locale
+    } else {
+      window.location.href = path_without_locale + '?locale=' + non_draft_locale    // Reload current page to clear edit mode styling. (without params)
+    }
+  }
+  
+  function setUIForEditMode(){               // On page load, update UI for edit mode appearance/functionality
+    if (inEditMode()) {
+      disableAllLinksOnPage()
+      initEditableEvents()
+      turnOnEditModeStyling()
+    }
+  }
+  
+  function disableAllLinksOnPage() {         // When in edit mode, links should be inactive so clicking to change their text doesn't load a new page
+    links = document.getElementsByTagName("a")
+    for (i = 0; i < links.length; i++) {
+      if (links[i].text != 'Save'){                   // Skip the 'Update' content links (they are needed for submit the content changes)
+        links[i].onclick = function() {return false}    // Make all other links on page inactive
+        if (links[i].getAttribute('data-method')){
+          links[i].setAttribute('data-method', '')      // Needed to inactivate the sign-out link (and any link with a data-method)
+        }
+        if (links[i].getAttribute('data-toggle')){
+          links[i].setAttribute('data-toggle', '')      // Needed to inactivate the sign-out link (and any link with a data-method)
+        }
+      }
+    }
+  }
+  
+  function initEditableEvents() {
+    console.debug("initEditableEvents")
+    $('[data-editable]').on('click', toggleEditableArea)
+  }
+  
+  function turnOnEditModeStyling() {         // Activates edit mode styling for each editable component. (Currently just highlights on hover).
+    document.body.dataset.editMode = true
+  }
+  
+  function showOrHideEditableArea(parent_element_id) {                              // Shows or hides the editable text area and update link
+    // TODO: convert to event response. This doesn't work if there is more than one element on a page from the same i18n key. An event would use the element we clicked on.
+    console.debug("showOrHideEditableArea", {parent_element_id: parent_element_id, this: this})
+    if (!inEditMode()) {
+      throw new Error('Should only be called when editMode==true')
+    }
+  
+    parentEl = document.getElementById(parent_element_id)
+    toggledDisplay = (parentEl.style.display == 'none') ? 'initial' : 'none'
+    // debugger
+    console.debug("showOrHideEditableArea", {parentEl: parentEl, toggledDisplay: toggledDisplay})
+    parentEl.style.display = toggledDisplay
+  }
+  
+  // Used by event(s) on editable_elements
+  function toggleEditableArea(event) {                              // Shows or hides the editable text area and update link
+    console.debug("toggleEditableArea", {target: event.target, event: event, this: this})
+    if (!inEditMode()) {
+      throw new Error('Should only be called when editMode==true')
+    }
+    // debugger
+    event.preventDefault(); //disable normal "click" event
+  
+    editableUiElementId = $(this).data('editableUiId');
+    uiElSelector = '#' + jQuery.escapeSelector(editableUiElementId); // escape periods/colons for jQuery selector
+    console.debug("in toggleEditableArea", {toggling: uiElSelector})
+    $(uiElSelector).toggle();
+  }
+  
+  function updateContent(key, locale) {                                              // Update YAML file with new content for given key. Load action which handles that.
+    // TODO: convert to event response. This doesn't work if there is more than one element on a page from the same i18n key. An event would use the element we clicked on.
+    text_area = document.getElementById(key)
+    window.location.href = window.location.origin + "/admin/content_files/in_page_content_update?content=" + encodeURIComponent(text_area.value) + "&key=" + key + "&edit_mode=" + inEditMode() + "&locale=" + locale
+  }
+</script>
+
+<section id='flashMessages'>
+
+</section>
+
+</header>
+<main id='main_content' role='main'>
+
+
+
+
+<div class='top-bar'>
+<nav aria-labelledby='topics_heading' class='left-section' role='navigation'>
+<div class='viewspace-dropdown-container border-topbottom unveiling_menu' data-value=''>
+<a class='selector-text' href='javascript:void(0);' onclick='viewspace_dropdown(this)'>
+<h2 class='title' id='topics_heading'>Topics</h2>
+<div class='indicator'>
+<div class='icon'>
+<i class="fas fa-chevron-down" aria-hidden="true"></i>
+</div>
+</div>
+</a>
+<div class='selector-content'>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Star Death</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_death/crab_nebula">Crab Nebula</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_death/supernova_1987A">Supernova 1987A</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_death/helix_nebula">Helix Nebula</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Star Formation</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_formation/eagle_nebula">Eagle Nebula</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_formation/lagoon_nebula">Lagoon Nebula</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/star_formation/hh_46_47">Herbig-Haro 46/47</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Variable Stars</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/variable_stars/eta_carinae">Eta Carinae</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/variable_stars/v838_monocerotis">V838 Monocerotis</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Detecting Other Worlds</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/detecting_other_worlds/transiting_exoplanet">Transiting Exoplanet</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/detecting_other_worlds/direct_imaging">Direct Imaging</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Exoplanet Diversity</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/exoplanet_diversity/atmospheres">Atmosphere</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/exoplanet_diversity/orbital_distance">Orbital Distance</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Forms of Light</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/forms_of_light/seeing_through_smoke">Seeing Through Smoke</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/forms_of_light/electromagnetic_spectrum">Electromagnetic Spectrum</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals">Infrared Animals</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/forms_of_light/omega_centauri">Omega Centauri</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/forms_of_light/the_phantom_galaxy">Phantom Galaxy</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Gathering Light</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/gathering_light/hubble_ultra_deep_field">Hubble Ultra Deep Field</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/gathering_light/ngc_602">Star Cluster NGC 602</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Analyzing Light</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair">Spectrum of the Star Altair</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/analyzing_light/the_southern_crab_nebula">Southern Crab Nebula</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/analyzing_light/supernova_e0102">Supernova E0102</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/analyzing_light/starburst_galaxy_m82">Starburst Galaxy M82</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Seeing Farther</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/seeing_farther/chandra_deep_field">Chandra Deep Field-South</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/seeing_farther/hubble_ultra_deep_field">Hubble Ultra Deep Field</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Interacting Galaxies</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/interacting_galaxies/future_of_the_milky_way">Future of the Milky Way</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/interacting_galaxies/the_antennae">The Antennae</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Dark Matter</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/dark_matter/bullet_cluster">Bullet Cluster</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/dark_matter/supernova_refsdal">Supernova Refsdal</a>
+</div>
+
+</div>
+</div>
+<div class='viewspace-accordian-container'>
+<div class='selector-text'>
+<a class='title' onclick='toggleViewspaceAccordian(this)' tabindex='0'>Black Holes</a>
+<div class='indicator' onclick='toggleViewspaceAccordian(this)' tabindex='0'>
+<div class='closed'>
+<i class="fas fa-plus" aria-hidden="true"></i>
+</div>
+<div class='open'>
+<i class="fas fa-minus" aria-hidden="true"></i>
+</div>
+</div>
+<div class='border-hover-animation'></div>
+</div>
+<div class='selector-content'>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/black_holes/sagittarius_a">Sagittarius A*</a>
+</div>
+<div class='menu_item'>
+<a class="text" href="/interactives/unveiling_invisible_universe/black_holes/centaurus_a">Centaurus A</a>
+</div>
+
+</div>
+</div>
+<a class='home_link' href='/interactives/unveiling_invisible_universe#start_exploring'>
+<div class='title'>
+All Topics
+</div>
+<div class='indicator'>
+<i class="fas fa-chevron-right"></i>
+</div>
+</a>
+
+</div>
+</div>
+</nav>
+<div class='right-section'>
+<div class='labels-toggle-container'>
+<div class="toggle_switch_container"><label class="toggle-switch-label" data-placement="bottom" data-toggle="tooltip" title="Toggle labels on and off" for="labels_toggle_switch">Labels</label><label class="ios round toggle-switch" tabindex="0" for="labels_toggle_switch"><input type="checkbox" name="labels_toggle_switch" id="labels_toggle_switch" class="switch-input" checked="checked" /><span class="switch-body" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></div>
+<script>
+  $(document).on('turbolinks:load', function () {
+    var switch_el = document.getElementById("labels_toggle_switch");
+    switch_el.addEventListener("click", label_toggle);
+    label_toggle(switch_el); // as page is displayed
+  })
+</script>
+</div>
+</div>
+<div class='center-section'>
+<div class='figure-title'>
+<h1 class='main'>
+<strong>
+Detecting Other Worlds:
+</strong>
+Direct Imaging
+</h1>
+<p class='secondary'>
+<span>Four planets orbiting a young star</span>
+<br>
+<span>
+<a class="full-story-below scroll-to" href="#slider-content">Full Story
+<i class="fas fa-chevron-right" aria-hidden="true"></i>
+</a></span>
+</p>
+<h2 class='sr-only'>Direct Imaging Interactive</h2>
+</div>
+</div>
+</div>
+
+<input id='starting_image' type='hidden' value='0'>
+<input id='amount_of_images' type='hidden' value='6'>
+<div class='slider' id='main-slider'>
+<div class='body'>
+<div class='track'>
+<div class='slide' data-image-index='0' data-label='8/01/2009' data-starting-opacity='5' style='opacity: 1'>
+<div class='image'>
+<img class="clean slider-image" id="8-01-2009_clean" alt="Four bright spots around a black disk covering a star" data-category="8/01/2009" onload="slide_image_load(&#39;8/01/2009&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop1@2x-5897aa90cb2c664d6160bf92ee8dd25eb10b85bd99a283331edd696f54fee62c.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop1@1x-0304871786674e5964eb05aab8e292ed773dc2cfe76fca5e62e91ab31d7ad567.jpg" width="705" height="700" />
+<img class="primary slider-image" id="8-01-2009_primary" alt="Four bright spots around a black disk covering a star" data-category="8/01/2009" onload="slide_image_load(&#39;8/01/2009&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop1-LABEL@2x-e2a04da45ea4a262baf5c68878f89f3626f51bded82ff603265cc01a701428ab.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop1-LABEL@1x-2e14a671987ac37ff640850a92a72b48dc7b5a8d23ea20ba039d9009162256f5.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Blocked star' data-placement='left' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='340' data-yPosition='350' id='8-01-20091' tabindex='0' title='Blocked star'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Planet' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='492' data-yPosition='225' id='8-01-20092' tabindex='0' title='Planet'></div>
+
+</div>
+</div>
+<div class='slide' data-image-index='1' data-label='7/21/2010' data-starting-opacity='4' style='opacity: 0'>
+<div class='image'>
+
+<img class="primary slider-image lazyload" id="7-21-2010_primary" alt="Four bright spots around a black disk have shifted" data-category="7/21/2010" onload="slide_image_load(&#39;7/21/2010&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop2@2x-8b0fd272b0f8109c99ce0e53d63df77ce5ea69e0c180a7a4198cfc1b7d2b2923.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop2@1x-9e3424aaec8e9598797c644aeeee7c404baa6640c6adb656cb3af510db28e3fc.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Cooler,&lt;br&gt;dimmer planet' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='101' data-yPosition='217' id='7-21-20101' tabindex='0' title='Cooler,&lt;br&gt;dimmer planet'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Warmer,&lt;br&gt;brighter planet' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='479' data-yPosition='220' id='7-21-20102' tabindex='0' title='Warmer,&lt;br&gt;brighter planet'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Leftover starlight' data-placement='left' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='370' data-yPosition='382' id='7-21-20103' tabindex='0' title='Leftover starlight'></div>
+
+</div>
+</div>
+<div class='slide' data-image-index='2' data-label='7/20/2011' data-starting-opacity='3' style='opacity: 0'>
+<div class='image'>
+
+<img class="primary slider-image lazyload" id="7-20-2011_primary" alt="Four bright spots around a black disk have shifted more" data-category="7/20/2011" onload="slide_image_load(&#39;7/20/2011&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop3@2x-42a2583cbf02d16ff0c6063b79a868db8f138bce09ab95530c503d52df2fae69.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop3@1x-f21cfdf6917626dc5c1227a5d96398dad78dc25bbfb348ae415a235980e1a5f4.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Dimmer, less&lt;br&gt;massive planet' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='090' data-yPosition='217' id='7-20-20111' tabindex='0' title='Dimmer, less&lt;br&gt;massive planet'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Brighter, more&lt;br&gt;massive planet' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='468' data-yPosition='221' id='7-20-20112' tabindex='0' title='Brighter, more&lt;br&gt;massive planet'></div>
+
+</div>
+</div>
+<div class='slide' data-image-index='3' data-label='10/26/2012' data-starting-opacity='2' style='opacity: 0'>
+<div class='image'>
+<img class="clean slider-image lazyload" id="10-26-2012_clean" alt="Spots continue to shift, forming small arcs with their motion" data-category="10/26/2012" onload="slide_image_load(&#39;10/26/2012&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop4@2x-3fefdb05d9c75477c70726611b68995ef73dfeaec35ba2b0a41e353413d07583.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop4@1x-78437f9ebae95887f9e7e4b690b21dc0c174c8311641460cdd9221ef3e97601b.jpg" width="705" height="700" />
+<img class="primary slider-image lazyload" id="10-26-2012_primary" alt="Spots continue to shift, forming small arcs with their motion" data-category="10/26/2012" onload="slide_image_load(&#39;10/26/2012&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop4-LABEL@2x-6afe8d7fdfa8dfc2e877cdf520d965a6e988aed63bbfe0f4ec822b8c30cafa22.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop4-LABEL@1x-3045586e2c42f9f0accd4f2639b90fffb6b50649c9ea87596771b00ef873a758.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Planets orbit counterclockwise' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='091' data-yPosition='219' id='10-26-20121' tabindex='0' title='Planets orbit counterclockwise'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Closer planets&lt;br&gt;orbit faster' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='427' data-yPosition='367' id='10-26-20122' tabindex='0' title='Closer planets&lt;br&gt;orbit faster'></div>
+
+</div>
+</div>
+<div class='slide' data-image-index='4' data-label='10/15/2013' data-starting-opacity='1' style='opacity: 0'>
+<div class='image'>
+<img class="clean slider-image lazyload" id="10-15-2013_clean" alt="Circular orbits overlaid over four bright spots around disk" data-category="10/15/2013" onload="slide_image_load(&#39;10/15/2013&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop5@2x-cebd3074b2bbd042c29d543ba400350a951af7e04515afd374c4f59cd57eb8a8.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop5@1x-8fd243ac02dd20cfa423060f97419e2b2af525e4d65d0f5254480ea14f709892.jpg" width="705" height="700" />
+<img class="primary slider-image lazyload" id="10-15-2013_primary" alt="Circular orbits overlaid over four bright spots around disk" data-category="10/15/2013" onload="slide_image_load(&#39;10/15/2013&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop5-LABEL@2x-14556e8924f1ce1c95d6eced591686547e0cdf5f32950b73fa3608905a11eb7d.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop5-LABEL@1x-dffa56c7771cee9322696ae4575231341420290dc892a3b6a1dd3b09196e3afe.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='About 233 years' data-placement='top' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='405' data-yPosition='185' id='10-15-20131' tabindex='0' title='About 233 years'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='About 110 years' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='473' data-yPosition='382' id='10-15-20132' tabindex='0' title='About 110 years'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='About 54 years' data-placement='left' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='281' data-yPosition='387' id='10-15-20133' tabindex='0' title='About 54 years'></div>
+
+</div>
+</div>
+<div class='slide' data-image-index='5' data-label='7/17/2014' data-starting-opacity='0' style='opacity: 0'>
+<div class='image'>
+
+<img class="primary slider-image lazyload" id="7-17-2014_primary" alt="Four spots continue to orbit around disk" data-category="7/17/2014" onload="slide_image_load(&#39;7/17/2014&#39;)" srcset="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop6@2x-f12db49745bebd877d3a6b91f4e386147518c076d2139364a18322aa1fd5fd9d.jpg 2x" src="/assets/interactives/live/detecting_other_worlds/direct_imaging_of_hr_8799/HR-8799-Stop6@1x-94f2f81da5db797fdb022510481b26da57239b0bfa3943f18882234d4bf9caca.jpg" width="705" height="700" />
+</div>
+<div class='points'>
+<div class='point' data-animation='false' data-html='true' data-originalTitle='More planets?' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='078' data-yPosition='068' id='7-17-20141' tabindex='0' title='More planets?'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Formed here or migrated here?' data-placement='right' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='471' data-yPosition='210' id='7-17-20142' tabindex='0' title='Formed here or migrated here?'></div>
+
+<div class='point' data-animation='false' data-html='true' data-originalTitle='Atmospheric composition?' data-placement='bottom' data-toggle='tooltip' data-trigger='manual' data-viewport='.track' data-xPosition='426' data-yPosition='460' id='7-17-20143' tabindex='0' title='Atmospheric composition?'></div>
+
+</div>
+</div>
+</div>
+</div>
+<div class='controller' id='slider-controller'>
+<div class='container page-section'>
+<div class='descriptions'>
+<div class='loading_text'>Loading images...</div>
+<div class='description' data-label='8/01/2009'>
+<p>
+When most of the bright light of HR 8799 is blocked by a coronagraph, it is possible to detect four planets.
+</p>
+</div>
+<div class='description' data-label='7/21/2010'>
+<p>
+The Keck telescope in Hawaii detects heat radiated from the planets in the form of infrared light.
+</p>
+</div>
+<div class='description' data-label='7/20/2011'>
+<p>
+The brightness of a planet in infrared can provide clues about its mass.
+</p>
+</div>
+<div class='description' data-label='10/26/2012'>
+<p>
+With multiple observations, it is clear that this is a planetary system viewed from above.
+</p>
+</div>
+<div class='description' data-label='10/15/2013'>
+<p>
+More observations help us predict full orbits and notice interesting relationships between the orbits.
+</p>
+</div>
+<div class='description' data-label='7/17/2014'>
+<p>
+Direct imaging of the HR 8799 system provides some answers, and also leads to many new questions.
+</p>
+</div>
+</div>
+<div class='control-panel'>
+<input autocomplete='off' class='control' id='slider_control' max='500' min='0' type='range' value='0'>
+<div class='control-labels'>
+<div class='control-label' style='left:0.0%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="0" href="javascript:void(0);">8/01/2009
+</a></div>
+<div class='control-label' style='left:20.0%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="1" href="javascript:void(0);">7/21/2010
+</a></div>
+<div class='control-label' style='left:40.0%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="2" href="javascript:void(0);">7/20/2011
+</a></div>
+<div class='control-label' style='left:60.00000000000001%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="3" href="javascript:void(0);">10/26/2012
+</a></div>
+<div class='control-label' style='left:80.0%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="4" href="javascript:void(0);">10/15/2013
+</a></div>
+<div class='control-label' style='left:100.0%; width: 16.666666666666664%'>
+<div class='tick'></div>
+<a class="label_text" data-index="5" href="javascript:void(0);">7/17/2014
+</a></div>
+</div>
+<div class='control-labels-mobile'>
+<div class='mobile-label' data-label='8/01/2009'>
+<div class='label_text'>
+8/01/2009
+</div>
+</div>
+<div class='mobile-label' data-label='7/21/2010'>
+<div class='label_text'>
+7/21/2010
+</div>
+</div>
+<div class='mobile-label' data-label='7/20/2011'>
+<div class='label_text'>
+7/20/2011
+</div>
+</div>
+<div class='mobile-label' data-label='10/26/2012'>
+<div class='label_text'>
+10/26/2012
+</div>
+</div>
+<div class='mobile-label' data-label='10/15/2013'>
+<div class='label_text'>
+10/15/2013
+</div>
+</div>
+<div class='mobile-label' data-label='7/17/2014'>
+<div class='label_text'>
+7/17/2014
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='dark-on-light' id='slider-content' tabindex='-1'>
+<div class='container page-section'>
+<h2 class='section-header'>
+A Story Of Detecting Other Worlds:
+<span class='section-sub-header'>Direct Imaging</span>
+</h2>
+<div class='subheader'>
+<p>
+Blocking bright starlight allows us to photograph the faint light of distant exoplanets.
+</p>
+</div>
+<p>
+Exoplanets are very difficult to see directly, even with powerful telescopes. Even if the planet is relatively large, the starlight overwhelms the light reflected off the exoplanet. Trying to see an exoplanet orbiting a star is like trying to see a firefly next to a big bright search light from thousands of miles away.
+</p>
+<p>
+However, with a special tool known as a coronagraph, direct imaging of exoplanets it is possible. A coronagraph is essentially an opaque disc used to block starlight, making it possible to see much fainter objects near the star. As of 2020, about 50 planets—roughly 1% of the total number of confirmed exoplanets—have been discovered through direct imaging using coronagraphs.
+</p>
+<p>
+The direct images of four giant planets orbiting star HR 8799 shown here were captured by the Keck telescope in Hawaii. The observations provide a special “birds-eye” view of a planetary system. By observing the system over several years, astronomers were able to confirm that four of the bright spots are in fact planets. They were also able to measure how far each planet is from the star; estimate each planet’s size and mass; and predict their full orbits. Telescopes like the James Webb Space Telescope and the upcoming Nancy Grace Roman Space Telescope will use direct imaging to find out more about planets like these and look for additional planets.
+</p>
+<h2 class='section-header'>
+Quick Facts:
+<span class='section-sub-header'>Direct Imaging</span>
+</h2>
+<div class='quick-facts'>
+<p>
+<strong>
+Type:
+</strong>
+Super-Jupiters
+<br>
+</p>
+<p>
+<strong>
+Distance from Earth:
+</strong>
+135 light-years
+<br>
+</p>
+<p>
+<strong>
+Location in the universe:
+</strong>
+Orbiting star HR 8799 (also called V342 Pegasi)
+<br>
+</p>
+<p>
+<strong>
+Mass:
+</strong>
+Exoplanet HR 8799 b is roughly 6 times the mass of Jupiter; planets c, d, and e are roughly 7 times the mass of Jupiter
+<br>
+</p>
+<p>
+<strong>
+Size:
+</strong>
+All four planets are about 1.2 times the diameter of Jupiter
+<br>
+</p>
+<p>
+<strong>
+Orbital period:
+</strong>
+Planet b completes one orbit in about 491 Earth-years; c:  about 233 Earth-years; d:  about 110 Earth-years; e: about 54 Earth-years
+<br>
+</p>
+<p>
+<strong>
+Did you know:
+</strong>
+The HR 8799 system is the only directly imaged solar system known to have four super-Jupiter planets.
+<br>
+</p>
+</div>
+</div>
+</div>
+<div class='dark-on-light'>
+<div class='container page-section'>
+<div class='explore-more hide-for-pwa'>
+<!-- /TODO: Remove this first conditional block once Sliders are upgraded to have the new Explore More -->
+<!-- /      functionality with the same relationship to AdditionalResources that Videos currently has. -->
+<div class='section-intro'>
+<h2 class='intro-heading' id='slider-explore-more-heading'>Explore More About Detecting Other Worlds</h2>
+<p class='section-description'>Find out more with these additional resources from NASA’s Universe of Learning</p>
+<div class='resources'>
+<ul aria-labelledby="slider-explore-more-heading" role="list" class="explore_more_cards horizontal link_cards vs_cards"><li role="listitem"><div class="vs_card explore_more_card"><a target="_blank" rel="noopener" class="link_card" href="https://exoplanets.nasa.gov/alien-worlds/ways-to-find-a-planet/"><h3 class="card_caption">Astroviz&nbsp;<span class="glyphicon glyphicon-new-window"></span></h3><div class="card_image"><img alt="" src="/explore_more/astro-vis.jpg" /></div></a><div class="resource_description">5 Ways to Find an Exoplanet</div></div>
+</li><li role="listitem"><div class="vs_card explore_more_card"><a target="_blank" rel="noopener" class="link_card" href="https://waps.cfa.harvard.edu/microobservatory/diy/index.php"><h3 class="card_caption">DIY Planet Search&nbsp;<span class="glyphicon glyphicon-new-window"></span></h3><div class="card_image"><img alt="" src="/explore_more/cassiopeia.jpg" /></div></a><div class="resource_description">Find exoplanets using actual astronomy data</div></div>
+</li><li role="listitem"><div class="vs_card explore_more_card"><a target="_blank" rel="noopener" class="link_card" href="https://eyes.nasa.gov/eyes-on-exoplanets.html"><h3 class="card_caption">Eyes on Exoplanets&nbsp;<span class="glyphicon glyphicon-new-window"></span></h3><div class="card_image"><img alt="" src="/explore_more/universe-of-learning.jpg" /></div></a><div class="resource_description">Explore thousands of planetary systems orbiting distant stars</div></div>
+</li><li role="listitem"><div class="vs_card explore_more_card"><a target="_blank" rel="noopener" class="link_card" href="https://astropix.ipac.caltech.edu/link/b4y"><h3 class="card_caption">AstroPix&nbsp;<span class="glyphicon glyphicon-new-window"></span></h3><div class="card_image"><img alt="" src="/explore_more/astropix.jpg" /></div></a><div class="resource_description">Illustrations of Exoplanets and Graphs of Exoplanet Data</div></div>
+</li></ul></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='credits'>
+<div class='container page-section'>
+<h2 class='section-header'>
+Credits:
+<span class='section-sub-header'>Direct Imaging</span>
+</h2>
+<p>Infrared coronagraph images of HR 8799 from the Keck Telescope: Jason Wang (Caltech), Christian Marois (NRC Herzberg)</p>
+<p>
+Produced by the Space Telescope Science Institute’s Office of Public Outreach
+</p>
+</div>
+</div>
+
+</main>
+<footer role='contentinfo'>
+<h2 class='sr-only'>Footer</h2>
+<nav aria-labelledby='secondary-navigation' class='container footer-links hide-for-pwa' role='navigation'>
+<h3 id="secondary-navigation" class="sr-only">Secondary Navigation</h3>
+<ul aria-labelledby="secondary-navigation" role="list" class="horizontal"><li><a class="&lt;span class=&quot;translation_missing&quot; en.footer.section_1.link_1.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/support/message/new">Contact Us</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.footer.section_1.link_2.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/support/terms_and_conditions">Terms & Conditions</a></li>
+<li><a class="&lt;span class=&quot;translation_missing&quot; en.footer.section_1.link_3.classes&quot;&gt;Classes&lt;/span&gt; missing: title=&quot;translation" href="/sitemap">Site Map</a></li>
+</ul></nav>
+
+<div class='disclaimer'>
+<h3 id="disclaimer_heading" class="sr-only">Disclaimer</h3>
+<p>
+ViewSpace video content contains copyrighted material and should not be downloaded or used outside of this website.
+</p>
+<p>
+This product is based upon work supported by NASA under award numbers NNX16AC65A and NNX15AB26G and contracts NAS5-26555 and NAS5-03127. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Aeronautics and Space Administration.
+</p>
+</div>
+
+</footer>
+
+<!-- This area is for supporting content (i.e. modal dialogs) -->
+</body>
+</html>
