@@ -12,7 +12,7 @@ from spire.pdf.common import *
 from spire.pdf import *
  
 DSOs = ['Carina Nebula', 'NGC 1333', 'TW Hya', 'HH 7-11', 'AB Aurigae', 'HD 169142', 'Luhman 16', 'V830 Tau b', 'V 1298 Tau b', 'WASP-18b', 'WASP-39b', 'WASP-43b', 'HR 8799', 'Beta Pictoris', '2M 1207', 'TRAPPIST-1']
-DSOs = DSOs[7:]
+DSOs = DSOs[13:]
 paperDir = "static/papers/"
 graphDir = "static/graphs/"
 for DSO in DSOs:
