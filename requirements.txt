@@ -1,0 +1,9 @@
+flask>=2.0.0
+opencv-python>=4.5.0
+numpy>=1.20.0
+matplotlib>=3.3.0
+selenium>=4.0.0
+beautifulsoup4>=4.9.0
+requests>=2.25.0
+# spire.pdf>=9.0.0 - only needed for paper scraper
+pathlib2>=2.3.0
