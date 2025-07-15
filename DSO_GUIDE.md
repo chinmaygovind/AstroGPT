@@ -71,7 +71,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Excellent example of planet formation in progress
   - Shows disk structure and evolution
   - Demonstrates early solar system formation
-- **Image Sample**: `static/images/AB_Aurigae/AB Aurigae_000.png`
+
+![AB Aurigae](static/images/AB_Aurigae/AB%20Aurigae_000.png)
 
 ### 🌟 HD 169142
 - **Type**: Herbig Ae star with transitional disk
@@ -86,7 +87,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows advanced stages of planet formation
   - Demonstrates disk gaps created by planets
   - Example of transitional disk evolution
-- **Image Sample**: `static/images/HD_169142/HD 169142_000.png`
+
+![HD 169142](static/images/HD_169142/HD%20169142_000.png)
 
 ### 🌟 TW Hya
 - **Type**: T Tauri star with protoplanetary disk
@@ -101,7 +103,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Benchmark system for disk studies
   - Shows detailed disk structure
   - Prototype for early solar system
-- **Image Sample**: `static/images/TW_Hya/TW Hya_000.png`
+
+![TW Hya](static/images/TW_Hya/TW%20Hya_000.png)
 
 ---
 
@@ -120,7 +123,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Rare example of direct exoplanet imaging
   - Shows planetary system architecture
   - Demonstrates young planetary system evolution
-- **Image Sample**: `static/images/HR_8799/HR 8799_000.png`
+
+![HR 8799](static/images/HR_8799/HR%208799_000.png)
 
 ### 🪐 Beta Pictoris
 - **Type**: Young star with debris disk and exoplanet
@@ -135,7 +139,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Classic example of debris disk
   - Shows late stages of planetary system formation
   - Demonstrates planet-disk interactions
-- **Image Sample**: `static/images/Beta_Pictoris/Beta Pictoris_000.png`
+
+![Beta Pictoris](static/images/Beta_Pictoris/Beta%20Pictoris_000.png)
 
 ### 🪐 TRAPPIST-1
 - **Type**: Ultra-cool dwarf star with seven Earth-sized planets
@@ -150,7 +155,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Benchmark for terrestrial exoplanet systems
   - Shows planetary system dynamics
   - Key target for habitability studies
-- **Image Sample**: `static/images/TRAPPIST-1/TRAPPIST-1_000.png`
+
+![TRAPPIST-1](static/images/TRAPPIST-1/TRAPPIST-1_000.png)
 
 ### 🪐 WASP-18b
 - **Type**: Hot Jupiter exoplanet
@@ -165,7 +171,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Example of extreme exoplanet physics
   - Shows tidal heating effects
   - Demonstrates planetary migration
-- **Image Sample**: `static/images/WASP-18b/WASP-18b_000.png`
+
+![WASP-18b](static/images/WASP-18b/WASP-18b_000.png)
 
 ### 🪐 WASP-39b
 - **Type**: Hot Jupiter exoplanet
@@ -180,7 +187,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Excellent example of atmospheric characterization
   - Shows exoplanet atmospheric composition
   - Demonstrates transit spectroscopy
-- **Image Sample**: `static/images/WASP-39b/WASP-39b_000.png`
+
+![WASP-39b](static/images/WASP-39b/WASP-39b_000.png)
 
 ### 🪐 WASP-43b
 - **Type**: Hot Jupiter exoplanet
@@ -195,7 +203,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows extreme atmospheric dynamics
   - Demonstrates thermal redistribution
   - Example of atmospheric modeling
-- **Image Sample**: `static/images/WASP-43b/WASP-43b_000.png`
+
+![WASP-43b](static/images/WASP-43b/WASP-43b_000.png)
 
 ---
 
@@ -214,7 +223,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Boundary between stars and planets
   - Shows substellar object formation
   - Historic first direct exoplanet image
-- **Image Sample**: `static/images/2M_1207/2M 1207_000.png`
+
+![2M 1207](static/images/2M_1207/2M%201207_000.png)
 
 ### 🤎 Luhman 16
 - **Type**: Brown dwarf binary system
@@ -229,7 +239,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Closest example of failed stars
   - Shows brown dwarf atmospheric physics
   - Demonstrates substellar evolution
-- **Image Sample**: `static/images/Luhman_16/Luhman 16_000.png`
+
+![Luhman 16](static/images/Luhman_16/Luhman%2016_000.png)
 
 ---
 
@@ -248,7 +259,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows planet formation timescales
   - Demonstrates early planetary evolution
   - Connection between star and planet formation
-- **Image Sample**: `static/images/V830_Tau_b/V830 Tau b_000.png`
+
+![V830 Tau b](static/images/V830_Tau_b/V830%20Tau%20b_000.png)
 
 ### 🌟 V 1298 Tau b
 - **Type**: Young exoplanet system
@@ -263,7 +275,8 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows multiple planet formation
   - Demonstrates young planetary systems
   - Example of planetary system architecture
-- **Image Sample**: `static/images/V_1298_Tau_b/V 1298 Tau b_000.png`
+
+![V 1298 Tau b](static/images/V_1298_Tau_b/V%201298%20Tau%20b_000.png)
 
 ---
 
