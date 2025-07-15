@@ -20,7 +20,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Showcases stellar evolution and massive star formation
   - Contains multiple stellar populations
 
-![Carina Nebula](static/images/Carina_Nebula/Carina%20Nebula_000.png)
+<div align="center">
+  <img src="static/images/Carina_Nebula/Carina%20Nebula_000.png" alt="Carina Nebula" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>Carina Nebula (NGC 3372) - A massive star-forming region</em></p>
+</div>
+
+---
 
 ### 🌌 NGC 1333
 - **Type**: Reflection nebula / Star-forming region
@@ -36,7 +41,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Demonstrates protoplanetary disk formation
   - Shows dust and gas interactions
 
-![NGC 1333](static/images/NGC_1333/NGC%201333_000.png)
+<div align="center">
+  <img src="static/images/NGC_1333/NGC%201333_000.png" alt="NGC 1333" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>NGC 1333 - A reflection nebula in Perseus</em></p>
+</div>
+
+---
 
 ### 🌌 HH 7-11 (Herbig-Haro Objects)
 - **Type**: Herbig-Haro objects / Jets from young stars
@@ -52,7 +62,10 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows interaction between stellar winds and ISM
   - Key evidence of active star formation
 
-![HH 7-11](static/images/HH_7-11/HH%207-11_000.png)
+<div align="center">
+  <img src="static/images/HH_7-11/HH%207-11_000.png" alt="HH 7-11" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>HH 7-11 - Herbig-Haro objects showing stellar jets</em></p>
+</div>
 
 ---
 
@@ -72,7 +85,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows disk structure and evolution
   - Demonstrates early solar system formation
 
-![AB Aurigae](static/images/AB_Aurigae/AB%20Aurigae_000.png)
+<div align="center">
+  <img src="static/images/AB_Aurigae/AB%20Aurigae_000.png" alt="AB Aurigae" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>AB Aurigae - Young star with protoplanetary disk</em></p>
+</div>
+
+---
 
 ### 🌟 HD 169142
 - **Type**: Herbig Ae star with transitional disk
@@ -88,7 +106,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Demonstrates disk gaps created by planets
   - Example of transitional disk evolution
 
-![HD 169142](static/images/HD_169142/HD%20169142_000.png)
+<div align="center">
+  <img src="static/images/HD_169142/HD%20169142_000.png" alt="HD 169142" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>HD 169142 - Transitional disk with gaps and rings</em></p>
+</div>
+
+---
 
 ### 🌟 TW Hya
 - **Type**: T Tauri star with protoplanetary disk
@@ -104,7 +127,10 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows detailed disk structure
   - Prototype for early solar system
 
-![TW Hya](static/images/TW_Hya/TW%20Hya_000.png)
+<div align="center">
+  <img src="static/images/TW_Hya/TW%20Hya_000.png" alt="TW Hya" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>TW Hya - Nearest protoplanetary disk system</em></p>
+</div>
 
 ---
 
@@ -124,7 +150,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows planetary system architecture
   - Demonstrates young planetary system evolution
 
-![HR 8799](static/images/HR_8799/HR%208799_000.png)
+<div align="center">
+  <img src="static/images/HR_8799/HR%208799_000.png" alt="HR 8799" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>HR 8799 - System with four directly imaged exoplanets</em></p>
+</div>
+
+---
 
 ### 🪐 Beta Pictoris
 - **Type**: Young star with debris disk and exoplanet
@@ -140,7 +171,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows late stages of planetary system formation
   - Demonstrates planet-disk interactions
 
-![Beta Pictoris](static/images/Beta_Pictoris/Beta%20Pictoris_000.png)
+<div align="center">
+  <img src="static/images/Beta_Pictoris/Beta%20Pictoris_000.png" alt="Beta Pictoris" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>Beta Pictoris - Edge-on debris disk with exoplanet</em></p>
+</div>
+
+---
 
 ### 🪐 TRAPPIST-1
 - **Type**: Ultra-cool dwarf star with seven Earth-sized planets
@@ -156,7 +192,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows planetary system dynamics
   - Key target for habitability studies
 
-![TRAPPIST-1](static/images/TRAPPIST-1/TRAPPIST-1_000.png)
+<div align="center">
+  <img src="static/images/TRAPPIST-1/TRAPPIST-1_000.png" alt="TRAPPIST-1" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>TRAPPIST-1 - Seven Earth-sized planets system</em></p>
+</div>
+
+---
 
 ### 🪐 WASP-18b
 - **Type**: Hot Jupiter exoplanet
@@ -172,7 +213,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows tidal heating effects
   - Demonstrates planetary migration
 
-![WASP-18b](static/images/WASP-18b/WASP-18b_000.png)
+<div align="center">
+  <img src="static/images/WASP-18b/WASP-18b_000.png" alt="WASP-18b" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>WASP-18b - Ultra-hot Jupiter with extreme conditions</em></p>
+</div>
+
+---
 
 ### 🪐 WASP-39b
 - **Type**: Hot Jupiter exoplanet
@@ -188,7 +234,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows exoplanet atmospheric composition
   - Demonstrates transit spectroscopy
 
-![WASP-39b](static/images/WASP-39b/WASP-39b_000.png)
+<div align="center">
+  <img src="static/images/WASP-39b/WASP-39b_000.png" alt="WASP-39b" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>WASP-39b - Hot Jupiter with detailed atmospheric studies</em></p>
+</div>
+
+---
 
 ### 🪐 WASP-43b
 - **Type**: Hot Jupiter exoplanet
@@ -204,7 +255,10 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Demonstrates thermal redistribution
   - Example of atmospheric modeling
 
-![WASP-43b](static/images/WASP-43b/WASP-43b_000.png)
+<div align="center">
+  <img src="static/images/WASP-43b/WASP-43b_000.png" alt="WASP-43b" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>WASP-43b - Shows extreme atmospheric circulation</em></p>
+</div>
 
 ---
 
@@ -224,7 +278,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows substellar object formation
   - Historic first direct exoplanet image
 
-![2M 1207](static/images/2M_1207/2M%201207_000.png)
+<div align="center">
+  <img src="static/images/2M_1207/2M%201207_000.png" alt="2M 1207" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>2M 1207 - Brown dwarf with planetary companion</em></p>
+</div>
+
+---
 
 ### 🤎 Luhman 16
 - **Type**: Brown dwarf binary system
@@ -240,7 +299,10 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Shows brown dwarf atmospheric physics
   - Demonstrates substellar evolution
 
-![Luhman 16](static/images/Luhman_16/Luhman%2016_000.png)
+<div align="center">
+  <img src="static/images/Luhman_16/Luhman%2016_000.png" alt="Luhman 16" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>Luhman 16 - Nearest brown dwarf binary system</em></p>
+</div>
 
 ---
 
@@ -260,7 +322,12 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Demonstrates early planetary evolution
   - Connection between star and planet formation
 
-![V830 Tau b](static/images/V830_Tau_b/V830%20Tau%20b_000.png)
+<div align="center">
+  <img src="static/images/V830_Tau_b/V830%20Tau%20b_000.png" alt="V830 Tau b" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>V830 Tau b - Young exoplanet around T Tauri star</em></p>
+</div>
+
+---
 
 ### 🌟 V 1298 Tau b
 - **Type**: Young exoplanet system
@@ -276,7 +343,10 @@ A comprehensive guide to all astronomical objects in the AstroGPT database, orga
   - Demonstrates young planetary systems
   - Example of planetary system architecture
 
-![V 1298 Tau b](static/images/V_1298_Tau_b/V%201298%20Tau%20b_000.png)
+<div align="center">
+  <img src="static/images/V_1298_Tau_b/V%201298%20Tau%20b_000.png" alt="V 1298 Tau b" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>V 1298 Tau b - Multiple planet system around young star</em></p>
+</div>
 
 ---
 
