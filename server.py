@@ -1,5 +1,7 @@
 from flask import *  
 import secrets
+import asyncio
+import os
 from multiprocessing import Process, Manager
 from findImage import *
 from pathlib import Path
@@ -13,15 +15,49 @@ def main():
     return render_template("index.html")   
 
 @app.route('/create-search', methods = ['POST'])   
-async def create_search():   
+def create_search():   
+    print("DEBUG: /create-search route called")
     if request.method == 'POST':   
-        f = request.files['image-input']
-        requestID = secrets.token_urlsafe(30*3//4)
-        f.save(f"static/queryimages/image_{requestID}.png")   
-        queries[requestID] = await queryImage(f"static/queryimages/image_{requestID}.png")
-        print("Awaiting process...")
-        print(queries[requestID])
-        return render_template('results.html', myRequestID=requestID)
+        print("DEBUG: POST request received")
+        try:
+            f = request.files['image-input']
+            print(f"DEBUG: File received: {f.filename}")
+            
+            requestID = secrets.token_urlsafe(30*3//4)
+            print(f"DEBUG: Generated requestID: {requestID}")
+            
+            # Ensure the queryimages directory exists
+            query_dir = "static/queryimages"
+            if not os.path.exists(query_dir):
+                os.makedirs(query_dir)
+                print(f"DEBUG: Created directory: {query_dir}")
+            
+            filename = f"static/queryimages/image_{requestID}.png"
+            f.save(filename)   
+            print(f"DEBUG: File saved to: {filename}")
+            
+            # Verify the file was saved
+            if os.path.exists(filename):
+                print(f"DEBUG: File exists and size: {os.path.getsize(filename)} bytes")
+            else:
+                print(f"DEBUG: ERROR - File was not saved: {filename}")
+                return "Error: Could not save uploaded file", 500
+            
+            print("DEBUG: About to call queryImage...")
+            queries[requestID] = asyncio.run(queryImage(filename))
+            print("DEBUG: queryImage completed")
+            print(f"DEBUG: Query result: {queries[requestID]}")
+            
+            print("DEBUG: About to render results template")
+            return render_template('results.html', myRequestID=requestID)
+        except Exception as e:
+            print(f"DEBUG: Exception in create_search: {e}")
+            import traceback
+            traceback.print_exc()
+            return f"Error: {str(e)}", 500
+    else:
+        print("DEBUG: Non-POST request received")
+        return "Method not allowed", 405
  
 
 @app.route('/check-search', methods = ['GET'])   

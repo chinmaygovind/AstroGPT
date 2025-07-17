@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroGPT</title>
+    <style>
+        #imageDisplay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 25%;
+            max-height: 25%;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        /* Style for the image within the display container */
+        #displayedImg {
+            width: 100%;
+            height: 100%;
+        }
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -100;
+        }
+
+        h1 {
+            font-size: 1500%;
+            color: rgb(255, 243, 230);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2%;
+        }
+
+        /* Styles for the buttons */
+        .button {
+            padding: 2% 4%;
+            margin: 1% 1%;
+            width: 30%;
+            height: 10%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 2%;
+            cursor: pointer;
+            font-size: 300%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right: 10px;
+        }
+
+        /* Style for hover effect on the buttons */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #submit {
+            padding: 2% 4%;
+            margin: 1% 1%;
+            width: 20%;
+            height: 7%;
+            background-color: #096f9e;
+            color: #fff;
+            border: none;
+            border-radius: 2%;
+            cursor: pointer;
+            font-size: 200%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right: 10px;
+        }
+        
+        #rocket-container {
+            position: absolute;
+            bottom: 0;
+            left: 100px; /* Start off-screen */
+            width: 100px;
+            height: 150px;
+        }
+        
+        #rocket {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 120px;
+            transition: transform 3s linear;
+            
+        }
+        
+        .move-rocket {
+            animation: bobbing 1s ease-in-out infinite alternate;
+            transform: translateX(calc(10vw + 10px)); /* Move rocket across the screen */
+        }
+        @keyframes bobbing {
+            0% {
+            transform: translateY(0);
+            }
+            50% {
+            transform: translateY(10px);
+            }
+            100% {
+            transform: translateY(0);
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <video playsinline autoplay muted loop id="bgvid">
+        <source src="/static/media/space.mp4" type="video/mp4">
+      </video>   
+
+    <h1>AstroGPT</h1>
+    <button id="uploadButton" class="button">Upload Image</button>
+    <button id="clipboardButton" class="button">Paste from Clipboard</button>
+    
+    <form id = "image-form" action = "/create-search" method = "post" enctype="multipart/form-data">   
+        <input style = "display: none" type= "file" id="image-input" name="image-input"/>
+        <input id = "submit" type = "submit" value="Submit!" onclick="rocket.classList.add('move-rocket');"/>   
+    </form>   
+    
+    <p id = "status" style = "display: none">Status: </p>
+    
+    <div id="imageDisplay">
+        <img id="displayedImg" src="" alt="Uploaded Image">
+    </div>
+    
+    <div id="rocket-container">
+    <img id="rocket" src="https://i.imgur.com/xsEYC2G.png" alt="Rocket">
+    <div class="flame"></div>
+
+    <!-- submission script -->
+    <script>
+        const fileInput = document.getElementById("image-input");
+        document.getElementById('uploadButton').addEventListener('click', function() {
+        fileInput.click();
+        });
+
+        document.getElementById('image-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            displayImage(file);
+        });
+
+        function updateStatus() {
+        // Make a GET request to your endpoint
+        fetch('/check-search?requestID={{myRequestID}}') // Replace '/your-endpoint' with your actual endpoint
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Update the status div with the received data
+                document.getElementById('status').innerText = "Status: " + data.status;
+                if (data.status == "finished") {
+                    window.location.href = "results?requestID={{myRequestID}}";
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                document.getElementById('status').innerText = 'Error fetching status';
+            });
+        }
+
+        document.getElementById('submit').addEventListener("click", function(event) {
+
+            // Call the function initially and then every second
+            updateStatus(); // Update immediately
+            setInterval(updateStatus, 1000);
+        });
+
+        
+        document.onpaste = function (event) {
+            var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+            console.log(JSON.stringify(items)); // might give you mime types
+            for (var index in items) {
+                var item = items[index];
+                if (item.kind === 'file') {
+                    var blob = item.getAsFile();
+                    fileInput.file = blob;
+                    displayImage(blob);
+                }
+            }
+        };
+
+        function displayImage(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageUrl = event.target.result;
+                const imageDisplay = document.getElementById('imageDisplay');
+                const displayedImg = document.getElementById('displayedImg');
+                displayedImg.src = imageUrl;
+                imageDisplay.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>

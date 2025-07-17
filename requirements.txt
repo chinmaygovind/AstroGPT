@@ -7,3 +7,4 @@ beautifulsoup4>=4.9.0
 requests>=2.25.0
 # spire.pdf>=9.0.0 - only needed for paper scraper
 pathlib2>=2.3.0
+tqdm>=4.50.0
