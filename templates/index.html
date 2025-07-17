@@ -348,12 +348,22 @@
         </div>
     </div>
 
+    <!-- Modal for DSO match info -->
+    <div id="dsoModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+        <div style="background:#222; color:#fff; border-radius:16px; max-width:420px; width:90vw; margin:auto; padding:2rem 1.5rem; box-shadow:0 8px 32px #000; position:relative;">
+            <span id="dsoModalClose" style="position:absolute; top:12px; right:18px; font-size:2rem; cursor:pointer; color:#74b9ff;">&times;</span>
+            <h2 id="dsoModalName" style="margin-bottom:0.7rem; color:#74b9ff;"></h2>
+            <img id="dsoModalImg" src="" alt="DSO Image" style="max-width:100%; max-height:220px; border-radius:10px; margin-bottom:1rem; box-shadow:0 4px 16px #000; border:2px solid #74b9ff;">
+            <div id="dsoModalDesc" style="margin-bottom:0.7rem; font-size:1rem; color:#b8b8b8;">Description goes here.</div>
+            <div id="dsoModalLinks" style="margin-bottom:0.7rem; font-size:0.95rem;"></div>
+        </div>
+    </div>
     <script>
         // --- OpenCV.js integration ---
         // Add OpenCV.js script dynamically if not present
         if (!document.querySelector('script[src*="opencv.js"]')) {
             const script = document.createElement('script');
-            script.src = '/static/opencv.js'; // Place opencv.js in static folder
+            script.src = '/static/scripts/opencv.js'; // Place opencv.js in static folder
             document.head.appendChild(script);
         }
 
@@ -385,7 +395,8 @@
             statusElement.innerHTML = 'Status: Processing... <span class="loading"></span>';
             submitButton.disabled = true;
             submitButton.value = 'Processing...';
-            processImage(fileInput.files[0]);
+            // Defer to allow status to update before heavy processing
+            setTimeout(() => processImage(fileInput.files[0]), 50);
         });
 
         document.addEventListener('paste', function(event) {
@@ -416,60 +427,96 @@
         }
 
         // --- Client-side image matching logic ---
-        // Placeholder DSO database (add real images and descriptors for production)
-        let dsoDatabase = [
-            { name: "Carina Nebula", imageUrl: "/static/images/Carina_Nebula/Carina_Nebula_0.png", descriptors: null },
-            { name: "Beta Pictoris", imageUrl: "/static/images/Beta_Pictoris/Beta_Pictoris_0.png", descriptors: null }
-        ];
-
-        function loadImageToMat(url, callback) {
-            let img = new window.Image();
-            img.crossOrigin = "Anonymous";
-            img.onload = function() {
-                let canvas = document.createElement('canvas');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                let ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0);
-                let src = cv.imread(canvas);
-                callback(src);
-            };
-            img.src = url;
-        }
-
+        // Extract ORB descriptors from an image Mat
         function extractORBDescriptors(mat) {
-            let gray = new cv.Mat();
-            cv.cvtColor(mat, gray, cv.COLOR_RGBA2GRAY, 0);
-            let orb = new cv.ORB();
+            let brisk = new cv.BRISK();
             let keypoints = new cv.KeyPointVector();
             let descriptors = new cv.Mat();
-            orb.detectAndCompute(gray, new cv.Mat(), keypoints, descriptors);
-            gray.delete(); orb.delete(); keypoints.delete();
+            brisk.detectAndCompute(mat, new cv.Mat(), keypoints, descriptors);
+            brisk.delete();
+            keypoints.delete();
             return descriptors;
         }
+        // Load descriptor database from static/dsoDescriptorDatabase.json
+        let dsoDatabase = [];
+        fetch('/static/dsoDescriptorDatabase.json')
+            .then(response => response.json())
+            .then(data => {
+                // The new database is already flat: each entry has name, type, path, descriptors
+                dsoDatabase = data;
+                waitForOpenCV(() => {
+                    statusElement.style.display = 'block';
+                    statusElement.innerHTML = 'Ready for search!';
+                });
+            })
+            .catch(err => {
+                console.error('Failed to load DSO descriptor database:', err);
+            });
 
-        function matchDescriptors(desc1, desc2) {
-            let bf = new cv.BFMatcher(cv.NORM_HAMMING, true);
-            let matches = new cv.DMatchVector();
-            bf.match(desc1, desc2, matches);
-            let score = matches.size();
-            bf.delete(); matches.delete();
-            return score;
+        function matchDescriptorArrays(desc1, desc2) {
+            // Robust matching using BFMatcher with k-NN and Lowe's ratio test
+            if (!desc1 || !desc2 || desc1.length === 0 || desc2.length === 0) return 0;
+            // Convert JS arrays to cv.Mat
+            let mat1 = cv.matFromArray(desc1.length, desc1[0].length, cv.CV_8U, desc1.flat());
+            let mat2 = cv.matFromArray(desc2.length, desc2[0].length, cv.CV_8U, desc2.flat());
+            let bf = new cv.BFMatcher(cv.NORM_HAMMING, false);
+            let matches = new cv.DMatchVectorVector();
+            bf.knnMatch(mat1, mat2, matches, 2);
+            let goodMatches = 0;
+            for (let i = 0; i < matches.size(); i++) {
+                if (matches.get(i).size() < 2) continue;
+                let m = matches.get(i).get(0);
+                let n = matches.get(i).get(1);
+                if (m.distance < 0.75 * n.distance) {
+                    goodMatches++;
+                }
+            }
+            // Clean up
+            mat1.delete();
+            mat2.delete();
+            bf.delete();
+            matches.delete();
+            return goodMatches;
         }
 
         async function findBestMatch(uploadedMat) {
-            let uploadedDesc = extractORBDescriptors(uploadedMat);
-            let bestScore = -1, bestName = "No match";
-            for (let dso of dsoDatabase) {
-                if (!dso.descriptors) continue;
-                let score = matchDescriptors(uploadedDesc, dso.descriptors);
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestName = dso.name;
+            let uploadedDescMat = extractORBDescriptors(downsampleMat(uploadedMat));
+            let totalImages = dsoDatabase.length;
+            let uploadedDesc = [];
+            for (let r = 0; r < uploadedDescMat.rows; r++) {
+                let row = [];
+                for (let c = 0; c < uploadedDescMat.cols; c++) {
+                    row.push(uploadedDescMat.ucharPtr(r)[c]);
                 }
+                uploadedDesc.push(row);
             }
-            uploadedDesc.delete();
-            return bestName;
+            // Debug: show descriptor counts
+            console.log('Uploaded image descriptors:', uploadedDesc.length);
+            if (dsoDatabase.length > 0) {
+                console.log('First DB entry descriptors:', dsoDatabase[0].descriptors ? dsoDatabase[0].descriptors.length : 'none');
+            }
+            let matchResults = [];
+            const maxNameLen = 24;
+            const maxNumLen = String(totalImages).length;
+            for (let i = 0; i < dsoDatabase.length; i++) {
+                let dso = dsoDatabase[i];
+                let percent = Math.round((i+1)/totalImages*100);
+                let nameStr = (dso.name || '').padEnd(maxNameLen, ' ');
+                let idxStr = String(i+1).padStart(maxNumLen, ' ');
+                let totalStr = String(totalImages).padStart(maxNumLen, ' ');
+                let percentStr = String(percent).padStart(3, ' ');
+                statusElement.innerHTML = `<pre style='display:inline-block; min-width:380px; font-family:monospace; font-size:1.1em; background:none; border:none; margin:0; padding:0; text-align:left;'>Status: Checking ${nameStr} (${idxStr}/${totalStr}) ... ${percentStr}%</pre>`;
+                await new Promise(resolve => setTimeout(resolve, 10)); // allow UI update
+                if (!dso.descriptors || !Array.isArray(dso.descriptors) || dso.descriptors.length === 0) continue;
+                // Debug: show descriptor counts for each db entry
+                if (i < 5) console.log(`DB[${i}] ${dso.name} descriptors:`, dso.descriptors.length);
+                let score = matchDescriptorArrays(uploadedDesc, dso.descriptors);
+                let matchPercent = uploadedDesc.length > 0 ? Math.round(100 * score / uploadedDesc.length) : 0;
+                matchResults.push({ name: dso.name, type: dso.type, path: dso.path, score, matchPercent });
+            }
+            uploadedDescMat.delete();
+            matchResults.sort((a, b) => b.score - a.score);
+            return matchResults;
         }
 
         function processImage(file) {
@@ -482,29 +529,67 @@
             }
             let img = new window.Image();
             img.onload = async function() {
+                statusElement.style.display = 'block';
                 let canvas = document.createElement('canvas');
                 canvas.width = img.width;
                 canvas.height = img.height;
                 let ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0);
                 let mat = cv.imread(canvas);
-                let matchName = await findBestMatch(mat);
-                statusElement.innerHTML = 'Status: Best match: <b>' + matchName + '</b>';
-                submitButton.disabled = false;
-                submitButton.value = '🚀 Start Search';
-                mat.delete();
+            let matchResults = await findBestMatch(mat);
+            statusElement.innerHTML = 'Status: Top matches:';
+            submitButton.disabled = false;
+            submitButton.value = '🚀 Start Search';
+            mat.delete();
+            // Show modal popup with top 5 matches
+            showDSOModal(matchResults);
+        // Show DSO modal popup
+        function showDSOModal(matchResults) {
+            // Show top match name and image
+            if (matchResults.length === 0) {
+                document.getElementById('dsoModalName').textContent = 'No match found';
+                document.getElementById('dsoModalImg').style.display = 'none';
+                document.getElementById('dsoModalDesc').textContent = '';
+                document.getElementById('dsoModalLinks').innerHTML = '';
+            } else {
+                // Only show top 5 matches
+                let top5 = matchResults.slice(0, 5);
+                let top = top5[0];
+                let imgPath = top.path;
+                if (imgPath && !imgPath.startsWith('/')) {
+                    imgPath = '/' + imgPath;
+                }
+                document.getElementById('dsoModalName').textContent = top.name + (top.type ? ' (' + top.type + ')' : '');
+                document.getElementById('dsoModalImg').src = imgPath;
+                document.getElementById('dsoModalImg').style.display = 'block';
+                document.getElementById('dsoModalDesc').textContent = `Top 5 matches:`;
+                // List top 5 matches with image, description, link, and match percent
+                let linksHtml = '<ol style="padding-left:1.2em;">';
+                top5.forEach((res, idx) => {
+                    let p = res.path;
+                    if (p && !p.startsWith('/')) p = '/' + p;
+                    let percent = res.matchPercent !== undefined ? res.matchPercent : 0;
+                    linksHtml += `<li style='margin-bottom:1.2em;'>`
+                        + `<div style='display:flex; align-items:center;'>`
+                        + `<img src='${p}' alt='${res.name}' style='width:60px; height:60px; object-fit:cover; border-radius:8px; margin-right:1em; border:2px solid #74b9ff;'>`
+                        + `<div style='flex:1;'>`
+                        + `<b>${res.name}${res.type ? ' (' + res.type + ')' : ''}</b><br>`
+                        + `<span style='color:#b8b8b8;'>${res.description ? res.description : ''}</span><br>`
+                        + `<span style='color:#00cec9;'>Match: ${percent}%</span> `
+                        + `<a href='${p}' target='_blank' style='color:#00cec9; margin-left:0.5em;'>View</a>`
+                        + `</div></div></li>`;
+                });
+                linksHtml += '</ol>';
+                document.getElementById('dsoModalLinks').innerHTML = linksHtml;
+            }
+            document.getElementById('dsoModal').style.display = 'flex';
+        }
+        // Close modal on click
+        document.getElementById('dsoModalClose').onclick = function() {
+            document.getElementById('dsoModal').style.display = 'none';
+        };
             };
             img.src = URL.createObjectURL(file);
-        }
-
-        // Precompute descriptors for database images (run once after OpenCV.js loads)
-        function precomputeDSODescriptors() {
-            for (let dso of dsoDatabase) {
-                loadImageToMat(dso.imageUrl, (mat) => {
-                    dso.descriptors = extractORBDescriptors(mat);
-                    mat.delete();
-                });
-            }
         }
 
         // Wait for OpenCV.js to load
@@ -515,7 +600,19 @@
                 setTimeout(() => waitForOpenCV(callback), 200);
             }
         }
-        waitForOpenCV(precomputeDSODescriptors);
+
+        // Downsample image to reduce memory usage and speed up matching
+        function downsampleMat(mat, maxDim=256) {
+            let width = mat.cols, height = mat.rows;
+            let scale = Math.min(1, maxDim / Math.max(width, height));
+            if (scale < 1) {
+                let dsize = new cv.Size(Math.round(width * scale), Math.round(height * scale));
+                let resized = new cv.Mat();
+                cv.resize(mat, resized, dsize, 0, 0, cv.INTER_AREA);
+                return resized;
+            }
+            return mat;
+        }
     </script>
 </body>
 </html>

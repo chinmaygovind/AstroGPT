@@ -6,7 +6,11 @@ from multiprocessing import Process, Manager
 from findImage import *
 from pathlib import Path
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+# Explicit route to serve static files (if default does not work)
+@app.route('/static/<path:filename>')
+def custom_static(filename):
+    return send_from_directory(app.static_folder, filename)
 
 queries = {}
 
